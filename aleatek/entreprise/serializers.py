@@ -11,5 +11,5 @@ class ResponsableSerializer(ModelSerializer):
 
 class EntrepriseSerializer(ModelSerializer):
     class Meta:
-        model = Responsable
+        model = Entreprise
         fields = '__all__'

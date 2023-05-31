@@ -1,32 +1,24 @@
-"""aleatek URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
 from .views import get_csrf_token
 from rest_framework import routers
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from mission.views import MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdmin, ITAdminViewsetAdmin
 
 from collaborateurs.views import UtilisateurConnecteView, CollaborateursAdminViewsetAdmin
 from entreprise.views import ResponsableAdminViewsetAdmin, EntrepriseAdminViewsetAdmin
 from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmin, ProduitAdminViewsetAdmin, DestinationAdminViewsetAdmin, ChantierAdminViewsetAdmin
-
+from adresse.views import AdressdminViewsetAdmin
 router = routers.SimpleRouter()
+router.register('admin/mission', MissionAdminViewsetAdmin, basename='admin-mission')
+router.register('admin/missions/active', MissionActiveAdminViewsetAdmin, basename='admin-mission-active')
+router.register('admin/intervention/technique', ITAdminViewsetAdmin, basename='admin-it')
+
+
+router.register('admin/adresse', AdressdminViewsetAdmin, basename='admin-adresse')
+
 router.register('admin/destination', DestinationAdminViewsetAdmin, basename='admin-batiment')
 router.register('admin/chantier', ChantierAdminViewsetAdmin, basename='admin-chantier')
-
 router.register('admin/affaire', AffaireAdminViewsetAdmin, basename='admin-affaoire')
 router.register('admin/planafaire', PlanAffaireAdminViewsetAdmin, basename='admin-paffaire')
 router.register('admin/produit', ProduitAdminViewsetAdmin, basename='admin-collab')
