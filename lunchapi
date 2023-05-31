@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 pkill python3
-python ./aleatek/manage.py seed adresse
-python ./aleatek/manage.py seed collaborateurs
-python ./aleatek/manage.py seed entreprise
-python ./aleatek/manage.py seed Dashbord
+python3 ./aleatek/manage.py seed adresse
+python3 ./aleatek/manage.py seed collaborateurs
+python3 ./aleatek/manage.py seed entreprise
+python3 ./aleatek/manage.py seed Dashbord

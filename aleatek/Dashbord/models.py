@@ -48,7 +48,6 @@ class PlanAffaire(models.Model):
     TYPES_AFFAIRES = [
         ('CTC', 'CTC'),
         ('VT', 'VT')
-
     ]
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
     numero = models.IntegerField()
