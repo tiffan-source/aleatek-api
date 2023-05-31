@@ -26,6 +26,7 @@ class ChantierSerializer(ModelSerializer):
         model = Chantier
         fields = '__all__'
 
+
 class BatimentSerializer(ModelSerializer):
     class Meta:
         model = Batiment

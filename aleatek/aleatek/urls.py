@@ -7,13 +7,26 @@ from mission.views import MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdm
 
 from collaborateurs.views import UtilisateurConnecteView, CollaborateursAdminViewsetAdmin
 from entreprise.views import ResponsableAdminViewsetAdmin, EntrepriseAdminViewsetAdmin
-from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmin, ProduitAdminViewsetAdmin, DestinationAdminViewsetAdmin, ChantierAdminViewsetAdmin
+from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmin, ProduitAdminViewsetAdmin, \
+    DestinationAdminViewsetAdmin, ChantierAdminViewsetAdmin
 from adresse.views import AdressdminViewsetAdmin
+from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin
+
+from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, FichierSerializerAdminViewsetAdmin
+
+from commentaire.views import CommentaireAdminViewsetAdmin
+
 router = routers.SimpleRouter()
+router.register('admin/commentaire', CommentaireAdminViewsetAdmin, basename='admin=commentaire')
+router.register('admin/fichierattacher', FichierSerializerAdminViewsetAdmin, basename='admin=avis')
+router.register('admin/avis', AvisSerializerAdminViewsetAdmin, basename='admin=avis')
+router.register('admin/documents', DocumentSerializerAdminViewsetAdmin, basename='admin=document')
+router.register('admin/ouvrage', OuvrageAdminViewsetAdmin, basename='admin=ouvrage')
+router.register('admin/affaireouvrage', AffaireOuvrageAdminViewsetAdmin, basename='admin=aafffaireouvrage')
+router.register('admin/aso', AsoSerializerAdminViewsetAdmin, basename='admin=aso')
 router.register('admin/mission', MissionAdminViewsetAdmin, basename='admin-mission')
 router.register('admin/missions/active', MissionActiveAdminViewsetAdmin, basename='admin-mission-active')
 router.register('admin/intervention/technique', ITAdminViewsetAdmin, basename='admin-it')
-
 
 router.register('admin/adresse', AdressdminViewsetAdmin, basename='admin-adresse')
 
