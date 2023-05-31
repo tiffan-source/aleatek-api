@@ -1,4 +1,3 @@
 aleatek/db.sqlite3
 f
-aleatek/**/migrations/*.py
 aleatek/**/__pycache__/
