@@ -20,8 +20,18 @@ from rest_framework import routers
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from collaborateurs.views import UtilisateurConnecteView, CollaborateursAdminViewsetAdmin
+from entreprise.views import ResponsableAdminViewsetAdmin, EntrepriseAdminViewsetAdmin
+from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmin, ProduitAdminViewsetAdmin, DestinationAdminViewsetAdmin, ChantierAdminViewsetAdmin
 
 router = routers.SimpleRouter()
+router.register('admin/destination', DestinationAdminViewsetAdmin, basename='admin-batiment')
+router.register('admin/chantier', ChantierAdminViewsetAdmin, basename='admin-chantier')
+
+router.register('admin/affaire', AffaireAdminViewsetAdmin, basename='admin-affaoire')
+router.register('admin/planafaire', PlanAffaireAdminViewsetAdmin, basename='admin-paffaire')
+router.register('admin/produit', ProduitAdminViewsetAdmin, basename='admin-collab')
+router.register('admin/responsable', ResponsableAdminViewsetAdmin, basename='admin-collab')
+router.register('admin/entreprise', EntrepriseAdminViewsetAdmin, basename='admin-entreprise')
 router.register('admin/collaborateurs', CollaborateursAdminViewsetAdmin, basename='admin-collab')
 
 urlpatterns = [
