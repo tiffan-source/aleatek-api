@@ -50,7 +50,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # new
 # new
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 4,
+    'PAGE_SIZE': 1000,
 
     # 'DEFAULT_AUTHENTICATION_CLASSES':
     # ['rest_framework_simplejwt.authentication.JWTAuthentication',],

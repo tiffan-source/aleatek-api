@@ -14,4 +14,4 @@ class Responsable(models.Model):
     nom = models.CharField(max_length=50)
     prenom = models.CharField(max_length=50)
     email = models.EmailField()
-    responsable = models.ForeignKey(Entreprise, on_delete=models.CASCADE, related_name='Responsables')
+    entreprise = models.ForeignKey(Entreprise, on_delete=models.CASCADE, related_name='Responsables')

@@ -5,7 +5,7 @@ from .models import Responsable, Entreprise
 from .permissions import IsAdminAuthenticated
 from .serializers import ResponsableSerializer
 from rest_framework.views import APIView
-
+from adresse.models import Adress
 
 class MultipleSerializerMixin:
     detail_serializer_class = None
@@ -29,3 +29,30 @@ class EntrepriseAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = EntrepriseSerializer
     queryset = Entreprise.objects.all()
     permission_classes = [IsAdminAuthenticated]
+
+class GetEntrepriseWithCollaborateur(APIView):
+    def get(self, request):
+        entreprises = Entreprise.objects.all().values()
+        data = []
+        for entreprise in entreprises:
+            entreprise_data = {
+                'id': entreprise['id'],
+                'raison_sociale': entreprise['raison_sociale'],
+                'siret': entreprise['siret'],
+                'activite': entreprise['activite'],
+                'adresse': {}
+            }
+            adresse = Adress.objects.get(id=entreprise['adresse_id'])
+            entreprise_data['adresse'] = {
+                'ville': adresse.ville,
+            }
+            responsables = Responsable.objects.filter(entreprise_id=entreprise['id']).values()
+            entreprise_data['responsables'] = []
+            for responsable in responsables:
+                entreprise_data['responsables'].append({
+                    'nom': responsable['nom'],
+                    'prenom': responsable['prenom'],
+                })
+            data.append(entreprise_data)
+
+        return Response(data)
