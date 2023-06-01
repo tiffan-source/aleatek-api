@@ -12,11 +12,12 @@ from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmi
 from adresse.views import AdressdminViewsetAdmin
 from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin
 
-from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, FichierSerializerAdminViewsetAdmin
+from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, FichierSerializerAdminViewsetAdmin, RapportVisiteSerializerAdminViewsetAdmin
 
 from commentaire.views import CommentaireAdminViewsetAdmin
 
 router = routers.SimpleRouter()
+router.register('admin/rapport/visite', RapportVisiteSerializerAdminViewsetAdmin, basename='admin-rapport')
 router.register('admin/commentaire', CommentaireAdminViewsetAdmin, basename='admin=commentaire')
 router.register('admin/fichierattacher', FichierSerializerAdminViewsetAdmin, basename='admin=avis')
 router.register('admin/avis', AvisSerializerAdminViewsetAdmin, basename='admin=avis')

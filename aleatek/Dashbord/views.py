@@ -51,6 +51,7 @@ class ChantierAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     queryset = Chantier.objects.all()
     permission_classes = [IsAdminAuthenticated]
 
+
 class GetPlanAffaireDetail(APIView):
     def get(self, request):
         planAffaires = PlanAffaire.objects.all().values()
@@ -67,8 +68,8 @@ class GetPlanAffaireDetail(APIView):
             # On cherche le charger
             charger_affaire = Collaborateurs.objects.get(id=model_to_dict(affaire)['charge'])
             planAffaire_data['charge_affaire'] = {
-                'nom' : charger_affaire.last_name,
-                'prenom' : charger_affaire.first_name,
+                'nom': charger_affaire.last_name,
+                'prenom': charger_affaire.first_name,
             }
             # On cherche le client
             client = Entreprise.objects.get(id=model_to_dict(affaire)['client'])

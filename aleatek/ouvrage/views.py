@@ -1,10 +1,10 @@
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
-from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache
+from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache, RapportVisite
 from .permissions import IsAdminAuthenticated
 from .serializers import AsoSerializer, OuvrageSerializer, DocumentSerializer, FichierAttacheSerializer, \
-    AvisSerializer, AffaireOuvrageSerializer
+    AvisSerializer, AffaireOuvrageSerializer, RappoerVisiteSerializer
 
 
 class MultipleSerializerMixin:
@@ -49,4 +49,10 @@ class AvisSerializerAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
 class FichierSerializerAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = FichierAttacheSerializer
     queryset = FichierAttache.objects.all()
+    permission_classes = [IsAdminAuthenticated]
+
+
+class RapportVisiteSerializerAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
+    serializer_class = RappoerVisiteSerializer
+    queryset = RapportVisite.objects.all()
     permission_classes = [IsAdminAuthenticated]
