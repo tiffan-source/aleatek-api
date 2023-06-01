@@ -1,6 +1,7 @@
 from django.db import models
 
 from adresse.models import Adress
+from collaborateurs.models import Collaborateurs
 from entreprise.models import Entreprise
 
 
@@ -29,9 +30,12 @@ class Affaire(models.Model):
     statut = models.CharField(max_length=20, choices=STATUS)
     numero_offre = models.IntegerField()
     numero_contrat = models.IntegerField
-    libelle_contrat = models.CharField(max_length=100)
+    libelle_contrat = models.CharField(max_length=100, default='', blank=True)
     date_contrat = models.DateField()
-    client = models.ForeignKey(Entreprise, on_delete=models.CASCADE)
+    client = models.ForeignKey(Entreprise, on_delete=models.CASCADE, null=True) # Retirer null
+    charge = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairecharge', null=True)
+    assistant = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffaireassistant', null=True)
+    chef = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairechef', null=True)
 
 class PlanAffaire(models.Model):
     RISQUES = [
@@ -49,20 +53,27 @@ class PlanAffaire(models.Model):
         ('CTC', 'CTC'),
         ('VT', 'VT')
     ]
+
+    TYPES_MONTANT= [
+        ('HT', 'HT'),
+        ('TTC', 'TTC')
+    ]
+
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
     numero = models.IntegerField()
     risque = models.CharField(max_length=20, choices=RISQUES)
     libelle = models.CharField(max_length=50)
     devise = models.CharField(max_length=10, choices=DEVISE)
     type = models.CharField(max_length=10, choices=TYPES_AFFAIRES)
+    type_montant = models.CharField(max_length=10, choices=TYPES_MONTANT, default='HT')
     prix = models.IntegerField()
+    debut_prestation = models.DateField()
     debut_chantier = models.DateField()
     fin_chantier = models.DateField()
-    reunions = models.IntegerField()
     visite = models.IntegerField()
+    doc = models.IntegerField()
 
 class Chantier(models.Model):
-    batiment = models.OneToOneField(Batiment, on_delete=models.CASCADE)
+    batiment = models.ForeignKey(Batiment, on_delete=models.CASCADE)
     plan_affaire = models.OneToOneField(PlanAffaire, on_delete=models.CASCADE)
     adresse = models.OneToOneField(Adress, models.CASCADE)
-

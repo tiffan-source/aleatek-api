@@ -6,6 +6,11 @@ from .permissions import IsAdminAuthenticated
 from .serializers import AffaireSerializer, ProduitSerializer, PlanAffaireSerializer, BatimentSerializer, \
     ChantierSerializer
 from rest_framework.views import APIView
+from adresse.models import Adress
+from collaborateurs.models import Collaborateurs
+from entreprise.models import Entreprise
+
+from django.forms.models import model_to_dict
 
 
 class MultipleSerializerMixin:
@@ -35,7 +40,7 @@ class ProduitAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     permission_classes = [IsAdminAuthenticated]
 
 
-class DestinationAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
+class BatimentAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = BatimentSerializer
     queryset = Batiment.objects.all()
     permission_classes = [IsAdminAuthenticated]
@@ -45,3 +50,33 @@ class ChantierAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = ChantierSerializer
     queryset = Chantier.objects.all()
     permission_classes = [IsAdminAuthenticated]
+
+class GetPlanAffaireDetail(APIView):
+    def get(self, request):
+        planAffaires = PlanAffaire.objects.all().values()
+        data = []
+        for planAffaire in planAffaires:
+            planAffaire_data = dict(planAffaire)
+            # On cherche l'affaire
+            affaire = Affaire.objects.get(id=planAffaire['affaire_id'])
+            planAffaire_data['affaire'] = model_to_dict(affaire)
+            # On cherche la ville
+            chantier = model_to_dict(Chantier.objects.get(plan_affaire=planAffaire['id']))
+            adresse = Adress.objects.get(id=chantier['id'])
+            planAffaire_data['ville'] = adresse.ville
+            # On cherche le charger
+            charger_affaire = Collaborateurs.objects.get(id=model_to_dict(affaire)['charge'])
+            planAffaire_data['charge_affaire'] = {
+                'nom' : charger_affaire.last_name,
+                'prenom' : charger_affaire.first_name,
+            }
+            # On cherche le client
+            client = Entreprise.objects.get(id=model_to_dict(affaire)['client'])
+            planAffaire_data['client'] = client.raison_sociale
+            # On cherche le batiment
+            batiment = Batiment.objects.get(id=chantier['batiment'])
+            planAffaire_data['batiment'] = batiment.libelle
+
+            data.append(planAffaire_data)
+
+        return Response(data)

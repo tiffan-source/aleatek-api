@@ -8,7 +8,7 @@ from mission.views import MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdm
 from collaborateurs.views import UtilisateurConnecteView, CollaborateursAdminViewsetAdmin
 from entreprise.views import ResponsableAdminViewsetAdmin, EntrepriseAdminViewsetAdmin, GetEntrepriseWithCollaborateur
 from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmin, ProduitAdminViewsetAdmin, \
-    DestinationAdminViewsetAdmin, ChantierAdminViewsetAdmin
+    BatimentAdminViewsetAdmin, ChantierAdminViewsetAdmin, GetPlanAffaireDetail
 from adresse.views import AdressdminViewsetAdmin
 from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin
 
@@ -30,7 +30,7 @@ router.register('admin/intervention/technique', ITAdminViewsetAdmin, basename='a
 
 router.register('admin/adresse', AdressdminViewsetAdmin, basename='admin-adresse')
 
-router.register('admin/destination', DestinationAdminViewsetAdmin, basename='admin-batiment')
+router.register('admin/batiment', BatimentAdminViewsetAdmin, basename='admin-batiment')
 router.register('admin/chantier', ChantierAdminViewsetAdmin, basename='admin-chantier')
 router.register('admin/affaire', AffaireAdminViewsetAdmin, basename='admin-affaoire')
 router.register('admin/planaffaire', PlanAffaireAdminViewsetAdmin, basename='admin-paffaire')
@@ -42,6 +42,7 @@ router.register('admin/collaborateurs', CollaborateursAdminViewsetAdmin, basenam
 urlpatterns = [
 
     path('api/entreprise_and_responsable/', GetEntrepriseWithCollaborateur.as_view()),
+    path('api/detail_plan_affaire/', GetPlanAffaireDetail.as_view()),
 
 
     path('utilisateur-connecte/', UtilisateurConnecteView.as_view(), name='utilisateur_connecte'),

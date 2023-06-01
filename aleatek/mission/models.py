@@ -13,8 +13,8 @@ class Mission(models.Model):
 
 
 class MissionActive(models.Model):
-    id_mission = models.OneToOneField(Mission, on_delete=models.CASCADE)
-    id_affaire = models.OneToOneField(Affaire, on_delete=models.CASCADE)
+    id_mission = models.ForeignKey(Mission, on_delete=models.CASCADE)
+    id_affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
 
 
 class InterventionTechnique(models.Model):

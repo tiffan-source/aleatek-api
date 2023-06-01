@@ -5,6 +5,7 @@ from .models import Mission, MissionActive, InterventionTechnique
 from .permissions import IsAdminAuthenticated
 from .serializers import MissionSerializer, MissionActiveSerializer, InterventionTechniqueSerializer
 from rest_framework.views import APIView
+from Dashbord.models import Affaire, PlanAffaire
 
 
 class MultipleSerializerMixin:
@@ -32,3 +33,7 @@ class ITAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = InterventionTechniqueSerializer
     queryset = InterventionTechnique.objects.all()
     permission_classes = [IsAdminAuthenticated]
+
+class MissionActiveForCurrentAffaire(APIView):
+    def get(self, request, id_plan):
+        pass
