@@ -87,7 +87,7 @@ class Avis(models.Model):
         ('VI', 'VI')]
     id_document = models.ForeignKey(Documents, on_delete=models.CASCADE)
     codification = models.CharField(max_length=23, choices=AVIS)
-    constructeur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
+    collaborateurs = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
 
 
 class RapportVisite(models.Model):

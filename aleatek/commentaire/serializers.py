@@ -1,10 +1,10 @@
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
-from .models import commentaire
+from .models import Commentaire
 
 
 class CommentaireSerializer(ModelSerializer):
     class Meta:
-        model = commentaire
+        model = Commentaire
         fields = '__all__'
 

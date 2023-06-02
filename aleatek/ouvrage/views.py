@@ -129,3 +129,77 @@ class RecupereLensembleDesAvisSurDocument(APIView):
             if affaire_ouvrage.id == affaire_ouvrage_id:
                 TabCodifications.append(avis.codification)
         return Response(TabCodifications)
+
+class GetAllDetailDocument(APIView):
+    def get(self, request, id_affaire):
+        all_document = Documents.objects.all()
+
+        data = []
+
+        for document in all_document:
+            emetteur = document.emetteur
+            if emetteur != None:
+                affaireOuvrage = emetteur.affaire_ouvrage
+                affaireEntreprise = emetteur.affaire_entreprise
+
+                id = affaireOuvrage.id_affaire.id
+                if id == id_affaire:
+                    prepare = model_to_dict(document)
+                    ouvrage = affaireOuvrage.id_ouvrage
+                    print(ouvrage)
+                    entreprise = affaireEntreprise.entreprise
+
+                    prepare['ouvrage'] = model_to_dict(ouvrage)
+                    prepare['entreprise'] = model_to_dict(entreprise)
+
+                    data.append(prepare)
+
+        return Response(data)
+    
+class GetAllDetailDocumentWithIdDoc(APIView):
+    def get(self, request, id_affaire, id_doc):
+        all_document = Documents.objects.all()
+        data = []
+
+        for document in all_document:
+            emetteur = document.emetteur
+            if emetteur is not None:
+                affaireOuvrage = emetteur.affaire_ouvrage
+                affaireEntreprise = emetteur.affaire_entreprise
+
+                id = affaireOuvrage.id_affaire.id
+                if id == id_affaire:
+                    prepare = model_to_dict(document)
+                    ouvrage = affaireOuvrage.id_ouvrage
+                    entreprise = affaireEntreprise.entreprise
+
+                    prepare['ouvrage'] = model_to_dict(ouvrage)
+                    prepare['entreprise'] = model_to_dict(entreprise)
+
+                    data.append(prepare)
+
+        if id_doc is not None:
+            filtered_data = [doc for doc in data if doc['id'] == id_doc]
+            if len(filtered_data) == 0:
+                return Response({'error': 'Document not found'}, status=404)
+            return Response(filtered_data[0])
+        
+        return Response(data)
+
+
+class CheckAvisOnDocumentByCollaborateur(APIView):
+    def get(self, request, id_document, id_collaborateur):
+        all_avis = Avis.objects.all()
+        find = None
+        for avis in all_avis:
+            document = avis.id_document
+            collab = avis.collaborateurs
+            if document.id == id_document and collab.id == id_collaborateur:
+                find = avis
+                break
+
+        if find == None:
+            return Response({'avis' : False})
+        else:
+            return Response({'avis' : model_to_dict(find)})
+        

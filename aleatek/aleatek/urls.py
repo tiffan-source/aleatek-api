@@ -3,7 +3,7 @@ from django.urls import path, include
 from .views import get_csrf_token
 from rest_framework import routers
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from mission.views import MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdmin, ITAdminViewsetAdmin, MissionActiveForCurrentAffaire, VerifyExistITForMissionSignAndCollab, VerifyExistMissionActive
+from mission.views import MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdmin, ITAdminViewsetAdmin, MissionActiveForCurrentAffaire, VerifyExistITForMissionSignAndCollab, VerifyExistMissionActive, AllIntervenantForAffaire, AllMissionForAffaire
 
 from collaborateurs.views import UtilisateurConnecteView, CollaborateursAdminViewsetAdmin, AllCollabAssignToMission
 from entreprise.views import ResponsableAdminViewsetAdmin, EntrepriseAdminViewsetAdmin, GetEntrepriseWithCollaborateur
@@ -12,12 +12,12 @@ from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmi
 from adresse.views import AdressdminViewsetAdmin
 from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin, EntrepriseAffaireOuvrageViewset, GetAllAffaireOuvrageByAffaire, VerifyEntrepriseCollabOnOuvrage, AllEntreprisebAssignToAffaireOuvrage
 
-from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, FichierSerializerAdminViewsetAdmin, RapportVisiteSerializerAdminViewsetAdmin, VerifyExistAffaireOuvrage
+from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, FichierSerializerAdminViewsetAdmin, RapportVisiteSerializerAdminViewsetAdmin, VerifyExistAffaireOuvrage, CheckAvisOnDocumentByCollaborateur
 
-from commentaire.views import CommentaireAdminViewsetAdmin
+from commentaire.views import CommentaireAdminViewsetAdmin, GetAllCommentForAvis
 
 
-from ouvrage.views import RecupereLensembleDesAvisSurDocument
+from ouvrage.views import RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc
 
 router = routers.SimpleRouter()
 router.register('admin/rapport/visite', RapportVisiteSerializerAdminViewsetAdmin, basename='admin-rapport')
@@ -65,10 +65,20 @@ urlpatterns = [
     path('api/verify_entreprise_collab_on_ouvrage/<int:id_entreprise_affaire>/<int:id_ouvrage_affaire>/', VerifyEntrepriseCollabOnOuvrage.as_view()),
 
     path('api/collab_for_mission_sign/<int:id_mission_sign>/', AllCollabAssignToMission.as_view()),
+
+    path('api/all_intervenant/<int:id_affaire>/', AllIntervenantForAffaire.as_view()),
+    path('api/all_mission/<int:id_affaire>/', AllMissionForAffaire.as_view()),
+    
     path('api/entreprise_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', AllEntreprisebAssignToAffaireOuvrage.as_view()),
     path('api/entreprise_collab_affaire/<int:id_affaire>/', GetAllEntrepriseForAffaire.as_view()),
     path('api/entreprise_collab_affaire_detail/<int:id_affaire>/', GetAllEntrepriseDetailForAffaire.as_view()),
 
+    path('api/get_all_detail_document/<int:id_affaire>/', GetAllDetailDocument.as_view()),
+    path('api/get_all_detail_document/<int:id_affaire>/<int:id_doc>/', GetAllDetailDocumentWithIdDoc.as_view()),
+
+    path('api/check_avis_on_document_by_collaborateur/<int:id_document>/<int:id_collaborateur>/', CheckAvisOnDocumentByCollaborateur.as_view()),
+
+    path('api/get_all_comment_for_avis/<int:id_avis>/', GetAllCommentForAvis.as_view()),
 
     path('api/utilisateur-connecte/', UtilisateurConnecteView.as_view(), name='utilisateur_connecte'),
     path('api/get-csrf-token/', get_csrf_token, name='get_csrf_token'),

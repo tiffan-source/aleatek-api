@@ -5,7 +5,7 @@ from ouvrage.models import Avis
 
 # Create your models here.
 
-class commentaire(models.Model):
+class Commentaire(models.Model):
     id_avis = models.ForeignKey(Avis, on_delete=models.CASCADE)
     commentaire = models.CharField(max_length=200)
     a_suivre = models.BooleanField(default=True)
