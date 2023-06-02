@@ -117,7 +117,7 @@ class RapportVisiteSerializerAdminViewsetAdmin(MultipleSerializerMixin, ModelVie
     permission_classes = [IsAdminAuthenticated]
 
 
-class RecupereLensembleDesAvisSurDocument(APIView):
+class RecupereLensembleDesAvisSurOuvrage(APIView):
     def get(self, request, affaire_ouvrage_id):
         aviss = Avis.objects.all()
         TabCodifications = []
@@ -128,4 +128,46 @@ class RecupereLensembleDesAvisSurDocument(APIView):
             print(affaire_ouvrage.id)
             if affaire_ouvrage.id == affaire_ouvrage_id:
                 TabCodifications.append(avis.codification)
-        return Response(TabCodifications)
+        if len(TabCodifications) == 0:
+            return Response({'codification': False})
+        liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
+        unique_liste = list(set(TabCodifications))
+        codification = unique_liste[0]
+
+        for tu in unique_liste:
+            if liste.index(tu) < liste.index(codification):
+                codification = tu
+
+        return Response({'codification': codification})
+
+
+class RecupereLensembleDesAvisSurDocument(APIView):
+    def get(self, request, id_document):
+        aviss = Avis.objects.all()
+        TabCodifications = []
+        for avis in aviss:
+            document = avis.id_document
+            if id_document == document.id:
+                TabCodifications.append(avis.codification)
+        if len(TabCodifications) == 0:
+            return Response({'codification': False})
+        liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
+        unique_liste = list(set(TabCodifications))
+        codification = unique_liste[0]
+
+        for tu in unique_liste:
+            if liste.index(tu) < liste.index(codification):
+                codification = tu
+
+        return Response({'codification': codification})
+
+
+"""
+
+class RecupereLensembleDesAvisSurDocument(APIView):
+    def get(self, request, affaire_ouvrage_id):
+        aviss = Avis.objects.filter(id_document__emetteur__affaire_ouvrage__id=affaire_ouvrage_id)
+        tab_codifications = [avis.codification for avis in aviss]
+        lowest_codification = min(tab_codifications) if tab_codifications else None
+        return Response({'codification': lowest_codification})
+"""

@@ -32,10 +32,13 @@ class Affaire(models.Model):
     numero_contrat = models.IntegerField
     libelle_contrat = models.CharField(max_length=100, default='', blank=True)
     date_contrat = models.DateField()
-    client = models.ForeignKey(Entreprise, on_delete=models.CASCADE, null=True) # Retirer null
-    charge = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairecharge', null=True)
-    assistant = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffaireassistant', null=True)
+    client = models.ForeignKey(Entreprise, on_delete=models.CASCADE, null=True)  # Retirer null
+    charge = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairecharge',
+                               null=True)
+    assistant = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffaireassistant',
+                                  null=True)
     chef = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairechef', null=True)
+
 
 class PlanAffaire(models.Model):
     RISQUES = [
@@ -54,7 +57,7 @@ class PlanAffaire(models.Model):
         ('VT', 'VT')
     ]
 
-    TYPES_MONTANT= [
+    TYPES_MONTANT = [
         ('HT', 'HT'),
         ('TTC', 'TTC')
     ]
@@ -73,12 +76,13 @@ class PlanAffaire(models.Model):
     visite = models.IntegerField()
     doc = models.IntegerField()
 
+
 class Chantier(models.Model):
     batiment = models.ForeignKey(Batiment, on_delete=models.CASCADE)
     plan_affaire = models.OneToOneField(PlanAffaire, on_delete=models.CASCADE)
     adresse = models.OneToOneField(Adress, models.CASCADE)
 
+
 class EntrepriseAffaire(models.Model):
     entreprise = models.ForeignKey(Entreprise, on_delete=models.CASCADE, null=True)
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
-

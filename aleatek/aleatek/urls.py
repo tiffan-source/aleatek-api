@@ -3,21 +3,29 @@ from django.urls import path, include
 from .views import get_csrf_token
 from rest_framework import routers
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from mission.views import MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdmin, ITAdminViewsetAdmin, MissionActiveForCurrentAffaire, VerifyExistITForMissionSignAndCollab, VerifyExistMissionActive
+from mission.views import MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdmin, ITAdminViewsetAdmin, \
+    MissionActiveForCurrentAffaire, VerifyExistITForMissionSignAndCollab, VerifyExistMissionActive
 
 from collaborateurs.views import UtilisateurConnecteView, CollaborateursAdminViewsetAdmin, AllCollabAssignToMission
 from entreprise.views import ResponsableAdminViewsetAdmin, EntrepriseAdminViewsetAdmin, GetEntrepriseWithCollaborateur
 from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmin, ProduitAdminViewsetAdmin, \
-    BatimentAdminViewsetAdmin, ChantierAdminViewsetAdmin, GetPlanAffaireDetail, EntrepriseAffaireViewsetAdmin, GetAllEntrepriseForAffaire, GetAllEntrepriseDetailForAffaire
+    BatimentAdminViewsetAdmin, ChantierAdminViewsetAdmin, GetPlanAffaireDetail, EntrepriseAffaireViewsetAdmin, \
+    GetAllEntrepriseForAffaire, GetAllEntrepriseDetailForAffaire
 from adresse.views import AdressdminViewsetAdmin
-from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin, EntrepriseAffaireOuvrageViewset, GetAllAffaireOuvrageByAffaire, VerifyEntrepriseCollabOnOuvrage, AllEntreprisebAssignToAffaireOuvrage
+from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin, \
+    EntrepriseAffaireOuvrageViewset, GetAllAffaireOuvrageByAffaire, VerifyEntrepriseCollabOnOuvrage, \
+    AllEntreprisebAssignToAffaireOuvrage
 
-from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, FichierSerializerAdminViewsetAdmin, RapportVisiteSerializerAdminViewsetAdmin, VerifyExistAffaireOuvrage
+from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, \
+    FichierSerializerAdminViewsetAdmin, RapportVisiteSerializerAdminViewsetAdmin, VerifyExistAffaireOuvrage
 
 from commentaire.views import CommentaireAdminViewsetAdmin
 
-
 from ouvrage.views import RecupereLensembleDesAvisSurDocument
+
+from ouvrage.views import RecupereLensembleDesAvisSurOuvrage
+
+# from ouvrage.views import CodificationplusBas
 
 router = routers.SimpleRouter()
 router.register('admin/rapport/visite', RapportVisiteSerializerAdminViewsetAdmin, basename='admin-rapport')
@@ -36,7 +44,8 @@ router.register('admin/adresse', AdressdminViewsetAdmin, basename='admin-adresse
 
 router.register('admin/batiment', BatimentAdminViewsetAdmin, basename='admin-batiment')
 router.register('admin/entreprise_affaire', EntrepriseAffaireViewsetAdmin, basename='admin-entrepriseaffaire')
-router.register('admin/entreprise_affaire_ouvrage', EntrepriseAffaireOuvrageViewset, basename='admin-entrepriseaffaireouvrage')
+router.register('admin/entreprise_affaire_ouvrage', EntrepriseAffaireOuvrageViewset,
+                basename='admin-entrepriseaffaireouvrage')
 router.register('admin/chantier', ChantierAdminViewsetAdmin, basename='admin-chantier')
 router.register('admin/affaire', AffaireAdminViewsetAdmin, basename='admin-affaoire')
 router.register('admin/planaffaire', PlanAffaireAdminViewsetAdmin, basename='admin-paffaire')
@@ -46,29 +55,35 @@ router.register('admin/entreprise', EntrepriseAdminViewsetAdmin, basename='admin
 router.register('admin/collaborateurs', CollaborateursAdminViewsetAdmin, basename='admin-collab')
 
 urlpatterns = [
-
-    path('api/documents/avis/<int:affaire_ouvrage_id>/', RecupereLensembleDesAvisSurDocument.as_view(), name='recuperer_avis_document'),
+    #    path('codification/plusbas/', CodificationplusBas.as_view(), name='codification_plus_bas'),
+    path('api/documents/avis/<int:affaire_ouvrage_id>/', RecupereLensembleDesAvisSurDocument.as_view(),
+         name='recuperer_avis_document'),
 
     path('api/entreprise_and_responsable/', GetEntrepriseWithCollaborateur.as_view()),
     path('api/entreprise_and_responsable/<int:id_entreprise>/', GetEntrepriseWithCollaborateur.as_view()),
-    
+
     path('api/detail_plan_affaire/', GetPlanAffaireDetail.as_view()),
     path('api/mission_sign/<int:id_plan>/', MissionActiveForCurrentAffaire.as_view()),
 
     path('api/get_ouvrage_affaire/<int:id_affaire>/', GetAllAffaireOuvrageByAffaire.as_view()),
 
-    path('api/it_mission_collab/<int:id_collab>/<int:id_mission_sign>/', VerifyExistITForMissionSignAndCollab.as_view()),
+    path('api/it_mission_collab/<int:id_collab>/<int:id_mission_sign>/',
+         VerifyExistITForMissionSignAndCollab.as_view()),
     path('api/mission_affaire/<int:id_affaire>/<int:id_mission>/', VerifyExistMissionActive.as_view()),
-    
+
     path('api/ouvrage_affaire/<int:id_affaire>/<int:id_ouvrage>/', VerifyExistAffaireOuvrage.as_view()),
 
-    path('api/verify_entreprise_collab_on_ouvrage/<int:id_entreprise_affaire>/<int:id_ouvrage_affaire>/', VerifyEntrepriseCollabOnOuvrage.as_view()),
+    path('api/verify_entreprise_collab_on_ouvrage/<int:id_entreprise_affaire>/<int:id_ouvrage_affaire>/',
+         VerifyEntrepriseCollabOnOuvrage.as_view()),
 
     path('api/collab_for_mission_sign/<int:id_mission_sign>/', AllCollabAssignToMission.as_view()),
-    path('api/entreprise_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', AllEntreprisebAssignToAffaireOuvrage.as_view()),
+    path('api/entreprise_for_affaire_ouvrage/<int:id_affaire_ouvrage>/',
+         AllEntreprisebAssignToAffaireOuvrage.as_view()),
     path('api/entreprise_collab_affaire/<int:id_affaire>/', GetAllEntrepriseForAffaire.as_view()),
     path('api/entreprise_collab_affaire_detail/<int:id_affaire>/', GetAllEntrepriseDetailForAffaire.as_view()),
 
+    path('affaire-ouvrage/<int:affaire_ouvrage_id>/avis/', RecupereLensembleDesAvisSurOuvrage.as_view(),
+         name='recuperer_avis'),
 
     path('api/utilisateur-connecte/', UtilisateurConnecteView.as_view(), name='utilisateur_connecte'),
     path('api/get-csrf-token/', get_csrf_token, name='get_csrf_token'),
