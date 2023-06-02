@@ -16,6 +16,9 @@ from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdm
 
 from commentaire.views import CommentaireAdminViewsetAdmin
 
+
+from ouvrage.views import RecupereLensembleDesAvisSurDocument
+
 router = routers.SimpleRouter()
 router.register('admin/rapport/visite', RapportVisiteSerializerAdminViewsetAdmin, basename='admin-rapport')
 router.register('admin/commentaire', CommentaireAdminViewsetAdmin, basename='admin=commentaire')
@@ -43,6 +46,8 @@ router.register('admin/entreprise', EntrepriseAdminViewsetAdmin, basename='admin
 router.register('admin/collaborateurs', CollaborateursAdminViewsetAdmin, basename='admin-collab')
 
 urlpatterns = [
+
+    path('api/documents/avis/<int:affaire_ouvrage_id>/', RecupereLensembleDesAvisSurDocument.as_view(), name='recuperer_avis_document'),
 
     path('api/entreprise_and_responsable/', GetEntrepriseWithCollaborateur.as_view()),
     path('api/entreprise_and_responsable/<int:id_entreprise>/', GetEntrepriseWithCollaborateur.as_view()),

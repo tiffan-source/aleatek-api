@@ -1,7 +1,9 @@
+from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.viewsets import ModelViewSet
-from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache, EntrepriseAffaireOuvrage, RapportVisite
+from rest_framework.viewsets import ModelViewSet, ViewSet
+from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache, EntrepriseAffaireOuvrage, \
+    RapportVisite
 from .permissions import IsAdminAuthenticated
 from .serializers import AsoSerializer, OuvrageSerializer, DocumentSerializer, FichierAttacheSerializer, \
     AvisSerializer, AffaireOuvrageSerializer, EntrepriseAffaireOuvrageSerializer, RapportVisiteSerializer
@@ -55,18 +57,21 @@ class FichierSerializerAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     queryset = FichierAttache.objects.all()
     permission_classes = [IsAdminAuthenticated]
 
+
 class EntrepriseAffaireOuvrageViewset(MultipleSerializerMixin, ModelViewSet):
     serializer_class = EntrepriseAffaireOuvrageSerializer
     queryset = EntrepriseAffaireOuvrage.objects.all()
     permission_classes = [IsAdminAuthenticated]
 
+
 class VerifyExistAffaireOuvrage(APIView):
     def get(self, request, id_affaire, id_ouvrage):
         try:
             AffaireOuvrage.objects.get(id_affaire=id_affaire, id_ouvrage=id_ouvrage)
-            return Response({'check' : True})
+            return Response({'check': True})
         except:
-            return Response({'check' : False})
+            return Response({'check': False})
+
 
 class GetAllAffaireOuvrageByAffaire(APIView):
     def get(self, request, id_affaire):
@@ -80,17 +85,21 @@ class GetAllAffaireOuvrageByAffaire(APIView):
             data.append(final_data)
         return Response(data)
 
+
 class VerifyEntrepriseCollabOnOuvrage(APIView):
     def get(self, request, id_entreprise_affaire, id_ouvrage_affaire):
         try:
-            EntrepriseAffaireOuvrage.objects.get(affaire_ouvrage=id_ouvrage_affaire, affaire_entreprise=id_entreprise_affaire)
-            return Response({'check' : True})
+            EntrepriseAffaireOuvrage.objects.get(affaire_ouvrage=id_ouvrage_affaire,
+                                                 affaire_entreprise=id_entreprise_affaire)
+            return Response({'check': True})
         except:
-            return Response({'check' : False})
-        
+            return Response({'check': False})
+
+
 class AllEntreprisebAssignToAffaireOuvrage(APIView):
     def get(self, request, id_affaire_ouvrage):
-        entreprise_affaire_ouvrage = EntrepriseAffaireOuvrage.objects.filter(affaire_ouvrage = id_affaire_ouvrage).values()
+        entreprise_affaire_ouvrage = EntrepriseAffaireOuvrage.objects.filter(
+            affaire_ouvrage=id_affaire_ouvrage).values()
         data = []
         for e_a_o in entreprise_affaire_ouvrage:
             final = dict(e_a_o)
@@ -101,7 +110,22 @@ class AllEntreprisebAssignToAffaireOuvrage(APIView):
 
         return Response(data)
 
+
 class RapportVisiteSerializerAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = RapportVisiteSerializer
     queryset = RapportVisite.objects.all()
     permission_classes = [IsAdminAuthenticated]
+
+
+class RecupereLensembleDesAvisSurDocument(APIView):
+    def get(self, request, affaire_ouvrage_id):
+        aviss = Avis.objects.all()
+        TabCodifications = []
+        for avis in aviss:
+            document = avis.id_document
+            entreprise_affaire_ouvrage = document.emetteur
+            affaire_ouvrage = entreprise_affaire_ouvrage.affaire_ouvrage
+            print(affaire_ouvrage.id)
+            if affaire_ouvrage.id == affaire_ouvrage_id:
+                TabCodifications.append(avis.codification)
+        return Response(TabCodifications)
