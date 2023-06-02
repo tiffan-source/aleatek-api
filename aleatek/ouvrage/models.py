@@ -56,21 +56,20 @@ class Documents(models.Model):
     dossier = models.CharField(max_length=200, default='Execution', choices=(('Execution', 'Execution'),
                                                                              ('Conception', 'Conception')))
     nature = models.CharField(choices=Nature, max_length=30)
-    indice = models.IntegerField()
+    indice = models.CharField(max_length=5)
     date_indice = models.DateField()
     date_reception = models.DateField()
     titre = models.CharField(max_length=100)
     numero_revision = models.IntegerField()
+    numero_externe = models.IntegerField(blank=True, null=True)
     emetteur = models.ForeignKey(EntrepriseAffaireOuvrage, on_delete=models.CASCADE, null=True)#Must be change
 
 
 class FichierAttache(models.Model):
-    prioritaire = models.BooleanField(default=False)
-    nom_fichier = models.CharField(max_length=250)
+    nom = models.CharField(max_length=250)
     fichier = models.FileField(upload_to='fichierattachedocument')
-    cree_le = models.DateField()
-    action = models.BooleanField(default=False)
-    document_attache = models.ForeignKey(Documents, on_delete=models.CASCADE)
+    date = models.DateField()
+    document = models.ForeignKey(Documents, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nom_fichier
