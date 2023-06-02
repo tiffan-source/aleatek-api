@@ -88,3 +88,10 @@ class EntrepriseAffaireOuvrage(models.Model):
     affaire_ouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
     affaire_entreprise = models.ForeignKey(EntrepriseAffaire, on_delete=models.CASCADE)
 
+class RapportVisite(models.Model):
+    date = models.DateField()
+    redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
+    affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
+
+
+
