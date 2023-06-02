@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
-from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache
+from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache, EntrepriseAffaireOuvrage
 
 
 class AsoSerializer(ModelSerializer):
@@ -39,3 +39,7 @@ class FichierAttacheSerializer(ModelSerializer):
         fields = '__all__'
 
 
+class EntrepriseAffaireOuvrageSerializer(ModelSerializer):
+    class Meta:
+        model = EntrepriseAffaireOuvrage
+        fields = '__all__'

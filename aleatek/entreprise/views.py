@@ -6,6 +6,7 @@ from .permissions import IsAdminAuthenticated
 from .serializers import ResponsableSerializer
 from rest_framework.views import APIView
 from adresse.models import Adress
+from django.forms.models import model_to_dict
 
 class MultipleSerializerMixin:
     detail_serializer_class = None
@@ -31,10 +32,12 @@ class EntrepriseAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     permission_classes = [IsAdminAuthenticated]
 
 class GetEntrepriseWithCollaborateur(APIView):
-    def get(self, request):
-        entreprises = Entreprise.objects.all().values()
-        data = []
-        for entreprise in entreprises:
+    def get(self, request, id_entreprise=None):
+        if id_entreprise is not None:
+            entreprise = Entreprise.objects.filter(id=id_entreprise).values().first()
+            if entreprise is None:
+                return Response({'message': 'Entreprise non trouvée'}, status=status.HTTP_404_NOT_FOUND)
+            
             entreprise_data = {
                 'id': entreprise['id'],
                 'raison_sociale': entreprise['raison_sociale'],
@@ -43,16 +46,39 @@ class GetEntrepriseWithCollaborateur(APIView):
                 'adresse': {}
             }
             adresse = Adress.objects.get(id=entreprise['adresse_id'])
-            entreprise_data['adresse'] = {
-                'ville': adresse.ville,
-            }
+            entreprise_data['adresse'] = model_to_dict(adresse)
             responsables = Responsable.objects.filter(entreprise_id=entreprise['id']).values()
             entreprise_data['responsables'] = []
             for responsable in responsables:
                 entreprise_data['responsables'].append({
                     'nom': responsable['nom'],
                     'prenom': responsable['prenom'],
+                    'email' : responsable['email']
                 })
-            data.append(entreprise_data)
+            
+            return Response(entreprise_data)
+        
+        else:
+            entreprises = Entreprise.objects.all().values()
+            data = []
+            for entreprise in entreprises:
+                entreprise_data = {
+                    'id': entreprise['id'],
+                    'raison_sociale': entreprise['raison_sociale'],
+                    'siret': entreprise['siret'],
+                    'activite': entreprise['activite'],
+                    'adresse': {}
+                }
+                adresse = Adress.objects.get(id=entreprise['adresse_id'])
+                entreprise_data['adresse'] = model_to_dict(adresse)
+                responsables = Responsable.objects.filter(entreprise_id=entreprise['id']).values()
+                entreprise_data['responsables'] = []
+                for responsable in responsables:
+                    entreprise_data['responsables'].append({
+                        'nom': responsable['nom'],
+                        'prenom': responsable['prenom'],
+                        'email' : responsable['email']
+                    })
+                data.append(entreprise_data)
 
-        return Response(data)
+            return Response(data)

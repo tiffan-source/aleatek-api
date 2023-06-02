@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
-from .models import PlanAffaire, Produit, Affaire, Chantier, Batiment
+from .models import PlanAffaire, Produit, Affaire, Chantier, Batiment, EntrepriseAffaire
 
 
 class ProduitSerializer(ModelSerializer):
@@ -30,4 +30,9 @@ class ChantierSerializer(ModelSerializer):
 class BatimentSerializer(ModelSerializer):
     class Meta:
         model = Batiment
+        fields = '__all__'
+
+class EntrepriseAffaireSerializer(ModelSerializer):
+    class Meta:
+        model = EntrepriseAffaire
         fields = '__all__'

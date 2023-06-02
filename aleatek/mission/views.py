@@ -6,6 +6,7 @@ from .permissions import IsAdminAuthenticated
 from .serializers import MissionSerializer, MissionActiveSerializer, InterventionTechniqueSerializer
 from rest_framework.views import APIView
 from Dashbord.models import Affaire, PlanAffaire
+from django.forms.models import model_to_dict
 
 
 class MultipleSerializerMixin:
@@ -36,4 +37,25 @@ class ITAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
 
 class MissionActiveForCurrentAffaire(APIView):
     def get(self, request, id_plan):
-        pass
+        plan_aff = PlanAffaire.objects.get(id=id_plan)
+
+        all_mission_active = MissionActive.objects.filter(id_affaire=plan_aff.affaire).values()
+
+        return Response(list(all_mission_active))
+    
+class VerifyExistITForMissionSignAndCollab(APIView):
+    def get(self, request, id_collab, id_mission_sign):
+        try:
+            InterventionTechnique.objects.get(id_mission_active=id_mission_sign, id_collaborateur=id_collab)
+            return Response({'check' : True})
+        except:        
+            return Response({'check' : False})
+        
+class VerifyExistMissionActive(APIView):
+    def get(self, request, id_affaire, id_mission):
+        try:
+            MissionActive.objects.get(id_mission=id_mission, id_affaire=id_affaire)
+            return Response({'check' : True})
+        except:        
+            return Response({'check' : False})
+        

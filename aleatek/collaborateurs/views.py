@@ -5,7 +5,8 @@ from .models import Collaborateurs
 from .permissions import IsAdminAuthenticated
 from .serializers import ColaboratteursSerializer
 from rest_framework.views import APIView
-
+from mission.models import InterventionTechnique
+from django.forms.models import model_to_dict
 
 class MultipleSerializerMixin:
     detail_serializer_class = None
@@ -31,3 +32,20 @@ class UtilisateurConnecteView(APIView):
             'id': user.id
         }
         return Response(data)
+    
+class AllCollabAssignToMission(APIView):
+    def get(self, request, id_mission_sign):
+        collab_data_to_retrieve = InterventionTechnique.objects.filter(id_mission_active=id_mission_sign).values()
+        data = []
+        for collab in collab_data_to_retrieve:
+            collab_data = dict(collab)
+            # On cherche le collaborateur
+            collab = Collaborateurs.objects.get(id=collab_data['id_collaborateur_id'])
+            collab_data['collaborateur'] = {
+                'nom' : collab.last_name,
+                'prenom' : collab.first_name,
+            }
+            data.append(collab_data)
+
+        return Response(data)
+

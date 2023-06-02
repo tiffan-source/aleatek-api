@@ -77,3 +77,8 @@ class Chantier(models.Model):
     batiment = models.ForeignKey(Batiment, on_delete=models.CASCADE)
     plan_affaire = models.OneToOneField(PlanAffaire, on_delete=models.CASCADE)
     adresse = models.OneToOneField(Adress, models.CASCADE)
+
+class EntrepriseAffaire(models.Model):
+    entreprise = models.ForeignKey(Entreprise, on_delete=models.CASCADE, null=True)
+    affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
+

@@ -1,10 +1,10 @@
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
-from .models import Produit, PlanAffaire, Affaire, Batiment, Chantier
+from .models import Produit, PlanAffaire, Affaire, Batiment, Chantier, EntrepriseAffaire
 from .permissions import IsAdminAuthenticated
 from .serializers import AffaireSerializer, ProduitSerializer, PlanAffaireSerializer, BatimentSerializer, \
-    ChantierSerializer
+    ChantierSerializer, EntrepriseAffaireSerializer
 from rest_framework.views import APIView
 from adresse.models import Adress
 from collaborateurs.models import Collaborateurs
@@ -51,6 +51,13 @@ class ChantierAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     queryset = Chantier.objects.all()
     permission_classes = [IsAdminAuthenticated]
 
+class EntrepriseAffaireViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
+    serializer_class = EntrepriseAffaireSerializer
+    queryset = EntrepriseAffaire.objects.all()
+    permission_classes = [IsAdminAuthenticated]
+
+
+
 class GetPlanAffaireDetail(APIView):
     def get(self, request):
         planAffaires = PlanAffaire.objects.all().values()
@@ -79,4 +86,26 @@ class GetPlanAffaireDetail(APIView):
 
             data.append(planAffaire_data)
 
+        return Response(data)
+
+class GetAllEntrepriseForAffaire(APIView):
+    def get(self, request, id_affaire):
+        entreprises = EntrepriseAffaire.objects.filter(affaire=id_affaire)
+        data = []
+        for entreprise in entreprises:
+            data.append(model_to_dict(entreprise.entreprise)['id'])
+        
+        return Response(data)
+
+
+class GetAllEntrepriseDetailForAffaire(APIView):
+    def get(self, request, id_affaire):
+        entreprises = EntrepriseAffaire.objects.filter(affaire=id_affaire).values()
+        data = []
+        for entreprise in entreprises:
+            final = dict(entreprise)
+            detailEntreprise = Entreprise.objects.get(id=entreprise['entreprise_id'])
+            final['entreprise'] = model_to_dict(detailEntreprise)
+            data.append(final)
+        
         return Response(data)

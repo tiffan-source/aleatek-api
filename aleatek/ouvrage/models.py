@@ -1,8 +1,7 @@
 from django.db import models
 
-from Dashbord.models import Affaire
+from Dashbord.models import Affaire, EntrepriseAffaire
 from collaborateurs.models import Collaborateurs
-
 
 # Create your models here.
 
@@ -20,8 +19,8 @@ class AffaireOuvrage(models.Model):
     ]
     id_affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
     id_ouvrage = models.ForeignKey(Ouvrage, on_delete=models.CASCADE)
-    validateur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
-    statut = models.CharField(max_length=10, choices=ETAPES)
+    validateur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, null=True)
+    statut = models.CharField(max_length=10, choices=ETAPES, default=0)
 
 
 class Aso(models.Model):
@@ -84,3 +83,8 @@ class Avis(models.Model):
     id_document = models.ForeignKey(Documents, on_delete=models.CASCADE)
     codification = models.CharField(max_length=23, choices=AVIS)
     constructeur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
+
+class EntrepriseAffaireOuvrage(models.Model):
+    affaire_ouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
+    affaire_entreprise = models.ForeignKey(EntrepriseAffaire, on_delete=models.CASCADE)
+

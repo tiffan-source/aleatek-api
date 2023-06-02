@@ -18,5 +18,7 @@ class MissionActive(models.Model):
 
 
 class InterventionTechnique(models.Model):
-    id_mission_active = models.OneToOneField(MissionActive, on_delete=models.CASCADE)
-    id_collaborateur = models.OneToOneField(Collaborateurs, on_delete=models.CASCADE)
+    affecteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='ITAffecteur')
+    date = models.DateField()
+    id_mission_active = models.ForeignKey(MissionActive, on_delete=models.CASCADE)
+    id_collaborateur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='ITAffecter')
