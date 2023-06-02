@@ -27,6 +27,10 @@ class Aso(models.Model):
     redacteur = models.OneToOneField(Collaborateurs, on_delete=models.CASCADE)
     affaireouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
 
+class EntrepriseAffaireOuvrage(models.Model):
+    affaire_ouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
+    affaire_entreprise = models.ForeignKey(EntrepriseAffaire, on_delete=models.CASCADE)
+
 
 class Documents(models.Model):
     Nature = [
@@ -57,7 +61,7 @@ class Documents(models.Model):
     date_reception = models.DateField()
     titre = models.CharField(max_length=100)
     numero_revision = models.IntegerField()
-    affaireouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
+    emetteur = models.ForeignKey(EntrepriseAffaireOuvrage, on_delete=models.CASCADE, null=True)#Must be change
 
 
 class FichierAttache(models.Model):
@@ -84,9 +88,6 @@ class Avis(models.Model):
     codification = models.CharField(max_length=23, choices=AVIS)
     constructeur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
 
-class EntrepriseAffaireOuvrage(models.Model):
-    affaire_ouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
-    affaire_entreprise = models.ForeignKey(EntrepriseAffaire, on_delete=models.CASCADE)
 
 class RapportVisite(models.Model):
     date = models.DateField()
