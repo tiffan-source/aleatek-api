@@ -1,3 +1,4 @@
 aleatek/db.sqlite3
 f
 aleatek/**/__pycache__/
+aleatek/media/fichierattachedocument/*
