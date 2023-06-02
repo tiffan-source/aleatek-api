@@ -3,6 +3,7 @@ from django.db import models
 from Dashbord.models import Affaire, EntrepriseAffaire
 from collaborateurs.models import Collaborateurs
 
+
 # Create your models here.
 
 
@@ -26,6 +27,7 @@ class AffaireOuvrage(models.Model):
 class Aso(models.Model):
     redacteur = models.OneToOneField(Collaborateurs, on_delete=models.CASCADE)
     affaireouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
+
 
 class EntrepriseAffaireOuvrage(models.Model):
     affaire_ouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
@@ -92,6 +94,3 @@ class RapportVisite(models.Model):
     date = models.DateField()
     redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
-
-
-
