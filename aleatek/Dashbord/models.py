@@ -18,7 +18,6 @@ class Produit(models.Model):
 class Batiment(models.Model):
     libelle = models.CharField(max_length=50)
 
-
 class Affaire(models.Model):
     STATUS = [
         ('En cours', 'En cours'),
@@ -65,7 +64,7 @@ class PlanAffaire(models.Model):
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
     numero = models.IntegerField()
     risque = models.CharField(max_length=20, choices=RISQUES)
-    libelle = models.CharField(max_length=50)
+    libelle = models.CharField(max_length=50, null=True, blank=True)
     devise = models.CharField(max_length=10, choices=DEVISE)
     type = models.CharField(max_length=10, choices=TYPES_AFFAIRES)
     type_montant = models.CharField(max_length=10, choices=TYPES_MONTANT, default='HT')

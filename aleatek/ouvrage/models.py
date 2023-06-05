@@ -4,9 +4,6 @@ from Dashbord.models import Affaire, EntrepriseAffaire
 from collaborateurs.models import Collaborateurs
 
 
-# Create your models here.
-
-
 class Ouvrage(models.Model):
     libelle = models.CharField(max_length=200)
 
@@ -16,7 +13,6 @@ class AffaireOuvrage(models.Model):
         (0, 'En cours'),
         (1, 'Accepté'),
         (2, 'Classé'),
-        (4, 'diffusé')
     ]
     id_affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
     id_ouvrage = models.ForeignKey(Ouvrage, on_delete=models.CASCADE)
@@ -25,7 +21,15 @@ class AffaireOuvrage(models.Model):
 
 
 class Aso(models.Model):
-    redacteur = models.OneToOneField(Collaborateurs, on_delete=models.CASCADE)
+    ETAPES = [
+        (0, 'En cours'),
+        (1, 'Accepté'),
+        (2, 'Classé'),
+        (3, 'Diffuse'),
+    ]
+    date = models.DateField()
+    statut = models.CharField(max_length=10, choices=ETAPES, default=0)
+    redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, null=True)
     affaireouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
 
 
@@ -89,8 +93,3 @@ class Avis(models.Model):
     codification = models.CharField(max_length=23, choices=AVIS)
     collaborateurs = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
 
-
-class RapportVisite(models.Model):
-    date = models.DateField()
-    redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
-    affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)

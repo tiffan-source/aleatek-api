@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django_seed',
     'mission',
     'ouvrage',
-    'commentaire'
+    'commentaire',
+    'rapport_visite'
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # new

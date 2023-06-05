@@ -46,7 +46,7 @@ class CustomUserManager(BaseUserManager):
 
 class Collaborateurs(AbstractUser):
     email = models.EmailField(unique=True)
-    telephone = PhoneNumberField()
+    telephone = models.CharField(max_length=15)
     address = models.OneToOneField(Adress, on_delete=models.CASCADE, null=True)
 
     USERNAME_FIELD = 'email'

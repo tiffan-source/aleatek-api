@@ -109,3 +109,16 @@ class GetAllEntrepriseDetailForAffaire(APIView):
             data.append(final)
         
         return Response(data)
+
+class FindChargeAffaireForAffaire(APIView):
+    def get(self, requet, id_affaire):
+        try:
+            affaire = Affaire.objects.get(id=id_affaire)
+            charge = {
+                'id' : affaire.charge.id,
+                'prenom' : affaire.charge.first_name,
+                'nom' : affaire.charge.last_name
+            }
+            return Response(charge)
+        except:
+            return Response({"not found" : True})

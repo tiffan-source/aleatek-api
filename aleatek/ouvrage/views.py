@@ -2,16 +2,16 @@ from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet, ViewSet
-from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache, EntrepriseAffaireOuvrage, \
-    RapportVisite
+from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache, EntrepriseAffaireOuvrage
 from .permissions import IsAdminAuthenticated
 from .serializers import AsoSerializer, OuvrageSerializer, DocumentSerializer, FichierAttacheSerializer, \
-    AvisSerializer, AffaireOuvrageSerializer, EntrepriseAffaireOuvrageSerializer, RapportVisiteSerializer
+    AvisSerializer, AffaireOuvrageSerializer, EntrepriseAffaireOuvrageSerializer
 from rest_framework.views import APIView
 from django.forms.models import model_to_dict
 from entreprise.models import Entreprise
 from Dashbord.models import EntrepriseAffaire
-
+from mission.models import  MissionActive
+from commentaire.models import Commentaire
 
 class MultipleSerializerMixin:
     detail_serializer_class = None
@@ -111,17 +111,13 @@ class AllEntreprisebAssignToAffaireOuvrage(APIView):
         return Response(data)
 
 
-class RapportVisiteSerializerAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
-    serializer_class = RapportVisiteSerializer
-    queryset = RapportVisite.objects.all()
-    permission_classes = [IsAdminAuthenticated]
-
 
 class RecupereLensembleDesAvisSurOuvrage(APIView):
     def get(self, request, affaire_ouvrage_id):
         aviss = Avis.objects.all()
         TabCodifications = []
         for avis in aviss:
+            print(avis.id)
             document = avis.id_document
             entreprise_affaire_ouvrage = document.emetteur
             affaire_ouvrage = entreprise_affaire_ouvrage.affaire_ouvrage
@@ -131,6 +127,7 @@ class RecupereLensembleDesAvisSurOuvrage(APIView):
 
         if len(TabCodifications) == 0:
             return Response({'codification': False})
+
         liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
         unique_liste = list(set(TabCodifications))
         codification = unique_liste[0]
@@ -238,10 +235,137 @@ class RecupereLensembleDesAvisSurDocument(APIView):
 
 class GetAffaireOuvrageFromDocument(APIView):
     def get(self, request, id_doc):
-        doc = Documents.objects.get(id=id_doc)
+        try:
+            doc = Documents.objects.get(id=id_doc)
+            entreprise_affaire_ouvrage = doc.emetteur
 
-        entreprise_affaire_ouvrage = doc.emetteur
+            affaire_ouvrage = entreprise_affaire_ouvrage.affaire_ouvrage
 
-        affaire_ouvrage = entreprise_affaire_ouvrage.affaire_ouvrage
+            return Response(model_to_dict(affaire_ouvrage))
+        except:
+            return Response({'not found' : True})
 
-        return Response(model_to_dict(affaire_ouvrage))
+class GetAllDetailAsoForAffaire(APIView):
+    def get(self, request, id_affaire):
+        all_aso = Aso.objects.all()
+
+        data = []
+
+        for aso in all_aso:
+            affaire = aso.affaireouvrage.id_affaire
+            if affaire.id == id_affaire:
+                prepare = model_to_dict(aso)
+                prepare['ouvrage'] = model_to_dict(aso.affaireouvrage.id_ouvrage)
+                data.append(prepare)
+        
+        return Response(data)
+    
+class GetAllDetailAsoForAffaireOneVersion(APIView):
+    def get(self, request, id_aso):
+        try:
+            aso = Aso.objects.get(id=id_aso)
+            data = model_to_dict(aso)
+            data['ouvrage'] = model_to_dict(aso.affaireouvrage.id_ouvrage)
+            return Response(data)
+        except:
+            return Response({'not found' : True})
+
+class GetAllDetailDocumentForAffaireOuvrage(APIView):
+    def get(self, request, id_affaire_ouvrage):
+        all_doc = Documents.objects.all();
+
+        data = []
+        for doc in all_doc:
+            if doc.emetteur != None:
+                affaire_ouvrage = doc.emetteur.affaire_ouvrage
+                if affaire_ouvrage.id == id_affaire_ouvrage:
+                    prepare = model_to_dict(doc)
+                    prepare['ouvrage'] = model_to_dict(doc.emetteur.affaire_ouvrage.id_ouvrage)
+                    prepare['entreprise'] = model_to_dict(doc.emetteur.affaire_entreprise.entreprise)
+                    data.append(prepare)
+        return Response(data)
+    
+class GenerateDataForAso(APIView):
+    def get(self, request, id_aso):
+        try:
+            aso = Aso.objects.get(id=id_aso)
+
+            data = {}
+
+            # Donne de l'aso
+
+            data['aso'] = model_to_dict(aso)
+
+            # Donne de l'affaire
+
+            data['affaire'] = model_to_dict(aso.affaireouvrage.id_affaire)
+
+            # Donne ouvrage
+
+            data['ouvrage'] = model_to_dict(aso.affaireouvrage.id_ouvrage)
+
+            # Donne du charge d'affaire
+
+            charge = aso.affaireouvrage.id_affaire.charge
+
+            data['charge'] = model_to_dict(charge)
+            data['charge']['adresse'] = model_to_dict(charge.address)
+
+            # Donne de l'entreprise
+
+            entreprise = aso.affaireouvrage.id_affaire.client
+
+            data['client'] = model_to_dict(entreprise)
+            data['client']['adresse'] = model_to_dict(entreprise.adresse)
+
+            # All mission
+
+            data['mission'] = []
+            id_affaire = entreprise = aso.affaireouvrage.id_affaire.id
+
+            all_mission = MissionActive.objects.filter(id_affaire=id_affaire)
+
+            for mission in all_mission:
+                data['mission'].append(model_to_dict(mission.id_mission))
+
+            # Data about document
+
+            data['documents'] = []
+            
+            all_entreprise_affaire_ouvrage = EntrepriseAffaireOuvrage.objects.filter(affaire_ouvrage=aso.affaireouvrage)
+            all_document = Documents.objects.all()
+            all_commentaire = Commentaire.objects.all()
+            aviss = Avis.objects.all()
+            liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
+
+
+            for document in all_document:
+                for e_a_o in all_entreprise_affaire_ouvrage:
+                    if document.emetteur != None and document.emetteur.id == e_a_o.id:
+                        prepare = {}
+                        prepare['document'] = model_to_dict(document)
+                        prepare['avis'] = []
+                        for commentaire in all_commentaire:
+                            if commentaire.id_avis.id_document.id == document.id:
+                                prepare['avis'].append(model_to_dict(commentaire))
+
+                        TabCodifications = []
+                        for avis in aviss:
+                            document_o = avis.id_document
+                            if document.id == document_o.id:
+                                TabCodifications.append(avis.codification)
+                        if len(TabCodifications) != 0:
+                            unique_liste = list(set(TabCodifications))
+                            codification = unique_liste[0]
+
+                            for tu in unique_liste:
+                                if liste.index(tu) < liste.index(codification):
+                                    codification = tu
+                            prepare['codification'] = codification
+                        
+                        data['documents'].append(prepare)
+        except:
+            return Response({})
+
+            
+        return Response(data)
