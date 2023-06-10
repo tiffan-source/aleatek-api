@@ -111,18 +111,14 @@ class AllEntreprisebAssignToAffaireOuvrage(APIView):
         return Response(data)
 
 
-
-class RecupereLensembleDesAvisSurOuvrage(APIView):
-    def get(self, request, affaire_ouvrage_id):
+class CodificationASO(APIView):
+    def get(self, request, id_aso):
         aviss = Avis.objects.all()
         TabCodifications = []
         for avis in aviss:
             print(avis.id)
             document = avis.id_document
-            entreprise_affaire_ouvrage = document.emetteur
-            affaire_ouvrage = entreprise_affaire_ouvrage.affaire_ouvrage
-            print(affaire_ouvrage.id)
-            if affaire_ouvrage.id == affaire_ouvrage_id:
+            if document.aso.id == id_aso:
                 TabCodifications.append(avis.codification)
 
         if len(TabCodifications) == 0:
@@ -137,6 +133,7 @@ class RecupereLensembleDesAvisSurOuvrage(APIView):
                 codification = tu
 
         return Response({'codification': codification})
+
 
 class GetAllDetailDocument(APIView):
     def get(self, request, id_affaire):
@@ -379,11 +376,31 @@ class GenerateDataForAso(APIView):
                             prepare['codification'] = codification
                         
                         data['documents'].append(prepare)
+
+            aviss = Avis.objects.all()
+            TabCodifications = []
+            for avis in aviss:
+                print(avis.id)
+                document = avis.id_document
+                if document.aso.id == id_aso:
+                    TabCodifications.append(avis.codification)
+
+            liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
+            unique_liste = list(set(TabCodifications))
+            codification = unique_liste[0]
+
+            for tu in unique_liste:
+                if liste.index(tu) < liste.index(codification):
+                    codification = tu
+
+            data['codification'] = codification
+        
+            return Response(data)
+        
         except:
             return Response({})
 
             
-        return Response(data)
 
 class CheckIfCanValidateAffaireOuvrage(APIView):
     def get(self, request, id_affaire_ouvrage):

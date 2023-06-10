@@ -13,7 +13,7 @@ from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmi
     GetAllEntrepriseForAffaire, GetAllEntrepriseDetailForAffaire, FindChargeAffaireForAffaire, GetPlanAffaireDetailForPlanAffaire, DeleteEntrepriseAffaire
 from adresse.views import AdressdminViewsetAdmin
 from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin, \
-    EntrepriseAffaireOuvrageViewset, GetAllAffaireOuvrageByAffaire, VerifyEntrepriseCollabOnOuvrage, \
+    EntrepriseAffaireOuvrageViewset, GetAllAffaireOuvrageByAffaire, VerifyEntrepriseCollabOnOuvrage, CodificationASO, \
     AllEntreprisebAssignToAffaireOuvrage, GetAllDetailAsoForAffaireOneVersion, AffaireOuvrageConcerneByAso, GetAllDetailDocumentForAffaireOuvrageAsoVersion
 
 from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, GetAllDetailDocumentForAffaireOuvrage, AllEntrepriseConcerneByAso,\
@@ -23,7 +23,7 @@ from commentaire.views import CommentaireAdminViewsetAdmin, GetAllCommentForAvis
 
 from rapport_visite.views import RapportVisiteSerializerAdminViewsetAdmin, AvisOuvrageViewsetAdmin, CommentaireAvisOuvrageViewsetAdmin, GetAllRapportVisiteByAffaire, GetAllRapportVisiteOneVersions
 
-from ouvrage.views import RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc, GetAffaireOuvrageFromDocument, RecupereLensembleDesAvisSurOuvrage, GetAllDetailAsoForAffaire
+from ouvrage.views import RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc, GetAffaireOuvrageFromDocument, GetAllDetailAsoForAffaire
 
 
 # from ouvrage.views import CodificationplusBas
@@ -106,8 +106,8 @@ urlpatterns = [
     path('api/check_avis_on_document_by_collaborateur/<int:id_document>/<int:id_collaborateur>/', CheckAvisOnDocumentByCollaborateur.as_view()),
 
     path('api/get_all_comment_for_avis/<int:id_avis>/', GetAllCommentForAvis.as_view()),
-    path('api/affaire_ouvrage/<int:affaire_ouvrage_id>/avis/', RecupereLensembleDesAvisSurOuvrage.as_view(),
-         name='recuperer_avis'),
+
+    path('api/codification_aso/<int:id_aso>/', CodificationASO.as_view()),
 
     path('api/get_affaire_ouvrage_from_document/<int:id_doc>/', GetAffaireOuvrageFromDocument.as_view()),
     
