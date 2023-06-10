@@ -10,14 +10,14 @@ from collaborateurs.views import UtilisateurConnecteView, CollaborateursAdminVie
 from entreprise.views import ResponsableAdminViewsetAdmin, EntrepriseAdminViewsetAdmin, GetEntrepriseWithCollaborateur
 from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmin, ProduitAdminViewsetAdmin, \
     BatimentAdminViewsetAdmin, ChantierAdminViewsetAdmin, GetPlanAffaireDetail, EntrepriseAffaireViewsetAdmin, \
-    GetAllEntrepriseForAffaire, GetAllEntrepriseDetailForAffaire, FindChargeAffaireForAffaire
+    GetAllEntrepriseForAffaire, GetAllEntrepriseDetailForAffaire, FindChargeAffaireForAffaire, GetPlanAffaireDetailForPlanAffaire, DeleteEntrepriseAffaire
 from adresse.views import AdressdminViewsetAdmin
 from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin, \
     EntrepriseAffaireOuvrageViewset, GetAllAffaireOuvrageByAffaire, VerifyEntrepriseCollabOnOuvrage, \
-    AllEntreprisebAssignToAffaireOuvrage, GetAllDetailAsoForAffaireOneVersion
+    AllEntreprisebAssignToAffaireOuvrage, GetAllDetailAsoForAffaireOneVersion, AffaireOuvrageConcerneByAso, GetAllDetailDocumentForAffaireOuvrageAsoVersion
 
-from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, GetAllDetailDocumentForAffaireOuvrage,\
-    FichierSerializerAdminViewsetAdmin, VerifyExistAffaireOuvrage, CheckAvisOnDocumentByCollaborateur, GenerateDataForAso
+from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, GetAllDetailDocumentForAffaireOuvrage, AllEntrepriseConcerneByAso,\
+    FichierSerializerAdminViewsetAdmin, VerifyExistAffaireOuvrage, CheckAvisOnDocumentByCollaborateur, GenerateDataForAso, CheckIfCanValidateAffaireOuvrage, CheckAsoCurrentForAffaireOuvrage
 
 from commentaire.views import CommentaireAdminViewsetAdmin, GetAllCommentForAvis
 
@@ -59,6 +59,9 @@ router.register('admin/collaborateurs', CollaborateursAdminViewsetAdmin, basenam
 
 urlpatterns = [
     #    path('codification/plusbas/', CodificationplusBas.as_view(), name='codification_plus_bas'),
+    path('api/all_entreprise_concerne_by_aso/<int:id_aso>/', AllEntrepriseConcerneByAso.as_view()),
+    path('api/affaire_ouvrage_concerne_by_aso/<int:id_aso>/', AffaireOuvrageConcerneByAso.as_view()),
+    path('api/check_aso_current_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', CheckAsoCurrentForAffaireOuvrage.as_view()),
 
     path('api/get_all_rapport_visite_by_affaire/<int:affaire>/', GetAllRapportVisiteByAffaire.as_view()),
     path('api/get_all_rapport_visite_by_affaire_one_version/<int:rv>/', GetAllRapportVisiteOneVersions.as_view()),
@@ -69,6 +72,8 @@ urlpatterns = [
     path('api/entreprise_and_responsable/<int:id_entreprise>/', GetEntrepriseWithCollaborateur.as_view()),
 
     path('api/detail_plan_affaire/', GetPlanAffaireDetail.as_view()),
+    path('api/detail_plan_affaire_for_plan_affaire/<int:id_plan_affaire>/', GetPlanAffaireDetailForPlanAffaire.as_view()),
+
     path('api/mission_sign/<int:id_plan>/', MissionActiveForCurrentAffaire.as_view()),
 
     path('api/get_ouvrage_affaire/<int:id_affaire>/', GetAllAffaireOuvrageByAffaire.as_view()),
@@ -91,9 +96,12 @@ urlpatterns = [
     path('api/entreprise_collab_affaire/<int:id_affaire>/', GetAllEntrepriseForAffaire.as_view()),
     path('api/entreprise_collab_affaire_detail/<int:id_affaire>/', GetAllEntrepriseDetailForAffaire.as_view()),
 
+    path('api/delete/entreprise_affaire/<int:id_affaire>/<int:id_entreprise>/', DeleteEntrepriseAffaire.as_view()),
+
     path('api/get_all_detail_document/<int:id_affaire>/', GetAllDetailDocument.as_view()),
     path('api/get_all_detail_document/<int:id_affaire>/<int:id_doc>/', GetAllDetailDocumentWithIdDoc.as_view()),
     path('api/get_all_detail_document_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', GetAllDetailDocumentForAffaireOuvrage.as_view()),
+    path('api/get_all_detail_document_for_affaire_ouvrage_aso_version/<int:id_aso>/', GetAllDetailDocumentForAffaireOuvrageAsoVersion.as_view()),
 
     path('api/check_avis_on_document_by_collaborateur/<int:id_document>/<int:id_collaborateur>/', CheckAvisOnDocumentByCollaborateur.as_view()),
 
@@ -108,6 +116,8 @@ urlpatterns = [
     path('api/get_all_detail_aso_for_affaire_one_version/<int:id_aso>/', GetAllDetailAsoForAffaireOneVersion.as_view()),
 
     path('api/find_charge_affaire_for_affaire/<int:id_affaire>/', FindChargeAffaireForAffaire.as_view()),
+
+    path('api/check_if_can_validate_affaire_ouvrage/<int:id_affaire_ouvrage>/', CheckIfCanValidateAffaireOuvrage.as_view()),
 
     path('api/data_for_aso/<int:id_aso>/', GenerateDataForAso.as_view()),
 

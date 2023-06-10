@@ -55,8 +55,8 @@ class VerifyExistITForMissionSignAndCollab(APIView):
 class VerifyExistMissionActive(APIView):
     def get(self, request, id_affaire, id_mission):
         try:
-            MissionActive.objects.get(id_mission=id_mission, id_affaire=id_affaire)
-            return Response({'check' : True})
+            mission = MissionActive.objects.get(id_mission=id_mission, id_affaire=id_affaire)
+            return Response({'check' : mission.id})
         except:        
             return Response({'check' : False})
         

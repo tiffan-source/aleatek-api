@@ -47,14 +47,10 @@ class GetEntrepriseWithCollaborateur(APIView):
             }
             adresse = Adress.objects.get(id=entreprise['adresse_id'])
             entreprise_data['adresse'] = model_to_dict(adresse)
-            responsables = Responsable.objects.filter(entreprise_id=entreprise['id']).values()
+            responsables = Responsable.objects.filter(entreprise_id=entreprise['id'])
             entreprise_data['responsables'] = []
             for responsable in responsables:
-                entreprise_data['responsables'].append({
-                    'nom': responsable['nom'],
-                    'prenom': responsable['prenom'],
-                    'email' : responsable['email']
-                })
+                entreprise_data['responsables'].append(model_to_dict(responsable))
             
             return Response(entreprise_data)
         
@@ -71,14 +67,10 @@ class GetEntrepriseWithCollaborateur(APIView):
                 }
                 adresse = Adress.objects.get(id=entreprise['adresse_id'])
                 entreprise_data['adresse'] = model_to_dict(adresse)
-                responsables = Responsable.objects.filter(entreprise_id=entreprise['id']).values()
+                responsables = Responsable.objects.filter(entreprise_id=entreprise['id'])
                 entreprise_data['responsables'] = []
                 for responsable in responsables:
-                    entreprise_data['responsables'].append({
-                        'nom': responsable['nom'],
-                        'prenom': responsable['prenom'],
-                        'email' : responsable['email']
-                    })
+                    entreprise_data['responsables'].append(model_to_dict(responsable))
                 data.append(entreprise_data)
 
             return Response(data)

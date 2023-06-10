@@ -35,16 +35,15 @@ class UtilisateurConnecteView(APIView):
     
 class AllCollabAssignToMission(APIView):
     def get(self, request, id_mission_sign):
-        collab_data_to_retrieve = InterventionTechnique.objects.filter(id_mission_active=id_mission_sign).values()
+        collab_data_to_retrieve = InterventionTechnique.objects.filter(id_mission_active=id_mission_sign)
         data = []
         for collab in collab_data_to_retrieve:
-            collab_data = dict(collab)
+            collab_data = model_to_dict(collab)
             # On cherche le collaborateur
-            collab = Collaborateurs.objects.get(id=collab_data['id_collaborateur_id'])
-            collab_data['collaborateur'] = {
-                'nom' : collab.last_name,
-                'prenom' : collab.first_name,
-            }
+            collaborateur = collab.id_collaborateur
+            collab_data['collaborateur'] = model_to_dict(collaborateur)
+            affecteur = collab.affecteur
+            collab_data['affecteur'] = model_to_dict(affecteur)
             data.append(collab_data)
 
         return Response(data)

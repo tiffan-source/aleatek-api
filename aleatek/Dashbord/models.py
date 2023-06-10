@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import UniqueConstraint
 
 from adresse.models import Adress
 from collaborateurs.models import Collaborateurs
@@ -85,3 +86,7 @@ class Chantier(models.Model):
 class EntrepriseAffaire(models.Model):
     entreprise = models.ForeignKey(Entreprise, on_delete=models.CASCADE, null=True)
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
+    class Meta:
+        constraints = [
+            UniqueConstraint(fields=['entreprise', 'affaire'], name='unique_entreprise_affaire')
+        ]

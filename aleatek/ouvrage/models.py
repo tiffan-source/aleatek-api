@@ -2,6 +2,7 @@ from django.db import models
 
 from Dashbord.models import Affaire, EntrepriseAffaire
 from collaborateurs.models import Collaborateurs
+from django.db.models import UniqueConstraint
 
 
 class Ouvrage(models.Model):
@@ -9,15 +10,10 @@ class Ouvrage(models.Model):
 
 
 class AffaireOuvrage(models.Model):
-    ETAPES = [
-        (0, 'En cours'),
-        (1, 'Accepté'),
-        (2, 'Classé'),
-    ]
     id_affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
     id_ouvrage = models.ForeignKey(Ouvrage, on_delete=models.CASCADE)
     validateur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, null=True)
-    statut = models.CharField(max_length=10, choices=ETAPES, default=0)
+    diffusion = models.BooleanField(default=False)
 
 
 class Aso(models.Model):
@@ -36,7 +32,11 @@ class Aso(models.Model):
 class EntrepriseAffaireOuvrage(models.Model):
     affaire_ouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
     affaire_entreprise = models.ForeignKey(EntrepriseAffaire, on_delete=models.CASCADE)
-
+    diffusion = models.BooleanField(default=False)
+    class Meta:
+        constraints = [
+            UniqueConstraint(fields=['affaire_ouvrage', 'affaire_entreprise'], name='unique_entreprise_ouvrage')
+        ]
 
 class Documents(models.Model):
     Nature = [
@@ -68,7 +68,8 @@ class Documents(models.Model):
     titre = models.CharField(max_length=100)
     numero_revision = models.IntegerField()
     numero_externe = models.IntegerField(blank=True, null=True)
-    emetteur = models.ForeignKey(EntrepriseAffaireOuvrage, on_delete=models.CASCADE, null=True)#Must be change
+    emetteur = models.ForeignKey(EntrepriseAffaireOuvrage, on_delete=models.CASCADE, null=True)
+    aso = models.ForeignKey(Aso, on_delete=models.SET_NULL, null=True)
 
 
 class FichierAttache(models.Model):
@@ -92,4 +93,3 @@ class Avis(models.Model):
     id_document = models.ForeignKey(Documents, on_delete=models.CASCADE)
     codification = models.CharField(max_length=23, choices=AVIS)
     collaborateurs = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
-

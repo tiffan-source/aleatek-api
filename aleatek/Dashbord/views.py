@@ -87,6 +87,35 @@ class GetPlanAffaireDetail(APIView):
             data.append(planAffaire_data)
 
         return Response(data)
+    
+class GetPlanAffaireDetailForPlanAffaire(APIView):
+    def get(self, request, id_plan_affaire):
+        try:
+            planAffaire = PlanAffaire.objects.get(id=id_plan_affaire)
+
+            planAffaire_data = model_to_dict(planAffaire)
+            # On cherche l'affaire
+            affaire = Affaire.objects.get(id=planAffaire_data['affaire'])
+            planAffaire_data['affaire'] = model_to_dict(affaire)
+            # On cherche la ville
+            chantier = model_to_dict(Chantier.objects.get(plan_affaire=planAffaire_data['id']))
+            adresse = Adress.objects.get(id=chantier['id'])
+            planAffaire_data['adresse'] = model_to_dict(adresse)
+            # On cherche le charger
+            charger_affaire = Collaborateurs.objects.get(id=model_to_dict(affaire)['charge'])
+            planAffaire_data['charge_affaire'] = model_to_dict(charger_affaire)
+            # On cherche le client
+            client = Entreprise.objects.get(id=model_to_dict(affaire)['client'])
+            adresse_client = client.adresse
+            planAffaire_data['client'] = model_to_dict(client)
+            planAffaire_data['client']['adresse_detail'] = model_to_dict(adresse_client)
+            # On cherche le batiment
+            batiment = Batiment.objects.get(id=chantier['batiment'])
+            planAffaire_data['batiment'] = batiment.libelle
+
+            return Response(planAffaire_data)
+        except:
+            return Response({})
 
 class GetAllEntrepriseForAffaire(APIView):
     def get(self, request, id_affaire):
@@ -94,7 +123,7 @@ class GetAllEntrepriseForAffaire(APIView):
         data = []
         for entreprise in entreprises:
             data.append(model_to_dict(entreprise.entreprise)['id'])
-        
+
         return Response(data)
 
 
@@ -122,3 +151,11 @@ class FindChargeAffaireForAffaire(APIView):
             return Response(charge)
         except:
             return Response({"not found" : True})
+        
+class DeleteEntrepriseAffaire(APIView):
+    def get(self, request, id_affaire, id_entreprise):
+        # try:
+        result = EntrepriseAffaire.objects.get(entreprise=id_entreprise, affaire=id_affaire).delete()
+        return Response(result)
+        # except:
+        #     return Response({})
