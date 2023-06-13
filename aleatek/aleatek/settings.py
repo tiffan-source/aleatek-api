@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-b6_k4bay75%gsb84cqe%-gj1*-d#7q4$tb^e+kds=)6su!tz6i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1:8000', '127.0.0.1', 'localhost', 'localhost:3000', 'aleatek-api.onrender.com']
+ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1:8000', '127.0.0.1', 'localhost', 'localhost:3000', 'aleatek-api.onrender.com', 'aleatek-d7a43.web.app']
 
 # Application definition
 
@@ -165,13 +165,13 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
+    'http://localhost:3000', 'https://aleatek-d7a43.web.app'
 )
 
-CSRF_TRUSTED_ORIGINS = ['http://*.localhost:3000']
+CSRF_TRUSTED_ORIGINS = ['http://*.localhost:3000', 'https://aleatek-d7a43.web.app']
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000'
+    'http://localhost:3000', 'https://aleatek-d7a43.web.app'
 ]
 
 CORS_EXPOSE_HEADERS = [
