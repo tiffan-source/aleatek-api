@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-b6_k4bay75%gsb84cqe%-gj1*-d#7q4$tb^e+kds=)6su!tz6i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1:8000', '127.0.0.1', 'localhost', 'localhost:3000']
+ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1:8000', '127.0.0.1', 'localhost', 'localhost:3000', 'aleatek-api.onrender.com']
 
 # Application definition
 
