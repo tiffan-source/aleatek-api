@@ -312,10 +312,14 @@ class GenerateDataForAso(APIView):
 
             data['affaire'] = model_to_dict(aso.affaireouvrage.id_affaire)
 
-            # Donne ouvrage
+            # Donne ouvrage et entreprise en diffusion
 
             data['ouvrage'] = model_to_dict(aso.affaireouvrage.id_ouvrage)
+            data['collaborateurs'] = []
 
+            entreprise_affaire = EntrepriseAffaireOuvrage.objects.filter(affaire_ouvrage=aso.affaireouvrage.id, diffusion=True)
+            for ea in entreprise_affaire:
+                data['collaborateurs'].append(model_to_dict(ea.affaire_entreprise.entreprise))
             # Donne du charge d'affaire
 
             charge = aso.affaireouvrage.id_affaire.charge
@@ -323,7 +327,7 @@ class GenerateDataForAso(APIView):
             data['charge'] = model_to_dict(charge)
             data['charge']['adresse'] = model_to_dict(charge.address)
 
-            # Donne de l'entreprise
+            # Donne de l'entreprise cliente
 
             entreprise = aso.affaireouvrage.id_affaire.client
 
