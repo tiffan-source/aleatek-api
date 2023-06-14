@@ -111,14 +111,15 @@ class AllEntreprisebAssignToAffaireOuvrage(APIView):
         return Response(data)
 
 
-class CodificationASO(APIView):
+class CodificationASOInCurrent(APIView):
     def get(self, request, id_aso):
         aviss = Avis.objects.all()
+        ouvrage = Aso.objects.get(id=id_aso).affaireouvrage
         TabCodifications = []
         for avis in aviss:
             print(avis.id)
             document = avis.id_document
-            if document.aso.id == id_aso:
+            if document.emetteur.affaire_ouvrage.id == ouvrage.id:
                 TabCodifications.append(avis.codification)
 
         if len(TabCodifications) == 0:
@@ -134,6 +135,34 @@ class CodificationASO(APIView):
 
         return Response({'codification': codification})
 
+
+class CodificationASO(APIView):
+    def get(self, request, id_aso):
+        # aviss = Avis.objects.all()
+        TabCodifications = []
+        # for avis in aviss:
+        #     print(avis.id)
+        #     document = avis.id_document
+        #     if document.aso.id == id_aso:
+        #         TabCodifications.append(avis.codification)
+        documents = Documents.objects.filter(aso=id_aso)
+        for document in documents:
+            aviss = Avis.objects.filter(id_document=document.id)
+            for avis in aviss:
+                TabCodifications.append(avis.codification)
+
+        if len(TabCodifications) == 0:
+            return Response({'codification': False})
+
+        liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
+        unique_liste = list(set(TabCodifications))
+        codification = unique_liste[0]
+
+        for tu in unique_liste:
+            if liste.index(tu) < liste.index(codification):
+                codification = tu
+
+        return Response({'codification': codification})
 
 class GetAllDetailDocument(APIView):
     def get(self, request, id_affaire):

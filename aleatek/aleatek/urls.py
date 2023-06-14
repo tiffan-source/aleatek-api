@@ -12,8 +12,8 @@ from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmi
     BatimentAdminViewsetAdmin, ChantierAdminViewsetAdmin, GetPlanAffaireDetail, EntrepriseAffaireViewsetAdmin, \
     GetAllEntrepriseForAffaire, GetAllEntrepriseDetailForAffaire, FindChargeAffaireForAffaire, GetPlanAffaireDetailForPlanAffaire, DeleteEntrepriseAffaire
 from adresse.views import AdressdminViewsetAdmin
-from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin, \
-    EntrepriseAffaireOuvrageViewset, GetAllAffaireOuvrageByAffaire, VerifyEntrepriseCollabOnOuvrage, CodificationASO, \
+from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin, CodificationASO, \
+    EntrepriseAffaireOuvrageViewset, GetAllAffaireOuvrageByAffaire, VerifyEntrepriseCollabOnOuvrage, CodificationASOInCurrent, \
     AllEntreprisebAssignToAffaireOuvrage, GetAllDetailAsoForAffaireOneVersion, AffaireOuvrageConcerneByAso, GetAllDetailDocumentForAffaireOuvrageAsoVersion
 
 from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, GetAllDetailDocumentForAffaireOuvrage, AllEntrepriseConcerneByAso,\
@@ -107,6 +107,7 @@ urlpatterns = [
 
     path('api/get_all_comment_for_avis/<int:id_avis>/', GetAllCommentForAvis.as_view()),
 
+    path('api/codification_aso_in_current/<int:id_aso>/', CodificationASOInCurrent.as_view()),
     path('api/codification_aso/<int:id_aso>/', CodificationASO.as_view()),
 
     path('api/get_affaire_ouvrage_from_document/<int:id_doc>/', GetAffaireOuvrageFromDocument.as_view()),
