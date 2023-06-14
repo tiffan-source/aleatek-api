@@ -3,6 +3,10 @@ from django.urls import path, include
 from .views import get_csrf_token
 from rest_framework import routers
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 from mission.views import MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdmin, ITAdminViewsetAdmin, \
     MissionActiveForCurrentAffaire, VerifyExistITForMissionSignAndCollab, VerifyExistMissionActive, AllIntervenantForAffaire, AllMissionForAffaire
 
@@ -21,7 +25,8 @@ from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdm
 
 from commentaire.views import CommentaireAdminViewsetAdmin, GetAllCommentForAvis
 
-from rapport_visite.views import RapportVisiteSerializerAdminViewsetAdmin, AvisOuvrageViewsetAdmin, CommentaireAvisOuvrageViewsetAdmin, GetAllRapportVisiteByAffaire, GetAllRapportVisiteOneVersions
+from rapport_visite.views import RapportVisiteSerializerAdminViewsetAdmin, AvisOuvrageViewsetAdmin, CommentaireAvisOuvrageViewsetAdmin, \
+    GetAllRapportVisiteByAffaire, GetAllRapportVisiteOneVersions, AllEntrepriseConcerneByRV, GenerateDataForRV
 
 from ouvrage.views import RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc, GetAffaireOuvrageFromDocument, GetAllDetailAsoForAffaire
 
@@ -60,6 +65,7 @@ router.register('admin/collaborateurs', CollaborateursAdminViewsetAdmin, basenam
 urlpatterns = [
     #    path('codification/plusbas/', CodificationplusBas.as_view(), name='codification_plus_bas'),
     path('api/all_entreprise_concerne_by_aso/<int:id_aso>/', AllEntrepriseConcerneByAso.as_view()),
+    path('api/all_entreprise_concerne_by_rv/<int:id_rv>/', AllEntrepriseConcerneByRV.as_view()),
     path('api/affaire_ouvrage_concerne_by_aso/<int:id_aso>/', AffaireOuvrageConcerneByAso.as_view()),
     path('api/check_aso_current_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', CheckAsoCurrentForAffaireOuvrage.as_view()),
 
@@ -121,6 +127,7 @@ urlpatterns = [
     path('api/check_if_can_validate_affaire_ouvrage/<int:id_affaire_ouvrage>/', CheckIfCanValidateAffaireOuvrage.as_view()),
 
     path('api/data_for_aso/<int:id_aso>/', GenerateDataForAso.as_view()),
+    path('api/data_for_rv/<int:id_rv>/', GenerateDataForRV.as_view()),
 
     path('api/utilisateur-connecte/', UtilisateurConnecteView.as_view(), name='utilisateur_connecte'),
     path('api/get-csrf-token/', get_csrf_token, name='get_csrf_token'),
@@ -133,3 +140,4 @@ urlpatterns = [
     path('api/users/dj-rest-auth/registration/',  # new
          include('dj_rest_auth.registration.urls')),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

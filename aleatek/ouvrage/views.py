@@ -366,7 +366,7 @@ class GenerateDataForAso(APIView):
             # All mission
 
             data['mission'] = []
-            id_affaire = entreprise = aso.affaireouvrage.id_affaire.id
+            id_affaire = aso.affaireouvrage.id_affaire.id
 
             all_mission = MissionActive.objects.filter(id_affaire=id_affaire)
 

@@ -5,17 +5,26 @@ from ouvrage.models import AffaireOuvrage
 # Create your models here.
 
 class RapportVisite(models.Model):
+    ETAPES = [
+        (0, 'En cours'),
+        (1, 'Accepté'),
+        (2, 'Classé'),
+        (3, 'Diffuse'),
+    ]
     date = models.DateField()
-    redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
     objet = models.CharField(max_length=20)
+    statut = models.CharField(max_length=10, choices=ETAPES, default=0)
+    
 
 class AvisOuvrage(models.Model):
+    redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
     ouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
     objet = models.CharField(max_length=200)
+    rv = models.ForeignKey(RapportVisite, on_delete=models.CASCADE)
 
 class CommentaireAvisOuvrage(models.Model):
     asuivre = models.BooleanField(default=False),
     commentaire = models.CharField(max_length=200)
-    image = models.ImageField(null=True)
+    image = models.ImageField(null=True, blank=True)
     avis = models.ForeignKey(AvisOuvrage, on_delete=models.CASCADE)
