@@ -110,7 +110,7 @@ SITE_ID =1
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse("postgres://aleatek_db_user:1aowrf0GPeAfDpRvIGlSgT5HtlS8oEqi@dpg-ci4bc8h5rnuiierphnl0-a.oregon-postgres.render.com/aleatek_db")
+    'default': dj_database_url.parse("postgres://aleatek_db_fx0f_user:oD1ZjOqrtOrjKqELalZE0Jv7eNf9nIxQ@dpg-ci50malgkuvj7bk72crg-a.oregon-postgres.render.com/aleatek_db_fx0f")
 }
 
 # Password validation
