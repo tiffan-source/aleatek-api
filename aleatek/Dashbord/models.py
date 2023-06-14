@@ -19,6 +19,7 @@ class Produit(models.Model):
 class Batiment(models.Model):
     libelle = models.CharField(max_length=50)
 
+
 class Affaire(models.Model):
     STATUS = [
         ('En cours', 'En cours'),
@@ -86,6 +87,7 @@ class Chantier(models.Model):
 class EntrepriseAffaire(models.Model):
     entreprise = models.ForeignKey(Entreprise, on_delete=models.CASCADE, null=True)
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
+
     class Meta:
         constraints = [
             UniqueConstraint(fields=['entreprise', 'affaire'], name='unique_entreprise_affaire')

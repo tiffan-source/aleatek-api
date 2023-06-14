@@ -13,7 +13,6 @@ class AffaireOuvrage(models.Model):
     id_affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
     id_ouvrage = models.ForeignKey(Ouvrage, on_delete=models.CASCADE)
     validateur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, null=True)
-    diffusion = models.BooleanField(default=False)
 
 
 class Aso(models.Model):

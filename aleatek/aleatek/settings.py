@@ -1,5 +1,5 @@
 from pathlib import Path
-
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-b6_k4bay75%gsb84cqe%-gj1*-d#7q4$tb^e+kds=)6su!tz6i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1:8000', '127.0.0.1', 'localhost', 'localhost:3000']
+ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1:8000', '127.0.0.1', 'localhost', 'localhost:3000', 'aleatek-api.onrender.com', 'aleatek-d7a43.web.app']
 
 # Application definition
 
@@ -102,11 +102,15 @@ SITE_ID =1
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.parse("postgres://aleatek_db_user:1aowrf0GPeAfDpRvIGlSgT5HtlS8oEqi@dpg-ci4bc8h5rnuiierphnl0-a.oregon-postgres.render.com/aleatek_db")
 }
 
 # Password validation
@@ -161,13 +165,13 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000',
+    'http://localhost:3000', 'https://aleatek-d7a43.web.app'
 )
 
-CSRF_TRUSTED_ORIGINS = ['http://*.localhost:3000']
+CSRF_TRUSTED_ORIGINS = ['http://*.localhost:3000', 'https://aleatek-d7a43.web.app']
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000'
+    'http://localhost:3000', 'https://aleatek-d7a43.web.app'
 ]
 
 CORS_EXPOSE_HEADERS = [
