@@ -68,6 +68,7 @@ class GetPlanAffaireDetail(APIView):
             affaire = Affaire.objects.get(id=planAffaire['affaire_id'])
             planAffaire_data['affaire'] = model_to_dict(affaire)
             # On cherche la ville
+            print(planAffaire['id'])
             chantier = model_to_dict(Chantier.objects.get(plan_affaire=planAffaire['id']))
             adresse = Adress.objects.get(id=chantier['id'])
             planAffaire_data['ville'] = adresse.ville
