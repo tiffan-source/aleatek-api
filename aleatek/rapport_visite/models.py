@@ -13,18 +13,18 @@ class RapportVisite(models.Model):
     ]
     date = models.DateField()
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
-    objet = models.CharField(max_length=20)
+    objet = models.CharField(max_length=20, blank=True)
     statut = models.CharField(max_length=10, choices=ETAPES, default=0)
     
 
 class AvisOuvrage(models.Model):
     redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
     ouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
-    objet = models.CharField(max_length=200)
+    objet = models.CharField(max_length=200, null=True, blank=True)
     rv = models.ForeignKey(RapportVisite, on_delete=models.CASCADE)
 
 class CommentaireAvisOuvrage(models.Model):
     asuivre = models.BooleanField(default=False),
-    commentaire = models.CharField(max_length=200)
+    commentaire = models.CharField(max_length=200, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     avis = models.ForeignKey(AvisOuvrage, on_delete=models.CASCADE)

@@ -85,7 +85,8 @@ class GenerateDataForRV(APIView):
             charge = rv.affaire.charge
 
             data['charge'] = model_to_dict(charge)
-            data['charge']['adresse'] = model_to_dict(charge.address)
+            if charge.address:
+                data['charge']['adresse'] = model_to_dict(charge.address)
 
             entreprise = rv.affaire.client
 

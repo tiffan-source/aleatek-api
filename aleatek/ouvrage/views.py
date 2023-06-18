@@ -267,8 +267,6 @@ class GetAffaireOuvrageFromDocument(APIView):
 
             affaire_ouvrage = entreprise_affaire_ouvrage.affaire_ouvrage
             result = model_to_dict(affaire_ouvrage)
-            if affaire_ouvrage.validateur:
-                result['detail_validateur'] = model_to_dict(affaire_ouvrage.validateur)
             return Response(result)
         except:
             return Response({'not found' : True})
@@ -300,35 +298,21 @@ class GetAllDetailAsoForAffaireOneVersion(APIView):
 
 class GetAllDetailDocumentForAffaireOuvrage(APIView):
     def get(self, request, id_affaire_ouvrage):
-        all_doc = Documents.objects.filter(aso=None);
+        all_doc = Documents.objects.all();
 
         data = []
         for doc in all_doc:
-            if doc.emetteur != None:
-                affaire_ouvrage = doc.emetteur.affaire_ouvrage
-                if affaire_ouvrage.id == id_affaire_ouvrage:
-                    prepare = model_to_dict(doc)
-                    prepare['ouvrage'] = model_to_dict(doc.emetteur.affaire_ouvrage.id_ouvrage)
-                    prepare['entreprise'] = model_to_dict(doc.emetteur.affaire_entreprise.entreprise)
-                    data.append(prepare)
-        return Response(data)
-    
-
-class GetAllDetailDocumentForAffaireOuvrageAsoVersion(APIView):
-    def get(self, request, id_aso):
-        all_doc = Documents.objects.filter(aso=id_aso);
-
-        data = []
-        for doc in all_doc:
-            prepare = model_to_dict(doc)
-            prepare['ouvrage'] = model_to_dict(doc.emetteur.affaire_ouvrage.id_ouvrage)
-            prepare['entreprise'] = model_to_dict(doc.emetteur.affaire_entreprise.entreprise)
-            data.append(prepare)
+            affaire_ouvrage = doc.emetteur.affaire_ouvrage
+            if affaire_ouvrage.id == id_affaire_ouvrage and doc.validateur != None:
+                prepare = model_to_dict(doc)
+                prepare['ouvrage'] = model_to_dict(doc.emetteur.affaire_ouvrage.id_ouvrage)
+                prepare['entreprise'] = model_to_dict(doc.emetteur.affaire_entreprise.entreprise)
+                data.append(prepare)
         return Response(data)
     
 class GenerateDataForAso(APIView):
     def get(self, request, id_aso):
-        try:
+        # try:
             aso = Aso.objects.get(id=id_aso)
 
             data = {}
@@ -354,7 +338,8 @@ class GenerateDataForAso(APIView):
             charge = aso.affaireouvrage.id_affaire.charge
 
             data['charge'] = model_to_dict(charge)
-            data['charge']['adresse'] = model_to_dict(charge.address)
+            if charge.address:
+                data['charge']['adresse'] = model_to_dict(charge.address)
 
             # Donne de l'entreprise cliente
 
@@ -415,12 +400,16 @@ class GenerateDataForAso(APIView):
             for avis in aviss:
                 print(avis.id)
                 document = avis.id_document
-                if document.aso.id == id_aso:
+                if document.aso and (document.aso.id == id_aso):
                     TabCodifications.append(avis.codification)
 
             liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
             unique_liste = list(set(TabCodifications))
-            codification = unique_liste[0]
+
+            codification = ''
+
+            if len(unique_liste) != 0:
+                codification = unique_liste[0]
 
             for tu in unique_liste:
                 if liste.index(tu) < liste.index(codification):
@@ -430,36 +419,20 @@ class GenerateDataForAso(APIView):
         
             return Response(data)
         
-        except:
-            return Response({})
+        # except:
+        #     return Response({})
 
-            
-
-class CheckIfCanValidateAffaireOuvrage(APIView):
-    def get(self, request, id_affaire_ouvrage):
-        affaire_ouvrage = AffaireOuvrage.objects.get(id=id_affaire_ouvrage)
-        entreprise_affaire_ouvrage = EntrepriseAffaireOuvrage.objects.filter(affaire_ouvrage=affaire_ouvrage)
-        documents = Documents.objects.filter(emetteur__in=entreprise_affaire_ouvrage, aso=None)
-        
-        if not documents:
-            return Response({"can_validate": False, "reason": "No unprocessed documents found"})
-        
-        for document in documents:
-            avis_exists = Avis.objects.filter(id_document=document).exists()
-            if not avis_exists:
-                return Response({"can_validate": False, "reason": "Unreviewed document found"})
-        
-        return Response({"can_validate": True})
 
 class CheckAsoCurrentForAffaireOuvrage(APIView):
     def get(self, request, id_affaire_ouvrage):
-        affaire_ouvrage = AffaireOuvrage.objects.get(id=id_affaire_ouvrage)
-        aso_exists = Aso.objects.filter(affaireouvrage=affaire_ouvrage, statut=0).exists()
-        
-        if aso_exists:
-            return Response({"has_current_aso": True})
-        
-        return Response({"has_current_aso": False})
+        try:
+            affaire_ouvrage = AffaireOuvrage.objects.get(id=id_affaire_ouvrage)
+            aso_exists = Aso.objects.get(affaireouvrage=affaire_ouvrage, statut=0)
+
+            if aso_exists:
+                return Response(model_to_dict(aso_exists))
+        except:
+            return Response(False)
 
 class AllEntrepriseConcerneByAso(APIView):
     def get(self, request, id_aso):

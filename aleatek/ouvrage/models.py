@@ -12,7 +12,6 @@ class Ouvrage(models.Model):
 class AffaireOuvrage(models.Model):
     id_affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
     id_ouvrage = models.ForeignKey(Ouvrage, on_delete=models.CASCADE)
-    validateur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, null=True)
 
 
 class Aso(models.Model):
@@ -23,7 +22,7 @@ class Aso(models.Model):
         (3, 'Diffuse'),
     ]
     date = models.DateField()
-    statut = models.CharField(max_length=10, choices=ETAPES, default=0)
+    statut = models.CharField(max_length=10, choices=ETAPES, default=0, null=True, blank=True)
     redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, null=True)
     affaireouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
 
@@ -61,15 +60,15 @@ class Documents(models.Model):
     dossier = models.CharField(max_length=200, default='Execution', choices=(('Execution', 'Execution'),
                                                                              ('Conception', 'Conception')))
     nature = models.CharField(choices=Nature, max_length=30)
-    indice = models.CharField(max_length=5)
-    date_indice = models.DateField()
-    date_reception = models.DateField()
-    titre = models.CharField(max_length=100)
-    numero_revision = models.IntegerField()
+    indice = models.CharField(max_length=5, blank=True, null=True)
+    date_indice = models.DateField(blank=True, null=True)
+    date_reception = models.DateField(blank=True, null=True)
+    titre = models.CharField(max_length=100, blank=True, null=True)
+    numero_revision = models.IntegerField(blank=True, null=True)
     numero_externe = models.IntegerField(blank=True, null=True)
-    emetteur = models.ForeignKey(EntrepriseAffaireOuvrage, on_delete=models.CASCADE, null=True)
+    emetteur = models.ForeignKey(EntrepriseAffaireOuvrage, on_delete=models.CASCADE)
     aso = models.ForeignKey(Aso, on_delete=models.SET_NULL, null=True)
-
+    validateur = models.ForeignKey(Collaborateurs, on_delete=models.SET_NULL, null=True, blank=True)
 
 class FichierAttache(models.Model):
     nom = models.CharField(max_length=250)

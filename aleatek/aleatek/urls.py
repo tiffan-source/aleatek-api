@@ -18,10 +18,10 @@ from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmi
 from adresse.views import AdressdminViewsetAdmin
 from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin, CodificationASO, \
     EntrepriseAffaireOuvrageViewset, GetAllAffaireOuvrageByAffaire, VerifyEntrepriseCollabOnOuvrage, CodificationASOInCurrent, \
-    AllEntreprisebAssignToAffaireOuvrage, GetAllDetailAsoForAffaireOneVersion, AffaireOuvrageConcerneByAso, GetAllDetailDocumentForAffaireOuvrageAsoVersion
+    AllEntreprisebAssignToAffaireOuvrage, GetAllDetailAsoForAffaireOneVersion, AffaireOuvrageConcerneByAso
 
 from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdminViewsetAdmin, GetAllDetailDocumentForAffaireOuvrage, AllEntrepriseConcerneByAso,\
-    FichierSerializerAdminViewsetAdmin, VerifyExistAffaireOuvrage, CheckAvisOnDocumentByCollaborateur, GenerateDataForAso, CheckIfCanValidateAffaireOuvrage, CheckAsoCurrentForAffaireOuvrage
+    FichierSerializerAdminViewsetAdmin, VerifyExistAffaireOuvrage, CheckAvisOnDocumentByCollaborateur, GenerateDataForAso, CheckAsoCurrentForAffaireOuvrage
 
 from commentaire.views import CommentaireAdminViewsetAdmin, GetAllCommentForAvis
 
@@ -107,7 +107,6 @@ urlpatterns = [
     path('api/get_all_detail_document/<int:id_affaire>/', GetAllDetailDocument.as_view()),
     path('api/get_all_detail_document/<int:id_affaire>/<int:id_doc>/', GetAllDetailDocumentWithIdDoc.as_view()),
     path('api/get_all_detail_document_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', GetAllDetailDocumentForAffaireOuvrage.as_view()),
-    path('api/get_all_detail_document_for_affaire_ouvrage_aso_version/<int:id_aso>/', GetAllDetailDocumentForAffaireOuvrageAsoVersion.as_view()),
 
     path('api/check_avis_on_document_by_collaborateur/<int:id_document>/<int:id_collaborateur>/', CheckAvisOnDocumentByCollaborateur.as_view()),
 
@@ -123,8 +122,6 @@ urlpatterns = [
     path('api/get_all_detail_aso_for_affaire_one_version/<int:id_aso>/', GetAllDetailAsoForAffaireOneVersion.as_view()),
 
     path('api/find_charge_affaire_for_affaire/<int:id_affaire>/', FindChargeAffaireForAffaire.as_view()),
-
-    path('api/check_if_can_validate_affaire_ouvrage/<int:id_affaire_ouvrage>/', CheckIfCanValidateAffaireOuvrage.as_view()),
 
     path('api/data_for_aso/<int:id_aso>/', GenerateDataForAso.as_view()),
     path('api/data_for_rv/<int:id_rv>/', GenerateDataForRV.as_view()),

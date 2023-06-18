@@ -26,19 +26,16 @@ class Affaire(models.Model):
         ('Achevé', 'Achevé'),
         ('Abandonné', 'Abandonné')
     ]
-    numero = models.IntegerField()
     libelle = models.CharField(max_length=100)
     statut = models.CharField(max_length=20, choices=STATUS)
-    numero_offre = models.IntegerField()
-    numero_contrat = models.IntegerField
+    numero_offre = models.IntegerField(blank=True, null=True)
+    numero_contrat = models.IntegerField(blank=True, null=True)
     libelle_contrat = models.CharField(max_length=100, default='', blank=True)
-    date_contrat = models.DateField()
+    date_contrat = models.DateField(blank=True, null=True)
     client = models.ForeignKey(Entreprise, on_delete=models.CASCADE, null=True)  # Retirer null
-    charge = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairecharge',
-                               null=True)
-    assistant = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffaireassistant',
-                                  null=True)
-    chef = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairechef', null=True)
+    charge = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairecharge')
+    assistant = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffaireassistant')
+    chef = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairechef')
 
 
 class PlanAffaire(models.Model):
@@ -70,16 +67,16 @@ class PlanAffaire(models.Model):
     devise = models.CharField(max_length=10, choices=DEVISE)
     type = models.CharField(max_length=10, choices=TYPES_AFFAIRES)
     type_montant = models.CharField(max_length=10, choices=TYPES_MONTANT, default='HT')
-    prix = models.IntegerField()
-    debut_prestation = models.DateField()
-    debut_chantier = models.DateField()
-    fin_chantier = models.DateField()
-    visite = models.IntegerField()
-    doc = models.IntegerField()
+    prix = models.IntegerField(blank=True, null=True)
+    debut_prestation = models.DateField(blank=True, null=True)
+    debut_chantier = models.DateField(blank=True, null=True)
+    fin_chantier = models.DateField(blank=True, null=True)
+    visite = models.IntegerField(blank=True, null=True)
+    doc = models.IntegerField(blank=True, null=True)
 
 
 class Chantier(models.Model):
-    batiment = models.ForeignKey(Batiment, on_delete=models.CASCADE)
+    batiment = models.ForeignKey(Batiment, on_delete=models.CASCADE, null=True, blank=True)
     plan_affaire = models.OneToOneField(PlanAffaire, on_delete=models.CASCADE)
     adresse = models.OneToOneField(Adress, models.CASCADE)
 
