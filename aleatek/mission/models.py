@@ -10,6 +10,10 @@ from collaborateurs.models import Collaborateurs
 class Mission(models.Model):
     code_mission = models.CharField(max_length=10)
     libelle = models.CharField(max_length=100)
+    mission_parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='sous_missions', limit_choices_to={'mission_parent__isnull': True})
+
+    def __str__(self):
+        return self.libelle
 
 
 class MissionActive(models.Model):
@@ -22,3 +26,19 @@ class InterventionTechnique(models.Model):
     date = models.DateField()
     id_mission_active = models.ForeignKey(MissionActive, on_delete=models.CASCADE)
     id_collaborateur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='ITAffecter')
+
+
+class Article(models.Model):
+    titre = models.CharField(max_length=100)
+    article_parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='sous_articles')
+    commentaire = models.TextField(blank=True)
+    mission = models.ForeignKey(Mission, on_delete=models.CASCADE, related_name='articles')
+
+    def save(self, *args, **kwargs):
+        if self.article_parent:
+            if self.mission != self.article_parent.mission:
+                raise ValueError("La mission de l'article doit correspondre à la mission de son article parent.")
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.titre

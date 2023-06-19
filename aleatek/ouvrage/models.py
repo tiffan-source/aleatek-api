@@ -84,9 +84,7 @@ class Avis(models.Model):
     AVIS = [
         ('F', 'F'),
         ('RMQ', 'RMQ'),
-        ('FA', 'FA'),
         ('HM', 'HM'),
-        ('SO', 'SO'),
         ('VI', 'VI')]
     id_document = models.ForeignKey(Documents, on_delete=models.CASCADE)
     codification = models.CharField(max_length=23, choices=AVIS)

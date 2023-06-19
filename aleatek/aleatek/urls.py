@@ -7,7 +7,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from django.conf import settings
 from django.conf.urls.static import static
 
-from mission.views import MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdmin, ITAdminViewsetAdmin, \
+from mission.views import GetAllArticleForMission, GetAllMissionViewByChapitre, MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdmin, ITAdminViewsetAdmin, ArticleAdminViewsetAdmin, GetAllParentMission, \
     MissionActiveForCurrentAffaire, VerifyExistITForMissionSignAndCollab, VerifyExistMissionActive, AllIntervenantForAffaire, AllMissionForAffaire
 
 from collaborateurs.views import UtilisateurConnecteView, CollaborateursAdminViewsetAdmin, AllCollabAssignToMission
@@ -31,10 +31,20 @@ from rapport_visite.views import RapportVisiteSerializerAdminViewsetAdmin, AvisO
 from ouvrage.views import RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc, GetAffaireOuvrageFromDocument, GetAllDetailAsoForAffaire
 
 
+from RICT.views import CheckRICTForAffaire, RICTViewsetAdmin, AvisArticleViewsetAdmin, DispositionViewsetAdmin, CommentaireAvisArticleViewsetAdmin
+
 # from ouvrage.views import CodificationplusBas
 
 router = routers.SimpleRouter()
+
+router.register('admin/rict', RICTViewsetAdmin, basename='rict')
+router.register('admin/disposition', DispositionViewsetAdmin, basename='disposition')
+router.register('admin/avis_article', AvisArticleViewsetAdmin, basename='avis_article')
+router.register('admin/commentaire_avis_article', CommentaireAvisArticleViewsetAdmin, basename='commentaire_avis_article')
+
+
 router.register('admin/avis_ouvrage', AvisOuvrageViewsetAdmin, basename='admin-avis_ouvrage')
+router.register('admin/article', ArticleAdminViewsetAdmin, basename='admin-article')
 router.register('admin/avis_commentaire', CommentaireAvisOuvrageViewsetAdmin)
 router.register('admin/rapport/visite', RapportVisiteSerializerAdminViewsetAdmin, basename='admin-rapport')
 router.register('admin/commentaire', CommentaireAdminViewsetAdmin, basename='admin=commentaire')
@@ -64,65 +74,74 @@ router.register('admin/collaborateurs', CollaborateursAdminViewsetAdmin, basenam
 
 urlpatterns = [
     #    path('codification/plusbas/', CodificationplusBas.as_view(), name='codification_plus_bas'),
+
+    # entreprise service
     path('api/all_entreprise_concerne_by_aso/<int:id_aso>/', AllEntrepriseConcerneByAso.as_view()),
     path('api/all_entreprise_concerne_by_rv/<int:id_rv>/', AllEntrepriseConcerneByRV.as_view()),
-    path('api/affaire_ouvrage_concerne_by_aso/<int:id_aso>/', AffaireOuvrageConcerneByAso.as_view()),
-    path('api/check_aso_current_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', CheckAsoCurrentForAffaireOuvrage.as_view()),
-
-    path('api/get_all_rapport_visite_by_affaire/<int:affaire>/', GetAllRapportVisiteByAffaire.as_view()),
-    path('api/get_all_rapport_visite_by_affaire_one_version/<int:rv>/', GetAllRapportVisiteOneVersions.as_view()),
-    path('api/documents/avis/<int:id_document>/', RecupereLensembleDesAvisSurDocument.as_view(),
-         name='recuperer_avis_document'),
-
     path('api/entreprise_and_responsable/', GetEntrepriseWithCollaborateur.as_view()),
     path('api/entreprise_and_responsable/<int:id_entreprise>/', GetEntrepriseWithCollaborateur.as_view()),
-
-    path('api/detail_plan_affaire/', GetPlanAffaireDetail.as_view()),
-    path('api/detail_plan_affaire_for_plan_affaire/<int:id_plan_affaire>/', GetPlanAffaireDetailForPlanAffaire.as_view()),
-
-    path('api/mission_sign/<int:id_plan>/', MissionActiveForCurrentAffaire.as_view()),
-
-    path('api/get_ouvrage_affaire/<int:id_affaire>/', GetAllAffaireOuvrageByAffaire.as_view()),
-
-    path('api/it_mission_collab/<int:id_collab>/<int:id_mission_sign>/',
-         VerifyExistITForMissionSignAndCollab.as_view()),
-    path('api/mission_affaire/<int:id_affaire>/<int:id_mission>/', VerifyExistMissionActive.as_view()),
-
-    path('api/ouvrage_affaire/<int:id_affaire>/<int:id_ouvrage>/', VerifyExistAffaireOuvrage.as_view()),
-
     path('api/verify_entreprise_collab_on_ouvrage/<int:id_entreprise_affaire>/<int:id_ouvrage_affaire>/',
-         VerifyEntrepriseCollabOnOuvrage.as_view()),
-
-    path('api/collab_for_mission_sign/<int:id_mission_sign>/', AllCollabAssignToMission.as_view()),
-
-    path('api/all_intervenant/<int:id_affaire>/', AllIntervenantForAffaire.as_view()),
-    path('api/all_mission/<int:id_affaire>/', AllMissionForAffaire.as_view()),
-    
+        VerifyEntrepriseCollabOnOuvrage.as_view()),
     path('api/entreprise_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', AllEntreprisebAssignToAffaireOuvrage.as_view()),
     path('api/entreprise_collab_affaire/<int:id_affaire>/', GetAllEntrepriseForAffaire.as_view()),
     path('api/entreprise_collab_affaire_detail/<int:id_affaire>/', GetAllEntrepriseDetailForAffaire.as_view()),
-
     path('api/delete/entreprise_affaire/<int:id_affaire>/<int:id_entreprise>/', DeleteEntrepriseAffaire.as_view()),
 
+    # affaire ouvrage service
+    path('api/affaire_ouvrage_concerne_by_aso/<int:id_aso>/', AffaireOuvrageConcerneByAso.as_view()),
+    path('api/get_affaire_ouvrage_from_document/<int:id_doc>/', GetAffaireOuvrageFromDocument.as_view()),
+    path('api/get_ouvrage_affaire/<int:id_affaire>/', GetAllAffaireOuvrageByAffaire.as_view()),
+    path('api/ouvrage_affaire/<int:id_affaire>/<int:id_ouvrage>/', VerifyExistAffaireOuvrage.as_view()),
+
+    # aso service
+    path('api/get_all_detail_aso_for_affaire_one_version/<int:id_aso>/', GetAllDetailAsoForAffaireOneVersion.as_view()),
+    path('api/get_all_detail_aso_for_affaire/<int:id_affaire>/', GetAllDetailAsoForAffaire.as_view()),
+    path('api/check_aso_current_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', CheckAsoCurrentForAffaireOuvrage.as_view()),
+
+    # RV service
+    path('api/get_all_rapport_visite_by_affaire/<int:affaire>/', GetAllRapportVisiteByAffaire.as_view()),
+    path('api/get_all_rapport_visite_by_affaire_one_version/<int:rv>/', GetAllRapportVisiteOneVersions.as_view()),
+
+    # Codification service
+    path('api/codification_aso/<int:id_aso>/', CodificationASO.as_view()),
+    path('api/codification_aso_in_current/<int:id_aso>/', CodificationASOInCurrent.as_view()),
+    path('api/documents/avis/<int:id_document>/', RecupereLensembleDesAvisSurDocument.as_view(),
+         name='recuperer_avis_document'),
+
+    # Affaire and plan affaire service
+    path('api/detail_plan_affaire/', GetPlanAffaireDetail.as_view()),
+    path('api/detail_plan_affaire_for_plan_affaire/<int:id_plan_affaire>/', GetPlanAffaireDetailForPlanAffaire.as_view()),
+
+    # Mission service
+    path('api/mission_sign/<int:id_plan>/', MissionActiveForCurrentAffaire.as_view()),
+    path('api/it_mission_collab/<int:id_collab>/<int:id_mission_sign>/',
+         VerifyExistITForMissionSignAndCollab.as_view()),
+    path('api/mission_affaire/<int:id_affaire>/<int:id_mission>/', VerifyExistMissionActive.as_view()),
+    path('api/all_mission/<int:id_affaire>/', AllMissionForAffaire.as_view()),
+    path('api/get_all_parent_mission/', GetAllParentMission.as_view()),
+    path('api/get_all_mission_view_by_chapitre/<int:id_affaire>/', GetAllMissionViewByChapitre.as_view()),
+
+    # Collaborateur service
+    path('api/find_charge_affaire_for_affaire/<int:id_affaire>/', FindChargeAffaireForAffaire.as_view()),
+    path('api/collab_for_mission_sign/<int:id_mission_sign>/', AllCollabAssignToMission.as_view()),
+    path('api/all_intervenant/<int:id_affaire>/', AllIntervenantForAffaire.as_view()),
+
+    # Document service
     path('api/get_all_detail_document/<int:id_affaire>/', GetAllDetailDocument.as_view()),
     path('api/get_all_detail_document/<int:id_affaire>/<int:id_doc>/', GetAllDetailDocumentWithIdDoc.as_view()),
     path('api/get_all_detail_document_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', GetAllDetailDocumentForAffaireOuvrage.as_view()),
 
+    # Avis service
     path('api/check_avis_on_document_by_collaborateur/<int:id_document>/<int:id_collaborateur>/', CheckAvisOnDocumentByCollaborateur.as_view()),
-
     path('api/get_all_comment_for_avis/<int:id_avis>/', GetAllCommentForAvis.as_view()),
 
-    path('api/codification_aso_in_current/<int:id_aso>/', CodificationASOInCurrent.as_view()),
-    path('api/codification_aso/<int:id_aso>/', CodificationASO.as_view()),
+    # Article Service
+    path('api/get_all_article_for_mission/<int:id_mission>/', GetAllArticleForMission.as_view()),
 
-    path('api/get_affaire_ouvrage_from_document/<int:id_doc>/', GetAffaireOuvrageFromDocument.as_view()),
-    
-    path('api/get_all_detail_aso_for_affaire/<int:id_affaire>/', GetAllDetailAsoForAffaire.as_view()),
+    # RICT Service
+    path('api/check_RICT_for_affaire/<int:id_affaire>/', CheckRICTForAffaire.as_view()),
 
-    path('api/get_all_detail_aso_for_affaire_one_version/<int:id_aso>/', GetAllDetailAsoForAffaireOneVersion.as_view()),
-
-    path('api/find_charge_affaire_for_affaire/<int:id_affaire>/', FindChargeAffaireForAffaire.as_view()),
-
+    # Livrable service
     path('api/data_for_aso/<int:id_aso>/', GenerateDataForAso.as_view()),
     path('api/data_for_rv/<int:id_rv>/', GenerateDataForRV.as_view()),
 

@@ -125,7 +125,7 @@ class CodificationASOInCurrent(APIView):
         if len(TabCodifications) == 0:
             return Response({'codification': False})
 
-        liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
+        liste = ['RMQ', 'F', 'HM', 'VI']
         unique_liste = list(set(TabCodifications))
         codification = unique_liste[0]
 
@@ -154,7 +154,7 @@ class CodificationASO(APIView):
         if len(TabCodifications) == 0:
             return Response({'codification': False})
 
-        liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
+        liste = ['RMQ', 'F', 'HM', 'VI']
         unique_liste = list(set(TabCodifications))
         codification = unique_liste[0]
 
@@ -248,7 +248,7 @@ class RecupereLensembleDesAvisSurDocument(APIView):
                 TabCodifications.append(avis.codification)
         if len(TabCodifications) == 0:
             return Response({'codification': False})
-        liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
+        liste = ['RMQ', 'F', 'HM', 'VI']
         unique_liste = list(set(TabCodifications))
         codification = unique_liste[0]
 
@@ -366,7 +366,7 @@ class GenerateDataForAso(APIView):
             all_document = Documents.objects.filter(aso=id_aso)
             all_commentaire = Commentaire.objects.all()
             aviss = Avis.objects.all()
-            liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
+            liste = ['RMQ', 'F', 'HM', 'VI']
 
 
             for document in all_document:
@@ -403,7 +403,7 @@ class GenerateDataForAso(APIView):
                 if document.aso and (document.aso.id == id_aso):
                     TabCodifications.append(avis.codification)
 
-            liste = ['RMQ', 'FA', 'F', 'HM', 'SO', 'VI']
+            liste = ['RMQ', 'F', 'HM', 'VI']
             unique_liste = list(set(TabCodifications))
 
             codification = ''

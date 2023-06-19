@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-b6_k4bay75%gsb84cqe%-gj1*-d#7q4$tb^e+kds=)6su!tz6i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1:8000', '127.0.0.1', 'localhost', 'localhost:3000', 'aleatek-api.onrender.com', 'aleatek-d7a43.web.app']
+ALLOWED_HOSTS = ['127.0.0.1:8000', '127.0.0.1:8000', '127.0.0.1', 'localhost', 'localhost:3000', 'aleatek-api.onrender.com', 'aleatek-d7a43.web.app', '192.168.1.170', '192.168.1.170:8000']
 
 # Application definition
 
@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'mission',
     'ouvrage',
     'commentaire',
-    'rapport_visite'
+    'rapport_visite',
+    'RICT'
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # new

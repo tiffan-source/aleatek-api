@@ -33,9 +33,9 @@ class Affaire(models.Model):
     libelle_contrat = models.CharField(max_length=100, default='', blank=True)
     date_contrat = models.DateField(blank=True, null=True)
     client = models.ForeignKey(Entreprise, on_delete=models.CASCADE, null=True)  # Retirer null
-    charge = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairecharge')
-    assistant = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffaireassistant')
-    chef = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairechef')
+    charge = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairecharge', null=True)
+    assistant = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffaireassistant', null=True)
+    chef = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairechef', null=True)
 
 
 class PlanAffaire(models.Model):
