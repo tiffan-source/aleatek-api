@@ -3,6 +3,8 @@ from django.db.models import UniqueConstraint
 from Dashbord.models import Affaire
 from mission.models import Article
 from collaborateurs.models import Collaborateurs
+
+
 # Create your models here.
 
 class RICT(models.Model):
@@ -15,7 +17,8 @@ class RICT(models.Model):
     date = models.DateField()
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
     statut = models.CharField(max_length=10, choices=ETAPES, default=0)
-    
+
+
 class Disposition(models.Model):
     rict = models.ForeignKey(RICT, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
@@ -25,6 +28,7 @@ class Disposition(models.Model):
         constraints = [
             UniqueConstraint(fields=['rict', 'article'], name='unique_rict_article')
         ]
+
 
 class AvisArticle(models.Model):
     AVIS = [
@@ -37,6 +41,7 @@ class AvisArticle(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     codification = models.CharField(max_length=5, choices=AVIS)
     collaborateurs = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
+
 
 class CommentaireAvisArticle(models.Model):
     id_avis = models.ForeignKey(AvisArticle, on_delete=models.CASCADE)
