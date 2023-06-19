@@ -1,0 +1,478 @@
+HYPOTHESES GENERALES
+	Données relatives au système de fondation
+		Reconnaissance des sols
+		- Réalisation d'une étude géotechnique du site
+		- Cohérence de l'étude de sols
+		- Risques naturels connus ou soupçonnés
+		- Hydrologie locale - risques d'inondations
+		- Identification des sols 
+		- Agressivité des sols et des eaux
+		Adaptation au site
+		- Fondations sur sol en pente - Stabilité d'ensemble du sol
+		- Fondations sur remblais - Stabilité d'ensemble du sol
+		- Fondations aux voisinages de fouilles
+		- Fondations à proximité d'autres bâtiments
+		Etude des fondations
+		- Système préconisé  de fondation et niveau d'assise
+		- Définition des charges envisagées
+		- Définition de la portance du sol 
+		- Déformation des sols compatible avec l'ouvrage
+		- Drainage des sols - étude spécifique
+	Données relatives à la structure
+        Hypothèses de charges sur les structures
+        - Charges permanentes
+        - Charges d'exploitation
+        - Charges liées au process
+        - Charges roulantes
+        - Charges climatiques
+        - Pressions hydrostatiques
+        - Charges accidentelles
+        Stabilité générale des structures
+        - Stabilité d'ensemble de l'ouvrage
+        - Etude d'exécution des éléments de construction
+        - Etude des interfaces techniques
+        - Modèle de fonctionnement et adéquation aux actions supportées par la structure
+        - Définition des déplacements aux appuis. Adaptation au mode de fondation de l'ossature
+        - Compatibilité de déformation entre les éléments de la construction
+        - Contreventement de l'ouvrage
+        - Joints de rupture, dilatation, fractionnement
+    Données relatives à l'agressivité de l'environnement
+        Données sur l'ambiance extérieure
+        - Atmosphères extérieures
+        - Atmosphères marines
+        - Atmosphères spéciales
+        Données sur l'ambiance intérieure
+        - Critères d'agressivité des locaux
+        - Critères d'entretien des locaux
+        - Hygrométrie, température des locaux
+
+VIABILITES
+    Réseaux divers
+        Assainissement
+        - Adéquation des conduites aux réactions du sol
+        - Remblaiement des tranchées
+        - Consolidation du fond de fouille
+        - Dispositions pour canalisations sous le niveau de la nappe
+        - Regards
+        - Liaison regard / tuyau
+        - Capacité du réseau à collecter les eaux pluviales
+        - Capacité du réseau à collecter les eaux sanitaires
+        Alimentation en eau
+        - Adéquation des conduites aux réactions du sol
+        - Adéquation des conduites à la nature de l'eau
+        - Remblaiement des tranchées
+        - Consolidation du fond de fouille
+        Drainage
+        - Compatibilité permettant l'évacuation des eaux
+        - Principe constructif du réseau de drainage
+        - Remblaiement des tranchées
+
+    Voirie
+        Chaussées
+        - Définition du trafic
+        - Réception de la plateforme de terrassement
+        - Dimensionnement global de la chaussée
+        - Qualité et caractéristiques des matériaux de chaussée
+        - Pente de la chaussée
+        - Bordures et caniveaux
+        - Dispositif de couronnement des regards d'assainissement
+        - Joints de chaussée
+
+FONDATIONS
+    Fondations superficielles et radiers
+        Semelles filantes ou isolées
+        - Cohérence du mode de fondation avec les conclusions de l'étude géotechnique
+        - Profondeur des sondages
+        - Dispositions concernant le gel
+        - Dispositions concernant les risques de tassement différentiel
+        - Dimensionnement des ouvrages de fondation
+        - Traitement des fonds de fouille
+        - Dispositions concernant l'exécution des fondations
+        - Dispositions contre le retrait / gonflement des sols
+        - Dispositions contre les infiltrations d'eau
+        - Dispositions concernant les milieux agressifs
+        Radiers
+        - Cohérence du mode de fondation avec les conclusions de l'étude géotechnique et de l'hétérogénéité du sol d'appuis
+        - Profondeur des sondages
+        - Principe de conception des radiers en fonction de la rigidité de la superstructure et du radier
+        - Dispositions concernant les risques de tassement différentiel
+        - Prise en compte de l'influence de la poussée hydrostatique
+        - Caractérisation et propriétés du support
+        - Dimensionnement des radiers
+
+    Dallages
+
+        Dallage - données relatives au sol
+        - Cohérence du mode de fondation avec les conclusions de l'étude géotechnique
+        - Profondeur des sondages
+        - Caractéristiques géotechniques des sols
+        - Caractérisation et propriétés du support
+        - Couche de forme
+        Dallage - Exigences d'utilisation et conception
+        - Définition des actions appliquées
+        - Exigences d'utilisation
+        - Déformations du dallage
+        - Etat de surface du support et interface
+        - Ecran antipollution
+        - Conception du dallage
+        - Dispositions concernant les milieux agressifs
+        - Présence de canalisations dans le dallage
+        - Arrêt de coulage et joints
+        - Conception de la couche d'usure
+        - Dispositions particulières
+    Fondations profondes
+        Pieux - Micro pieux - Puits - Barrettes
+        - Cohérence du système de fondation avec les conclusions de l'étude géotechnique
+        - Profondeur des sondages
+        - Efforts en tête
+        - Efforts parasites sur le fut des fondations
+        - Effets des terrassements ultérieurs sur les pieux réalisés
+        - Dossier technique de conception et d'exécution
+        - Dispositions constructives de réalisation
+        - Dispositions de contrôle et vérification
+        - Principe de recépage
+        - Réception / Recollement
+    Amélioration des sols
+        Renforcement des sols et inclusions
+        - Cohérence de la méthode de traitement avec l'étude géotechnique
+        - Profondeur des sondages
+        - Typologie du procédé envisagé
+        - Compatibilité du procédé avec la nature du sol à traiter
+        - Dispositions constructives de réalisation
+        - Exigences de contrôles et d'essais
+        Substitution des sols
+        - Cohérence de la méthode de traitement avec l'étude géotechnique
+        - Typologie du procédé envisagé
+        - Compatibilité du procédé avec la nature du sol à traiter
+        - Dispositions particulières de réalisation
+        - Exigences de contrôles et d'essais
+
+    Soutènements
+        Murs de soutènement
+        - Cohérence du mode de soutènement avec les conclusions de l'étude géotechnique
+        - Adéquation du soutènement vis-à-vis de l'environnement
+        - Adéquation du soutènement vis-à-vis de l'eau
+        - Influence des poussées hydrostatiques
+        - Adéquation du soutènement vis-à-vis des terres
+        - Adéquation de soutènement / charges mitoyennes
+        - Dimensionnement des ouvrages de soutènement
+        - Dispositions constructives de réalisation
+        - Exigences de contrôles et d'essais
+        Parois de soutènement
+        - Cohérence du mode de soutènement avec les conclusions de l'étude géotechnique
+        - Adéquation du soutènement vis-à-vis de l'environnement
+        - Adéquation du soutènement vis-à-vis de l'eau
+        - Influence des poussées hydrostatiques
+        - Adéquation du soutènement vis-à-vis des terres
+        - Adéquation de soutènement / charges mitoyennes
+        - Dimensionnement des ouvrages de soutènement
+        - Dispositions constructives de réalisation
+        - Exigences de contrôles et d'essais
+        Parois clouées
+        - Cohérence du mode de soutènement avec les conclusions de l'étude géotechnique
+        - Adéquation du soutènement vis-à-vis de l'environnement
+        - Adéquation du soutènement vis-à-vis de l'eau
+        - Influence des poussées hydrostatiques
+        - Adéquation du soutènement vis-à-vis des terres
+        - Adéquation de soutènement / charges mitoyennes
+        - Dimensionnement des ouvrages de soutènement
+        - Dispositions constructives de réalisation
+        - Dimensionnement des ancrages
+        - Exigences de contrôles et d'essais
+        Tirants d'ancrage / butons
+        - Cohérence du procédé d'exécution avec l'étude géotechnique
+        - Dimensionnement des ouvrages d'ancrage
+        - Dispositions constructives de réalisation
+        - Exigences de contrôles et d'essais
+        Murs en sol renforcé
+        - Cohérence du mode de soutènement avec les conclusions de l'étude géotechnique
+        - Adéquation du soutènement vis-à-vis de l'environnement
+        - Adéquation du soutènement vis-à-vis de l'eau
+        - Influence des poussées hydrostatiques
+        - Adéquation du soutènement vis-à-vis des terres
+        - Adéquation de soutènement / charges mitoyennes
+        - Dimensionnement des ouvrages de soutènement
+        - Dispositions constructives de réalisation
+        - Dimensionnement des ancrages
+        - Exigences de contrôles et d'essais
+
+STRUCTURES
+    Infrastructures
+        Murs et ouvrages enterrés y compris plancher bas
+        - Définition des exigences d'utilisation des locaux enterrés
+        - Caractéristiques des murs enterrés
+        - Revêtement des parois enterrés
+        - Protection contre les remontés d'humidité du sol
+        - Définition des exigences d'utilisation des locaux enterrés
+        - Typologie du procédé d'étanchéité
+        - Compatibilité du support avec le revêtement d'étanchéité
+        - Traitement des liaisons de structure et points singuliers
+        - Protection du revêtement
+    Planchers
+        Dalles coulées en place
+        - Matériaux
+        - Référentiel applicable
+        - Dispositions constructives et justification
+        - Dispositions particulières aux planchers portants dans les deux directions
+        - Incorporation des conduits
+        - Etat de surface vis-à-vis des revêtements ou équipements appliqués
+        - Influence sur la structure à long terme des phases provisoires
+        Dalles constituées d'éléments préfabriqués (prédalles)
+        - Matériaux
+        - Référentiel applicable
+        - Dispositions constructives et justification
+        - Dispositions particulières aux planchers portants dans les deux directions
+        - Incorporation des conduits
+        - Etat de surface vis-à-vis des revêtements ou équipements appliqués
+        - Influence sur la structure à long terme des phases provisoires
+        Dalles alvéolaires
+        - Matériaux
+        - Référentiel applicable
+        - Dispositions constructives et justification
+        - Etat de surface vis-à-vis des revêtements ou équipements appliqués
+        - Influence sur la structure à long terme des phases provisoires
+        Planchers collaborants
+        - Matériaux
+        - Référentiel
+        - Dispositions constructives et justification
+        - Dispositions constructives relatives à l'hourdis béton
+        - Etat de surface vis-à-vis des revêtements ou équipements appliqués
+        - Influence sur la structure à long terme des phases provisoires
+        - Dispositions relatives à la rigidité du plancher
+        Planchers traditionnels en bois
+        - Dispositions constructives de réalisation
+        - Dispositions aux appuis du plancher
+        - Dispositions relatives à la rigidité du plancher
+        Ouvrages de toiture – Planchers terrasses
+        - Compatibilité de la pente en fonction de la destination de la toiture
+        - Compatibilité de l'élément porteur avec la protection envisagée
+        - Compatibilité de l'élément porteur avec les formes rapportées
+        - Dispositions vis-à-vis des sollicitations d'origine thermique
+        - Dispositions constructives concernant les formes rapportées
+        - Compatibilité joints de structure et accessibilité de la terrasse
+        - Dispositions renforcées de planéité de l'élément porteur
+        - Dispositions complémentaires en climat de montagne
+    Murs
+        Murs en maçonnerie porteuse
+        - Nature des matériaux proposés
+        - Stabilité et rigidité des parois
+        - Dispositions constructives relatives aux maçonneries
+        - Dispositions constructives relatives aux points singuliers
+        - Dispositions relatives aux joints de dilatation
+        Voile en béton armé
+        - Matériaux
+        - Référentiel
+        - Dispositions constructives et justification
+        Ouvrages de toiture - ouvrages en relief
+        - Implantation et dimensionnement des reliefs
+        - Stabilité des reliefs
+        - Forme et hauteur des reliefs
+        - Compatibilité des acrotères hauts avec les façades en maçonnerie
+        - Joints dans les acrotères hauts
+        - Dispositions complémentaires en climat de montagne
+        Ossatures métalliques secondaires pour murs et bardages
+        - Dispositions relatives à la stabilité de la paroi
+        - Dispositions constructives
+        Murs à ossature bois
+        - Identification des panneaux contreventant
+        - Ancrage des panneaux contreventant
+    Portiques
+        Ossature en béton armé
+        - Matériaux
+        - Référentiel
+        - Dispositions constructives et justification
+        - Interaction avec les autres types de structures
+        - Prise en compte des phénomènes de retrait, dilatation thermique et fluage
+        - Eléments préfabriqués
+        Ossature en béton précontraint
+        - Définition du système de précontrainte
+        - Nature des matériaux proposés et éléments intégrés au système
+        - Référentiel
+        - Dispositions constructives et justification
+        - Conception des liaisons - Compatibilité des rotations d'appuis
+        - Stabilité et rigidité des ouvrages BP
+        - Influence sur la structure à long terme des phases provisoires
+        Charpente métallique
+        - Nuance et qualité des aciers
+        - Durabilité vis-à-vis du milieu ambiant
+        - Profilés minces à froid
+        - Dispositions constructives - typologie
+        - Dispositions de contreventement
+        - Dispositions concernant les appuis de la charpente
+        - Dispositions concernant les assemblages
+        - Dispositions concernant les éléments de toiture
+        - PRS - Voilement des plaques élancées
+        - Dispositions concernant les poutres treillis
+        - Système et procédé de construction
+        - Risques particuliers
+        Charpente bois
+        - Nature des bois
+        - Durabilité vis-à-vis du milieu ambiant
+        - Eléments en lamellé-collé
+        - Eléments industrialisés – fermettes
+        - Eléments reconstitués
+        - Dispositions constructives – typologie
+        - Dispositions concernant les appuis de la charpente
+        - Dispositions concernant les assemblages
+        - Dispositions concernant les éléments de toiture
+        - Dispositions concernant les structures a ossatures bois
+ENVELOPPE – FACADES
+    Façades lourdes
+        Murs de façade traditionnels - Maçonnerie / béton
+        - Performances de la façade vis-à-vis de son exposition extérieure
+        - Compatibilité de l'épaisseur des murs en façade
+        - Conditions de non condensation dans l'épaisseur des murs
+        - Dispositions constructives relatives aux points singuliers
+        Murs de façade en éléments préfabriqués lourds
+        - Performances de la façade vis-à-vis de son exposition extérieure
+        - Conditions de non condensation dans l'épaisseur des murs
+        - Compatibilité avec la déformation de l'ossature porteuse
+        - Caractéristiques dimensionnelles panneaux préfabriqués
+        - Dispositions constructives des panneaux préfabriqués
+        - Traditionnalité des panneaux préfabriqués
+        - Conditions de fabrication des panneaux préfabriqués
+        - Conception des joints assurant la fonction étanchéité
+    Façades légères
+        Façades légères traditionnelles
+        - Performances de la façade vis-à-vis de son exposition extérieure
+        - Inclinaison de la façade
+        - Nature des profilés constituant l'ossature
+        - Principe constructif
+        - Rigidité de l'ossature
+        - Adéquation de la conception de la façade avec la flexibilité de la structure
+        - Eléments de remplissage opaque
+        - Produits verriers – composition
+        - Produits verriers - comportement aux chocs thermiques
+        - Durabilité vis-à-vis de l'ambiance extérieure
+        - Durabilité vis-à-vis de l'ambiance intérieure
+        - Rigidité de l'ossature
+        - Mode de pose et fixation à l'ouvrage
+        - Dispositions vis-à-vis de la dilatation
+        - Dispositions vis-à-vis des chocs
+        - Etanchéité et calfeutrement
+        - Traitement des points singuliers
+        - Incorporation de châssis vitrés
+        Façade avec vitrages extérieurs collés (VEC)
+        - Performances de la façade vis-à-vis de son exposition extérieure
+        - Inclinaison de la façade
+        - Nature des profilés constituant l'ossature
+        - Principe constructif
+        - Rigidité de l'ossature
+        - Adéquation de la conception de la façade avec la flexibilité de la structure
+        - Adhérence et compatibilité des produits proposés
+        - Dispositifs mécaniques palliant la défaillance de collage
+        - Produits verriers – composition
+        - Produits verriers - comportement aux chocs thermiques
+        - Eléments de remplissage opaque
+        - Durabilité vis-à-vis de l'ambiance extérieure
+        - Durabilité vis-à-vis de l'ambiance intérieure
+        - Rigidité de l'ossature
+        - Dispositions vis-à-vis de la dilatation
+        - Dispositions vis-à-vis des chocs
+        - Etanchéité et calfeutrement
+        - Traitement des points singuliers
+        - Incorporation de châssis vitrés
+        Façade avec vitrages extérieurs attachés (VEA)
+        - Définition de la technique de mise en œuvre
+        - Inclinaison de la façade
+        - Analyse des déformations de l'ossature porteuse
+        - Technique de fixation y compris les attaches
+        - Produits verriers – composition
+        - Durabilité vis-à-vis de l'ambiance extérieure
+        - Durabilité vis-à-vis de l'ambiance intérieure
+        - Stabilité et prédimensionnement des vitrages
+        - Produits d'étanchéité - compatibilité - destination des locaux
+        - Dispositions vis-à-vis des chocs
+        - Dispositions constructives vis-à-vis des traversées
+        - Etanchéité et calfeutrement
+        - Traitement des points singuliers
+        Bardages opaques assurant le clos
+        - Procédé constructif constituant le bardage
+        - Durabilité des parements intérieurs et extérieurs
+        - Dispositions relatives aux phénomènes de condensation
+        - Stabilité du bardage
+        - Prescriptions en fonction de l'inclinaison de la paroi
+        - Traitement des points singuliers
+        - Protection contre les chocs
+        Bardages translucides
+        - Performance d'utilisation des bardages translucides
+        - Dispositions vis-à-vis de la dilatation
+        - Conception du bardage translucide
+        - Conception de la paroi vis-à-vis des phénomènes d'échauffement
+        - Stabilité de la paroi
+        - Traitement des points singuliers
+        - Protection contre les chocs
+    Menuiseries extérieures
+        Fenêtres
+        - Constitution des châssis
+        - Produits verriers - nature des vitrages
+        - Produits verriers - comportement aux chocs thermiques
+        - Nature des éléments de remplissage autres que vitrages
+        - Typologie des châssis et assemblage
+        - Durabilité vis-à-vis de l'ambiance extérieure
+        - Durabilité vis-à-vis de l'ambiance intérieure
+        - Performances des fenêtres
+        - Mode de pose et fixation à l'ouvrage
+        - Etanchéité et calfeutrement
+        Portes d'entrée
+        - Constitution des portes
+        - Durabilité vis-à-vis de l'ambiance extérieure
+        - Durabilité vis-à-vis de l'ambiance intérieure
+        - Stabilité des portes en bois
+        - Performances des portes
+        - Mode de pose et fixation à l'ouvrage
+        - Etanchéité et calfeutrement
+        Portes industrielles, commerciales, et de garage
+        - Caractéristiques essentielles des portes
+        - Durabilité vis-à-vis de l'ambiance extérieure
+        - Durabilité vis-à-vis de l'ambiance intérieure
+        - Performances des portes
+        - Mode de pose et fixation à l'ouvrage
+        - Etanchéité et calfeutrement
+        - Traitement des seuils
+        Occultations
+        - Constitution des fermetures
+        - Durabilité vis-à-vis de l'ambiance extérieure
+        - Performances des occultations
+    Revêtements extérieurs rapportés
+        Bardages rapportés, vêture, vétage
+        - Performances de la façade vis-à-vis de son exposition extérieure
+        - Adéquation de la parois support
+        - Description du procédé technique de bardage – Référentiel
+        - Durabilité du parement extérieur et de l'ossature secondaire
+        - Rigidité de l'ossature en fonction du parement extérieur
+        - Stabilité du bardage
+        - Contribution à l'étanchéité à l'eau de la paroi
+        - Tenue aux chocs
+        - Isolation thermique
+        - Traitements des points singuliers
+        Revêtements muraux attachés en pierres minces
+        - Choix de la pierre en fonction de sa position
+        - Durabilité du revêtement vis-à-vis de son exposition
+        - Compatibilité du système de fixation en fonction de la nature du support
+        - Durabilité des systèmes de fixations
+        - Calepinage général des façades
+        - Traitement des points singuliers
+        Revêtements muraux extérieurs collés
+        - Adéquation des parois supports
+        - Nature des revêtements muraux – format
+        - Caractéristique du mortier colle
+        - Mode de pose des revêtements muraux
+        - Joints
+        Isolation thermique par l'extérieur (ETICS)
+        - Adéquation de la paroi support
+        - Conformité du procédé vis-à-vis de l'exposition
+        - Nature de l'isolant thermique
+        - Mode de pose de l'isolant thermique
+        - Mode de finition
+        - Traitement des points singuliers
+        Enduits hydrauliques extérieurs
+        - Nature de l'enduit hydraulique
+        - Compatibilité de la paroi support
+        - Durabilité de l'enduit vis à vis de son exposition
+        - Traitement des points singuliers
+        - Type de finition et/ou revêtements éventuels
+        Revêtements organiques de façade
+        - Existence d'un diagnostic du support
+        - Nature du revêtement organique
+        - Application du revêtement
