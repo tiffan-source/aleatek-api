@@ -1,0 +1,1932 @@
+[
+{
+    "model": "mission.article",
+    "pk": 22,
+    "fields": {
+        "titre": "HYPOTHESES GENERALES",
+        "article_parent": null,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 23,
+    "fields": {
+        "titre": "Données relatives au système de fondation",
+        "article_parent": 22,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 24,
+    "fields": {
+        "titre": "Reconnaissance des sols",
+        "article_parent": 23,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 25,
+    "fields": {
+        "titre": "- Réalisation d'une étude géotechnique du site",
+        "article_parent": 24,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 26,
+    "fields": {
+        "titre": "- Cohérence de l'étude de sols",
+        "article_parent": 24,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 27,
+    "fields": {
+        "titre": "- Risques naturels connus ou soupçonnés",
+        "article_parent": 24,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 28,
+    "fields": {
+        "titre": "- Hydrologie locale - risques d'inondations",
+        "article_parent": 24,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 29,
+    "fields": {
+        "titre": "- Identification des sols",
+        "article_parent": 24,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 30,
+    "fields": {
+        "titre": "- Agressivité des sols et des eaux",
+        "article_parent": 24,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 31,
+    "fields": {
+        "titre": "Adaptation au site",
+        "article_parent": 23,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 32,
+    "fields": {
+        "titre": "- Fondations sur sol en pente - Stabilité d'ensemble du sol",
+        "article_parent": 31,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 33,
+    "fields": {
+        "titre": "- Fondations sur remblais - Stabilité d'ensemble du sol",
+        "article_parent": 31,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 34,
+    "fields": {
+        "titre": "- Fondations aux voisinages de fouilles",
+        "article_parent": 31,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 35,
+    "fields": {
+        "titre": "- Fondations à proximité d'autres bâtiments",
+        "article_parent": 31,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 36,
+    "fields": {
+        "titre": "Etude des fondations",
+        "article_parent": 23,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 37,
+    "fields": {
+        "titre": "- Système préconisé  de fondation et niveau d'assise",
+        "article_parent": 36,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 38,
+    "fields": {
+        "titre": "- Définition des charges envisagées",
+        "article_parent": 36,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 39,
+    "fields": {
+        "titre": "- Définition de la portance du sol",
+        "article_parent": 36,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 40,
+    "fields": {
+        "titre": "- Déformation des sols compatible avec l'ouvrage",
+        "article_parent": 36,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 41,
+    "fields": {
+        "titre": "- Drainage des sols - étude spécifique",
+        "article_parent": 36,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 42,
+    "fields": {
+        "titre": "Données relatives à la structure",
+        "article_parent": 22,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 43,
+    "fields": {
+        "titre": "Hypothèses de charges sur les structures",
+        "article_parent": 42,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 44,
+    "fields": {
+        "titre": "- Charges permanentes",
+        "article_parent": 43,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 45,
+    "fields": {
+        "titre": "- Charges d'exploitation",
+        "article_parent": 43,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 46,
+    "fields": {
+        "titre": "- Charges liées au process",
+        "article_parent": 43,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 47,
+    "fields": {
+        "titre": "- Charges roulantes",
+        "article_parent": 43,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 48,
+    "fields": {
+        "titre": "- Charges climatiques",
+        "article_parent": 43,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 49,
+    "fields": {
+        "titre": "- Pressions hydrostatiques",
+        "article_parent": 43,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 50,
+    "fields": {
+        "titre": "- Charges accidentelles",
+        "article_parent": 43,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 51,
+    "fields": {
+        "titre": "Stabilité générale des structures",
+        "article_parent": 42,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 52,
+    "fields": {
+        "titre": "- Stabilité d'ensemble de l'ouvrage",
+        "article_parent": 51,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 53,
+    "fields": {
+        "titre": "- Etude d'exécution des éléments de construction",
+        "article_parent": 51,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 54,
+    "fields": {
+        "titre": "- Etude des interfaces techniques",
+        "article_parent": 51,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 55,
+    "fields": {
+        "titre": "- Modèle de fonctionnement et adéquation aux actions supportées par la structure",
+        "article_parent": 51,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 56,
+    "fields": {
+        "titre": "- Définition des déplacements aux appuis. Adaptation au mode de fondation de l'ossature",
+        "article_parent": 51,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 57,
+    "fields": {
+        "titre": "- Compatibilité de déformation entre les éléments de la construction",
+        "article_parent": 51,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 58,
+    "fields": {
+        "titre": "- Contreventement de l'ouvrage",
+        "article_parent": 51,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 59,
+    "fields": {
+        "titre": "- Joints de rupture, dilatation, fractionnement",
+        "article_parent": 51,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 60,
+    "fields": {
+        "titre": "Données relatives à l'agressivité de l'environnement",
+        "article_parent": 22,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 61,
+    "fields": {
+        "titre": "Données sur l'ambiance extérieure",
+        "article_parent": 60,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 62,
+    "fields": {
+        "titre": "- Atmosphères extérieures",
+        "article_parent": 61,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 63,
+    "fields": {
+        "titre": "- Atmosphères marines",
+        "article_parent": 61,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 64,
+    "fields": {
+        "titre": "- Atmosphères spéciales",
+        "article_parent": 61,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 65,
+    "fields": {
+        "titre": "Données sur l'ambiance intérieure",
+        "article_parent": 60,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 66,
+    "fields": {
+        "titre": "- Critères d'agressivité des locaux",
+        "article_parent": 65,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 67,
+    "fields": {
+        "titre": "- Critères d'entretien des locaux",
+        "article_parent": 65,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 68,
+    "fields": {
+        "titre": "- Hygrométrie, température des locaux",
+        "article_parent": 65,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 69,
+    "fields": {
+        "titre": "VIABILITES",
+        "article_parent": 22,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 70,
+    "fields": {
+        "titre": "Réseaux divers",
+        "article_parent": 69,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 71,
+    "fields": {
+        "titre": "Assainissement",
+        "article_parent": 70,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 72,
+    "fields": {
+        "titre": "- Adéquation des conduites aux réactions du sol",
+        "article_parent": 71,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 73,
+    "fields": {
+        "titre": "- Remblaiement des tranchées",
+        "article_parent": 71,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 74,
+    "fields": {
+        "titre": "- Consolidation du fond de fouille",
+        "article_parent": 71,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 75,
+    "fields": {
+        "titre": "- Dispositions pour canalisations sous le niveau de la nappe",
+        "article_parent": 71,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 76,
+    "fields": {
+        "titre": "- Regards",
+        "article_parent": 71,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 77,
+    "fields": {
+        "titre": "- Liaison regard / tuyau",
+        "article_parent": 71,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 78,
+    "fields": {
+        "titre": "- Capacité du réseau à collecter les eaux pluviales",
+        "article_parent": 71,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 79,
+    "fields": {
+        "titre": "- Capacité du réseau à collecter les eaux sanitaires",
+        "article_parent": 71,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 80,
+    "fields": {
+        "titre": "Alimentation en eau",
+        "article_parent": 70,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 81,
+    "fields": {
+        "titre": "- Adéquation des conduites aux réactions du sol",
+        "article_parent": 80,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 82,
+    "fields": {
+        "titre": "- Adéquation des conduites à la nature de l'eau",
+        "article_parent": 80,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 83,
+    "fields": {
+        "titre": "- Remblaiement des tranchées",
+        "article_parent": 80,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 84,
+    "fields": {
+        "titre": "- Consolidation du fond de fouille",
+        "article_parent": 80,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 85,
+    "fields": {
+        "titre": "Drainage",
+        "article_parent": 70,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 86,
+    "fields": {
+        "titre": "- Compatibilité permettant l'évacuation des eaux",
+        "article_parent": 85,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 87,
+    "fields": {
+        "titre": "- Principe constructif du réseau de drainage",
+        "article_parent": 85,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 88,
+    "fields": {
+        "titre": "- Remblaiement des tranchées",
+        "article_parent": 85,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 89,
+    "fields": {
+        "titre": "Voirie",
+        "article_parent": 69,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 90,
+    "fields": {
+        "titre": "Chaussées",
+        "article_parent": 89,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 91,
+    "fields": {
+        "titre": "- Définition du trafic",
+        "article_parent": 90,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 92,
+    "fields": {
+        "titre": "- Réception de la plateforme de terrassement",
+        "article_parent": 90,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 93,
+    "fields": {
+        "titre": "- Dimensionnement global de la chaussée",
+        "article_parent": 90,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 94,
+    "fields": {
+        "titre": "- Qualité et caractéristiques des matériaux de chaussée",
+        "article_parent": 90,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 95,
+    "fields": {
+        "titre": "- Pente de la chaussée",
+        "article_parent": 90,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 96,
+    "fields": {
+        "titre": "- Bordures et caniveaux",
+        "article_parent": 90,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 97,
+    "fields": {
+        "titre": "- Dispositif de couronnement des regards d'assainissement",
+        "article_parent": 90,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 98,
+    "fields": {
+        "titre": "- Dispositif de couronnement des regards d'assainissement",
+        "article_parent": 90,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 99,
+    "fields": {
+        "titre": "FONDATIONS",
+        "article_parent": 22,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 100,
+    "fields": {
+        "titre": "Fondations superficielles et radiers",
+        "article_parent": 99,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 101,
+    "fields": {
+        "titre": "Semelles filantes ou isolées",
+        "article_parent": 100,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 102,
+    "fields": {
+        "titre": "- Cohérence du mode de fondation avec les conclusions de l'étude géotechnique",
+        "article_parent": 101,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 103,
+    "fields": {
+        "titre": "- Profondeur des sondages",
+        "article_parent": 101,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 104,
+    "fields": {
+        "titre": "- Dispositions concernant le gel",
+        "article_parent": 101,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 105,
+    "fields": {
+        "titre": "- Dispositions concernant les risques de tassement différentiel",
+        "article_parent": 101,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 106,
+    "fields": {
+        "titre": "- Dimensionnement des ouvrages de fondation",
+        "article_parent": 101,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 107,
+    "fields": {
+        "titre": "- Traitement des fonds de fouille",
+        "article_parent": 101,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 108,
+    "fields": {
+        "titre": "- Dispositions concernant l'exécution des fondations",
+        "article_parent": 101,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 109,
+    "fields": {
+        "titre": "- Dispositions contre le retrait / gonflement des sols",
+        "article_parent": 101,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 110,
+    "fields": {
+        "titre": "- Dispositions contre les infiltrations d'eau",
+        "article_parent": 101,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 111,
+    "fields": {
+        "titre": "- Dispositions concernant les milieux agressifs",
+        "article_parent": 101,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 112,
+    "fields": {
+        "titre": "Radiers",
+        "article_parent": 100,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 113,
+    "fields": {
+        "titre": "- Cohérence du mode de fondation avec les conclusions de l'étude géotechnique et de l'hétérogénéité",
+        "article_parent": 112,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 114,
+    "fields": {
+        "titre": "- Profondeur des sondages",
+        "article_parent": 112,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 115,
+    "fields": {
+        "titre": "- Principe de conception des radiers en fonction de la rigidité de la superstructure et du radier",
+        "article_parent": 112,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 116,
+    "fields": {
+        "titre": "- Dispositions concernant les risques de tassement différentiel",
+        "article_parent": 112,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 117,
+    "fields": {
+        "titre": "- Prise en compte de l'influence de la poussée hydrostatique",
+        "article_parent": 112,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 118,
+    "fields": {
+        "titre": "- Caractérisation et propriétés du support",
+        "article_parent": 112,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 119,
+    "fields": {
+        "titre": "- Dimensionnement des radiers",
+        "article_parent": 112,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 120,
+    "fields": {
+        "titre": "Dallages",
+        "article_parent": 99,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 121,
+    "fields": {
+        "titre": "Dallage - données relatives au sol",
+        "article_parent": 120,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 122,
+    "fields": {
+        "titre": "- Cohérence du mode de fondation avec les conclusions de l'étude géotechnique",
+        "article_parent": 121,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 123,
+    "fields": {
+        "titre": "- Profondeur des sondages",
+        "article_parent": 121,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 124,
+    "fields": {
+        "titre": "- Caractéristiques géotechniques des sols",
+        "article_parent": 121,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 125,
+    "fields": {
+        "titre": "- Caractérisation et propriétés du support",
+        "article_parent": 121,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 126,
+    "fields": {
+        "titre": "- Couche de forme",
+        "article_parent": 121,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 127,
+    "fields": {
+        "titre": "Dallage - Exigences d'utilisation et conception",
+        "article_parent": 120,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 128,
+    "fields": {
+        "titre": "- Définition des actions appliquées",
+        "article_parent": 127,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 129,
+    "fields": {
+        "titre": "- Exigences d'utilisation",
+        "article_parent": 127,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 130,
+    "fields": {
+        "titre": "- Déformations du dallage",
+        "article_parent": 127,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 131,
+    "fields": {
+        "titre": "- Etat de surface du support et interface",
+        "article_parent": 127,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 132,
+    "fields": {
+        "titre": "- Ecran antipollution",
+        "article_parent": 127,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 133,
+    "fields": {
+        "titre": "- Conception du dallage",
+        "article_parent": 127,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 134,
+    "fields": {
+        "titre": "- Dispositions concernant les milieux agressifs",
+        "article_parent": 127,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 135,
+    "fields": {
+        "titre": "- Présence de canalisations dans le dallage",
+        "article_parent": 127,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 136,
+    "fields": {
+        "titre": "- Arrêt de coulage et joints",
+        "article_parent": 127,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 137,
+    "fields": {
+        "titre": "- Conception de la couche d'usure",
+        "article_parent": 127,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 138,
+    "fields": {
+        "titre": "- Dispositions particulières",
+        "article_parent": 127,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 139,
+    "fields": {
+        "titre": "Fondations profondes",
+        "article_parent": 99,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 140,
+    "fields": {
+        "titre": "Pieux - Micro pieux - Puits - Barrettes",
+        "article_parent": 139,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 141,
+    "fields": {
+        "titre": "- Cohérence du système de fondation avec les conclusions de l'étude géotechnique",
+        "article_parent": 140,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 142,
+    "fields": {
+        "titre": "- Profondeur des sondages",
+        "article_parent": 140,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 143,
+    "fields": {
+        "titre": "- Efforts en tête",
+        "article_parent": 140,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 144,
+    "fields": {
+        "titre": "- Efforts parasites sur le fut des fondations",
+        "article_parent": 140,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 145,
+    "fields": {
+        "titre": "- Effets des terrassements ultérieurs sur les pieux réalisés",
+        "article_parent": 140,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 146,
+    "fields": {
+        "titre": "- Dossier technique de conception et d'exécution",
+        "article_parent": 140,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 147,
+    "fields": {
+        "titre": "- Dispositions constructives de réalisation",
+        "article_parent": 140,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 148,
+    "fields": {
+        "titre": "- Dispositions de contrôle et vérification",
+        "article_parent": 140,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 149,
+    "fields": {
+        "titre": "- Principe de recépage",
+        "article_parent": 140,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 150,
+    "fields": {
+        "titre": "- Réception / Recollement",
+        "article_parent": 140,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 151,
+    "fields": {
+        "titre": "Amélioration des sols",
+        "article_parent": 99,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 152,
+    "fields": {
+        "titre": "Renforcement des sols et inclusions",
+        "article_parent": 151,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 153,
+    "fields": {
+        "titre": "- Cohérence de la méthode de traitement avec l'étude géotechnique",
+        "article_parent": 152,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 154,
+    "fields": {
+        "titre": "- Profondeur des sondages",
+        "article_parent": 152,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 155,
+    "fields": {
+        "titre": "- Typologie du procédé envisagé",
+        "article_parent": 152,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 156,
+    "fields": {
+        "titre": "- Compatibilité du procédé avec la nature du sol à traiter",
+        "article_parent": 152,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 157,
+    "fields": {
+        "titre": "- Dispositions constructives de réalisation",
+        "article_parent": 152,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 158,
+    "fields": {
+        "titre": "- Dispositions constructives de réalisation",
+        "article_parent": 152,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 159,
+    "fields": {
+        "titre": "- Exigences de contrôles et d'essais",
+        "article_parent": 152,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 160,
+    "fields": {
+        "titre": "Substitution des sols",
+        "article_parent": 151,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 161,
+    "fields": {
+        "titre": "- Cohérence de la méthode de traitement avec l'étude géotechnique",
+        "article_parent": 160,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 162,
+    "fields": {
+        "titre": "- Typologie du procédé envisagé",
+        "article_parent": 160,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 163,
+    "fields": {
+        "titre": "- Compatibilité du procédé avec la nature du sol à traiter",
+        "article_parent": 160,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 164,
+    "fields": {
+        "titre": "- Dispositions particulières de réalisation",
+        "article_parent": 160,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 165,
+    "fields": {
+        "titre": "- Exigences de contrôles et d'essais",
+        "article_parent": 160,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 166,
+    "fields": {
+        "titre": "Soutènements",
+        "article_parent": 99,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 167,
+    "fields": {
+        "titre": "Murs de soutènement",
+        "article_parent": 166,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 168,
+    "fields": {
+        "titre": "- Cohérence du mode de soutènement avec les conclusions de l'étude géotechnique",
+        "article_parent": 167,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 169,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis de l'environnement",
+        "article_parent": 167,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 170,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis de l'eau",
+        "article_parent": 167,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 171,
+    "fields": {
+        "titre": "- Influence des poussées hydrostatiques",
+        "article_parent": 167,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 172,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis des terres",
+        "article_parent": 167,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 173,
+    "fields": {
+        "titre": "- Adéquation de soutènement / charges mitoyennes",
+        "article_parent": 167,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 174,
+    "fields": {
+        "titre": "- Dimensionnement des ouvrages de soutènement",
+        "article_parent": 167,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 175,
+    "fields": {
+        "titre": "- Dispositions constructives de réalisation",
+        "article_parent": 167,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 176,
+    "fields": {
+        "titre": "- Exigences de contrôles et d'essais",
+        "article_parent": 167,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 177,
+    "fields": {
+        "titre": "Parois de soutènement",
+        "article_parent": 166,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 178,
+    "fields": {
+        "titre": "- Cohérence du mode de soutènement avec les conclusions de l'étude géotechnique",
+        "article_parent": 177,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 179,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis de l'environnement",
+        "article_parent": 177,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 180,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis de l'eau",
+        "article_parent": 177,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 181,
+    "fields": {
+        "titre": "- Influence des poussées hydrostatiques",
+        "article_parent": 177,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 182,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis des terres",
+        "article_parent": 177,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 183,
+    "fields": {
+        "titre": "- Adéquation de soutènement / charges mitoyennes",
+        "article_parent": 177,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 184,
+    "fields": {
+        "titre": "- Dimensionnement des ouvrages de soutènement",
+        "article_parent": 177,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 185,
+    "fields": {
+        "titre": "- Dispositions constructives de réalisation",
+        "article_parent": 177,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 186,
+    "fields": {
+        "titre": "- Exigences de contrôles et d'essais",
+        "article_parent": 177,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 187,
+    "fields": {
+        "titre": "Parois clouées",
+        "article_parent": 166,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 188,
+    "fields": {
+        "titre": "- Cohérence du mode de soutènement avec les conclusions de l'étude géotechnique",
+        "article_parent": 187,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 189,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis de l'environnement",
+        "article_parent": 187,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 190,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis de l'eau",
+        "article_parent": 187,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 191,
+    "fields": {
+        "titre": "- Influence des poussées hydrostatiques",
+        "article_parent": 187,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 192,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis des terres",
+        "article_parent": 187,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 193,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis des terres",
+        "article_parent": 187,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 194,
+    "fields": {
+        "titre": "- Adéquation de soutènement / charges mitoyennes",
+        "article_parent": 187,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 195,
+    "fields": {
+        "titre": "- Dimensionnement des ouvrages de soutènement",
+        "article_parent": 187,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 196,
+    "fields": {
+        "titre": "- Dispositions constructives de réalisation",
+        "article_parent": 187,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 197,
+    "fields": {
+        "titre": "- Dimensionnement des ancrages",
+        "article_parent": 187,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 198,
+    "fields": {
+        "titre": "- Exigences de contrôles et d'essais",
+        "article_parent": 187,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 199,
+    "fields": {
+        "titre": "Tirants d'ancrage / butons",
+        "article_parent": 166,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 204,
+    "fields": {
+        "titre": "- Cohérence du procédé d'exécution avec l'étude géotechnique",
+        "article_parent": 199,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 205,
+    "fields": {
+        "titre": "- Dimensionnement des ouvrages d'ancrage",
+        "article_parent": 199,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 206,
+    "fields": {
+        "titre": "- Dispositions constructives de réalisation",
+        "article_parent": 199,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 207,
+    "fields": {
+        "titre": "- Exigences de contrôles et d'essais",
+        "article_parent": 199,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 208,
+    "fields": {
+        "titre": "Murs en sol renforcé",
+        "article_parent": 199,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 209,
+    "fields": {
+        "titre": "- Cohérence du mode de soutènement avec les conclusions de l'étude géotechnique",
+        "article_parent": 208,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 210,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis de l'environnement",
+        "article_parent": 208,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 211,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis de l'eau",
+        "article_parent": 208,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 212,
+    "fields": {
+        "titre": "- Influence des poussées hydrostatiques",
+        "article_parent": 208,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 213,
+    "fields": {
+        "titre": "- Adéquation du soutènement vis-à-vis des terres",
+        "article_parent": 208,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 214,
+    "fields": {
+        "titre": "- Adéquation de soutènement / charges mitoyennes",
+        "article_parent": 208,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 215,
+    "fields": {
+        "titre": "- Dimensionnement des ouvrages de soutènement",
+        "article_parent": 208,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 216,
+    "fields": {
+        "titre": "- Dispositions constructives de réalisation",
+        "article_parent": 208,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 217,
+    "fields": {
+        "titre": "- Dimensionnement des ancrages",
+        "article_parent": 208,
+        "commentaire": "",
+        "mission": 1
+    }
+},
+{
+    "model": "mission.article",
+    "pk": 218,
+    "fields": {
+        "titre": "- Exigences de contrôles et d'essais",
+        "article_parent": 208,
+        "commentaire": "",
+        "mission": 1
+    }
+}
+]

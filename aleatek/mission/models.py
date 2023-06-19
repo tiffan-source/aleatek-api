@@ -13,7 +13,7 @@ class Mission(models.Model):
     mission_parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='sous_missions', limit_choices_to={'mission_parent__isnull': True})
 
     def __str__(self):
-        return self.libelle
+        return self.code_mission
 
 
 class MissionActive(models.Model):
