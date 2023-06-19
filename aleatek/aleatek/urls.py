@@ -31,7 +31,8 @@ from rapport_visite.views import RapportVisiteSerializerAdminViewsetAdmin, AvisO
 from ouvrage.views import RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc, GetAffaireOuvrageFromDocument, GetAllDetailAsoForAffaire
 
 
-from RICT.views import CheckRICTForAffaire, RICTViewsetAdmin, AvisArticleViewsetAdmin, DispositionViewsetAdmin, CommentaireAvisArticleViewsetAdmin
+from RICT.views import GetAllAvisByRICTandMission, GetAllDispositionByRICTandMission, CheckRICTForAffaire, RICTViewsetAdmin, AvisArticleViewsetAdmin, DescriptionSommaireViewsetAdmin,\
+    DispositionViewsetAdmin, CommentaireAvisArticleViewsetAdmin, GetDesriptionSommaireByRICT
 
 # from ouvrage.views import CodificationplusBas
 
@@ -41,7 +42,7 @@ router.register('admin/rict', RICTViewsetAdmin, basename='rict')
 router.register('admin/disposition', DispositionViewsetAdmin, basename='disposition')
 router.register('admin/avis_article', AvisArticleViewsetAdmin, basename='avis_article')
 router.register('admin/commentaire_avis_article', CommentaireAvisArticleViewsetAdmin, basename='commentaire_avis_article')
-
+router.register('admin/description_sommaire', DescriptionSommaireViewsetAdmin, basename='description_sommaire'),
 
 router.register('admin/avis_ouvrage', AvisOuvrageViewsetAdmin, basename='admin-avis_ouvrage')
 router.register('admin/article', ArticleAdminViewsetAdmin, basename='admin-article')
@@ -137,6 +138,7 @@ urlpatterns = [
 
     # Article Service
     path('api/get_all_article_for_mission/<int:id_mission>/', GetAllArticleForMission.as_view()),
+    path('api/get_all_critere_for_affaire/<int:id_affaire>'),
 
     # RICT Service
     path('api/check_RICT_for_affaire/<int:id_affaire>/', CheckRICTForAffaire.as_view()),
@@ -144,6 +146,15 @@ urlpatterns = [
     # Livrable service
     path('api/data_for_aso/<int:id_aso>/', GenerateDataForAso.as_view()),
     path('api/data_for_rv/<int:id_rv>/', GenerateDataForRV.as_view()),
+
+    # Disposition service
+    path('api/get_all_disposition_by_RICT_and_mission/<int:id_rict>/<int:id_mission>/', GetAllDispositionByRICTandMission.as_view()),
+
+    # AvisArticle service
+    path('api/get_all_avis_by_RICT_and_mission/<int:id_rict>/<int:id_mission>/', GetAllAvisByRICTandMission.as_view()),
+
+    # Description Sommaire service
+    path('api/get_desription_sommaire_by_RICT/<int:id_rict>/', GetDesriptionSommaireByRICT.as_view()),
 
     path('api/utilisateur-connecte/', UtilisateurConnecteView.as_view(), name='utilisateur_connecte'),
     path('api/get-csrf-token/', get_csrf_token, name='get_csrf_token'),

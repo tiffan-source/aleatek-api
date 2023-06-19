@@ -36,9 +36,13 @@ class AvisArticle(models.Model):
     rict = models.ForeignKey(RICT, on_delete=models.CASCADE)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     codification = models.CharField(max_length=5, choices=AVIS)
-    collaborateurs = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
 
 class CommentaireAvisArticle(models.Model):
     id_avis = models.ForeignKey(AvisArticle, on_delete=models.CASCADE)
     commentaire = models.CharField(max_length=200)
     a_suivre = models.BooleanField(default=True)
+
+class DescriptionSommaire(models.Model):
+    type = models.CharField(max_length=200)
+    content = models.TextField()
+    rict = models.ForeignKey(RICT, on_delete=models.CASCADE)
