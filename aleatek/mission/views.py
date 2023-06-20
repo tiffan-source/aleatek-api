@@ -1,9 +1,9 @@
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet
-from .models import Mission, MissionActive, InterventionTechnique, Article
+from .models import Mission, MissionActive, InterventionTechnique, Article, ArticleSelect
 from .permissions import IsAdminAuthenticated
-from .serializers import MissionSerializer, MissionActiveSerializer, InterventionTechniqueSerializer, ArticleSerializer
+from .serializers import MissionSerializer, MissionActiveSerializer, InterventionTechniqueSerializer, ArticleSerializer, ArticleSelectSerializer
 from rest_framework.views import APIView
 from Dashbord.models import Affaire, PlanAffaire
 from collaborateurs.models import Collaborateurs
@@ -27,6 +27,11 @@ class MissionAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
 class ArticleAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = ArticleSerializer
     queryset = Article.objects.all()
+    permission_classes = [IsAdminAuthenticated]
+
+class ArticleSelectViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
+    serializer_class = ArticleSelectSerializer
+    queryset = ArticleSelect.objects.all()
     permission_classes = [IsAdminAuthenticated]
 
 class MissionActiveAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
@@ -131,7 +136,7 @@ class GetAllMissionViewByChapitre(APIView):
     
 
 class GetAllArticleForMission(APIView):
-    def get(self, request, id_mission):
+    def get(self, request, id_mission, id_affaire):
         articles1 = Article.objects.filter(mission=id_mission, article_parent=None)
         data = []
         for article1 in articles1:
@@ -141,22 +146,60 @@ class GetAllArticleForMission(APIView):
             articles2 = Article.objects.filter(mission=id_mission, article_parent=article1.id)
             for article2 in articles2:
                 parentResult2 = {}
-                parentResult2['parent'] = model_to_dict(article2)
-                parentResult2['childs'] = []
-                articles3 = Article.objects.filter(mission=id_mission, article_parent=article2.id)
-                for article3 in articles3:
-                    parentResult3 = {}
-                    parentResult3['parent'] = model_to_dict(article3)
-                    parentResult3['childs'] = []
-                    articles4 = Article.objects.filter(mission=id_mission, article_parent=article3.id)
-                    for article4 in articles4:
-                        parentResult4 = {}
-                        parentResult4['parent'] = model_to_dict(article4)
-                        parentResult3['childs'].append(parentResult4)
-                    parentResult2['childs'].append(parentResult3)
-                parentResult1['childs'].append(parentResult2)
-            data.append(parentResult1)
+                if ArticleSelect.objects.filter(affaire=id_affaire, article=article2.id).exists():
+                    parentResult2['parent'] = model_to_dict(article2)
+                    parentResult2['childs'] = []
+                    articles3 = Article.objects.filter(mission=id_mission, article_parent=article2.id)
+                    for article3 in articles3:
+                        parentResult3 = {}
+                        parentResult3['parent'] = model_to_dict(article3)
+                        parentResult3['childs'] = []
+                        articles4 = Article.objects.filter(mission=id_mission, article_parent=article3.id)
+                        for article4 in articles4:
+                            parentResult4 = {}
+                            parentResult4['parent'] = model_to_dict(article4)
+                            parentResult3['childs'].append(parentResult4)
+                        parentResult2['childs'].append(parentResult3)
+                    parentResult1['childs'].append(parentResult2)
+            if len(parentResult1['childs']) != 0:
+                data.append(parentResult1)
 
         return Response(data)
+    
+class GetAllCritereForAffaire(APIView):
+    def get(self, request, id_affaire):
+        articles_mission_active = Article.objects.filter(
+            mission__missionactive__id_affaire=id_affaire,
+            article_parent__article_parent__isnull=True
+        )
 
+        result = []
 
+        for article_mission_active in articles_mission_active:
+            if article_mission_active.article_parent != None:
+                toAppend = model_to_dict(article_mission_active)
+                toAppend['parent'] = model_to_dict(article_mission_active.article_parent)
+                check_exist = ArticleSelect.objects.filter(affaire=id_affaire, article=article_mission_active.id).exists()
+                toAppend['select'] = check_exist
+                result.append(toAppend)
+
+        return Response(result)
+    
+class AddArticleSelectForAffaire(APIView):
+    def get(self, request, id_affaire, id_article):
+        exist = ArticleSelect.objects.filter(affaire=id_affaire, article=id_article).exists()
+
+        if not exist:
+            new = ArticleSelect(affaire_id=id_affaire, article_id=id_article)
+            new.save()
+            return Response({'id': new.id})
+
+        return Response({'id': None})
+    
+class DeleteArticleSelectForAffaire(APIView):
+    def get(self, request, id_affaire, id_article):
+        try:
+            ArticleSelect.objects.filter(affaire=id_affaire, article=id_article).delete()
+            return Response({'delete':True})
+        except:
+            return Response({'delete':False})

@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
-from .models import MissionActive, Mission, InterventionTechnique, Article
+from .models import MissionActive, Mission, InterventionTechnique, Article, ArticleSelect
 
 
 class MissionSerializer(ModelSerializer):
@@ -23,4 +23,9 @@ class InterventionTechniqueSerializer(ModelSerializer):
 class ArticleSerializer(ModelSerializer):
     class Meta:
         model = Article
+        fields = '__all__'
+
+class ArticleSelectSerializer(ModelSerializer):
+    class Meta:
+        model = ArticleSelect
         fields = '__all__'

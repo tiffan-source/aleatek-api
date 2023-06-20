@@ -42,3 +42,7 @@ class Article(models.Model):
 
     def __str__(self):
         return self.titre
+
+class ArticleSelect(models.Model):
+    affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE, related_name='affaire_article_select')
+    article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='article_article_select')

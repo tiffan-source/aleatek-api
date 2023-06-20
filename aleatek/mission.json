@@ -11,7 +11,7 @@
     "model": "mission.mission",
     "pk": 2,
     "fields": {
-        "code_mission": "P1.",
+        "code_mission": "P1",
         "libelle": "Solidité des ouvrages dissociables"
     }
 },
@@ -172,7 +172,15 @@
     "pk": 22,
     "fields": {
         "code_mission": "ATT Ph",
-        "libelle": "Attestation de prise en compte de la réglementation acoustique  \n"
+        "libelle": "Attestation de prise en compte de la réglementation acoustique"
+    }
+},
+{
+    "model": "mission.mission",
+    "pk": 23,
+    "fields": {
+        "code_mission": "LP",
+        "libelle": "Solidité des ouvrages et éléments d’équipement"
     }
 }
-    ]
+]

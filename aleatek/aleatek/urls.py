@@ -7,7 +7,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from django.conf import settings
 from django.conf.urls.static import static
 
-from mission.views import GetAllArticleForMission, GetAllMissionViewByChapitre, MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdmin, ITAdminViewsetAdmin, ArticleAdminViewsetAdmin, GetAllParentMission, \
+from mission.views import DeleteArticleSelectForAffaire, AddArticleSelectForAffaire, GetAllCritereForAffaire, ArticleSelectViewsetAdmin, GetAllArticleForMission, GetAllMissionViewByChapitre, MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdmin, ITAdminViewsetAdmin, ArticleAdminViewsetAdmin, GetAllParentMission, \
     MissionActiveForCurrentAffaire, VerifyExistITForMissionSignAndCollab, VerifyExistMissionActive, AllIntervenantForAffaire, AllMissionForAffaire
 
 from collaborateurs.views import UtilisateurConnecteView, CollaborateursAdminViewsetAdmin, AllCollabAssignToMission
@@ -46,6 +46,7 @@ router.register('admin/description_sommaire', DescriptionSommaireViewsetAdmin, b
 
 router.register('admin/avis_ouvrage', AvisOuvrageViewsetAdmin, basename='admin-avis_ouvrage')
 router.register('admin/article', ArticleAdminViewsetAdmin, basename='admin-article')
+router.register('admin/article_select', ArticleSelectViewsetAdmin, basename='admin-article-select')
 router.register('admin/avis_commentaire', CommentaireAvisOuvrageViewsetAdmin)
 router.register('admin/rapport/visite', RapportVisiteSerializerAdminViewsetAdmin, basename='admin-rapport')
 router.register('admin/commentaire', CommentaireAdminViewsetAdmin, basename='admin=commentaire')
@@ -137,8 +138,10 @@ urlpatterns = [
     path('api/get_all_comment_for_avis/<int:id_avis>/', GetAllCommentForAvis.as_view()),
 
     # Article Service
-    path('api/get_all_article_for_mission/<int:id_mission>/', GetAllArticleForMission.as_view()),
-    path('api/get_all_critere_for_affaire/<int:id_affaire>'),
+    path('api/get_all_article_for_mission/<int:id_mission>/<int:id_affaire>/', GetAllArticleForMission.as_view()),
+    path('api/get_all_critere_for_affaire/<int:id_affaire>/', GetAllCritereForAffaire.as_view()),
+    path('api/add_article_select_for_affaire/<int:id_affaire>/<int:id_article>/', AddArticleSelectForAffaire.as_view()),
+    path('api/delete_article_select_for_affaire/<int:id_affaire>/<int:id_article>/', DeleteArticleSelectForAffaire.as_view()),
 
     # RICT Service
     path('api/check_RICT_for_affaire/<int:id_affaire>/', CheckRICTForAffaire.as_view()),
