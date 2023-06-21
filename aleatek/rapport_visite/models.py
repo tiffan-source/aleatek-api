@@ -25,7 +25,7 @@ class AvisOuvrage(models.Model):
     rv = models.ForeignKey(RapportVisite, on_delete=models.CASCADE)
 
 class CommentaireAvisOuvrage(models.Model):
-    asuivre = models.BooleanField(default=False),
+    asuivre = models.BooleanField(default=False)
     commentaire = models.CharField(max_length=200, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     avis = models.ForeignKey(AvisOuvrage, on_delete=models.CASCADE)

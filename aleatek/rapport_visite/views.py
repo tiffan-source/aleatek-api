@@ -140,3 +140,33 @@ class NextNumberRVForAffaire(APIView):
         rv = RapportVisite.objects.filter(affaire=id_affaire)
         print(len(rv))
         return Response({'position' : len(rv) + 1})
+    
+class AllAvisFromRV(APIView):
+    def get(self, request, id_rv):
+        ouvrages = AffaireOuvrage.objects.all()
+        data = []
+        for ouvrage in ouvrages:
+            all_avis_for_ouvrage = AvisOuvrage.objects.filter(ouvrage=ouvrage.id, rv=id_rv)
+            if len(all_avis_for_ouvrage) != 0:
+                result = model_to_dict(ouvrage.id_ouvrage)
+                result['all_avis'] = []
+                for avis in all_avis_for_ouvrage:
+                    subresult = model_to_dict(avis)
+                    subresult['comments'] = []
+                    all_comment = CommentaireAvisOuvrage.objects.filter(avis=avis.id)
+                    for comment in all_comment:
+                        # print(comment.asuivre)
+                        pre = model_to_dict(comment)
+                        pre['image'] = comment.image.url if comment.image else None
+                        # pre = {
+                        #     'asuivre': comment.asuivre,
+                        #     'commentaire': comment.commentaire,
+                        #     'image': comment.image.url if comment.image else None,
+                        #     'avis': comment.avis_id
+                        # }
+
+                        subresult['comments'].append(pre)
+
+                    result['all_avis'].append(subresult)
+                data.append(result)
+        return Response(data)

@@ -25,7 +25,7 @@ from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdm
 
 from commentaire.views import CommentaireAdminViewsetAdmin, GetAllCommentForAvis
 
-from rapport_visite.views import RapportVisiteSerializerAdminViewsetAdmin, AvisOuvrageViewsetAdmin, CommentaireAvisOuvrageViewsetAdmin, \
+from rapport_visite.views import AllAvisFromRV, RapportVisiteSerializerAdminViewsetAdmin, AvisOuvrageViewsetAdmin, CommentaireAvisOuvrageViewsetAdmin, \
     GetAllRapportVisiteByAffaire, GetAllRapportVisiteOneVersions, AllEntrepriseConcerneByRV, GenerateDataForRV, NextNumberRVForAffaire
 
 from ouvrage.views import NextNumberAsoForAffaire, RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc, GetAffaireOuvrageFromDocument, GetAllDetailAsoForAffaire
@@ -149,6 +149,7 @@ urlpatterns = [
     path('api/get_all_critere_for_affaire/<int:id_affaire>/', GetAllCritereForAffaire.as_view()),
     path('api/add_article_select_for_affaire/<int:id_affaire>/<int:id_article>/', AddArticleSelectForAffaire.as_view()),
     path('api/delete_article_select_for_affaire/<int:id_affaire>/<int:id_article>/', DeleteArticleSelectForAffaire.as_view()),
+    path('api/all_avis_from_RV/<int:id_rv>/', AllAvisFromRV.as_view()),
 
     # RICT Service
     path('api/check_RICT_for_affaire/<int:id_affaire>/', CheckRICTForAffaire.as_view()),
