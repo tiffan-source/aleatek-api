@@ -24,6 +24,7 @@ class Aso(models.Model):
     date = models.DateField()
     statut = models.CharField(max_length=10, choices=ETAPES, default=0, null=True, blank=True)
     redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, null=True)
+    order_in_affaire = models.IntegerField()
     affaireouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
 
 
@@ -58,17 +59,26 @@ class Documents(models.Model):
         ('Schéma', 'Schéma')
     ]
     dossier = models.CharField(max_length=200, default='Execution', choices=(('Execution', 'Execution'),
-                                                                             ('Conception', 'Conception')))
+                                                                            ('Conception', 'Conception')))
     nature = models.CharField(choices=Nature, max_length=30)
     indice = models.CharField(max_length=5, blank=True, null=True)
     date_indice = models.DateField(blank=True, null=True)
     date_reception = models.DateField(blank=True, null=True)
-    titre = models.CharField(max_length=100, blank=True, null=True)
+    titre = models.CharField(max_length=500, blank=True, null=True)
     numero_revision = models.IntegerField(blank=True, null=True)
     numero_externe = models.IntegerField(blank=True, null=True)
     emetteur = models.ForeignKey(EntrepriseAffaireOuvrage, on_delete=models.CASCADE)
     aso = models.ForeignKey(Aso, on_delete=models.SET_NULL, null=True)
-    validateur = models.ForeignKey(Collaborateurs, on_delete=models.SET_NULL, null=True, blank=True)
+    validateur = models.ForeignKey(Collaborateurs, on_delete=models.SET_NULL, null=True, blank=True, related_name='ouvrageDocumentsvalidateur')
+    createur = models.ForeignKey(Collaborateurs, on_delete=models.SET_NULL, null=True, blank=True, related_name='ouvrageDocumentscreateur')
+
+class DocumentAffectation(models.Model):
+    document = models.ForeignKey(Documents, on_delete=models.CASCADE)
+    collaborateur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
+    class Meta:
+        constraints = [
+            UniqueConstraint(fields=['document', 'collaborateur'], name='unique_document_affectation')
+        ]
 
 class FichierAttache(models.Model):
     nom = models.CharField(max_length=250)

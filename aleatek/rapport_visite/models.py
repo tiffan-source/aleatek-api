@@ -12,10 +12,11 @@ class RapportVisite(models.Model):
         (3, 'Diffuse'),
     ]
     date = models.DateField()
+    order_in_affaire = models.IntegerField()
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
-    objet = models.CharField(max_length=20, blank=True)
+    objet = models.CharField(max_length=500, blank=True)
     statut = models.CharField(max_length=10, choices=ETAPES, default=0)
-    
+
 
 class AvisOuvrage(models.Model):
     redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)

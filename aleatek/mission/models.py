@@ -29,7 +29,7 @@ class InterventionTechnique(models.Model):
 
 
 class Article(models.Model):
-    titre = models.CharField(max_length=100)
+    titre = models.CharField(max_length=500)
     article_parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='sous_articles')
     commentaire = models.TextField(blank=True)
     mission = models.ForeignKey(Mission, on_delete=models.CASCADE, related_name='articles')

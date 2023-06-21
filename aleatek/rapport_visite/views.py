@@ -133,3 +133,10 @@ class GenerateDataForRV(APIView):
             return Response(data)
         # except:
         #     return Response({})
+
+        
+class NextNumberRVForAffaire(APIView):
+    def get(self, request, id_affaire):
+        rv = RapportVisite.objects.filter(affaire=id_affaire)
+        print(len(rv))
+        return Response({'position' : len(rv) + 1})

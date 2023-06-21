@@ -16,7 +16,7 @@ from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmi
     BatimentAdminViewsetAdmin, ChantierAdminViewsetAdmin, GetPlanAffaireDetail, EntrepriseAffaireViewsetAdmin, \
     GetAllEntrepriseForAffaire, GetAllEntrepriseDetailForAffaire, FindChargeAffaireForAffaire, GetPlanAffaireDetailForPlanAffaire, DeleteEntrepriseAffaire
 from adresse.views import AdressdminViewsetAdmin
-from ouvrage.views import AsoSerializerAdminViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin, CodificationASO, \
+from ouvrage.views import AsoViewsetAdmin, AffaireOuvrageAdminViewsetAdmin, OuvrageAdminViewsetAdmin, CodificationASO, \
     EntrepriseAffaireOuvrageViewset, GetAllAffaireOuvrageByAffaire, VerifyEntrepriseCollabOnOuvrage, CodificationASOInCurrent, \
     AllEntreprisebAssignToAffaireOuvrage, GetAllDetailAsoForAffaireOneVersion, AffaireOuvrageConcerneByAso
 
@@ -26,17 +26,20 @@ from ouvrage.views import DocumentSerializerAdminViewsetAdmin, AvisSerializerAdm
 from commentaire.views import CommentaireAdminViewsetAdmin, GetAllCommentForAvis
 
 from rapport_visite.views import RapportVisiteSerializerAdminViewsetAdmin, AvisOuvrageViewsetAdmin, CommentaireAvisOuvrageViewsetAdmin, \
-    GetAllRapportVisiteByAffaire, GetAllRapportVisiteOneVersions, AllEntrepriseConcerneByRV, GenerateDataForRV
+    GetAllRapportVisiteByAffaire, GetAllRapportVisiteOneVersions, AllEntrepriseConcerneByRV, GenerateDataForRV, NextNumberRVForAffaire
 
-from ouvrage.views import RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc, GetAffaireOuvrageFromDocument, GetAllDetailAsoForAffaire
+from ouvrage.views import NextNumberAsoForAffaire, RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc, GetAffaireOuvrageFromDocument, GetAllDetailAsoForAffaire
 
 
 from RICT.views import GetAllAvisByRICTandMission, GetAllDispositionByRICTandMission, CheckRICTForAffaire, RICTViewsetAdmin, AvisArticleViewsetAdmin, DescriptionSommaireViewsetAdmin,\
     DispositionViewsetAdmin, CommentaireAvisArticleViewsetAdmin, GetDesriptionSommaireByRICT
 
+from ouvrage.views import DocumentAffectationViewsetAdmin, GetCollaborateurAffectOnDocument, RemoveCollaborateurOnDocument
 # from ouvrage.views import CodificationplusBas
 
 router = routers.SimpleRouter()
+
+router.register('admin/document_affectation', DocumentAffectationViewsetAdmin, basename='document_affectation')
 
 router.register('admin/rict', RICTViewsetAdmin, basename='rict')
 router.register('admin/disposition', DispositionViewsetAdmin, basename='disposition')
@@ -55,7 +58,7 @@ router.register('admin/avis', AvisSerializerAdminViewsetAdmin, basename='admin=a
 router.register('admin/documents', DocumentSerializerAdminViewsetAdmin, basename='admin=document')
 router.register('admin/ouvrage', OuvrageAdminViewsetAdmin, basename='admin=ouvrage')
 router.register('admin/affaireouvrage', AffaireOuvrageAdminViewsetAdmin, basename='admin=aafffaireouvrage')
-router.register('admin/aso', AsoSerializerAdminViewsetAdmin, basename='admin=aso')
+router.register('admin/aso', AsoViewsetAdmin, basename='admin=aso')
 router.register('admin/mission', MissionAdminViewsetAdmin, basename='admin-mission')
 router.register('admin/missions/active', MissionActiveAdminViewsetAdmin, basename='admin-mission-active')
 router.register('admin/intervention/technique', ITAdminViewsetAdmin, basename='admin-it')
@@ -99,10 +102,12 @@ urlpatterns = [
     path('api/get_all_detail_aso_for_affaire_one_version/<int:id_aso>/', GetAllDetailAsoForAffaireOneVersion.as_view()),
     path('api/get_all_detail_aso_for_affaire/<int:id_affaire>/', GetAllDetailAsoForAffaire.as_view()),
     path('api/check_aso_current_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', CheckAsoCurrentForAffaireOuvrage.as_view()),
+    path('api/next_number_aso_for_affaire/<int:id_affaire>/', NextNumberAsoForAffaire.as_view()),
 
     # RV service
     path('api/get_all_rapport_visite_by_affaire/<int:affaire>/', GetAllRapportVisiteByAffaire.as_view()),
     path('api/get_all_rapport_visite_by_affaire_one_version/<int:rv>/', GetAllRapportVisiteOneVersions.as_view()),
+    path('api/next_number_rv_for_affaire/<int:id_affaire>/', NextNumberRVForAffaire.as_view()),
 
     # Codification service
     path('api/codification_aso/<int:id_aso>/', CodificationASO.as_view()),
@@ -127,11 +132,13 @@ urlpatterns = [
     path('api/find_charge_affaire_for_affaire/<int:id_affaire>/', FindChargeAffaireForAffaire.as_view()),
     path('api/collab_for_mission_sign/<int:id_mission_sign>/', AllCollabAssignToMission.as_view()),
     path('api/all_intervenant/<int:id_affaire>/', AllIntervenantForAffaire.as_view()),
+    path('api/get_collaborateur_affect_on_document/<int:id_document>/', GetCollaborateurAffectOnDocument.as_view()),
 
     # Document service
     path('api/get_all_detail_document/<int:id_affaire>/', GetAllDetailDocument.as_view()),
     path('api/get_all_detail_document/<int:id_affaire>/<int:id_doc>/', GetAllDetailDocumentWithIdDoc.as_view()),
     path('api/get_all_detail_document_for_affaire_ouvrage/<int:id_affaire_ouvrage>/', GetAllDetailDocumentForAffaireOuvrage.as_view()),
+    path('api/remove_collaborateur_on_document/<int:id_collab>/<int:id_doc>/', RemoveCollaborateurOnDocument.as_view()),
 
     # Avis service
     path('api/check_avis_on_document_by_collaborateur/<int:id_document>/<int:id_collaborateur>/', CheckAvisOnDocumentByCollaborateur.as_view()),

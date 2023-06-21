@@ -32,10 +32,10 @@ class Affaire(models.Model):
     numero_contrat = models.IntegerField(blank=True, null=True)
     libelle_contrat = models.CharField(max_length=100, default='', blank=True)
     date_contrat = models.DateField(blank=True, null=True)
-    client = models.ForeignKey(Entreprise, on_delete=models.CASCADE, null=True)  # Retirer null
-    charge = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairecharge', null=True)
-    assistant = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffaireassistant', null=True)
-    chef = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='DashbordAffairechef', null=True)
+    client = models.ForeignKey(Entreprise, on_delete=models.SET_NULL, null=True)  # Retirer null
+    charge = models.ForeignKey(Collaborateurs, on_delete=models.SET_NULL, related_name='DashbordAffairecharge', null=True)
+    assistant = models.ForeignKey(Collaborateurs, on_delete=models.SET_NULL, related_name='DashbordAffaireassistant', null=True)
+    chef = models.ForeignKey(Collaborateurs, on_delete=models.SET_NULL, related_name='DashbordAffairechef', null=True)
 
 
 class PlanAffaire(models.Model):

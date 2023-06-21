@@ -174,13 +174,5 @@
         "code_mission": "ATT Ph",
         "libelle": "Attestation de prise en compte de la réglementation acoustique"
     }
-},
-{
-    "model": "mission.mission",
-    "pk": 23,
-    "fields": {
-        "code_mission": "LP",
-        "libelle": "Solidité des ouvrages et éléments d’équipement"
-    }
 }
 ]

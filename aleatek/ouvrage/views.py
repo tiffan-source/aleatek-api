@@ -2,10 +2,10 @@ from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet, ViewSet
-from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache, EntrepriseAffaireOuvrage
+from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache, EntrepriseAffaireOuvrage, DocumentAffectation
 from .permissions import IsAdminAuthenticated
 from .serializers import AsoSerializer, OuvrageSerializer, DocumentSerializer, FichierAttacheSerializer, \
-    AvisSerializer, AffaireOuvrageSerializer, EntrepriseAffaireOuvrageSerializer
+    AvisSerializer, AffaireOuvrageSerializer, EntrepriseAffaireOuvrageSerializer, DocumentAffectationSerializer
 from rest_framework.views import APIView
 from django.forms.models import model_to_dict
 from entreprise.models import Entreprise, Responsable
@@ -20,9 +20,13 @@ class MultipleSerializerMixin:
         if self.action == 'retrieve' and self.detail_serializer_class is not None:
             return self.detail_serializer_class
         return super().get_serializer_class()
+    
+class DocumentAffectationViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
+    serializer_class = DocumentAffectationSerializer
+    queryset = DocumentAffectation.objects.all()
+    permission_classes = [IsAdminAuthenticated]
 
-
-class AsoSerializerAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
+class AsoViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = AsoSerializer
     queryset = Aso.objects.all()
     permission_classes = [IsAdminAuthenticated]
@@ -209,6 +213,9 @@ class GetAllDetailDocumentWithIdDoc(APIView):
 
                     prepare['ouvrage'] = model_to_dict(ouvrage)
                     prepare['entreprise'] = model_to_dict(entreprise)
+
+                    if document.validateur:
+                        prepare['validateur'] = model_to_dict(document.validateur)
 
                     data.append(prepare)
 
@@ -461,3 +468,27 @@ class AffaireOuvrageConcerneByAso(APIView):
         aso = Aso.objects.get(id=id_aso)
 
         return Response(model_to_dict(aso.affaireouvrage))
+    
+class GetCollaborateurAffectOnDocument(APIView):
+    def get(self, request, id_document):
+        affectations = DocumentAffectation.objects.filter(document=id_document)
+        data = []
+
+        for affectation in affectations:
+            data.append(affectation.collaborateur.id)
+
+        return Response(data)
+
+class RemoveCollaborateurOnDocument(APIView):
+    def get(self, request, id_collab, id_doc):
+        try:
+            DocumentAffectation.objects.get(document=id_doc, collaborateur=id_collab).delete()
+            return Response({'remove' : True})
+        except:
+            return Response({'remove' : False})
+        
+class NextNumberAsoForAffaire(APIView):
+    def get(self, request, id_affaire):
+        asos = Aso.objects.filter(affaireouvrage__id_affaire_id=id_affaire)
+        print(len(asos))
+        return Response({'position' : len(asos) + 1})
