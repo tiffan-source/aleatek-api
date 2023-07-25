@@ -2,16 +2,20 @@ from django.http import HttpResponse
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import ModelViewSet, ViewSet
-from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache, EntrepriseAffaireOuvrage, DocumentAffectation
+from .models import Aso, AffaireOuvrage, Avis, Ouvrage, Documents, FichierAttache, EntrepriseAffaireOuvrage, DocumentAffectation, RemarqueAso
 from .permissions import IsAdminAuthenticated
 from .serializers import AsoSerializer, OuvrageSerializer, DocumentSerializer, FichierAttacheSerializer, \
-    AvisSerializer, AffaireOuvrageSerializer, EntrepriseAffaireOuvrageSerializer, DocumentAffectationSerializer
+    AvisSerializer, AffaireOuvrageSerializer, EntrepriseAffaireOuvrageSerializer, DocumentAffectationSerializer, RemarqueAsoSerializer
 from rest_framework.views import APIView
 from django.forms.models import model_to_dict
 from entreprise.models import Entreprise, Responsable
 from Dashbord.models import EntrepriseAffaire
 from mission.models import  MissionActive
 from commentaire.models import Commentaire
+from django.db import transaction
+from rest_framework import status
+from datetime import date
+from django.db.models import Q
 
 class MultipleSerializerMixin:
     detail_serializer_class = None
@@ -30,7 +34,11 @@ class AsoViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = AsoSerializer
     queryset = Aso.objects.all()
     permission_classes = [IsAdminAuthenticated]
-
+    
+class RemarqueAsoViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
+    serializer_class = RemarqueAsoSerializer
+    queryset = RemarqueAso.objects.all()
+    permission_classes = [IsAdminAuthenticated]
 
 class AffaireOuvrageAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = AffaireOuvrageSerializer
@@ -492,3 +500,228 @@ class NextNumberAsoForAffaire(APIView):
         asos = Aso.objects.filter(affaireouvrage__id_affaire_id=id_affaire)
         print(len(asos))
         return Response({'position' : len(asos) + 1})
+    
+class DocumentCreate(APIView):
+    def post(self, request):
+        try:
+            with transaction.atomic():
+                affaire  = request.data['affaire']
+                del request.data['affaire']
+                print(affaire)
+                number = len(Documents.objects.filter(emetteur__affaire_ouvrage__id_affaire_id=affaire))
+                print(number)
+                doc = Documents(**request.data, createur=request.user, order=number+1)
+                doc.save()
+                doc_affec = DocumentAffectation(document=doc, collaborateur=request.user)
+                doc_affec.save()
+        except Exception as ex:
+            print(ex)
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
+        return Response(status=status.HTTP_201_CREATED)
+
+class AddAffaireOuvrage(APIView):
+    def post(self, request):
+        try:
+            with transaction.atomic():
+                print(request.data['ouvrages'])
+                for ouvrage in request.data['ouvrages']:
+                    AffaireOuvrage(id_affaire_id=request.data['affaire'], id_ouvrage_id=ouvrage).save()
+        except Exception as e:
+            print(e)
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_201_CREATED)
+
+class DefineDiffusionForOuvrage(APIView):
+    def put(self, request):
+        try:
+            with transaction.atomic():
+                id_affaire_ouvrage = request.data['affaire_ouvrage']
+                entreprise_affaire_ouvrages = request.data['eao']
+                diffusion = request.data['diffusion']
+                AffaireOuvrage.objects.filter(id=id_affaire_ouvrage).update(diffusion=diffusion)
+                
+                for eao in entreprise_affaire_ouvrages:
+                    EntrepriseAffaireOuvrage.objects.filter(id=eao).update(diffusion=diffusion)
+
+        except Exception as e:
+            print(e)
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_200_OK)
+
+class AddAvisOnDoc(APIView):
+    def post(self, request):
+        try:
+            with transaction.atomic():
+                document = request.data['document']
+                codification = request.data['codification']
+                comments = request.data['comments']
+                oldComments = request.data['oldComments']
+                prevAvis = request.data['prevAvis']
+                
+                if prevAvis:
+                    Avis.objects.filter(id=prevAvis).delete()
+                
+                avis = Avis(id_document_id=document, codification=codification, collaborateurs=request.user)
+                avis.save()
+                
+                for comment in comments:
+                    Commentaire(id_avis=avis, commentaire=comment['commentaire'], a_suivre=comment['a_suivre']).save()
+
+                for oldComment in oldComments:
+                    Commentaire(id_avis=avis, commentaire=oldComment['commentaire'], a_suivre=oldComment['a_suivre']).save()                    
+            
+        except Exception as e:
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_201_CREATED)
+    
+class AttachDocOnAso(APIView):
+    def put(self, request):
+        try:
+            with transaction.atomic():
+                document = request.data['document']
+                
+                doc = Documents.objects.get(id=document)
+                affaire_ouvrage = doc.emetteur.affaire_ouvrage
+                
+                result_aso = Aso.objects.filter(affaireouvrage=affaire_ouvrage, statut=0)
+                
+                if result_aso.exists():
+                    if len(result_aso) > 1:
+                        raise Exception("Plusieurs aso sont en cours pour l'ouvrage")
+                    else:
+                        aso = result_aso[0]
+                        doc.aso = aso
+                        doc.validateur = request.user
+                        doc.save()
+                else:
+                    next_aso  = len(Aso.objects.filter(affaireouvrage__id_affaire_id=affaire_ouvrage.id_affaire.id))
+                    aso = Aso(date=date.today(), redacteur=request.user, affaireouvrage=affaire_ouvrage, order_in_affaire=next_aso+1)
+                    aso.save()
+                    doc.aso = aso
+                    doc.validateur = request.user
+                    doc.save()
+         
+        except Exception as e:
+            print(Exception)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_201_CREATED)
+    
+class AddEntrepriseOnOuvrage(APIView):
+    def post(self, request):
+        try:
+            with transaction.atomic():
+                entreprises = request.data['entreprises']
+                ouvrage_affaire = request.data['ouvrage_affaire']
+                
+                for entreprise in entreprises:
+                    if not EntrepriseAffaireOuvrage.objects.filter(affaire_ouvrage=ouvrage_affaire, affaire_entreprise=entreprise).exists():
+                        EntrepriseAffaireOuvrage(affaire_ouvrage_id=ouvrage_affaire, affaire_entreprise_id=entreprise).save()
+         
+        except Exception as e:
+            print(Exception)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_201_CREATED)
+    
+class SetRemarqueOnAso(APIView):
+    def post(self, request, id_aso):
+        try:
+            with transaction.atomic():
+                RemarqueAso(aso_id=id_aso, redacteur=request.user, content=request.data['remarque']).save()
+        except Exception as e:
+            print(Exception)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_201_CREATED)
+    
+class GetAllRemarqueGeneralOnAso(APIView):
+    def get(self, request, id_aso):
+        remarques = RemarqueAso.objects.filter(aso=id_aso)
+        
+        data = []
+        
+        for remarque in remarques:
+            prepare = model_to_dict(remarque)
+            prepare['redacteur'] = model_to_dict(remarque.redacteur)
+            data.append(prepare)
+            
+        return Response(data)
+
+    
+class GetUserRemarqueGeneralOnAso(APIView):
+    def get(self, request, id_aso):
+        remarques = RemarqueAso.objects.filter(aso=id_aso, redacteur=request.user.id)
+        
+        data = []
+        
+        for remarque in remarques:
+            prepare = model_to_dict(remarque)
+            prepare['redacteur'] = model_to_dict(remarque.redacteur)
+            data.append(prepare)
+            
+        return Response(data)
+
+class EditRemarque(APIView):
+    def put(self, request):
+        try:
+            with transaction.atomic():
+                remarques = request.data['remarques']
+                for remarque in remarques:
+                    RemarqueAso.objects.filter(id=remarque['id']).update(content=remarque['content'])
+        except Exception as e:
+            print(Exception)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        return Response(status=status.HTTP_201_CREATED)
+    
+class CreateOuvrageForAffaire(APIView):
+    def post(self, request):
+        try:
+            with transaction.atomic():
+                libelle = request.data['libelle']
+                affaire = request.data['affaire']
+                ouvrage = Ouvrage(libelle=libelle, affaire_id=affaire)
+                ouvrage.save()
+                AffaireOuvrage(id_affaire_id=affaire, id_ouvrage_id=ouvrage.id).save()
+        except Exception as e:
+            print(Exception)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        return Response(status=status.HTTP_201_CREATED)
+    
+class AllOuvrageAvailableForAffaire(APIView):
+    def get(self, request, id_affaire):
+        results = Ouvrage.objects.filter(Q(affaire=None) | Q(affaire_id=id_affaire))
+        data = []
+        for result in results:
+            data.append(model_to_dict(result))
+        return Response(data)
+
+class GetOuvrageAffaireDetailEntreprise(APIView):
+    def get(self, request, id_affaire):
+        all_affaire_ouvrage = AffaireOuvrage.objects.filter(id_affaire=id_affaire)
+        data = []
+        for ouvrage in all_affaire_ouvrage:
+            final_data = model_to_dict(ouvrage)  # Convertir l'objet QueryDict en dictionnaire
+            detail_ouvrage = Ouvrage.objects.get(id=ouvrage.id_ouvrage.id)
+            ouvrage_data = model_to_dict(detail_ouvrage)
+            final_data['ouvrage'] = ouvrage_data
+            
+            entreprise_affaire_ouvrage = EntrepriseAffaireOuvrage.objects.filter(
+            affaire_ouvrage=ouvrage.id).values()
+            data_entreprise = []
+            for e_a_o in entreprise_affaire_ouvrage:
+                final = dict(e_a_o)
+                detailEntrepriseAffaire = EntrepriseAffaire.objects.get(id=e_a_o['affaire_entreprise_id'])
+                detailEntreprise = model_to_dict(detailEntrepriseAffaire.entreprise)
+                final['entreprise'] = detailEntreprise
+                data_entreprise.append(final)
+                
+            final_data['entreprises'] = data_entreprise
+            data.append(final_data)
+        return Response(data)

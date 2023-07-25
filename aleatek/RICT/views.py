@@ -6,6 +6,8 @@ from .models import RICT, Disposition, AvisArticle, CommentaireAvisArticle, Desc
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.forms.models import model_to_dict
+from django.db import transaction
+from rest_framework import status
 
 # Create your views here.
 
@@ -86,3 +88,22 @@ class GetDesriptionSommaireByRICT(APIView):
             data.append(model_to_dict(description))
 
         return Response(data)
+    
+class SaveDecriptionSommaire(APIView):
+    def put(self, request):
+        try:
+            with transaction.atomic():
+                descriptions = request.data['descriptions']
+                
+                for description in descriptions:
+                    if 'id' in description:
+                        description['rict_id'] = description.pop('rict')
+                        DescriptionSommaire.objects.filter(id=description['id']).update(**description)
+                    else:
+                        DescriptionSommaire(**description).save()
+            
+        except Exception as e:
+            print(e)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_200_OK)

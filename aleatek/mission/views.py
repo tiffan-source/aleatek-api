@@ -8,6 +8,8 @@ from rest_framework.views import APIView
 from Dashbord.models import Affaire, PlanAffaire
 from collaborateurs.models import Collaborateurs
 from django.forms.models import model_to_dict
+from rest_framework import status
+from django.db import transaction
 
 
 class MultipleSerializerMixin:
@@ -46,10 +48,8 @@ class ITAdminViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     permission_classes = [IsAdminAuthenticated]
 
 class MissionActiveForCurrentAffaire(APIView):
-    def get(self, request, id_plan):
-        plan_aff = PlanAffaire.objects.get(id=id_plan)
-
-        all_mission_active = MissionActive.objects.filter(id_affaire=plan_aff.affaire).values()
+    def get(self, request, id_affaire):
+        all_mission_active = MissionActive.objects.filter(id_affaire=id_affaire).values()
 
         return Response(list(all_mission_active))
     
@@ -203,3 +203,29 @@ class DeleteArticleSelectForAffaire(APIView):
             return Response({'delete':True})
         except:
             return Response({'delete':False})
+
+class AddMissionActive(APIView):
+    def post(self, request):
+        try:
+            with transaction.atomic():
+                MissionActive.objects.filter(id_affaire=request.data['affaire']).delete()
+                for mission in request.data['missions']:
+                    MissionActive(id_affaire_id=request.data['affaire'], id_mission_id=mission).save()
+        except:
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_201_CREATED)
+    
+class AddInterventionTechnique(APIView):
+    def post(self, request):
+        try:
+            with transaction.atomic():
+                mission = request.data['mission_sign']
+                for collab in request.data['collaborateurs']:
+                    if not InterventionTechnique.objects.filter(id_mission_active=mission, id_collaborateur=collab).exists():
+                        InterventionTechnique(id_mission_active_id=mission, id_collaborateur_id=collab, affecteur=request.user).save()
+        except Exception as ex:
+            print(ex)
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_201_CREATED)

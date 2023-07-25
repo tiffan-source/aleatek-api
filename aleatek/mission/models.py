@@ -3,7 +3,8 @@ from django.db import models
 from Dashbord.models import Affaire
 
 from collaborateurs.models import Collaborateurs
-
+from datetime import date
+from django.db.models import UniqueConstraint
 
 # Create your models here.
 
@@ -23,9 +24,13 @@ class MissionActive(models.Model):
 
 class InterventionTechnique(models.Model):
     affecteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='ITAffecteur')
-    date = models.DateField()
+    date = models.DateField(default=date.today, blank=True)
     id_mission_active = models.ForeignKey(MissionActive, on_delete=models.CASCADE)
     id_collaborateur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, related_name='ITAffecter')
+    class Meta:
+        constraints = [
+            UniqueConstraint(fields=['id_mission_active', 'id_collaborateur'], name='unique_IT')
+        ]
 
 
 class Article(models.Model):

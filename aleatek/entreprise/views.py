@@ -7,6 +7,9 @@ from .serializers import ResponsableSerializer
 from rest_framework.views import APIView
 from adresse.models import Adress
 from django.forms.models import model_to_dict
+from django.db import transaction
+from rest_framework import status
+from Dashbord.models import EntrepriseAffaire
 
 class MultipleSerializerMixin:
     detail_serializer_class = None
@@ -74,3 +77,69 @@ class GetEntrepriseWithCollaborateur(APIView):
                 data.append(entreprise_data)
 
             return Response(data)
+
+class EditeDataEntreprise(APIView):
+    def put(self, request):
+        try:
+            with transaction.atomic():
+                adress = request.data['adress']
+                id_entreprise = request.data['id_entreprise']
+                entreprise = request.data['entreprise']
+                responsables = request.data['responsables']
+                
+                Adress.objects.filter(id=adress['id']).update(**adress)
+                Entreprise.objects.filter(id=id_entreprise).update(**entreprise, adresse_id=adress['id'])
+
+                for responsable in responsables:
+                    if not 'id' in responsable:
+                        Responsable(**responsable, entreprise_id=id_entreprise).save()
+            
+        except Exception as e:
+            print(Exception)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_200_OK)
+    
+class CreateEntreprise(APIView):
+    def post(self, request):
+        try:
+            with transaction.atomic():
+                adress = request.data['adress']
+                entreprise = request.data['entreprise']
+                responsables = request.data['responsables']
+                affaire = request.data['affaire'] if 'affaire' in request.data else None
+                
+                new_adresse = Adress(**adress)
+                new_adresse.save()
+                
+                new_entreprise = Entreprise(**entreprise, adresse=new_adresse)
+                new_entreprise.save()
+                
+                for responsable in responsables:
+                    Responsable(**responsable, entreprise=new_entreprise)
+                    
+                if affaire:
+                    EntrepriseAffaire(entreprise=new_entreprise, affaire_id=affaire).save()
+                
+        except Exception as e:
+            print(Exception)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_200_OK)
+    
+class AddEntrepriseOnAffaire(APIView):
+    def post(self, request):
+        try:
+            with transaction.atomic():
+                affaire = request.data['affaire']                
+                entreprises = request.data['entreprises']
+                
+                for entreprise in entreprises:
+                    EntrepriseAffaire(entreprise_id=entreprise, affaire_id=affaire).save()
+
+        except Exception as e:
+            print(Exception)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_200_OK)
+    

@@ -7,12 +7,18 @@ from django.db.models import UniqueConstraint
 
 class Ouvrage(models.Model):
     libelle = models.CharField(max_length=200)
+    affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE, null=True)
 
 
 class AffaireOuvrage(models.Model):
     id_affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE)
     id_ouvrage = models.ForeignKey(Ouvrage, on_delete=models.CASCADE)
-
+    diffusion = models.BooleanField(default=False)
+    rename = models.CharField(max_length=200, default='', blank=True)
+    class Meta:
+        constraints = [
+            UniqueConstraint(fields=['id_affaire', 'id_ouvrage'], name='unique_affaire_document')
+        ]
 
 class Aso(models.Model):
     ETAPES = [
@@ -26,7 +32,11 @@ class Aso(models.Model):
     redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE, null=True)
     order_in_affaire = models.IntegerField()
     affaireouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
-
+    
+class RemarqueAso(models.Model):
+    aso = models.ForeignKey(Aso, on_delete=models.CASCADE)
+    redacteur = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
+    content = models.TextField()
 
 class EntrepriseAffaireOuvrage(models.Model):
     affaire_ouvrage = models.ForeignKey(AffaireOuvrage, on_delete=models.CASCADE)
@@ -58,6 +68,7 @@ class Documents(models.Model):
         ('Rapport', 'Rapport'),
         ('Schéma', 'Schéma')
     ]
+    order = models.IntegerField()
     dossier = models.CharField(max_length=200, default='Execution', choices=(('Execution', 'Execution'),
                                                                             ('Conception', 'Conception')))
     nature = models.CharField(choices=Nature, max_length=30)
@@ -65,7 +76,6 @@ class Documents(models.Model):
     date_indice = models.DateField(blank=True, null=True)
     date_reception = models.DateField(blank=True, null=True)
     titre = models.CharField(max_length=500, blank=True, null=True)
-    numero_revision = models.IntegerField(blank=True, null=True)
     numero_externe = models.IntegerField(blank=True, null=True)
     emetteur = models.ForeignKey(EntrepriseAffaireOuvrage, on_delete=models.CASCADE)
     aso = models.ForeignKey(Aso, on_delete=models.SET_NULL, null=True)
@@ -99,3 +109,7 @@ class Avis(models.Model):
     id_document = models.ForeignKey(Documents, on_delete=models.CASCADE)
     codification = models.CharField(max_length=23, choices=AVIS)
     collaborateurs = models.ForeignKey(Collaborateurs, on_delete=models.CASCADE)
+    class Meta:
+        constraints = [
+            UniqueConstraint(fields=['id_document', 'collaborateurs'], name='unique_avis_collaborateur')
+        ]

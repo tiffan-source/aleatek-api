@@ -2,6 +2,7 @@ from django.db import models
 from Dashbord.models import Affaire
 from collaborateurs.models import Collaborateurs
 from ouvrage.models import AffaireOuvrage
+from synthese.models import SyntheseAvis
 # Create your models here.
 
 class RapportVisite(models.Model):

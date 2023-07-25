@@ -3,6 +3,7 @@ from django.db.models import UniqueConstraint
 from Dashbord.models import Affaire
 from mission.models import Article
 from collaborateurs.models import Collaborateurs
+from synthese.models import SyntheseAvis
 
 
 # Create your models here.

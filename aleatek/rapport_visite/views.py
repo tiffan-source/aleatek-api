@@ -10,6 +10,10 @@ from rest_framework.response import Response
 from ouvrage.models import EntrepriseAffaireOuvrage, AffaireOuvrage
 from mission.models import MissionActive
 from entreprise.models import Responsable
+from django.db import transaction
+from rest_framework import status
+from datetime import date
+from utils.utils import convert_to_dict
 
 class MultipleSerializerMixin:
     detail_serializer_class = None
@@ -170,3 +174,81 @@ class AllAvisFromRV(APIView):
                     result['all_avis'].append(subresult)
                 data.append(result)
         return Response(data)
+    
+
+
+
+class CreateRv(APIView):
+    def post(self, request):
+        try:
+            with transaction.atomic():
+
+                data = convert_to_dict(request.data)
+                print(data)
+                affaire = data['affaire']
+                objet = data['objet']
+                aviss = data['aviss'] if 'aviss' in data else {}
+                order = len(RapportVisite.objects.filter(affaire=affaire)) + 1
+                
+                print('---------------------------------------------')
+                print(order)
+
+                rv = RapportVisite(date=date.today(), order_in_affaire=order, affaire_id=affaire, objet=objet, statut=0)
+                rv.save()
+                
+                for avis in aviss.values():
+                    print('+++++++++++++++++')
+                    print(avis)
+                    new_avis = AvisOuvrage(redacteur=request.user, ouvrage_id=avis['ouvrage'], objet=avis.get('objet', ''), rv=rv)
+                    new_avis.save()
+                    
+                    for comment in avis.get('commentaires', {}).values():
+                        print('********')
+                        print(new_avis.id)
+                        print(comment)
+                        test = CommentaireAvisOuvrage(
+                            asuivre=(True if comment['asuivre'] == 'true' else False),
+                            commentaire=comment['commentaire'],
+                            avis=new_avis,
+                            image=(comment['image'] if 'image' in comment else None)
+                            )
+                        test.save()
+                        print(test.id)
+        except Exception as e:
+            print(Exception)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_201_CREATED)
+    
+class AddAvisOnRv(APIView):
+    def post(self, request, id_rv):
+        try:
+            with transaction.atomic():
+
+                data = convert_to_dict(request.data)
+                print(data)
+                                
+                for avis in data['aviss'].values():
+                    print('+++++++++++++++++')
+                    print(avis)
+                    new_avis = AvisOuvrage(redacteur=request.user, ouvrage_id=avis['ouvrage'], objet=avis.get('objet', ''), rv_id=id_rv)
+                    new_avis.save()
+                    
+                    for comment in avis.get('commentaires', {}).values():
+                        print('********')
+                        print(new_avis.id)
+                        print(comment)
+                        test = CommentaireAvisOuvrage(
+                            asuivre=(True if comment['asuivre'] == 'true' else False),
+                            commentaire=comment['commentaire'],
+                            avis=new_avis,
+                            image=(comment['image'] if 'image' in comment else None)
+                            )
+                        test.save()
+                        print(test.id)
+
+        except Exception as e:
+            print(Exception)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_201_CREATED)

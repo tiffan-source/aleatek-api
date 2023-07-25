@@ -2,7 +2,6 @@ from django.db import models
 
 from ouvrage.models import Avis
 
-
 # Create your models here.
 
 class Commentaire(models.Model):

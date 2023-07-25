@@ -9,8 +9,11 @@ from rest_framework.views import APIView
 from adresse.models import Adress
 from collaborateurs.models import Collaborateurs
 from entreprise.models import Entreprise
+from rest_framework import status
 
 from django.forms.models import model_to_dict
+from mission.models import MissionActive
+from django.db import transaction
 
 
 class MultipleSerializerMixin:
@@ -155,8 +158,40 @@ class FindChargeAffaireForAffaire(APIView):
         
 class DeleteEntrepriseAffaire(APIView):
     def get(self, request, id_affaire, id_entreprise):
-        # try:
-        result = EntrepriseAffaire.objects.get(entreprise=id_entreprise, affaire=id_affaire).delete()
-        return Response(result)
-        # except:
-        #     return Response({})
+        try:
+            result = EntrepriseAffaire.objects.get(entreprise=id_entreprise, affaire=id_affaire).delete()
+            return Response(result)
+        except:
+            return Response({})
+        
+class CreateAffaireAndPlanAffaire(APIView):
+    def post(self, request):
+
+        try:
+            with transaction.atomic():
+                affaire = Affaire(**request.data['dataAffaire'])
+                affaire.save()
+
+                plan_affaire = PlanAffaire(**request.data['dataPlanAffaire'], affaire_id=affaire.id)
+                plan_affaire.save()
+
+                adress = Adress(**request.data['dataAdresseChantier'])
+                adress.save()
+
+                chantier = Chantier(batiment_id=request.data['dataBatiment'], plan_affaire_id=plan_affaire.id, adresse_id=adress.id)
+                chantier.save()
+
+                for mission in request.data['dataMissions']:
+                    mission_active = MissionActive(id_mission_id=mission, id_affaire_id=affaire.id)
+                    mission_active.save()
+
+                print(chantier.id)
+        except Exception as e:
+            print(e)
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        return Response(status=status.HTTP_201_CREATED)
+
+
+
+

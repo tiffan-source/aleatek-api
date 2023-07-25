@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'ouvrage',
     'commentaire',
     'rapport_visite',
-    'RICT'
+    'RICT',
+    'synthese'
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # new
