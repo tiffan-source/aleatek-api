@@ -99,7 +99,7 @@
     "model": "mission.mission",
     "pk": 13,
     "fields": {
-        "code_mission": "TH.",
+        "code_mission": "TH",
         "libelle": " Vérification des exigences d'isolation thermique et aux économies d'énergie des bâtiments"
     }
 },
