@@ -17,7 +17,7 @@
     "model": "Dashbord.batiment",
     "pk": 3,
     "fields": {
-        "libelle": "Brage et digues"
+        "libelle": "Barrage et digues"
     }
 },
   {
@@ -45,7 +45,7 @@
     "model": "Dashbord.batiment",
     "pk": 7,
     "fields": {
-        "libelle": "âtiment de culte"
+        "libelle": "Bâtiment de culte"
     }
 },
   {
@@ -66,7 +66,7 @@
     "model": "Dashbord.batiment",
     "pk": 10,
     "fields": {
-        "libelle": "Commerce de surface limité"
+        "libelle": "Commerce de surface limitée"
     }
 },
   {

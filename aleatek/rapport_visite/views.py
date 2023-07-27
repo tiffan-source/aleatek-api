@@ -252,3 +252,35 @@ class AddAvisOnRv(APIView):
             return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
         return Response(status=status.HTTP_201_CREATED)
+    
+class EditAvisOuvrage(APIView):
+    def put(self, request):
+        try:
+            with transaction.atomic():
+
+                data = convert_to_dict(request.data)
+                print(data)
+                print('+++++++++++++++++')
+                # print(avis)
+                AvisOuvrage.objects.filter(id=data['id_avis']).delete()
+                new_avis = AvisOuvrage(redacteur=request.user, ouvrage_id=data['ouvrage'], objet=data.get('objet', ''), rv_id=data['rv'])
+                new_avis.save()
+                
+                for comment in data.get('commentaires', {}).values():
+                    print('********')
+                    print(new_avis.id)
+                    print(comment)
+                    test = CommentaireAvisOuvrage(
+                        asuivre=(True if comment['asuivre'] == 'true' else False),
+                        commentaire=comment['commentaire'],
+                        avis=new_avis,
+                        image=(comment['image'] if 'image' in comment else None)
+                        )
+                    test.save()
+                    print(test.id)
+
+        except Exception as e:
+            print(Exception)
+            return Response(str(e), status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+        return Response(status=status.HTTP_201_CREATED)

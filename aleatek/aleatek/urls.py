@@ -26,7 +26,7 @@ from ouvrage.views import AddEntrepriseOnOuvrage, AttachDocOnAso, DocumentSerial
 from commentaire.views import CommentaireAdminViewsetAdmin, GetAllCommentForAvis
 
 from rapport_visite.views import AddAvisOnRv, CreateRv, AllAvisFromRV, RapportVisiteSerializerAdminViewsetAdmin, AvisOuvrageViewsetAdmin, CommentaireAvisOuvrageViewsetAdmin, \
-    GetAllRapportVisiteByAffaire, GetAllRapportVisiteOneVersions, AllEntrepriseConcerneByRV, GenerateDataForRV, NextNumberRVForAffaire
+    GetAllRapportVisiteByAffaire, GetAllRapportVisiteOneVersions, AllEntrepriseConcerneByRV, GenerateDataForRV, NextNumberRVForAffaire, EditAvisOuvrage
 
 from ouvrage.views import EditRemarque, GetUserRemarqueGeneralOnAso, GetAllRemarqueGeneralOnAso, DocumentCreate, NextNumberAsoForAffaire, RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc, GetAffaireOuvrageFromDocument, GetAllDetailAsoForAffaire, CreateOuvrageForAffaire
 
@@ -129,6 +129,7 @@ urlpatterns = [
     path('api/next_number_rv_for_affaire/<int:id_affaire>/', NextNumberRVForAffaire.as_view()),
     path('api/create_rv/', CreateRv.as_view()),
     path('api/add_avis_on_rv/<int:id_rv>', AddAvisOnRv.as_view()),
+    path('api/edit_avis_ouvrage/', EditAvisOuvrage.as_view()),
 
     # Codification service
     path('api/codification_aso/<int:id_aso>/', CodificationASO.as_view()),

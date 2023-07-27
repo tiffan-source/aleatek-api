@@ -116,7 +116,7 @@ class CreateEntreprise(APIView):
                 new_entreprise.save()
                 
                 for responsable in responsables:
-                    Responsable(**responsable, entreprise=new_entreprise)
+                    Responsable(**responsable, entreprise=new_entreprise).save()
                     
                 if affaire:
                     EntrepriseAffaire(entreprise=new_entreprise, affaire_id=affaire).save()
