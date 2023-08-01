@@ -3,7 +3,6 @@ from django.db.models import UniqueConstraint
 from Dashbord.models import Affaire
 from mission.models import Article
 from collaborateurs.models import Collaborateurs
-from synthese.models import SyntheseAvis
 
 
 # Create your models here.
@@ -47,6 +46,7 @@ class CommentaireAvisArticle(models.Model):
     id_avis = models.ForeignKey(AvisArticle, on_delete=models.CASCADE)
     commentaire = models.CharField(max_length=200)
     a_suivre = models.BooleanField(default=True)
+    lever = models.BooleanField(default=False)
 
 class DescriptionSommaire(models.Model):
     type = models.CharField(max_length=200)

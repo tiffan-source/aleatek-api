@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.permissions import IsAuthenticated
-from .models import SyntheseAvis
-from .serializers import SyntheseAvisSerializer
+from .models import SyntheseAvis, SyntheseCommentaireArticle, SyntheseComentaireRV, SyntheseCommentaireDocument
+from .serializers import SyntheseAvisSerializer, SyntheseCommentaireDocumentSerializer, SyntheseComentaireRVSerializer, SyntheseCommentaireArticleSerializer
 from .permissions import IsAdminAuthenticated
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.views import APIView
@@ -30,6 +30,21 @@ class SyntheseAvisViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = SyntheseAvisSerializer
     queryset = SyntheseAvis.objects.all()
     permission_classes = [IsAdminAuthenticated]
+    
+class SyntheseCommentaireDocumentViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
+    serializer_class = SyntheseCommentaireDocumentSerializer
+    queryset = SyntheseCommentaireDocument.objects.all()
+    permission_classes = [IsAdminAuthenticated]
+    
+class SyntheseComentaireRVViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
+    serializer_class = SyntheseComentaireRVSerializer
+    queryset = SyntheseComentaireRV.objects.all()
+    permission_classes = [IsAdminAuthenticated]
+    
+class SyntheseCommentaireArticleViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
+    serializer_class = SyntheseCommentaireArticleSerializer
+    queryset = SyntheseCommentaireArticle.objects.all()
+    permission_classes = [IsAdminAuthenticated]
 
 class CreateSyntheseAvis(APIView):
     def get(self, request, id_affaire):
@@ -51,3 +66,54 @@ class AllSyntheseAvis(APIView):
             prepare['createur'] = model_to_dict(synthese.createur)
             data.append(prepare)
         return Response(data)
+
+
+class GetAllCommentaireOnAffaire(APIView):
+    def get(self, request, id_affaire):
+        result = []
+        
+        # Commentaire sur document
+        
+        comment_docs = Commentaire.objects.filter(
+            id_avis__id_document__emetteur__affaire_ouvrage__id_affaire__id=id_affaire,
+            id_avis__id_document__aso__statut__gt=1)
+        
+        for comm in comment_docs:
+            result.append({
+                'lever' : comm.lever,
+                'remarque' : comm.commentaire,
+                'on' : "Aso numero " + str(comm.id_avis.id_document.aso.order_in_affaire),
+                'ouvrage' : comm.id_avis.id_document.aso.affaireouvrage.id_ouvrage.libelle
+            })
+            
+        # Commentaire sur RV
+        
+        comment_rv = CommentaireAvisOuvrage.objects.filter(
+            avis__rv__affaire__id=id_affaire,
+            avis__rv__statut__gt=1
+        )
+        
+        for comm in comment_rv:
+            result.append({
+                'lever' : comm.lever,
+                'remarque' : comm.commentaire,
+                'on' : "RV numero " + str(comm.avis.rv.order_in_affaire),
+                'ouvrage' : comm.avis.ouvrage.id_ouvrage.libelle
+            })
+            
+        # Commentaire sur Article
+        
+        # comment_article = CommentaireAvisArticle.objects.filter(
+        #     id_avis__rict__affaire__id=id_affaire,
+        #     id_avis__rict__statut__gt=1
+        # )
+        
+        # for comm in comment_article:
+        #     result.append({
+        #         'lever' : comm.lever,
+        #         'remarque' : comm.commentaire,
+        #         'on' : "RICT numero " + str(comm.rict.id),
+        #         'ouvrage' : ""
+        #     })
+
+        return Response(result)

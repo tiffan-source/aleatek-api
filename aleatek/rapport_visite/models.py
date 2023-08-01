@@ -2,7 +2,6 @@ from django.db import models
 from Dashbord.models import Affaire
 from collaborateurs.models import Collaborateurs
 from ouvrage.models import AffaireOuvrage
-from synthese.models import SyntheseAvis
 # Create your models here.
 
 class RapportVisite(models.Model):
@@ -30,3 +29,4 @@ class CommentaireAvisOuvrage(models.Model):
     commentaire = models.CharField(max_length=200, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     avis = models.ForeignKey(AvisOuvrage, on_delete=models.CASCADE)
+    lever = models.BooleanField(default=False)

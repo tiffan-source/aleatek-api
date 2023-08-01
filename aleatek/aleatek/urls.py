@@ -12,7 +12,7 @@ from mission.views import AddInterventionTechnique, AddMissionActive, DeleteArti
 
 from collaborateurs.views import UtilisateurConnecteView, CollaborateursAdminViewsetAdmin, AllCollabAssignToMission
 from entreprise.views import AddEntrepriseOnAffaire, CreateEntreprise, EditeDataEntreprise, ResponsableAdminViewsetAdmin, EntrepriseAdminViewsetAdmin, GetEntrepriseWithCollaborateur
-from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmin, ProduitAdminViewsetAdmin, \
+from Dashbord.views import AffaireAdminViewsetAdmin, PlanAffaireAdminViewsetAdmin, ProduitAdminViewsetAdmin, EditPlanAffaire, \
     BatimentAdminViewsetAdmin, ChantierAdminViewsetAdmin, GetPlanAffaireDetail, EntrepriseAffaireViewsetAdmin, \
     GetAllEntrepriseForAffaire, GetAllEntrepriseDetailForAffaire, FindChargeAffaireForAffaire, GetPlanAffaireDetailForPlanAffaire, DeleteEntrepriseAffaire, CreateAffaireAndPlanAffaire
 from adresse.views import AdressdminViewsetAdmin
@@ -36,10 +36,15 @@ from RICT.views import SaveDecriptionSommaire, GetAllAvisByRICTandMission, GetAl
 
 from ouvrage.views import GetOuvrageAffaireDetailEntreprise, AllOuvrageAvailableForAffaire ,DocumentAffectationViewsetAdmin, GetCollaborateurAffectOnDocument, RemoveCollaborateurOnDocument, RemarqueAsoViewsetAdmin, SetRemarqueOnAso
 
-from synthese.views import SyntheseAvisViewsetAdmin, CreateSyntheseAvis, AllSyntheseAvis
+from synthese.views import SyntheseAvisViewsetAdmin, CreateSyntheseAvis, AllSyntheseAvis, SyntheseComentaireRVViewsetAdmin, SyntheseCommentaireArticleViewsetAdmin, SyntheseCommentaireDocumentViewsetAdmin, \
+    GetAllCommentaireOnAffaire
 # from ouvrage.views import CodificationplusBas
 
 router = routers.SimpleRouter()
+
+router.register('admin/synthese_commentaire_document', SyntheseCommentaireDocumentViewsetAdmin, basename='synthese_commentaire_document')
+router.register('admin/synthese_commentaire_rv', SyntheseComentaireRVViewsetAdmin, basename='synthese_commentaire_rv')
+router.register('admin/synthese_commentaire_article', SyntheseCommentaireArticleViewsetAdmin, basename='synthese_commentaire_article')
 
 router.register('admin/synthese_avis', SyntheseAvisViewsetAdmin, basename='synthese avis')
 
@@ -141,6 +146,7 @@ urlpatterns = [
     path('api/detail_plan_affaire/', GetPlanAffaireDetail.as_view()),
     path('api/detail_plan_affaire_for_plan_affaire/<int:id_plan_affaire>/', GetPlanAffaireDetailForPlanAffaire.as_view()),
     path('api/create_affaire_and_plan_affaire/', CreateAffaireAndPlanAffaire.as_view()),
+    path('api/edit_plan_affaire/<int:id_plan>/', EditPlanAffaire.as_view()),
 
     # Mission service
     path('api/mission_sign/<int:id_affaire>/', MissionActiveForCurrentAffaire.as_view()),
@@ -203,6 +209,9 @@ urlpatterns = [
     path('api/get_all_remarque_general_on_aso/<int:id_aso>/', GetAllRemarqueGeneralOnAso.as_view()),
     path('api/get_user_remarque_general_on_aso/<int:id_aso>/', GetUserRemarqueGeneralOnAso.as_view()),
 	path('api/edit_remarque/', EditRemarque.as_view()),
+ 
+    # Commentaire service
+    path('api/get_all_commentaire_on_affaire/<int:id_affaire>/', GetAllCommentaireOnAffaire.as_view()),
 
     path('api/utilisateur-connecte/', UtilisateurConnecteView.as_view(), name='utilisateur_connecte'),
     path('api/get-csrf-token/', get_csrf_token, name='get_csrf_token'),

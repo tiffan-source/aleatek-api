@@ -115,8 +115,10 @@ class GetPlanAffaireDetailForPlanAffaire(APIView):
             planAffaire_data['client']['adresse_detail'] = model_to_dict(adresse_client)
             # On cherche le batiment
             batiment = Batiment.objects.get(id=chantier['batiment'])
-            planAffaire_data['batiment'] = batiment.libelle
-
+            planAffaire_data['batiment'] = model_to_dict(batiment)
+            # On ajoute le chantier
+            planAffaire_data['chantier'] = chantier
+            
             return Response(planAffaire_data)
         except:
             return Response({})
@@ -193,5 +195,29 @@ class CreateAffaireAndPlanAffaire(APIView):
         return Response(status=status.HTTP_201_CREATED)
 
 
+class EditPlanAffaire(APIView):
+    def put(self, request, id_plan):
+        try:
+            with transaction.atomic():
+                data = request.data
+                PlanAffaire.objects.filter(id=id_plan).update(
+                    risque=data['risque'],
+                    libelle=data['libelle'],
+                    devise=data['devise'],
+                    type=data['type'],
+                    type_montant=data['type_montant'],
+                    prix=data['prix'],
+                    debut_prestation=data['debut_prestation'],
+                    fin_chantier=data['fin_chantier'],
+                    visite=data['visite'],
+                    doc=data['doc'],
+                    debut_chantier=data['debut_chantier'],
+                )
+                Affaire.objects.filter(id=data['affaire']['id']).update(charge_id=data['affaire']['charge'])
+                Chantier.objects.filter(id=data['chantier']['id']).update(batiment_id=data['destinationSelect'])
+        except Exception as e:
+            print(e)
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+        return Response(status=status.HTTP_201_CREATED)
 
