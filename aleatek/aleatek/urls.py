@@ -37,7 +37,7 @@ from RICT.views import SaveDecriptionSommaire, GetAllAvisByRICTandMission, GetAl
 from ouvrage.views import GetOuvrageAffaireDetailEntreprise, AllOuvrageAvailableForAffaire ,DocumentAffectationViewsetAdmin, GetCollaborateurAffectOnDocument, RemoveCollaborateurOnDocument, RemarqueAsoViewsetAdmin, SetRemarqueOnAso
 
 from synthese.views import SyntheseAvisViewsetAdmin, CreateSyntheseAvis, AllSyntheseAvis, SyntheseComentaireRVViewsetAdmin, SyntheseCommentaireArticleViewsetAdmin, SyntheseCommentaireDocumentViewsetAdmin, \
-    GetAllCommentaireOnAffaire
+    GetAllCommentaireOnAffaire, LeverCommentaire, AnnulerLever, AllAvisOfAffaire, ValidateSyntheseAvis, AllAvisOfSynthese, DevalidateSyntheseAvis
 # from ouvrage.views import CodificationplusBas
 
 router = routers.SimpleRouter()
@@ -94,7 +94,11 @@ urlpatterns = [
     
     path('api/create_synthese_avis/<int:id_affaire>/', CreateSyntheseAvis.as_view()),
     path('api/all_synthese_avis/<int:id_affaire>/', AllSyntheseAvis.as_view()),
-
+    path('api/all_avis_of_affaire/<int:id_affaire>/', AllAvisOfAffaire.as_view()),
+    path('api/all_avis_of_synthese/<int:id_synthese>/', AllAvisOfSynthese.as_view()),
+    path('api/validate_synthese_avis/<int:id_synthese>/<int:id_affaire>/', ValidateSyntheseAvis.as_view()),
+    path('api/devalidate_synthese_avis/<int:id_synthese>/', DevalidateSyntheseAvis.as_view()),
+    
     # entreprise service
     path('api/all_entreprise_concerne_by_aso/<int:id_aso>/', AllEntrepriseConcerneByAso.as_view()),
     path('api/all_entreprise_concerne_by_rv/<int:id_rv>/', AllEntrepriseConcerneByRV.as_view()),
@@ -212,6 +216,8 @@ urlpatterns = [
  
     # Commentaire service
     path('api/get_all_commentaire_on_affaire/<int:id_affaire>/', GetAllCommentaireOnAffaire.as_view()),
+    path('api/lever_commentaire/', LeverCommentaire.as_view()),
+    path('api/annuler_lever_commentaire/', AnnulerLever.as_view()),
 
     path('api/utilisateur-connecte/', UtilisateurConnecteView.as_view(), name='utilisateur_connecte'),
     path('api/get-csrf-token/', get_csrf_token, name='get_csrf_token'),

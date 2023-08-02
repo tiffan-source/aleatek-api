@@ -4,6 +4,7 @@ from collaborateurs.models import Collaborateurs
 from commentaire.models import Commentaire
 from rapport_visite.models import CommentaireAvisOuvrage
 from RICT.models import CommentaireAvisArticle
+from django.db.models import UniqueConstraint
 
 import datetime
 # Create your models here.
@@ -24,11 +25,23 @@ class SyntheseAvis(models.Model):
 class SyntheseCommentaireDocument(models.Model):
     synthese = models.ForeignKey(SyntheseAvis, on_delete=models.CASCADE)
     commentaire = models.ForeignKey(Commentaire, on_delete=models.CASCADE)
+    class Meta:
+        constraints = [
+            UniqueConstraint(fields=['synthese', 'commentaire'], name='unique_synthese_commentaire_document')
+        ]
     
 class SyntheseComentaireRV(models.Model):
     synthese = models.ForeignKey(SyntheseAvis, on_delete=models.CASCADE)
     commentaire = models.ForeignKey(CommentaireAvisOuvrage, on_delete=models.CASCADE)
+    class Meta:
+        constraints = [
+            UniqueConstraint(fields=['synthese', 'commentaire'], name='unique_synthese_commentaire_rv')
+        ]
 
 class SyntheseCommentaireArticle(models.Model):
     synthese = models.ForeignKey(SyntheseAvis, on_delete=models.CASCADE)
     commentaire = models.ForeignKey(CommentaireAvisArticle, on_delete=models.CASCADE)
+    class Meta:
+        constraints = [
+            UniqueConstraint(fields=['synthese', 'commentaire'], name='unique_synthese_commentaire_article')
+        ]
