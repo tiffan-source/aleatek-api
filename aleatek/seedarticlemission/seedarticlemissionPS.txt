@@ -1,0 +1,77 @@
+CONTEXTE REGLEMENTAIRE
+    Dispositions définies par arrêté du 22 octobre 2010 modifié
+        Zone sismique du projet
+        Catégorie d'importance de l'ouvrage
+        Intervention dans un existant
+    Dispositions spécifiques exigées pour l'ouvrage
+        Exigences réglementaires complémentaires
+        Continuité du fonctionnement des ouvrages de catégorie d'importance IV (Code de l'environnement - art R.563-5)
+        Exigences contractuelles
+
+ENVIRONNEMENT DE L'OUVRAGE
+    Risque lié à la topographie des lieux
+        Stabilité des pentes, chute de blocs
+    Risque lié aux ouvrages avoisinants
+        Risque lié aux ouvrages avoisinants
+DISPOSITIONS DE L'OUVRAGE
+    Interface sol-structure
+        Assise de l'ouvrage
+Dispositions générales de l'ouvrage
+    Configuration en plan
+        Configuration en élévation
+        Configuration des planchers
+FONDATIONS ET SOUTENEMENTS
+    Contexte géotechnique de l'opération
+        Eléments fournis par l'étude géotechnique
+    Système de fondation envisagé
+        fondations superficielles
+        fondations profondes
+    Ouvrages de soutènement
+        Ouvrage de soutènement
+OSSATURE ET ELEMENTS DE STRUCTURE
+    Cheminement des efforts - Contreventement
+        système du contreventement envisagé
+        interfaces à gérer
+    Facteurs de vulnérabilité identifiés
+        points de faiblesse identifiés
+    Justification du comportement sous séisme
+        Classe de ductilité retenue
+        Coefficient de comportement
+        Autres dispositions
+ELEMENTS DE CLOS ET DE COUVERT
+    Façades
+        dispositions prises pour limiter les déformations entre étages
+        dispositions et justifications spécifiques
+    Couverture
+       dispositions et justifications spécifiques
+ELEMENTS NON STRUCTURAUX
+    Eléments intérieurs horizontaux (ou assimilés)
+        dispositions et justifications spécifiques
+    Eléments intérieurs verticaux (ou assimilés)
+        dispositions et justifications spécifiques
+    Eléments extérieurs
+        dispositions et justifications spécifiques
+    Eléments rapportés
+AUTRES
+    Dispositions particulières
+        points particuliers du projet
+TRAVAUX DANS UN BATIMENT EXISTANT
+    Exigence réglementaire associée aux travaux
+        points particuliers du projet
+    Diagnostic préalable de l'existant
+        points particuliers du projet
+    Incidence des travaux prévus
+        points particuliers du projet
+
+
+
+
+
+
+
+
+
+
+
+
+

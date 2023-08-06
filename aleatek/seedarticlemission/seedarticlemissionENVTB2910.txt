@@ -1,0 +1,14 @@
+INSTALLATION DE COMBUSTION D'UNE PUISSANCE THERMIQUE > A 2 MW ET < A 20 MW - Arrêté du 25 juillet 1997
+    Implantation et aménagement
+        Alimentation en combustible (art. 2.12)
+        - Protection des canalisations contre les agressions extérieures
+        - Dispositif de coupure manuelle extérieur
+        - Signalisation du dispositif de coupure manuelle
+        - Dispositif de coupure automatique pour gaz
+        - Electrovannes gaz asservies à des détecteurs gaz et à un pressostat
+        - Appareil de réchauffage d'un combustible liquide
+        - Robinet d'arrêt sur chaque appareil de combustion
+        Contrôle de la combustion (art. 2.13)
+        - Dispositifs de contrôle du bon fonctionnement
+        - Dispositif de contrôle de flamme pour chaudières à combustible liquide ou gazeux
+

@@ -51,3 +51,11 @@ class Article(models.Model):
 class ArticleSelect(models.Model):
     affaire = models.ForeignKey(Affaire, on_delete=models.CASCADE, related_name='affaire_article_select')
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='article_article_select')
+
+
+class ArticleMission(models.Model):
+    id_article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    id_mission = models.ForeignKey(Mission, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.id_article} {self.id_mission}"

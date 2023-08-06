@@ -1,0 +1,82 @@
+ENTREPOTS COUVERTS ET PLATEFORME LOGISTIQUE - Arrêté du 5 août 2002 modifié
+    implantation-accessibilité
+        Implantation des entrepôts
+        - Eloignement des parois extérieures de l'entrepôt par rapport aux constructions tiers
+        - Implantation des entrepôts ouverts
+        - Pas d'habitation à l'exception du logement éventuel pour le gardien de l'entrepôt
+        Accessibilité des entrepôts
+        - Accessible en permanence par les services d'incendie et de secours
+        - Voie-engin sur le périmètre de l'entrepôt
+        - Accès à toutes les issues par chemin stabilisé depuis la voie-engin
+        - Voie échelle prévus pour chaque façade
+    Dispositions relatives au comportement au feu des entrepôts
+        Murs extérieurs
+        - Constitution des murs extérieurs
+        Toiture
+        - Eléments de support de la toiture
+        - Isolation thermique en toiture
+        - Classement de la toiture
+        - Dispositifs d'éclairage naturels
+        Résistance au feu des structures
+        - Stabilité au feu des structures
+        - Ruine en chaîne de la structure du bâtiment
+        - Degré coupe-feu des planchers
+        - Structures à simple RDC
+        Escaliers intérieurs
+        - Encloisonnement des cages d'escaliers
+        - Débouché des cages d'escalier directement sur l'extérieur ou circulation encloisonnée
+        - Portes d'accès donnant sur les escaliers
+        Ateliers d'entretien du matériel
+        - Isolement des locaux ateliers
+        - Portes de communication
+        Bureaux et locaux sociaux
+        - Isolement des locaux bureaux ou sociaux
+        - Porte de communication
+        Désenfumage des cellules de stockage
+        - Superficie maxi des cantons de désenfumage
+        - Ecran de cantonnement
+        - Dispositifs d'évacuation en partie haute
+        - Commande des exutoires
+        - Amenée d'air frais
+    Compartimentage et aménagement du stockage
+        Entrepôt compartimenté en cellules de stockage
+        - Parois séparant les cellules de stockage
+        - Percements dans les murs ou parois séparatives
+        - Ouvertures dans les murs ou parois séparatives
+        - Portes de communication entre cellules
+        - Dépassement des parois séparatives de la couverture
+        - Bande de protection sur la toiture
+        - Colonne sèche le long des parois séparatives en alternative aux bandes de protection sur toiture
+        - Dépassement des parois séparatives en façade
+        Taille des cellules de stockage
+        - Limitation de la taille des cellules
+        - Augmentation de la taille des cellules par décision préfectorale
+        Stockage des matières dangereuses dans des cellules particulières
+        Sol des aires et des locaux de stockage ou de manipulation de matières dangereuses
+        - Sol incombustible
+        Réservoirs ou récipients contenant des matières susceptibles de réagir dangereusement ensemble
+        - Pas d'association à la même cuvette de rétention
+        Recueille de l'ensemble des eaux et écoulements
+        - Orifice d'écoulement munis d'un dispositif automatique d'obturation
+        - Volume nécessaire au confinement
+    Moyens de lutte contre l'incendie
+        Détection automatique d'incendie
+        - Dans les cellules de stockage
+        - Transmission de l'alarme à l'exploitant
+        - Détecteurs adaptés aux produits stockés
+        Moyens de lutte contre l'incendie appropriés aux risques et conformes aux normes en vigueur
+        - Détermination des points d'eau nécessaires et implantation
+        - Extincteurs portatifs
+        - Robinets d'incendie armés
+        - Système d'extinction automatique d'incendie
+    Dispositions relatives à l'exploitation de l'entrepôt
+        Issues de secours
+        - Dégagement permettant une évacuation rapide et sure
+        - Nombre d'issues
+        - Distance à parcourir pour atteindre une issue
+        - Verrouillage des issues
+
+
+
+
+

@@ -1,0 +1,149 @@
+ISOLEMENT AUX BRUITS AERIENS
+    Isolement des locaux d'hébergement vis-à-vis des bruits extérieurs
+        Niveau d'Isolement requis pour la façade
+        Façades
+        - Parois opaque des façades (murs et toitures) : Nature et épaisseur
+        - Doublages de façades
+        - Menuiseries extérieures et parties vitrées
+        - Bouche d'entrée d'air
+        - Coffres de volets roulants
+    Isolement aux bruits aériens intérieurs
+        Isolement entre deux chambres : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre deux chambres : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les chambres sous toitures
+        - Rampants filants devant séparatif entre chambres
+        - Nature et mise en œuvre des parois doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre locaux d'hébergement et locaux de soins, salles d'examen et de consultation, salle d'attente, bureaux médicaux et soignants
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois séparatives
+        Isolement entre circulations intérieure et locaux d'hébergement et de soins
+        - Nature et épaisseur de la paroi verticale
+        - Porte des chambres
+        Isolement entre deux salles d'examen, de consultations, bureaux médicaux et soignants
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        - Présence d'une porte de communication
+        Isolement entre salles d'opération, d'obstétrique, salle de travail et les locaux d'hébergement, salles d'examens, autres locaux
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        Isolement entre circulations interne et salles d'opération, d'obstétrique, salles de travail
+        - Nature et épaisseur des planchers
+        - Porte des salles
+        Isolement entre cabines de déshabillage et les cabinets de consultation
+        - Porte de communication
+        Isolement gaines ascenseur
+        - Emplacement de la gaine
+        - Nature et épaisseur des parois de la gaine
+        - Nature et épaisseur du plancher haut de la gaine
+        Isolement du local machinerie ascenseur
+        - Emplacement du local
+        - Nature et épaisseur des parois du local
+        - Nature et épaisseur des planchers du local
+        Isolement des gaines techniques passant dans les locaux d'hébergement
+        - Parois des gaines techniques : nature et épaisseurs
+        Trappes de visite sur gaines techniques
+        - Implantation des trappes
+        - Indice d'affaiblissement acoustique des trappes
+        - Surface de trappe
+        - Joint périphérique de trappe
+        - Principe de fermeture de trappe
+NIVEAU DE RECEPTION AUX BRUITS DE CHOCS
+    Planchers
+    - Nature et épaisseur des planchers
+    Revêtements de sols nécessaire à la diminution du niveau de réception aux bruits de chocs
+        - Chambres
+        - Salles de bains
+        - Circulations communes
+        - Salles d'opération
+        - Salles d'examen, de consultation
+        - Autres locaux
+    Revêtements de sols posés sur chape flottante
+        - Caractéristique de la sous couche isolante
+    Escaliers collectifs
+        - Désolidarisation de la structure verticale
+        - Revêtement de sol
+BRUITS DES EQUIPEMENTS
+    Bruits des équipements hydrauliques et sanitaire des locaux d'hébergement voisins
+        Plomberie – sanitaire
+        - Nature des chutes
+        - Dévoiement des chutes
+        - Pression d'alimentation en eau
+        - Vitesse de l'eau dans les canalisations
+        - Robinetterie : classement acoustique
+        - Désolidarisation des équipements
+        - Désolidarisation des canalisations
+        Autres équipements individuels
+        - Volets roulants électriques
+    Bruits des équipements collectifs
+        Ascenseurs
+        - Caractéristiques ascenseur
+        - Machinerie : désolidarisation des équipements
+        - Armoire de commande : emplacement, dispositif antivibratile
+        Portes automatiques de garages collectifs
+        - Emplacement
+        - Dispositifs de désolidarisation
+        Chauffage collectif
+        - Caractéristiques de la chaudière
+        - Emplacement de la chaufferie
+        - Nature et épaisseur des parois de la chaufferie (murs et planchers)
+        - Ventilation de la chaufferie
+        - Conduits de fumée : emplacement
+        - Désolidarisation des équipements
+        Ventilation mécanique contrôlée collective
+        - Nature des bouches d'extractions
+        - Caisson de ventilation : emplacement
+        - Caisson de ventilation : insonorisation
+        - Caisson de ventilation : désolidarisation
+        - Vitesse de l'air
+        - Dépression
+        Ventilation mécanique de parking
+        - Emplacement
+        - Dispositif de désolidarisation
+        - Rejet d'air
+        Autres équipements collectifs
+        - Emplacement équipement
+        - Dispositif de désolidarisation de l'équipement
+TEMPS DE REVERBERATION
+    Durée de réverbérations des locaux
+        Salle de restauration de volume ≤ 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Salles de repos du personnel
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Local public d'accueil de volume ≤ 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Locaux d'hébergement et de soins  ≤ 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Salles d'examen et de consultation  ≤ 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Bureaux médicaux et soignants  ≤ 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Locaux et circulations accessibles au public d'un volume > 250 m3
+        - Nature des revêtements absorbants
+AIRE D'ABSORPTION EQUIVALENTE DES CIRCULATIONS COMMUNES
+    Aire d'absorption équivalente des revêtements absorbants disposés dans les circulations communes
+        - Nature des revêtements absorbants : indice d'absorption et surface
+        - Surface du sol
+
+
+
+
+
+
+
+
+
+
+
+
