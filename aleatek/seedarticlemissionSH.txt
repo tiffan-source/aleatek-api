@@ -1,0 +1,254 @@
+DEGAGEMENTS
+    Circulations horizontales protégées
+        Art. 37 - Circulations "à l'abri des fumées" - Désenfumage mécanique
+        - Débit d'extraction
+        - Mise en marche des ventilateurs par la détection
+        - Ouvertures des volets selon art. 36
+        - Dispositif en partie haute ouvrant sur l'extérieur
+        - Débouché en toiture
+        - Nature du ventilateur : 400°C pendant une heure
+        - Alimentation électrique des ventilateurs
+CONDUITS ET GAINES
+    Gaines et conduites montantes de gaz
+        Art. 50 et 51 - Gaines et conduites montantes de gaz
+        - Gaz rejeté vers l'extérieur en cas de fuite
+        - Accessibles et visitables depuis les parties communes
+        Art. 53 - Gaines et conduites montantes de gaz
+        - Accessibles et visitables depuis les parties communes
+        - Recoupement en PH du sous-sol
+        - Ventilation en partie haute
+        - Ventilation en partie basse et partie courante
+        - Débouché en partie basse sur extérieur ou volume ventilé
+        - Cas particulier des gaz plus lourd que l'air
+        - Conduits d'amenée d'air en sous-sol ou VS accessible
+        - Dispositions des gaines sans raccord mécanique
+        - Gaine possédant une paroi sur l'extérieur
+        - Gaine commune avec d'autres conduits
+        Art. 54 - Gaines et conduites montantes de gaz - caractéristiques
+        - Gaine en circulation commune ou en escalier à l'air libre
+        - Portes et trappes de visite de la gaine
+        Art. 55 - Gaines et conduites montantes gaz en communication avec local
+        - Recoupement à tous les niveaux
+        - Ventilation du local
+        - Ventilation de la gaine gaz
+        - Caractéristiques au feu des parois de l'ensemble gaine-local
+        Art. 56 - Installation de gaz
+        - Conformité à l'arrêté du 2 aout 1977
+        - Traversée parc de stationnement couvert
+        Art. 57 - Alvéoles techniques gaz
+        - Conformité à l'arrêté du 2 aout 1977
+    Autres gaines
+        Art. 59 - Conduits et circuits de ventilation - conditions générales
+        - Caractéristiques conduits de ventilation
+        - Caractéristiques conduits + calorifugeage + gaine (éventuelle)
+        Art. 60 - Conduits / circuits ventilation - conditions de non application art. 61
+        - Fonctionnement du ventilateur en permanence
+        - Alimentation électrique du ventilateur
+        - Catégorie du ventilateur
+        - Si VMC-Gaz dispositif de sécurité collective
+        - Présence de clapet actionné par dispositif thermique sur chaque bouche
+        Art. 61 - Conduits et circuits ventilation - conditions complémentaires
+        - Tenue au feu de la bouche d'extraction
+        - Respect de la règle des 50 Pa
+        - Dispositif étanche en position fermée
+        - Fermeture automatique des dispositifs
+        - Distance débouché – obstacles
+        Art. 62 - Conduits et circuits de ventilation - VMC inversée - VMC double flux
+        - VMC inversée : local exclusif pour ventilateur
+        - VMC inversée : Caractéristiques au feu des parois du local ventilateur
+        - VMC inversée : Caractéristiques au feu porte d'accès au local ventilateur
+        - VMC inversée : Absences de clapets sur conduits collectifs
+        - VMC double flux : risque de communication entre air extrait et air insufflé
+        - VMC double flux : Traitement selon art. 59 et 60 § 1 et 2
+        Art. 63 - Desserte des conduits de ventilation
+        - Absence conduits de ventilation communs entre habitation et autres locaux
+PARCS DE STATIONNEMENT
+    Aménagements et équipements
+        Art. 88.1 - Conduits et gaines dans le parc
+        - Protection contre le choc de véhicule
+        - Caractéristiques gaines avec conduits liquides inflammables
+        - Caractéristiques gaines avec conduits vapeur sous pression
+        - Caractéristiques gaines avec conduits gaz combustible
+        Art. 88.2 - Conduits et gaines de ventilation du parc
+        - Caractéristiques conduits et enveloppe
+        - Trappes et portes de visites
+        - Traversée dans d'autres locaux
+        - Principe de desserte
+        Art. 88.3 - Conduits et gaines traversant par cet autres locaux
+        - Coupe-feu de traversée
+        Art. 89.1 - Ventilation mécanique parc de stationnement
+        - Conditions mise en œuvre ventilation mécanique
+        - Débit ventilation mécanique
+        - Commandes prioritaires sélectives par niveau
+        - Caractéristiques des ventilateurs
+        - Alimentation électrique des ventilateurs
+INSTALLATION GAZ - arrêté du 2 août 1977
+    Généralités
+        Art 1 - Champ d'application
+        Art 4 - Références aux normes
+        Art 5 - Interdiction de vente
+        Art 6 - Documents à fournir
+    Alimentation des appareils
+        Art 7 - Pose des conduites
+        - Pression maximale effective de distribution
+        - Limitation du diamètre intérieur des conduites collectives
+        - Utilisation de la brasure
+        - Utilisation de conduite en plomb
+        - Conduites d'immeubles autres qu'en tubes d'acier
+        - Conduites intérieures aux habitations individuelles alimentées à P > 400 mbar
+        - Conduites montantes à l'intérieur des immeubles neufs installées dans une gaine
+        - Conduites montantes dans immeubles existants installées sans gaine
+        - Gaine technique commune électricité et gaz
+        - Absence de conduite collective à l'intérieur des logements
+        - Possibilité de tiges cuisines à l'intérieur des logements, sans gaine
+        - Desserte de 2 cuisines contigües à partir d'une même tige-cuisine autorisée
+        - Conduites sans joint mécanique dans la traversée d'un local non ventilé ou dans leur parcours encastré
+        - Conduites et accessoires assemblés solidairement entre eux et ensemble fixé aux murs, cloisons, planchers
+        - Pénétration à travers un mur enterré
+        - Implantation des conduites de gaz
+        - Utilisation des conduites de gaz
+        - Réalisation de l'installation gaz
+        - Emploi du polyéthylène pour la réalisation des canalisations extérieures enterrées
+        Art 8 - Dispositions particulières aux conduites d'alimentation des chaufferies et aux organes accessoires à celles-ci
+        - Organe de coupure à fermeture rapide
+        - Dérivations sur conduites gaz avant l'entrée dans l'immeuble ou à l'extérieur pour chaufferie en terrasse
+        - En immeuble existant, possibilité d'alimentation depuis une conduite montante préexistante
+        - Accessibilité et signalisation
+        - Pénétration dans bâtiment neuf
+        - Pénétration dans bâtiment existant
+        - Cas des chaufferies en terrasse ou en étage non surmonté d'étages habités
+        - Réalisation de l'installation
+        - Système de sécurité
+        - Bloc de détente à l'extérieur des bâtiments
+        - Bloc de détente en chaufferie
+        - Alimentation en gaz des appareils
+        Art 9 – Essais
+        - Epreuves d'étanchéité et de résistance mécanique
+        Art 10 - Robinets de commande d'appareils
+        - Appareil desservi par tuyauterie fixe
+        - Appareil raccordé en tube rigide
+        - Possibilité d'un seul robinet de commande pour l'ensemble des appareils de cuisson d'un même local
+        - Gaz distribué par réseau de canalisations publiques
+        - Installation individuelle distribué à partir d'un (des) récipient(s)
+        Art 11 - Alimentation en gaz des appareils
+        - Possibilité d'utiliser des tuyaux souples et des tuyaux flexibles
+        - Tuyaux souples et tuyaux flexibles
+        - Alimentés par une tuyauterie rigide ou par un tuyau flexible métallique
+        - Appareils de cuisson incorporés dans des blocs cuisine fixe
+        - Raccordement des appareils autres que ceux visés ci-dessus
+        Art 12 – Appareils
+        - Conformité NF-GAZ ou CE-France des appareils
+    Organes de coupure gaz
+        Art 13 - Dispositions générales
+        - Branchement d'immeuble
+        - Branchement d'immeuble  de plus de 10 logements par cage d'escalier
+        - Installation intérieur d'abonné commandée par un organe de coupure
+        - Conduites montantes extérieures
+        - Cas des tiges cuisine : organe de coupure confondu avec robinet de commande d'appareil
+        - Cas des tiges après compteur
+        Art 14 - Dispositions complémentaires applicables dans le cas de gaz distribué à une pression supérieure à 400 mbar.
+        - Distribution à une pression supérieure à 400 mbar
+        - Détendeurs collectifs communs
+    Prescriptions concernant l'aménagement des locaux
+        Art 15 - Installations des appareils - Aération des locaux
+        - Appareils à circuit étanche
+        - Appareils à circuit non étanche installés dans un local appartenant à une construction
+        - Appareils à circuit non étanche installé dans autres bâtiments
+        - Appareils de production d'eau chaude non raccordé
+        - Appareils de chauffage ou de production ECS dans les salles de bains ou de douches
+        Art 16 - Appareils regroupés en alvéoles techniques gaz
+        - Parois du local
+        - Vide en alvéoles techniques gaz et planchers de l'immeuble
+        - Cloisons séparant les différentes parties de l'alvéole
+        - Portes et trappes de visite
+        - Conduite montante gaz dans alvéole
+        - Alvéole technique gaz en immeuble de 4ème famille
+        Art 16bis - Dispositions particulières applicables aux mini-chaufferies
+        - Mini-chaufferies
+        - Appareils à gaz fixes de chauffage, production ECS installés à l'extérieur à proximité d'habitations ou de leurs dépendances
+        Art 17 - Dispositions complémentaires concernant les appareils non raccordés
+        - Appareils non raccordés à un conduit de fumée
+        - Conditions d'installation d'un appareil de production ECS
+        Art 18 - Evacuation des produits de combustion
+        - Conduits de fumée
+        - Evacuation des fumées par extraction mécanique
+        - Dispositif de sécurité collective sur VMC GAZ
+        - Conduits "spéciaux gaz"
+        - Prescriptions concernant les bâtiments anciens
+        - Alvéoles techniques
+        - Appareils à circuit étanche
+    Prescriptions particulières aux gaz liquéfiés
+        Art 19 – Locaux
+        - Ventilation du local
+        - Orifice de ventilation
+        - Stockage des récipients de butane
+        Art 20 – Récipients
+        - Récipients de propane > à 6,5 litres
+        - Localisation des récipients de propane
+        - Récipients sous abri
+        - Postes fixes
+        Art 21 - Place des récipients
+        - Implantation des récipients
+        - Implantation de la robinetterie
+        Art 22 - Remplacement des récipients
+        - Remplacement d'un récipient vide par un plein.
+        - Robinetterie et organes de détente
+        Art 23 - Branchement des récipients
+        - Branchement des récipients d'hydrocarbures liquéfiés
+        - Règles de sécurité
+        - Détenteur et limitateur de pression en extérieur
+        - Détenteur déclencheur intérieur
+        Art 24 – Transvasement
+    Contrôles, vérifications et entretien des installations
+        Art 25 - Certificat de conformité
+VMC GAZ - arrêté du 30 mai 1989
+    Généralités VMC Gaz
+        Générateur
+        - Coupe tirage pour les appareils raccordés
+        - Signalétique
+        - Sécurité VMC individuelle incorporée
+        Bouches
+        - Compatibilité avec le type de générateur
+        Réseaux aérauliques
+        - Absence de clapet pare-flamme sur le conduit de raccordement
+        - Absence de registre de réglage
+        - Conduits de raccordement des gaz brûlés
+        - Conduits d'évacuation des gaz brûlés
+        - Traînasses d'évacuation des gaz brûlés
+        - Traînasses d'évacuation des gaz brûlés situés en combles
+        - Pas de contact entre conduits d'évacuation des gaz brûlés et les matériaux combustibles de la construction
+        - Conduit de refoulement des gaz brûlés placé en gaine ventilée
+        - Plaque signalétique à proximité des bouches d'extraction des chaudières
+        Extracteur
+        - Débit d'extraction compatible avec la puissance de l'appareil
+        - Moteur de secours
+    Dispositif de sécurité collective
+        Installation de VMC-Gaz équipée d'un dispositif de sécurité collective conforme aux dispositions de l'arrêté du 30 mai 1989
+        - Principe de sécurité positive pour tous les éléments du DSC
+        - Circuit de sécurité transmettant l'ordre de mise à l'arrêt à tous les appareils raccordés
+        - Relais de sécurité dans chaque logement assurant la mise à l'arrêt du générateur
+        - Détecteur pressostatique ou tachymétrique sur le caisson de VMC gaz pour mise à l'arrêt de toutes les chaudières en cas de défaillance du ventilateur
+        - Dispositions diverses
+        - Attestation de conformité du descriptif du dispositif de sécurité collective aux dispositions de l'arrêté du 30 mai 1989.
+        - Attestation de conformité du dispositif de sécurité collective au descriptif et de bon fonctionnement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

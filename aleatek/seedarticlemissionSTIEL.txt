@@ -1,0 +1,102 @@
+CODE DU TRAVAIL - INSTALLATIONS ELECTRIQUES
+    Prescriptions relatives à la conception et à la réalisation des installations électriques Basse Tension
+        R.4215-3 - Protection contre les contacts directs et indirects
+        - - Mise hors de portée par éloignement
+        - - Mise hors de portée au moyen d'obstacles
+        - - Mise hors de portée par isolation
+        - - TRES BASSE TENSION DE SECURITE (TBTS)
+        - - TRES BASSE TENSION DE PROTECTION (TBTP)
+        - - TRES BASSE TENSION FONCTIONNELLE (TBTF)
+        - - Isolation double ou renforcée (Classe II)
+        - - Séparation de circuit
+        - - Installation à courant continu
+        - - Protection par dispositif différentiel
+        - - Protection complémentaire par DDR à haute sensibilité
+        - - Constitution de la prise de terre
+        - - Valeur de la résistance de la prise de terre
+        - - Mise à la terre des masses métalliques
+        - - Liaison équipotentielle
+        - - Isolement de l'installation basse tension
+        R.4215-4 - Protection contre les surtensions
+        - - Protection contre les surtensions à fréquence industrielle
+        - - Voisinage entre différents domaines de tension.
+        R.4215-5 - Risques d'élévation normale de température des matériels électriques
+        - - Risque de brulures pour les travailleurs
+        - - Risque de dégradation des objets voisins notamment les appuis des matériels.
+        - - Dissipation de la chaleur dégagée par les appareils ou canalisations.
+        R.4215-6 - Matériels supportant les effets de surintensité
+        - - Appareils de connexion, de sectionnement, de commande et de protection
+        - - Conducteurs des canalisations fixes protégées contre les surintensités.
+        - - Matériels avec diélectriques liquides inflammables et transformateurs type sec protégés contre les risques d'incendie.
+        R.4215-7 - Dispositifs de sectionnement permettant d'intervenir en sécurité sur l'installation.
+        - - Séparation des installations électriques
+        - - Séparation des circuits ou appareils d'utilisation
+        - - Séparation des sources d'alimentation
+        R.4215-8 - Dispositifs de coupure d'urgence de l'alimentation électrique.
+        R.4215-9 - Mode de pose des canalisations électriques
+        R.4215-10 - identification des circuits et des appareillages
+        - - Localisation et repérage des canalisations
+        - - Repérage des conducteurs
+        R.4215-11 - Matériels électriques tenant compte de la tension et des conditions d'environnement.
+        R.4215-12 - Installations électriques exposées à des risques d'incendie ou d'explosion
+        R.4215-13 - Locaux ou emplacement de service électrique
+        - - Accessibilité aux matériels
+        - - Aisance de déplacement et de mouvement
+        - - Protection contre les chocs électriques
+        - - Prévention des risques de brulures et d'incendie
+        - - Prévention des risques d'atmosphère toxique au asphyxiante
+        - - Eclairage de sécurité
+        R.4215-15 - Installations électriques conformes aux normes et guides d'application.
+        R.4215-16 - Matériels électriques conformes aux normes ou spécifications techniques assurant un niveau de sécurité équivalent.
+        R.4215-17 - Eclairage de sécurité
+        - - Conception et mise en ouvre de l'éclairage de sécurité (R.4227-14)
+    Prescriptions relatives à la conception et à la réalisation des installations électriques Haute Tension
+        R.4215-3 - Protection contre les contacts directs et indirects
+        - - Mise hors de portée par éloignement
+        - - Mise hors de portée au moyen d'obstacles
+        - - Mise hors de portée par isolation
+        - - Dispositions à prendre dans les locaux et emplacements de travail à risques de choc électrique
+        - - Verrouillage  -Schéma et consigne de manoeuvre
+        - - Schéma TNR
+        - - Schéma TTN et TTS
+        - - Schéma ITR, ITN et ITS
+        - - Protection homopolaire
+        - - Constitution de la prise de terre
+        - - Valeur de la résistance de la prise de terre
+        - - Mise à la terre des masses métalliques
+        - - Liaison équipotentielle
+        - - Protection contre les contacts indirects sur les enseignes hautes tension
+        R.4215-4 - Protection contre les surtensions
+        - - Protection contre les surtensions à fréquence industrielle
+        - - Voisinage entre différents domaines de tension.
+        R.4215-5 - Risques d'élévation normale de température des matériels électriques
+        - - Risque de brulures pour les travailleurs
+        - - Risque de dégradation des objets voisins notamment les appuis des matériels.
+        - - Dissipation de la chaleur dégagée par les appareils ou canalisations.
+        R.4215-6 - Matériels supportant les effets de surintensité
+        - - Mise en ouvre des connexions
+        - - Protection des canalisations contre les surintensités
+        - - Matériels avec diélectriques liquides inflammables et transformateurs type sec protégés contre les risques d'incendie.
+        R.4215-7 - Dispositifs de sectionnement permettant d'intervenir en sécurité sur l'installation.
+        R.4215-8 - Dispositifs de coupure d'urgence de l'alimentation électrique.
+        R.4215-9 - Mode de pose des canalisations électriques
+        R.4215-10 - identification des circuits et des appareillages
+        - - Localisation et repérage des canalisations
+        - - Repérage des conducteurs
+        R.4215-11 - Matériels électriques tenant compte de la tension et des conditions d'environnement
+        R.4215-12 - Installations électriques exposées à des risques d'incendie ou d'explosion
+        R.4215-13 - Locaux ou emplacement de service électrique
+        - - Accessibilité aux matériels
+        - - Aisance de déplacement et de mouvement
+        - - Protection contre les chocs électriques
+        - - Prévention des risques de brulures et d'incendie
+        - - Prévention des risques d'atmosphère toxique au asphyxiante
+        - - Eclairage de sécurité
+        - - Conditionnement ou ventilation
+        R.4215-15 - Installations électriques conformes aux normes et guides d'application.
+        R.4215-16 - Matériels électriques conformes aux normes ou spécifications techniques assurant un niveau de sécurité équivalent.
+
+
+
+
+
