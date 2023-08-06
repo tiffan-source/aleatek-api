@@ -1,0 +1,12 @@
+ATELIERS DE CHARGE D'ACCUMULATEURS PUISSANCE > A 10kW - arrêté du 29 mai 2000
+    Implantation - Aménagement
+        Installations électriques
+        - Installations électriques conformes au décret n° 88-1056
+        Mise à la terre des équipements
+        - Liaison équipotentielle des équipements métalliques
+    Risques
+        Matériel électrique de sécurité
+        - Installations électriques nécessaires aux besoins de l'exploitation
+        - Matériels électriques conformes sur les emplacements présentant des risques d'explosion
+        - Canalisations protégées contre les chocs, propagation des flammes.
+

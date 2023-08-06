@@ -1,0 +1,116 @@
+DISPOSITIONS REGLEMENTAIRES SPECIFIQUES AUX DOM - arrêté du 17 avril 2009
+    Aération des pièces de service
+        Aération des cuisines
+        - Une baie d'au moins 1 m² ouvrant sur l'extérieur
+        - Au moins 0,2 m² de la baie situé à au moins 1,9 m au-dessus du sol fini
+        Aération des pièces de service autre que la cuisine
+        - Baie ouvrant sur l'extérieur pour chaque pièce de service
+        - Surface d'ouverture minimale de chaque baie
+        Cas de la ventilation mécanique contrôlée (VMC)
+        - Débit d'extraction en cuisine
+    Dispositions spécifiques concernant l'aération
+        Locaux concernés
+        - Cuisine et pièce principale avec baie sur façade soumise à isolement acoustique (R. 162-3 du CCH)
+        - Pièce située dans une zone climatisée
+        Ventilation des cuisines
+        - Mise en dépression du local par rapport à l'extérieur
+        Ventilation des pièces principales
+        - Soit mise en dépression du local par rapport à l'extérieur et entrée d'air en façade ou menuiserie
+        - Soit système mécanique d'insufflation d'air extérieur
+AERATION DES LOGEMENTS - arrêté du 24 mars 1982
+    Dispositions communes aux deux modes d'aération
+        Art. 8 - Appareil à combustion : débit d'aération suffisant pour son bon fonctionnement
+        Art. 11 - Conduit de fumée ou foyer fonctionnant par tirage naturel en présence d'une extraction mécanique
+        Art. 12 - Raccordement des conduits de fumée à un dispositif mécanique
+        - Evacuation mécanique de l'air de ventilation du logement
+        - Dispositifs d'extraction d'air et des fumées communs ou ne pouvant fonctionner que simultanément
+        - Mise en sécurité en cas de panne de l'extracteur évacuation des fumées
+        Art. 12 - Mise en sécurité en cas de panne du dispositif mécanique collectif d'évacuation d'air de la cuisine
+        Art. 13 - Conduit d'évacuation des produits de combustion d'un appareil raccordé alimenté en gaz pouvant servir de sortie d'air
+        Art. 14 - Interdiction de raccorder un dispositif d'extraction mécanique individuel sur un conduit collectif
+        Art. 15 - Caractéristiques et emplacement des entrées d'air
+        - Implantation
+        - Dispositifs d'entrée d'air
+        Art. 16 - Accessibilité des dispositifs d'entrée et de sortie d'air
+        - Dispositifs d'entrée et de sortie d'air faciles à nettoyer
+        - Dispositifs mécaniques faciles à vérifier et à entretenir
+CONDUITS DE FUMEE - arrêté du 22 octobre 1969
+    Dispositions générales
+        Art. 2 - Construction des conduits de fumée
+        - Conditions d'étanchéité des conduits
+        - Conditions de résistance aux températures
+        - Conditions de résistance à la corrosion
+        - Conditions d'isolation thermique
+        Art. 3 - Conduits non auto-stables
+        - Adossés à des éléments porteurs en matériaux incombustibles, de stabilité et tenue au feu suffisante
+        - Solidement fixés à leur support
+        Art. 4 - Accessibilité des conduits
+        - Une face par conduit directement accessible
+        - Interdiction de suradossement de conduits
+        - Interdiction d'incorporation de conduits sur plusieurs épaisseurs
+        - Isolation des faces accessibles
+        Art. 5 - Conduits composés d'éléments
+        - Interdiction de joint en traversée d'ouvrage
+        Art. 6 - Section des conduits
+        - Section des conduits uniforme sur toute la hauteur
+        - Parois intérieures lisses
+        - Courbure régulière et sans discontinuité au droit des dévoiements
+        - Rapport L/l inférieur ou égal à 1,6
+    Conduits à tirage naturel
+        Art. 8 - Conduits de fumée collectifs
+        - Admis dans les immeubles de 4 niveaux et plus
+        - Nombre de foyers raccordés au conduit collecteur
+        Art. 9 - Section des conduits collecteurs
+        - Section intérieure appropriée aux foyers desservis
+        - Section au moins égale à 400 cm²
+        - Section carrée ou circulaire
+        - Section rectangulaire ou elliptique
+        Art. 10 - Conduits collecteurs
+        - Raccordement d'un seul foyer par étage
+        - Implantation des foyers
+        - Trappe de ramonage
+        Art. 11 - Raccordements individuels
+        - Foyer raccordé par raccordement individuel
+        - Hauteur du raccordement - hauteur de tirage
+        - Section des raccordements individuels
+        - Raccordement individuel vertical et sans dévoiement
+        - Jonction au conduit collecteur
+        Art. 12 - Appareils raccordés
+        - Puissance calorifique maxi des appareils raccordés
+        Art. 13 - Cheminées à feu ouvert
+        - Interdiction de raccordement sur conduit collectif
+        Art. 14 - Dispositif antirefouleur
+        - Conduits collectifs surmontés d'un dispositif antirefouleur
+        Art. 15 - Isolation des conduits de fumée collectifs
+        - Parcours en combles
+        - Parcours extérieur
+        - Adossement à une paroi extérieure
+        Art. 16 - Evacuation des gaz brulés d'appareils à gaz
+        - Conduit de fumée polycombustible
+        - Conduit de fumée "spécial gaz"
+        Art. 17.1 - Dévoiement des conduits individuels
+        - Nombre de dévoiements
+        - Angle des dévoiements
+        Art. 17.2 - Dévoiement des conduits collectifs et collecteurs
+        - Aucun dévoiement sur raccordements au conduit collectif
+        - Non dévoiement du conduit collecteur en parcours intérieur
+        - Dévoiements possibles hors de l'immeuble
+        - Dispositions pour ramonage du conduit
+        - Angle des dévoiements
+        Art 18 - Orifices extérieurs des conduits
+        - Cas général
+        - Cas particulier pour toiture à pente supérieure à 15°
+        - Cas toiture-terrasse ou pente inférieure à 15°
+    Conduits à tirage mécanique
+        Art 19 - Evacuation des fumées par extraction mécanique
+        - En cas de panne : évacuation par tirage naturel et conduits conformes aux articles 7 à 18
+        - En cas de panne : combustion arrêtée automatiquement
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,145 @@
+DISPOSITIONS REGLEMENTAIRES - R.162-1 et R.162-2 du CCH
+    Domaine d'application
+        Bâtiments d'habitation neufs ou parties nouvelles de bâtiments d'habitation existants
+        Demande de permis de construire ou déclaration préalable déposée à compter du 1er mai 2010
+        Autres bâtiments
+    Exigences
+        Limitation du recours à la climatisation par protection solaire et ventilation naturelle
+        Consommation d'énergie limitée pour le chauffage
+    Eau chaude sanitaire
+        Tout logement comporte un système de production d'eau chaude sanitaire (hors Guyane)
+        50 % des besoins produits par énergie solaire (y compris Guyane)
+RTAA - CARACTERISTIQUES THERMIQUES MINIMALES - ARRETE DU 17/04/09 MODIFIE
+    Facteur solaire des parois opaques en contact avec l'extérieur
+        Facteur solaire des parois horizontales
+        Facteur solaire des parois verticales des pièces principales
+        Exception des bâtiments d'habitation construits à La Réunion à une altitude supérieure à 600 mètres
+    Facteur solaire des baies des logements
+        Facteur solaire S de chaque baie des logements en contact avec l'extérieur
+        Baies des pièces de service de surface < 0,5 m²
+        Baies des logements, transparentes ou translucides, en contact avec l'extérieur, interdites dans le plan des parois horizontales
+        Exception des bâtiments d'habitation construits à La Réunion à une altitude supérieure à 600 mètres
+    Ventilation naturelle de confort thermique
+        Taux d'ouverture de chaque pièce principale de chaque logement
+        Répartition des surfaces d'ouverture libre des baies d'un logement sur les façades
+        Règles de dimensionnement et d'implantation des baies de chaque pièce principale
+        - Nombre de baies
+        - Surface minimale des baies
+        - Baies sur les parois opposées ou latérales
+        - Distance entre les centres des baies
+        - Calculs aérauliques ou mesures en soufflerie
+        Ventilateur de plafond dans les chambres disposant d'une seule ouverture
+        Attente électrique pour ventilateur de plafond dans les chambres disposant d'au moins deux ouvertures et dans les autres pièces principales
+        - Séjours > 20m² : 2 attentes
+        - Cuisine ouverte sur le séjour
+        Exception des bâtiments d'habitation construits à La Réunion à une altitude supérieure à 600 mètres
+    Eau chaude sanitaire et chauffage
+        Ballon de stockage sur les installations de production d'eau chaude sanitaire, individuelles ou collectives, fonctionnant totalement ou partiellement à l'énergie électrique
+        Installation de distribution d'eau chaude sanitaire (respect de l'art. 36 de l'arrêté du 23 juin 1978 modifié)
+        - Température maximale de l'eau chaude sanitaire afin de limiter le risque de brûlure
+        - Points de puisage à risque
+        - Température de l'eau contenue dans un équipement de stockage supérieur ou égal à 400 l à l'exclusion des ballons de préchauffage
+        Thermostats sur les équipements d'installation de chauffage des bâtiments d'habitation construits à La Réunion à une altitude supérieure à 600 mètres
+REGLEMENTATION THERMIQUE SPECIFIQUE
+    Conditions d'application
+        Guadeloupe : RTG (délibération du 14 juin 2013)
+        Martinique : RTM neuf (délibération du 28 juin 2013)
+        Solution technique
+        Extension ou surélévation de surface inférieure à 150 m² et à 30 % de la surface des bâtiments existants
+    Conditions de conformité réglementaire en logement
+        ICT < ICT_ref pour chaque zone à usage résidentiel
+        BBIO < BBIO_ref pour chaque zone à usage résidentiel
+        Exigences pour les logements dont le découpage en zones jour et zone nuit fait apparaître une zone climatisée et une zone non climatisée
+        - Présence d'une baie donnant directement sur la façade au vent de surface d'ouverture libre non nulle dans la zone non climatisée
+        - Présence de baies donnant directement sur au moins deux façades d'orientation différente de surface d'ouverture libre non nulle dans la zone non climatisée
+        - ICTnc < ICTnc_ref pour la zone non climatisée
+    Conditions de conformité réglementaire pour les bureaux et les commerces
+        BBIO < BBIO_ref pour chaque zone
+    Conditions de conformité réglementaire - cas particuliers
+        Commerces de SHON<100m²
+        Logements sociaux
+        Bâtiment livré par le maître d'ouvrage à l'acheteur avant mise en œuvre de l'ensemble des corps d'état
+    Dispositions liées au calcul des coefficients ICT et BBIO
+        Justification de toute valeur utilisée comme donnée d'entrée des calculs des coefficients réglementaires
+        Utilisation de la version la plus récente de l'outil de calcul réglementaire, à la date du dépôt de permis de construire, sans aucune modification de cet outil
+        Respect des autres mesures législatives et réglementaires en vigueur (santé, salubrité, hygiène, sécurité)
+        Calcul des coefficients réglementaires de référence
+        - Zone de vent
+        - Coefficient de vent
+        - Taux d'ouverture des façades
+        - Altitude (seuil de porte)
+        - Inertie
+        - Facteur solaire de baie verticale, protection solaire déployée
+        - Facteur solaire de baie horizontale, protection solaire déployée
+        - Facteur solaire des vitrines, protection solaire déployée
+        - Facteur solaire de paroi opaque verticale
+        - Facteur solaire de paroi opaque horizontale
+        - Transmission surfacique de baie
+        - Transmission surfacique de paroi opaque verticale
+        - Transmission surfacique de paroi opaque horizontale
+        - Coefficient d'absorption sur paroi opaque verticale
+        - Coefficient d'absorption sur paroi opaque horizontale
+        - Puissance d'éclairage installée
+        - Mode de régulation de l'éclairage
+        - Présence d'attentes pour ventilateurs de plafond
+        - Présence de ventilateurs de plafond
+        - Autres données d'entrée du calcul des coefficients de référence identiques à celles du projet
+        Calculs des coefficients réglementaires
+        - Altitude
+        - Zone de vent
+        - Zone d'urbanisation dense
+        - Débits de ventilation
+        - Dénombrement des pièces
+        - Inertie I de chaque zone
+        - Surface de plancher
+        - Puissances d'éclairage
+        - Gestion d'éclairage
+        - Surfaces accédant à la lumière naturelle
+        - Orientation des baies
+        - Orientation des parois opaques de l'enveloppe
+        - Orientation du vent dominant
+        - Surface des baies
+        - Surface des parois opaques de l'enveloppe
+        - Surface d'ouverture libre des baies
+        - Coefficient U des baies
+        - Coefficient U des parois opaques de l'enveloppe
+        - Facteur solaire S des baies
+        - Facteur solaire S des parois opaques de l'enveloppe
+        - Coefficient d'absorption des parois opaques de l'enveloppe
+        - Coefficient de réduction Cm
+    Exigences minimales supplémentaires
+        Classement à l'étanchéité à l'air des portes et fenêtres
+        - Toutes les portes et fenêtres en contact avec l'extérieur du bâtiment donnant sur une pièce principale située dans une zone à usage résidentiel climatisée ou une zone à usage de commerce ou de bureaux
+        - Au moins classe 1 au sens de la norme NF EN 12207
+        - Joints assurant une étanchéité équivalente
+        Pour chaque logement, plafonnement des surfaces d'ouverture libre à la surface d'ouverture interne
+        - Guadeloupe : valeur cumulée des surfaces d'ouverture libre de la façade sous le vent dominant
+        - Martinique : deuxième plus grande des quatre surfaces d'ouverture libre cumulée sur chacune des orientations de façade
+        Absence de flux d'air traversant un local abritant un cabinet d'aisance ou une salle de bains
+        Exigences supplémentaires pour les logements à faible niveau de confort
+        - Baies donnant sur la zone nuit du logement conformes aux exigences d'étanchéité à l'air
+        - Présence d'attentes pour ventilateurs de plafond dans la zone nuit du logement
+        Présence d'un dispositif empêchant les transferts d'air entre l'intérieur et l'extérieur d'une zone à usage de commerce sur les ouvertures disposées sur le périmètre de cette zone
+        En Guadeloupe : absence de baies (transparentes ou translucides) dans le plan horizontal en contact avec l'extérieur dans les zones à usage résidentiel (sauf celles donnant directement sur une salle d'eau, une salle de bains ou un cabinet d'aisance)
+    Etablissement des attestations réglementaires
+        Attestation de la prise en compte des exigences de la délibération établie par le Maitre d'Ouvrage, jointe à la demande de permis de construire
+        Etablissement au plus tard à la date de réception des travaux d'une note technique présentant le zonage du bâtiment et la justification des données d'entrée de calcul
+        Etablissement au plus tard à la date de réception des travaux des fichiers numériques de calcul établis à partir de l'outil informatique de calcul réglementaire en vigueur
+        Attestation que les travaux réalisés respectent les exigences de la délibération, jointe à la déclaration d'achèvement des travaux, établie par un contrôleur technique ou un expert indépendant certifié pour le DPE, mentionnant les points de non-conformité ainsi que les recommandations permettant de les lever
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
