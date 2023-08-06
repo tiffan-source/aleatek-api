@@ -1,0 +1,71 @@
+NSTALLATION DE COMBUSTION D'UNE PUISSANCE THERMIQUE > A 2 MW ET < A 20 MW - Arrêté du 25 juillet 1997
+    Implantation et aménagement
+        Implantation
+        - Conditions d'éloignement (art. 2.1)
+        - Non respect des conditions d'éloignement (art. 2.1)
+        - Implantation des appareils de combustion destinés à la production d'énergie (art. 2.1)
+        - Appareils de combustion placés en extérieur (art. 2.1)
+        Intégration dans le paysage (art. 2.2)
+        Interdiction d'activités au-dessus des installations (art. 2.3)
+        - Tiers superposés
+        - Sous-sol des bâtiments tiers
+        Comportement au feu des bâtiments (art. 2.4)
+        - Structure R60
+        - Murs extérieurs A2-s1, d0
+        - Sol incombustible (A1fl)
+        Désenfumage des locaux en cas d'incendie (art. 2.4)
+        - Dispositifs en partie haute pour évacuation des fumées et gaz dégagés en cas d'incendie
+        - Commandes d'ouverture manuelle
+        Comportement aux risques d'explosion des bâtiments (art. 2.4)
+        - Limitation des effets de l'explosion à l'extérieur du local
+        Comportement au feu des constructions vis-à-vis de locaux contigus ou non respect des conditions d'éloignement (art. 2.4)
+        - Parois, couverture et plancher haut REI 120 (CF 2h)
+        - Porte intérieure EI 30 (CF 1/2h) avec ferme-porte
+        - Porte sur extérieur EI 30 (CF 1/2h)
+        Accessibilité (art. 2.5)
+        - Accessibilité aux services d'incendie et de secours
+        - Aire de stationnement éventuelle pour les véhicules de service
+        - Espace libre suffisant autour des appareils de combustion
+        Ventilation (art. 2.6)
+        - Locaux ventilés pour éviter la formation d'une atmosphère explosive ou nocive
+        - Ventilation assurant en permanence un balayage du local
+        Rétention des aires et locaux de travail (art. 2.9)
+        - Sol étanche et incombustible
+        - Recueil des eaux de lavage et produits répandus accidentellement
+        Cuvettes de rétention (art. 2.10)
+        - Capacité de rétention
+        - Stockage sous le niveau du sol
+        - Stockage en réservoirs fixes aériens
+        - Capacités intermédiaires ou nourrices alimentant les appareils de combustion
+        - Stockage par récipients de 250 litres maxi de capacité unitaire
+        - Cuvette de rétention étanche et résistante aux produits contenus
+        Issues (art. 2.11)
+        - Evacuation dans deux directions opposées
+        - Portes ouvrant vers l'extérieur du local et manoeuvrables de l'intérieur
+        - Balisage de l'accès aux issues
+        Aménagement particulier (art. 2.14)
+        - Communication entre chaufferie gaz et autres locaux
+        Détection de gaz - détection incendie (art. 2.15)
+        - Dispositif de détection de gaz déclenchant une alarme en cas de dépassement du seuil de danger
+        - Dispositif de détection de gaz coupant les alimentations en gaz et électricité
+        - Dispositif de détection incendie pour les installations en sous-sol
+        Modification d'une installation existante (art. 2.16)
+        - Non application des dispositions des articles 2.1 à 2.5, 2.11 et 2.14 en cas de remplacement d'appareils de combustion
+    Risques
+        Moyens de lutte contre l'incendie (art. 4.2)
+        - Extincteurs pour combustibles liquides et solides
+        - Extincteurs pour combustibles gazeux
+        - Réserve de sable avec pelle pour combustibles liquides ou solides
+        - Appareils d'incendie complémentaires en fonction des dangers présentés
+        - Extincteurs automatiques
+        Localisation des risques (art. 4.3)
+        - Détermination de la nature des risques (à charge de l'exploitant)
+        Emplacements présentant des risques d'explosion (art. 4.4)
+        - Matériels électriques compatibles avec les risques d'explosion
+        - Protection des canalisations électriques
+        Interdiction des feux (art. 4.5)
+        "Permis de travail" et/ou "Permis de feux" (art. 4.6)
+        Consignes de sécurité (art. 4.7)
+
+
+

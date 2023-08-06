@@ -1,0 +1,9 @@
+INSTALLATION DE COMBUSTION D'UNE PUISSANCE THERMIQUE > A 2 MW ET < A 20 MW - Arrêté du 25 juillet 1997
+    Implantation et aménagement
+        Installations électriques (art. 2.7)
+        - Conformité aux règles en vigueur
+        - Coupures extérieures force et lumière accessibles et signalisées
+        - Compatibilité des matériels électriques avec les atmosphères explosives
+        Mise à la terre des équipements (art. 2.8)
+        - Liaison équipotentielle des équipements métalliques
+
