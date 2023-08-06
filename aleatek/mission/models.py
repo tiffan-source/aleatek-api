@@ -10,7 +10,8 @@ from collaborateurs.models import Collaborateurs
 class Mission(models.Model):
     code_mission = models.CharField(max_length=10)
     libelle = models.CharField(max_length=100)
-    mission_parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='sous_missions', limit_choices_to={'mission_parent__isnull': True})
+    mission_parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE,
+                                       related_name='sous_missions', limit_choices_to={'mission_parent__isnull': True})
 
     def __str__(self):
         return self.code_mission
@@ -30,7 +31,8 @@ class InterventionTechnique(models.Model):
 
 class Article(models.Model):
     titre = models.CharField(max_length=100)
-    article_parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='sous_articles')
+    article_parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE,
+                                       related_name='sous_articles')
     commentaire = models.TextField(blank=True)
     mission = models.ForeignKey(Mission, on_delete=models.CASCADE, related_name='articles')
 
@@ -42,3 +44,11 @@ class Article(models.Model):
 
     def __str__(self):
         return self.titre
+
+
+class ArticleMission(models.Model):
+    id_article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    id_mission = models.ForeignKey(Mission, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.id_article} {self.id_mission}"

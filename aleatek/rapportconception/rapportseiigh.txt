@@ -1,0 +1,388 @@
+Code de la construction et de l’habitation
+    Dispositions de sécurité relatives aux immeubles de grande hauteur – Code de la construction et de l’habitation
+    R. 122-2 à R.122-5 – Définition et classement
+
+        R. 122-2 – Plancher bas du dernier niveau à plus 50 m, pour bâtiment à usage d’habitation
+        R. 122-2 – Plancher bas du dernier niveau à plus de 28 m pour bâtiments à usage autre qu’habitation
+        R. 122-2 – Isolement des parcs de stationnement non intégrés
+        R. 122-5 – Classement
+
+    R. 122-6 – Emplacement
+
+        R. 122-6 – Immeuble situé à moins de 3 km d’un centre de secours
+
+    R. 122-7 – Conditions d’utilisation
+        R. 122-7 – Absence d’installations classées non autorisées
+        R. 122-7 – Interdiction d’entreposer ou de manipuler des substances ou préparations classées explosives, comburantes ou extrêmement inflammables ainsi que des matières définies à l’article R. 4227-22
+        R. 122-8 – Effectif moyen admissible par compartiment inférieur ou égal à 1 pers./10 m²
+        Effectif > 1 pers./10 m² : application des articles GH 71 à GH 74
+
+    122-9 – Principes de sécurité
+
+        R. 122-9 – Immeuble divisé en compartiments
+        R. 122-9 – Au moins 2 escaliers par compartiment
+        R. 122-9 – Présence d’une ou plusieurs sources autonomes d’électricité
+        R. 122-9 – Présence de moyens de secours adaptés
+        R. 122-9 – Maintien en service des ascenseurs en cas de sinistre avec non arrêt des cabines d’ascenseurs aux niveaux sinistrés
+        R. 122-9 – Compartiments étanches aux fumées
+        R. 122-9 – Sas entre compartiments et entre compartiments et escaliers
+        R. 122-9 – Volume de protection pour éviter la propagation d’un incendie extérieur
+        R. 122-10 – Compartiments – règles générales:
+            2 escaliers au moins par compartiment (R. 122-9)
+            Possibilité d’un seul escalier par compartiment en GHW 1 existant (R. 122-9 et GHW 1er)
+            Longueur < 75 m
+            Surface de plancher  2 500m² ou SHOB < 3000 m²
+            Possibilité d’un compartiment sur 2 niveaux si S  2 500 m²
+            Possibilité d’un compartiment sur 3 niveaux si S < 2 500 m² et un niveau accessible aux engins de secours
+            Parois des compartiments CF 2 h ou EI (REI si fonctions porteuses) 120
+
+Mesures générales communes à toutes les classes d’immeubles de grande hauteur
+
+    Dispositions de sécurité relatives aux immeubles de grande hauteur – Arrêté du 30 décembre 2011
+
+    Dispositions générales
+
+    G.H. 1er: Généralités
+
+        Respect des prescriptions générales communes complétées par les dispositions complémentaires et particulières
+        Une seule mezzanine autorisée par compartiment
+        Stabilité au feu des mezzanines
+
+    G.H. 2: Activités autorisées
+        Absence d’installations classées autres que : groupes électrogènes, installations de production de chaud et de froid, onduleurs, transformateurs nécessaires au fonctionnement de l’immeuble
+
+    G.H. 3 Terminologie
+    G.H. 4: Documents, contrôles et vérifications techniques
+    G.H. 5: Vérifications techniques par des organismes agréés
+        Implantation et environnement
+
+    G.H. 6: Voie d’accès pour les véhicules de lutte contre l’incendie
+        A moins de 30 m des sorties de l’immeuble
+        Voie permettant la circulation et le stationnement des engins
+        Ouverte à la circulation publique à ses 2 extrémités
+        Hauteur libre sous voûte ≥ 3,50 m
+        Largeur de la chaussée ≥ 3,50 m
+        Force portante : 160 kN (90 kN par essieu, ceux-ci étant distants de 3,60 m au minimum)
+        Résistance au poinçonnement : 80 N/cm² sur une surface minimale de 0,20 m²
+        Rayon de braquage intérieur ≥ 11 m et surlageur S=15/R si rayon inférieur à 50m
+        Pente ≤ 15%
+        Existence d’une aire de concentration définie en relation avec les services de secours
+
+    GH 7 – Isolement du voisinage, volume de protection
+
+        Parois d’isolement CF 2 h ou REI 120 (CF 4 h ou REI 240 si parc de stationnement non intégré)
+        Façade de l’immeuble CF 2 h sur toute la hauteur
+        ou
+        Volume de protection de 8 m
+        Volume de protection n’empiétant pas sur les fonds voisins
+
+    GH 8 – Servitude du volume de protection
+
+        Absence de tout élément combustible, végétation exclue
+        Construction à l’aplomb de l’IGH conforme au règlement IGH
+        Autres constructions situées dans le volume de protection : plancher bas du niveau le plus haut à moins de 8 m
+        Autres constructions situées dans le volume de protection : sorties à moins de 60 m des voies accessibles aux engins
+        (longueur à parcourir + 5 fois la différence de niveau éventuelle)
+        Autres constructions situées dans le volume de protection : structures indépendantes de celles de l’IGH
+        Autres constructions situées dans le volume de protection : structures SF 2 h
+        Autres constructions situées dans le volume de protection 
+
+            parois extérieures situées dans le volume de protection PF 2 h
+            application de GH 13 pour les façades
+
+        Autres constructions situées dans le volume de protection : absence d’installations classées
+
+    Structures – GH 9 – Stabilité au feu
+        Structure SF 2 h et planchers CF 2h
+
+    Structures – GH 10 – Parois en contiguïté avec d’autres constructions
+        Parois CF 2 h (GH7 (§ 1))
+        Dispositifs de franchissement :
+            2 au plus par compartiment
+            Débouchant dans une CHC de l’IGH et dans les parties communes du tiers
+            sas conformes à GH 25
+        Parois en contiguïté avec un parking non intégré :
+            Parois CF 4 h ou REI 240
+            Une seule communication admise
+        Communication avec un parking non intégré :
+
+            Sas débouchant uniquement et directement dans le hall principal d'accès des piétons
+            Sas CF 4 h ou EI 240
+            Portes du sas PF 2 h ou E 120 et CF 1h ou EI 60-C
+            Portes du sas munies de ferme-porte ou à fermeture automatique
+            Sas mis en surpression en cas d’incendie
+            Présence d’un détecteur de fumée, côté parc, relié au SDI de l’immeuble commandant la fermeture des portes à fermeture automatique et la mise en surpression du sas
+            Sas sous la responsabilité du propriétaire de l'immeuble de grande hauteur ou de son mandataire
+        Isolement des locaux voisins présentant des dangers d’explosion
+             Isolement déterminé en accord avec la commission de sécurité
+             Absence de communication directe ou indirecte
+    Structures – GH 10 – Passerelles de liaison avec un tiers
+        2 passerelles maximum par compartiment
+        Débouchant dans une CHC
+        Passerelles SF ½ h ou R 30
+        Accès côté IGH par un sas conforme à GH 25 § 6 à l’exception du sprinklage
+        Accès côté non IGH par porte CF ½ h muni d’un ferme-porte ou EI 30 – C
+        Façades conformes à GH 13 uniquement
+        Passerelles reliant un IGH à un bâtiment non IGH munies d’un exutoire de fumées de 1 m² conforme à GH 23 § 3
+        Absence de locaux débouchant sur les passerelles
+        Absence d’aménagements, dépôts ou matériaux constituant une charge calorifique appréciable
+        Les passerelles ne comptent pas comme dégagements d’évacuation
+        Dispositifs d'intercommunication éventuels et maintenance des passerelles placés sous la responsabilité du propriétaire de l'immeuble de grande hauteur ou de son mandataire
+        Détecteur, relié au SDI de l’IGH, situé à proximité immédiate du dispositif d'intercommunication, côté passerelle et commandant la fermeture des portes du dispositif
+
+    Structures – GH 11 – Parcs de stationnement intégrés
+        Respect des articles R. 122-9 et R. 122-10 du CCH
+        Respect des dispositions techniques, non contradictoires ni atténuantes, fixées au chapitre VI du livre IV du règlement de sécurité des ERP, à l'exception des paragraphes 2 et 3 de l'article PS 9
+        Le respect des mesures de sécurité incendie du parc de stationnement est assuré par le propriétaire de  l’IGH ou son mandataire
+        Absence de communication avec les locaux techniques non liés à l’exploitation du parc
+        Détection automatique d'incendie généralisée pour l'ensemble du parc
+        La sensibilisation d'un détecteur dans le parc entraîne uniquement et sans temporisation le fonctionnement des dispositions prévues à l'article PS 27, § 2b
+        Commandes manuelles de désenfumage regroupées à l'intérieur du poste central de sécurité incendie
+        Isolement du reste de l’IGH par parois CF 2 h ou REI 120
+        Présence d’un système d’extinction automatique de type sprinkleur
+        Présence d’une CHC par compartiment
+        Parois séparant la CHC du parc CF 2 h ou REI 120
+        Sas CF 2 h ou REI 120 entre le parc et la CHC
+        Sas munis de 2 portes PF 1 h munies de ferme-porte ou à fermeture automatique ou E 60 - C
+        RIA et colonne sèche ou en charge dans la CHC près des accès au parc sans constituer un obstacle
+        Escaliers complémentaires
+            Parois CF 2 h ou REI 120
+            Mis en surpression
+            Débouché des escaliers dans le volume de protection par portes CF 1 h ou EI 60.
+        SF des parties du parc de stationnement situées en dehors du volume de protection conforme au règlement ERP
+    Structures – GH 11 –Locaux dangereux situés dans l’immeuble
+        Isolement des locaux présentant des risques particuliers d’incendie suivant la demande de la commission de sécurité
+    Façades – GH 12 –  Généralités relatives aux façades
+        Conception des façades et des jonctions façades/planchers limitant la propagation du feu
+        Façades porteuses SF 2 h ou R 120
+        Visa feu attestant de la conformité aux articles GH 12 et GH 13
+    Façades – GH 13 – Comportement au feu des façades
+        Absence d’ouvrants pour les parties de façades soumises à exigence de résistance au feu
+        Masse combustible < ou = 130 MJ/m²
+        Avis de la CCS pour façades avec masse combustible > 130 MJ/m² ou faisant l'objet d'une innovation technique importante
+        Composants et équipements M0 ou A2-s3,d0
+        Cadres de menuiseries en bois tolérés
+        Eléments verriers avec intercalaires C-s3, d0 tolérés
+        Peintures et systèmes d’imperméabilisation classés M2 ou C-s3, d0 tolérés
+        Stores extérieurs ou intégrés classés M1 ou B-s3, d0 tolérés
+        Façades vitrées : respect de l’IT 249 avec :
+            C+D ≥ 1,2 m si M ≤ 80 MJ/m²
+            C+D ≥ 1,5 m si M ≤ 130 MJ/m²
+        Façades vitrées : Façades PF 1 h ext  int ou E o i 60
+        Dièdres < 100° :
+            PF 1 h ou E io 60 sur 4 m de part et d’autre de l’arrête du dièdre (non applicable aux retraits ou aux avancées de moins de 1 m)
+        Dièdre < 135° en limite de compartiment :
+            CF 1 h ou EW io 60 sur 2 m
+        Dièdre ≥135° et <180° en limite de compartiment
+            PF 1 h ou E io 60 sur 1 m
+        Façades non vitrées :
+            PF 1 h extint ou E oi 60
+    Façades – GH 14 –Couvertures
+        Classement BROOF (t3)
+        Absence de matériaux légers combustibles susceptibles de s’arracher en cas d’incendie
+    Eléments généraux de construction – GH 15 – Réaction au feu des matériaux de construction
+    Eléments généraux de construction – GH 16 – Limitation de la charge calorifique des éléments de construction
+         255 MJ/m (masse combustible de la façade et matériaux de catégorie M0 ou classés A1 ou A2 exclus)
+        Justification de la charge calorifique
+    Eléments généraux de construction – GH 17 – Dispositions générales relatives aux cages, trémies, gaines et conduits
+        Cages d’escaliers, d’ascenseurs, de monte-charge et de monte-plats en matériaux :
+            A1 et CF 2H ou REI 120
+            pour les cages d’escalier, A2-s1, d0, et CF 2 h ou EI 120 dans les conditions de mise en œuvre qui font l'objet d'un avis favorable du CECMI
+        Conduits respectant le coupe-feu de traversée
+        Absence de conduit ou gaine se trouvant ou s’ouvrant dans les cages d’escaliers, sas ou paliers d’ascenseurs, à l’exception des colonnes sèches ou humides
+    Eléments généraux de construction – GH 18 – Dispositions particulières aux gaines verticales non recoupées
+        Gaines CF 2 h ou EI 120
+        Dispositifs d’accès CF 2 h ou EI 120 et fermant à clé sauf pour escaliers et ascenseurs
+        Condition de réalisation du degré CF 2 h ou EI 120 (gaine ou local)
+        Gaines non recoupées désenfumées automatiquement et protégées par une installation d’extinction automatique de type sprinkler tous les 5 niveaux sauf pour les gaines d’ascenseur et de monte-charge
+        Gaines verticales monte-courrier ou transport mécanisé :
+            Détecteurs tous les 3 niveaux
+            Dispositifs d’obturation faisant l’objet, avant leur mise en œuvre, d'un rapport d'essai établi par un laboratoire agréé et attestant leur aptitude à la fonction d'obturation
+            Chaque gaine considérée comme une zone de mise en sécurité spécifique
+        Absence de conduits de vide-ordures
+    Eléments généraux de construction – GH 19 – Dispositions particulières aux gaines verticales recoupées
+        Gaines CF 2 h ou EI 120
+        Recoupement CF 2 h ou EI 120 à chaque plancher
+        Trappes munies de serrure et :
+            CF 1 h ou EI 60
+            CF ½ h ou EI 30 et S < 0,80 m² pour gaines contenant des conduits aérauliques
+            CF ½ h ou EI 30 et S < 1,40 m² pour gaines contenant des conduits de plomberie ou des canalisations et/ou tableaux électriques
+    Eléments généraux de construction – GH 20 – Dispositions particulières aux gaines d’allure horizontale
+        Portes et trappes de visite des gaines d'allure horizontale : degré coupe-feu égal à la moitié de celui de la gaine
+    Aménagements intérieurs –GH 21 – Plafonds, plafonds suspendus
+        M0 ou A2 s2, d0 dans les dégagements communs, les halls et les cuisines collectives
+        M1 ou B s3, d0 ailleurs
+        Paroi support des revêtements M0 ou A3-s3, d0
+        Plafonds suspendus SF ¼ h ou R 15 dans les dégagements communs et les halls
+        Plénums entre planchers hauts et plafonds suspendus :
+            Recoupements tous les 25 m
+            Recoupements en M0 ou A2-s2, d0 et PF ½ h ou E 30
+            Cellules recoupées ≤ 300m²
+            Entièrement visitable si h > 0,20 m
+            Absence de matériaux non classés au moins M2 ou C-s3, d1 à l’exception des canalisations électriques
+            Suspente et fixation classées A2 et réalisées selon les dispositions de la norme NF P 68-203.1
+        Plafonds suspendus installés dans les dégagements résistant aux effets des variations de pression dues au fonctionnement du désenfumage mécanique
+    Aménagements intérieurs GH 22 – Revêtement de sol et revêtement des parois latérales
+        Support M0 ou A2-s3, d0
+        Revêtement de sol M3 ou CFL-s1
+        Revêtement parois latérales M0 ou A2-s2, d0 dans les halls, dégagements communs et cuisines collectives
+        Revêtement parois latérales M1 ou B-s3, d0  ailleurs
+        Matériaux M3 ou D autorisés pour les blocs-portes et les plinthes
+        Matériaux M1 ou A2FL autorisés pour les planchers techniques (côté plénum)
+    Dégagements : escaliers, circulations horizontales et portes
+    Dégagements
+    GH 23 – Dispositions générales
+        Largeur minimum 2 UP
+        Conformité aux articles CO 37, CO 38 § 1, CO 42, CO 44, CO 45, CO 46, CO 48, CO 50, CO 51, CO 53 § 4, et CO 55 du règlement de sécurité ERP :
+            CO 37 : Absence de saillie dans les dégagements
+            CO 38 § 1 : Dégagement des locaux
+            CO 42 : Balisage des dégagements par panneaux opaques ou transparents conformes aux normes
+            CO 44 : Caractéristiques des blocs-portes
+            CO 45 : les portes des zones pouvant recevoir plus de 50 personnes doivent s’ouvrir dans le sens de la sortie
+            CO 45 : les portes des escaliers doivent s’ouvrir dans le sens de la sortie
+            CO 45 : dispositifs d’ouverture des portes
+            CO 45 : absence de verrou à aiguilles sur les portes à 2 vantaux utilisées comme dégagements de 2 UP ou plus
+            CO 45 : ouverture des portes sur dégagement à 180° ou en retrait
+            CO 45 : portes de recoupement des circulations en va-et-vient si utilisées dans les 2 sens pour gagner une sortie
+            CO 46 : Portes des sorties de secours
+            CO 48 § 1 : Portes à tambour
+            CO 48 § 2 : Tourniquets
+            CO 48 § 3 : Portes automatiques
+            CO 48 § 4 : Portes coulissantes non motorisées
+            CO 48 § 5 : Vitrages de sécurité
+            CO 50 : Conception des escaliers :
+            CO 51 : Sécurité d’utilisation des escaliers
+            CO 53 § 4 : Absence de conduits  présentant des risques dans les volumes d’encloisonnement des escaliers et ascenseurs
+            CO 55 : Escaliers droits
+        Encloisonnement des circulations horizontales communes :
+            Bloc-porte PF ½ h ou E30 - C
+            Absence de volume de rangement
+            Parois CF 1 h ou REI 60
+            Portes munies de ferme-porte
+        Espaces d’accueil dans les circulations :
+            15 m² maximum
+            Emprise hors de la CHC
+            Vocation exclusive d’accueil
+            Mobilier en matériaux M 1 ou B-s3, d0, limité à 50 MJ/m² et sans rangement
+            Un point de détection incendie au-dessus de la zone d’accueil
+        Escaliers
+            Chaque escalier visé à R. 122-9 du CCH accessible à partir de tout local occupé
+            Escaliers visés à R. 122-9 à volées droites
+            Cul de sac < 10 m
+            Escaliers de 1 UP tolérés pour les compartiments recevant moins de 1 pers/100 m²
+            Distance entre 2 escaliers :
+                > 10 m
+                < 30 m
+            Escaliers extérieurs au corps du bâtiment :
+                Escaliers protégés des flammes, des fumées et des intempéries
+                Ouvertures extérieures à au moins 2 m des baies de l’immeuble
+
+    Dégagements – GH 25 – Dispositifs d’intercommunication
+        Sas CF 2 h ou EI 120
+        Portes PF 1 h/CF ½ h ou E 60/EI 30
+        Sas entre compartiments reliant 2 CHC
+        Sas entre compartiments mis en surpression lors du fonctionnement du désenfumage
+        Possibilité de portes à 1 UP en étages ou sous-sol
+        Portes des sas à 2 UP au niveau d’évacuation
+        Dimensions des sas :
+            3 m²  S  8 m²
+            distance entre les 2 portes > 1,40 m
+        Absence de conduits, gaines ou trappes autres que colonnes sèches ou humides, volets de désenfumage et canalisations électriques et téléphoniques propres au sas
+        Portes des sas d’accès aux escaliers
+            Portes ouvrant vers la sortie
+            Portes munies de ferme-porte
+            Plaques signalétiques mentionnant exclusivement « Porte coupe-feu. A maintenir fermée », en lettres blanches sur fond rouge fixées sur chaque porte, côté circulation horizontale, d'une part, côté intérieur du dispositif pour la porte donnant accès à l'escalier, d'autre part
+        Portes des sas inter-compartiments
+            Ouverture vers l’intérieur du sas
+            Munies de ferme-porte
+            A fermeture automatique (fonctionnement selon GH 49)
+            Plaques signalétiques mentionnant exclusivement « Porte coupe-feu. A maintenir fermée », en lettres blanches sur fond rouge fixées sur la face extérieure de chaque porte,
+        Baie entre deux compartiments :
+            Uniquement au niveau d'accès aux piétons et aux deux niveaux voisins situés l'un au-dessus et l'autre au-dessous ; ou à tous les niveaux réservés aux parcs de stationnement
+            Dérogation obtenue
+            Dispositif d’obturation CF 2 h ou  EI 120 à fermeture automatique
+            Dispositif manœuvrable ou doublé par un sas inter-compartiment
+            Compartiments reliés protégés par sprinkler
+            Plaques signalétiques portant la mention : « Dispositif coupe-feu. Ne mettez pas d'obstacle à la fermeture », en lettres blanches sur fond rouge, apposées bien en évidence, à proximité de la baie, dans chaque compartiment
+    Dégagements – GH 26 – Surveillance permanente de l’isolement des compartiments
+        Signalisation au PCS, au bout de 60 secondes, des défauts de position des équipements dont la position normale est identique à la position de sécurité :
+            portes de sas d’accès aux escaliers
+            portes palières résistantes au feu des ascenseurs et monte-charge
+            portes d’accès aux gaines techniques non recoupées
+    Dégagements –GH 27 –Gestion des dispositifs de contrôle d’accès
+        Verrouillage des accès admis pour :
+            Niveau accès piétons : accès depuis le hall aux paliers d’ascenseurs et aux escaliers
+            Aux autres niveaux : accès à la CHC depuis, les paliers d’ascenseurs et les escaliers.
+            Accès aux zones privatives depuis la CHC
+        La décondamnation permet :
+            L’évacuation du compartiment sinistré vers l’extérieur ou vers des compartiments non sinistrés
+            La suppression des obstacles à l’efficacité du désenfumage
+            L’intervention des secours
+        Principes de décondamnation :
+            Libération automatique et généralisée à l’ensemble des niveaux dès le déclenchement du processus d’alarme de l’ensemble des dispositifs à l’exception des dispositifs d’accès aux zones privatives
+            Dispositif de commande manuelle spécifique au PCS doublant la commande automatique
+        Niveaux d’entrée piétons de l’immeuble :
+            Sorties des escaliers conformes à CO 45 § 2 : les portes doivent pouvoir s'ouvrir de l'intérieur par simple poussée ou par la manœuvre facile d'un seul dispositif par vantail
+            Déverrouillage des accès aux cages d’escalier par clés
+            Déverrouillage des contrôle d’accès depuis les halls vers les paliers d’ascenseur conforme à C0 46 § 2
+        Contrôles d’accès depuis les paliers d’ascenseurs vers les CHC :
+            Portes coulissante conforme à CO 48 § 3
+            Interphone sur palier ascenseur relié au PCS
+            Commandes manuelles installées côté zone contrôlée près de chaque porte concernée agissant sur toutes les portes du palier
+            Contacteur à clé côté palier
+        Contrôles d’accès depuis les sas d’accès aux escaliers vers les CHC :
+            Sortie libre vers les escaliers
+            Déverrouillage local par le SSIAP
+            Sorties vers les escaliers conformes à CO 45 § 2 :
+                les portes doivent pouvoir s'ouvrir de l'intérieur par simple poussée ou par la manœuvre facile d'un seul dispositif par vantail
+        Contrôles d’accès depuis les CHC d’accès aux escaliers vers les zones privatives :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
