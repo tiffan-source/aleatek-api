@@ -1,0 +1,154 @@
+ISOLEMENT AUX BRUITS AERIENS
+    Isolement aux bruits aériens extérieurs aux chambres
+        Niveau d'Isolement requis pour la façade
+        Isolement vis-à-vis du bruit des infrastructures de transport
+        - Parois opaque des façades (murs et toitures) : Nature et épaisseur
+        - Doublages de façades
+        - Menuiseries extérieures et parties vitrées
+        - Bouche d'entrée d'air
+        - Coffres de volets roulants
+        Isolement vis-à-vis des aires de livraison extérieures
+        - Parois opaque des façades (murs et toitures) : Nature et épaisseur
+        - Doublages de façades
+        - Menuiseries extérieures et parties vitrées
+        - Bouche d'entrée d'air
+        - Coffres de volets roulants
+    Isolement aux bruits aériens intérieurs
+        Isolement entre chambres : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre chambre : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les chambres sous toitures
+        - Rampants filants devant séparatif entre chambres
+        - Nature et mise en œuvre des doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre deux salles de bains : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre deux salles de bains : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les salles de bains sous toitures
+        - Rampants filants devant séparatif entre salles de bains
+        - Nature et mise en œuvre des doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre circulations intérieure et chambres
+        - Nature et épaisseur de la paroi verticale
+        - Portes palières : accès sur un sas d'entrée "fermé"
+        - Portes palières : entrée direct sur la chambre
+        - Points singuliers : conduits de désenfumage, gaines techniques, tableaux électriques incorporés…
+        Isolement entre circulations intérieure et salle de bains
+        - Nature et épaisseur des parois verticales séparatives
+        Isolement entre chambres et bureau, local de repos du personnel, vestiaire fermé, hall de réception, salle de lecture
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        Isolement entre chambres et salle de réunion, atelier, bar, commerce, cuisine, restaurant, sanitaire collectif, salle de TV, laverie
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        Isolement entre chambres et garage, parking, zone de livraison fermée
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        Isolement entre chambres et gymnase ou piscine intérieure
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        Isolement entre chambres et casino, salon de réception sans sonorisation, club de santé, salle de jeux
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        Isolement gaines ascenseur
+        - Emplacement de la gaine
+        - Nature et épaisseur des parois de la gaine
+        - Nature et épaisseur du plancher haut de la gaine
+        Isolement du local machinerie ascenseur
+        - Emplacement du local
+        - Nature et épaisseur des parois du local
+        - Nature et épaisseur des planchers du local
+        Isolement des gaines techniques passant dans les chambres et salles de bains
+        - Parois des gaines techniques : nature et épaisseurs
+        Trappes de visite sur gaines techniques
+        - Implantation des trappes
+        - Indice d'affaiblissement acoustique des trappes
+        - Surface de trappe
+        - Joint périphérique de trappe
+        - Principe de fermeture de trappe
+AIRE D'ABSORPTION EQUIVALENTE DES CIRCULATIONS COMMUNES
+    Aire d'absorption équivalente des revêtements absorbants disposés dans les circulations communes
+         Nature des revêtements absorbants : indice d'absorption et surface
+         Surface du sol
+NIVEAU DE RECEPTION AUX BRUITS DE CHOCS
+    Planchers
+        Nature et épaisseur des planchers
+    Revêtements de sols nécessaire à la diminution du niveau de réception aux bruits de chocs
+         Chambres
+         Salles de bains
+         Circulations communes
+         autres locaux
+         Coursives / Terrasses privatives
+    Revêtements de sols posés sur chape flottante
+        Caractéristique de la sous couche isolante
+    Escaliers communs ou en duplex
+         Désolidarisation de la structure verticale
+         Revêtement de sol
+BRUITS DES EQUIPEMENTS
+    Bruits des équipements individuels implantés dans la chambre
+        Chauffage
+        - Type des chaudières
+        - Localisation des chaudières
+        Climatisation
+        - Emplacement
+        - Type d'appareil
+        - Désolidarisation
+    Bruits des équipements individuels extérieurs à la chambre étudié
+        Plomberie – sanitaire
+        - Nature des chutes
+        - Dévoiement des chutes
+        - Pression d'alimentation en eau
+        - Vitesse de l'eau dans les canalisations
+        - Robinetterie : classement acoustique
+        - Désolidarisation des équipements
+        - Désolidarisation des canalisations
+    Bruits des équipements collectifs
+        Ascenseurs
+        - Caractéristiques ascenseur
+        - Machinerie : désolidarisation des équipements
+        - Armoire de commande : emplacement, dispositif antivibratile
+        Portes automatiques de garages collectifs
+        - Emplacement
+        - Dispositifs de désolidarisation
+        Chauffage collectif
+        - Caractéristiques de la chaudière
+        - Emplacement de la chaufferie
+        - Nature et épaisseur des parois de la chaufferie (murs et planchers)
+        - Ventilation chaufferie
+        - Conduits de fumée : emplacement
+        - Désolidarisation
+        Ventilation mécanique contrôlée
+        - Nature des bouches d'extractions
+        - Caisson de ventilation : emplacement
+        - Caisson de ventilation : insonorisation
+        - Caisson de ventilation : désolidarisation
+        - Vitesse de l'air
+        - Dépression
+        Ventilation mécanique de parking
+        - Emplacement
+        - Dispositif de désolidarisation
+        - Rejet d'air
+        Autres équipements collectifs
+        - Emplacement équipement
+        - Dispositif de désolidarisation de l'équipement
+
+
+
+
+
+
+
+
+
+
+
+
+

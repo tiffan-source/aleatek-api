@@ -1,0 +1,35 @@
+ATELIERS DE CHARGE D'ACCUMULATEURS PUISSANCE > A 10kW - arrêté du 29 mai 2000
+    Implantation - Aménagement
+        Implantation des bâtiments vis-à-vis des tiers
+        - Distance à respecter vis-à-vis des tiers
+        Comportement au feu des bâtiments
+        - Résistance au feu des murs et planchers hauts
+        - Couverture
+        - Portes intérieures
+        - Porte donnant vers l'extérieur
+        - Autres matériaux
+        - Dispositifs de désenfumage en partie haute
+        - Commande de désenfumage
+        Accessibilité
+        - Accessible pour permettre l'intervention des services d'incendie et de secours
+        - Desservi par une voie-engin
+        - Desservi par une voie-échelle
+        - Local fermé, une des façades équipée d'ouvrants
+        Rétention des aires et locaux de travail
+        - Sol incombustible
+    Risques
+        Moyens de secours contre l'incendie
+        - Détermination des points d'eau nécessaires et implantation
+        - Extincteurs portatifs
+        - Moyens d'alerte
+        - Plans des locaux
+        Localisation des risques
+        - Définition des parties d'installation présentant des risques spécifiques
+        - Présence de détecteur d'hydrogène dans les parties d'installation présentant un risque spécifique
+        Seuil de concentration limite en hydrogène
+        - Pour installations équipées de détecteurs d'hydrogène interruption automatique de l'opération de charge et déclenchement de l'alarme
+        - Pour installations non équipées de détecteurs d'hydrogène interruption des systèmes d'extraction d'air, opération de charge et déclenchement de l'alarme
+
+
+
+

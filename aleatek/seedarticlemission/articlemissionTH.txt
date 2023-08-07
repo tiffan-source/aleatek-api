@@ -1,0 +1,56 @@
+DISPOSITIONS REGLEMENTAIRES - R.162-1 et R.162-2 du CCH
+    Domaine d’application
+        -Bâtiments d’habitation neufs ou parties nouvelles de bâtiments d’habitation existants
+        -Demande de permis de construire ou déclaration préalable déposée à compter du 1er mai 2010
+    Exigences
+        -Limitation du recours à la climatisation par protection solaire et ventilation naturelle
+        -Consommation d’énergie limitée pour le chauffage
+    Eau chaude sanitaire
+        -Tout logement comporte un système de production d’eau chaude sanitaire (hors Guyane)
+        -50 % des besoins produits par énergie solaire (y compris Guyane)
+
+CARACTERISTIQUES THERMIQUES MINIMALES – ARRETE DU 17/04/09
+
+    Facteur solaire des parois opaques des pièces principales en contact avec l’extérieur
+        Facteur solaire des parois horizontales
+        Facteur solaire des parois verticales
+        Exception des bâtiments d’habitation construits à La Réunion à une altitude supérieure à 800 mètres
+        - Coefficient de transmission surfacique des parois opaques horizontales en contact avec l’extérieur
+        - Coefficient de transmission surfacique des parois opaques verticales en contact avec l’extérieur
+    Facteur solaire des baies des logements
+        Facteur solaire S de chaque baie des logements en contact avec l’extérieur
+        Pièces de service dont la surface est inférieure à 0,5 m²
+        Locaux climatisés
+        Baies des logements, transparentes ou translucides, en contact avec l’extérieur, interdites dans le plan des parois horizontales
+        - Exception des bâtiments d’habitation construits à La Réunion à une altitude supérieure à 800 mètres.
+    Perméabilité à l’air
+        Portes et les fenêtres en contact avec l’extérieur : classement ou joints
+        - Pièces principales des bâtiments d’habitation construits à La Réunion à une altitude supérieure à 800 mètres
+        - Pièces principales climatisées
+    Ventilation naturelle de confort thermique
+        Balayage des pièces principales de tout logement
+        Taux d’ouverture des façades
+        Ouvertures particulières à chaque flux, percées dans deux parois opposées ou latérales
+        - Règles d’implantation dans les parois latérales
+        Surface d’ouvertures des parois internes traversées
+        Cabinets d’aisance non traversés
+        Attente pour ventilateur de plafond
+        - Pièces principales des logements
+        - Pièces principales de surface supérieure à 30 m²
+        - Séjours
+        Ventilateur de plafond dans les chambres
+        - Exception des bâtiments d’habitation construits à La Réunion à une altitude supérieure à 800 mètres,
+
+    Eau chaude sanitaire et chauffage
+        Ballon de stockage sur les installations de production d’eau chaude sanitaire, individuelles ou collectives, fonctionnant totalement ou partiellement à l’énergie électrique
+        Installation de distribution d’eau chaude sanitaire (Respect de l’art. 36 de l’arrêté du 23 juin 1978 modifié)
+        - Température maximale de l'eau chaude sanitaire afin de limiter le risque de brûlure
+        - Points de puisage à risque
+        - Température de l'eau contenue dans un équipement de stockage supérieur ou égal à 400 l à l'exclusion des ballons de préchauffage.
+       Thermostats sur les équipements d’installation de chauffage des bâtiments d’habitation construits à La Réunion à une altitude supérieure à 800 mètres
+
+
+
+
+
+

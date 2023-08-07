@@ -1,0 +1,212 @@
+ISOLEMENT AUX BRUITS AERIENS
+    Isolement aux bruits aériens vis-à-vis des bruits extérieurs
+        Niveau d'Isolement requis pour la façade
+        Façades
+        - Parois opaque des façades (murs et toitures) : Nature et épaisseur
+        - Doublages de façades
+        - Menuiseries extérieures et parties vitrées
+        - Présence de bouche d'entrée d'air
+    Isolement aux bruits aériens intérieurs
+        Isolement entre locaux d'enseignement : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre locaux d'enseignement : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les locaux sous toitures
+        - Rampants filants devant séparatif entre locaux
+        - Présence d'une porte de communication
+        - Nature et mise en œuvre des doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre locaux d'enseignement et local d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration, salle des professeurs : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre locaux d'enseignement et local d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration, salle des professeurs : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les locaux sous toitures
+        - Rampants filants devant séparatif entre locaux
+        - Nature et mise en œuvre des doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre locaux administratifs : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre locaux administratif : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les locaux sous toitures
+        - Rampants filants devant séparatif entre locaux
+        - Présence d'une porte de communication
+        - Nature et mise en œuvre des doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre salle de musique, salle polyvalente ou salle de sport et locaux d'enseignement, d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre salle de musique, salle polyvalente ou salle de sport et locaux d'enseignement, d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les locaux sous toitures
+        - Rampants filants devant séparatif entre locaux
+        - Nature et mise en œuvre des doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre locaux administratifs : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre locaux administratif : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les locaux sous toitures
+        - Rampants filants devant séparatif entre locaux
+        - Présence d'une porte de communication
+        - Nature et mise en œuvre des doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre salle de musique, salle polyvalente ou salle de sport et locaux d'enseignement, d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre salle de musique, salle polyvalente ou salle de sport et locaux d'enseignement, d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les locaux sous toitures
+        - Rampants filants devant séparatif entre locaux
+        - Nature et mise en œuvre des doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre local médical, atelier peu  bruyant, cuisine, salle de réunion, sanitaires et locaux d'enseignement, d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre local médical, atelier peu  bruyant, cuisine, salle de réunion, sanitaires et locaux d'enseignement, d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les locaux sous toitures
+        - Rampants filants devant séparatif entre locaux
+        - Nature et mise en œuvre des doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre cages d'escalier et locaux d'enseignement, d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les locaux sous toiture
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre salle de restauration et locaux d'enseignement, d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les locaux sous toiture
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre circulations horizontales et locaux d'enseignement, d'activités pratiques, bibliothèque ou CDI, administration, salle de restauration, salle polyvalente
+        - Nature et épaisseur de la paroi verticale
+        - Porte des locaux
+        Isolement entre ateliers bruyants et locaux d'enseignement, d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre ateliers bruyants et locaux d'enseignement, d'activités pratiques, bibliothèque ou CDI, locaux médicaux, administration : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les locaux sous toitures
+        - Rampants filants devant séparatif entre locaux
+        - Nature et mise en œuvre des doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre circulations horizontales et locaux médicaux
+        - Nature et épaisseur de la paroi verticale
+        - Indice d'affaiblissement acoustique de la porte
+        Isolement gaines ascenseur
+        - Emplacement de la gaine
+        - Nature et épaisseur des parois de la gaine
+        - Nature et épaisseur du plancher haut de la gaine
+        Isolement du local machinerie ascenseur
+        - Emplacement du local
+        - Nature et épaisseur des parois du local
+        - Nature et épaisseur des planchers du local
+        Isolement des gaines techniques passant dans les locaux
+        - Parois des gaines techniques : nature et épaisseurs
+        Trappes de visite sur gaines techniques
+        - Implantation des trappes
+        - Indice d'affaiblissement acoustique des trappes
+        - Surface de trappe
+        - Joint périphérique de trappe
+        - Principe de fermeture de trappe
+NIVEAU DE RECEPTION AUX BRUITS DE CHOCS
+    Planchers
+    - Nature et épaisseur des planchers
+    Revêtements de sols nécessaire à la diminution du niveau de réception aux bruits de chocs
+    - Revêtement de sols souples
+    - Revêtement de sols durs
+    - Localisation de la salle de sport ou des ateliers bruyants par rapport aux autres locaux
+    Revêtements de sols posés sur chape flottante
+    - Caractéristique de la sous couche isolante
+    Escaliers collectifs
+    - Désolidarisation de la structure verticale
+    - Revêtement de sol
+BRUITS DES EQUIPEMENTS
+    Equipements sanitaires
+        Plomberie – sanitaire
+        - Emplacement des sanitaires par rapport aux locaux de réception
+        - Nature des chutes
+        - Dévoiement des chutes
+        - Pression d'alimentation en eau
+        - Vitesse de l'eau dans les canalisations
+        - Robinetterie : classement acoustique
+        - Désolidarisation des équipements
+        - Désolidarisation des canalisations
+    Bruits des équipements collectifs
+        Ascenseurs
+        - Caractéristiques ascenseur
+        - Machinerie : désolidarisation des équipements
+        - Armoire de commande : emplacement, dispositif antivibratile
+        Chauffage collectif
+        - Caractéristiques de la chaudière
+        - Emplacement de la chaufferie
+        - Nature et épaisseur des parois de la chaufferie (murs et planchers)
+        - Ventilation de la chaufferie
+        - Conduits de fumée : emplacement
+        - Désolidarisation des équipements
+        Autres équipements collectifs
+        - Emplacement équipement
+        - Dispositif de désolidarisation de l'équipement
+TEMPS DE REVERBERATION
+    Durée de réverbérations des locaux
+        Locaux d'enseignement de volume ≤ 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Salle de musique de volume ≤ 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Locaux d'enseignement de volume > 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Salle de musique de volume > 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Salle à manger  de volume > 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Salle polyvalente  de volume > 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        - Etude particulière
+        Autres locaux et circulations accessibles au élève d'un volume > 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+AIRE D'ABSORPTION EQUIVALENTE DES CIRCULATIONS COMMUNES
+    Aire d'absorption équivalente des revêtements absorbants disposés dans les circulations communes et halls dont le volume < 250 m3, et préaux
+        - Nature des revêtements absorbants : indice d'absorption et surface
+        - Surface du sol
+        - Présence de surface à l'air libre
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

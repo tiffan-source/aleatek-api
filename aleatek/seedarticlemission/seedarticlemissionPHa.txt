@@ -1,0 +1,128 @@
+ISOLEMENT AUX BRUITS AERIENS
+    Isolement aux bruits aériens extérieurs
+        Niveau d'Isolement requis pour la façade
+        Façades
+        - Parois opaque des façades (murs et toitures) : Nature et épaisseur
+        - Doublages de façades
+        - Menuiseries extérieures et parties vitrées
+        - Bouche d'entrée d'air
+        - Coffres de volets roulants
+    Isolement aux bruits aériens intérieurs
+        Isolement entre locaux : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre locaux : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les locaux sous toitures
+        - Rampants filants devant séparatif entre locaux
+        - Nature et mise en œuvre des parois doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre circulations communes et locaux
+        - Nature et épaisseur de la paroi verticale
+        - Portes d'accès aux locaux
+        - Points singuliers : conduits de désenfumage, gaines techniques, tableaux électriques incorporés…
+        Isolement entre locaux et garages collectifs
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        - Gaines techniques des locaux superposés au garage
+        Isolement entre locaux et locaux techniques (non chauffés)
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        - Gaines techniques des logements superposés aux locaux techniques
+        Isolement gaines ascenseur
+        - Emplacement de la gaine
+        - Nature et épaisseur des parois de la gaine
+        - Nature et épaisseur du plancher haut de la gaine
+        Isolement du local machinerie ascenseur
+        - Emplacement du local
+        - Nature et épaisseur des parois du local
+        - Nature et épaisseur des planchers du local
+        Isolement des gaines techniques passant dans les locaux étudiés
+        - Parois des gaines techniques : nature et épaisseurs
+        Trappes de visite sur gaines techniques
+        - Implantation des trappes
+        - Indice d'affaiblissement acoustique des trappes
+        - Surface de trappe
+        - Joint périphérique de trappe
+        - Principe de fermeture de trappe
+NIVEAU DE RECEPTION AUX BRUITS DE CHOCS
+    Planchers
+    - Nature et épaisseur des planchers
+    Revêtements de sols nécessaire à la diminution du niveau de réception aux bruits de chocs
+    - Revêtement de sols souples
+    - Revêtement de sols durs
+    - Circulations communes
+    - Coursives / Terrasses privatives
+    Revêtements de sols posés sur chape flottante
+    - Caractéristique de la sous couche isolante
+    Escaliers collectifs
+    - Désolidarisation de la structure verticale
+    - Revêtement de sol
+BRUITS DES EQUIPEMENTS
+    Bruits des équipements individuels extérieurs aux locaux étudié
+        Plomberie – sanitaire
+        - Nature des chutes
+        - Dévoiement des chutes
+        - Pression d'alimentation en eau
+        - Vitesse de l'eau dans les canalisations
+        - Robinetterie : classement acoustique
+        - Désolidarisation des équipements
+        - Désolidarisation des canalisations
+        Autres équipements individuels
+        - Climatisation
+        - Volets roulants électriques
+    Bruits des équipements collectifs
+        Ascenseurs
+        - Caractéristiques ascenseur
+        - Machinerie : désolidarisation des équipements
+        - Armoire de commande : emplacement, dispositif antivibratile
+        Portes automatiques de garages collectifs
+        - Emplacement
+        - Dispositifs de désolidarisation
+        Chauffage collectif
+        - Caractéristiques de la chaudière
+        - Emplacement de la chaufferie
+        - Nature et épaisseur des parois de la chaufferie (murs et planchers)
+        - Ventilation de la chaufferie
+        - Conduits de fumée : emplacement
+        - Désolidarisation
+        Ventilation mécanique contrôlée collective
+        - Nature des bouches d'extractions
+        - Caisson de ventilation : emplacement
+        - Caisson de ventilation : insonorisation
+        - Caisson de ventilation : désolidarisation
+        - Vitesse de l'air
+        - Dépression
+        Ventilation mécanique de parking
+        - Emplacement
+        - Dispositif de désolidarisation
+        - Rejet d'air
+        Autres équipements collectifs
+        - Emplacement équipement
+        - Dispositif de désolidarisation de l'équipement
+TEMPS DE REVERBERATION
+    Durée de réverbérations des locaux
+        Locaux de volume ≤ 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+        Locaux de volume > 250 m3
+        - Nature des revêtements absorbants
+        - Surfaces et localisations
+AIRE D'ABSORPTION EQUIVALENTE DES CIRCULATIONS COMMUNES
+    Aire d'absorption équivalente des revêtements absorbants disposés dans les circulations communes et halls
+        - Nature des revêtements absorbants : indice d'absorption et surface
+        - Surface du sol
+        - Présence de surface à l'air libre
+
+
+
+
+
+
+
+
+
+
+

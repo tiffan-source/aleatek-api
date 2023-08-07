@@ -1,0 +1,111 @@
+PROTECTION CONTRE LES BRUITS INTERIEURS AU BÄTIMENT
+    Caractéristiques des parois séparatives
+        Caractéristiques minimales des parois séparatives verticales entre logements
+        - Mur simple de masse supérieure ou égale à 350 kg/m2
+        - Parois double avec joint de dilatation. Chaque paroi de masse supérieure ou égale à 200 kg/m2
+        - Indice d'affaiblissement acoustique pondéré Rw+C supérieur ou égal à 54 dB
+        Points singuliers : logements contigus sous combles non aménageables
+        - Paroi répondant aux caractéristiques minimales des parois séparatives verticales prolongée sur toute la hauteur des combles
+        - Plancher haut sous combles avec un indice d’affaiblissement acoustique pondéré Rw+C supérieur ou égal à 35 dB
+        Isolement entre circulations communes intérieures fermées et logements
+        - Parois séparatives : mur simple de masse supérieure ou égale à 350 kg/m2
+        - Parois séparatives : parois double avec joint de dilatation. Chaque paroi de masse supérieure ou égale à 200 kg/m2
+        - Parois séparatives : Indice d'affaiblissement acoustique pondéré Rw+C supérieur ou égal à 54 dB
+        - Portes palières : indice d’affaiblissement acoustique pondéré Rw+C supérieur ou égal à 28 dB
+        Caractéristiques minimales des parois verticales séparatives entre un logement et un local d’activité ou les dépendances d’un autre logement
+        - Mur simple de masse supérieure ou égale à 350 kg/m2
+        - Parois double avec joint de dilatation. Chaque paroi de masse supérieure ou égale à 200 kg/m2
+        - Indice d'affaiblissement acoustique pondéré Rw+C supérieur ou égal à 57 dB
+        Parois horizontales séparatives entre logements ou entre logements et espaces extérieurs (terrasses, loggias, varangues, balcons)
+        - Respect des dispositions mur simple ou double paroi avec joint de dilatation, pour les parois séparatives verticales entre logements : masse supérieure ou égale à 450 kg/m2
+        - Respect des dispositions mur simple ou double paroi avec joint de dilatation, pour les parois séparatives verticales entre logements : masse supérieure ou égale à 400 kg/m2 et revêtement de sol avec Lw >= 9 dB
+        - Respect des dispositions mur simple ou double paroi avec joint de dilatation, pour les parois séparatives verticales entre logements : constitution avec des éléments permettant d’avoir un isolement aux bruits aériens et une réduction du niveau de bruit de choc supérieur ou égal aux dispositions 1 et 2
+        - Si les parois verticales séparatives entre logements respectent les dispositions : indice Rw+C suffisant : : masse supérieure ou égale à 450 kg/m2
+        - Si les parois verticales séparatives entre logements respectent les dispositions : indice Rw+C suffisant : constitution avec des éléments permettant d’avoir un isolement aux bruits aériens et une réduction du niveau de bruit de choc = aux dispositions 1 ou 2
+        Parois horizontales séparatives entre logements et local d’activité, garage individuel ou circulations horizontales communes
+        - Masse supérieure ou égale à 450 kg/m2
+        - constitution avec des éléments permettant d’avoir un isolement aux bruits aériens et une réduction du niveau de bruit de choc supérieur ou égal à la disposition mur simple
+        Distance déployée entre les parties ouvrantes des baies des pièces principales de logements différents
+        - Sans vision d’une baie à l’autre
+        - Avec vision d’une baie à l’autre
+        Indice d’affaiblissement acoustique pondéré Rw+Ctr des parties ouvrantes des baies des pièces principales de logements différents climatisés
+        Circulations verticales à l’intérieur des logements
+        - Désolidarisées de la structure du bâtiment et des parois séparatives entre logements
+        - Parois séparatives entre logements double avec joint de dilatation. Chaque paroi de masse supérieure ou égale à 200 kg/m2
+        Circulations verticales communes
+        - Désolidarisées de la structure du bâtiment et des parois horizontales et verticales des logements
+        - Parois séparatives entre les circulations et tout logement de masse supérieure ou égale à 450 kg/m2
+    Bruits des équipements individuels de chauffage et de climatisation
+        Chauffage
+        - Type des chaudières
+        - Localisation des chaudières
+        - Désolidarisation
+        Climatisation
+        - Emplacement
+        - Type d'appareil
+        - Désolidarisation
+    Bruits des équipements extérieurs au logement étudié
+        Ventilation mécanique contrôlée individuelle ou collective
+        - Nature des bouches d'extractions
+        - Caisson de ventilation : emplacement
+        - Caisson de ventilation : insonorisation
+        - Caisson de ventilation : désolidarisation
+        - Vitesse de l'air
+        - Dépression
+        Plomberie – sanitaire
+        - Absence de réseaux d’évacuation des eaux-vannes et des eaux pluviales apparents en pièces principales et en cuisines
+        - Absence de réseaux d’évacuation des eaux usées apparents en pièces principales
+        - Réseaux d’évacuation des eaux usées apparents autorisés en cuisine fermées
+        - Réseaux d’évacuation des eaux usées autorisés en cuisine ouverte sur pièces principales selon conditions
+        - Nature des chutes
+        - Dévoiement des chutes
+        - Pression d'alimentation en eau
+        - Vitesse de l'eau dans les canalisations
+        - Robinetterie : classement acoustique
+        - Désolidarisation des équipements
+        - Désolidarisation des canalisations
+    Bruits des équipements collectifs
+        Ascenseurs
+        - Caractéristiques ascenseur
+        - Machinerie : désolidarisation des équipements
+        - Armoire de commande : emplacement, dispositif antivibratile
+        Portes automatiques de garages collectifs
+        - Emplacement
+        - Dispositifs de désolidarisation
+        Chauffage collectif
+        - Caractéristiques de la chaudière
+        - Emplacement de la chaufferie
+        - Nature et épaisseur des parois de la chaufferie (murs et planchers)
+        - Ventilation de la chaufferie
+        - Conduits de fumée : emplacement
+        - Désolidarisation des équipements
+        Ventilation mécanique de parking
+        - Emplacement
+        - Dispositif de désolidarisation
+        - Rejet d'air
+        Vides ordures
+        - Emplacement de la gaine
+        - Emplacement du local récepteur
+        - Nature et épaisseur des parois du local récepteur
+        Autres équipements collectifs
+        - Emplacement équipement
+        - Dispositif de désolidarisation de l'équipement
+ISOLEMENT AUX BRUITS DES TRANSPORTS TERRESTRES
+    Façades
+        - Parois opaque des façades (murs et toitures) : Nature et épaisseur
+        - Doublages de façades
+        - Menuiseries extérieures et parties vitrées
+        - Bouche d'entrée d'air
+        Points singuliers en façades
+        - Coffres de volets roulants
+        - Chaudières à ventouse ou prise d’air radiateur gaz
+
+
+
+
+
+
+
+
+
+
