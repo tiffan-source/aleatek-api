@@ -1,0 +1,38 @@
+DÉROULEMENT DE LA MISSION
+RÉSEAUX EXTÉRIEURS D'ALIMENTATION EN EAU
+RÉSEAUX EXTÉRIEURS D'ASSAINISSEMENT
+RÉSEAUX EXTÉRIEURS DE TRANSPORT DE CHALEUR OU DE FROID
+PRODUCTION D'EAU CHAUDE SANITAIRE
+DISTRIBUTION D'EAU CHAUDE SANITAIRE
+DISTRIBUTION D'EAU FROIDE
+ÉVACUATIONS DES EAUX USÉES
+ÉVACUATIONS DES EAUX PLUVIALES
+SYSTÈMES DE CHAUFFAGE
+    Emission
+    Distribution
+    Production de chaleur
+SYSTÈMES DE VENTILATION DE CONFORT
+SYSTÈMES DE CLIMATISATION
+    Emission de froid
+    Distribution de froid
+    Production de froid
+VENTILATION MÉCANIQUE CONTRÔLÉE (VMC)
+INSTALLATIONS ÉLECTRIQUES INTÉRIEURES AU BÂTIMENT (COURANTS FORTS)
+INSTALLATIONS ÉLECTRIQUES INTÉRIEURES AU BÂTIMENT (COURANT FORT)
+    Bilan de puissance
+    - Puissance installée / Foisonnée
+    Les Sources
+    - Sources : Normale (HT ou BT), Remplacement (GE, ASI, chargeur batterie..)
+    Architecture de distribution (exploitation et maintenance)
+    - Distribution HT : Boucle automatisée, double dérivation, sélectivité
+    - Distribution BT : Indice de service des tableaux (IS) suivant NF EN 61 439-1 et NF EN 61 439-2 - TGBT, armoire spécialisées (CVC, PB, TA…), armoires d’étages, sélectivité
+    Comptage énergie :
+    - Compteurs sur l’alimentation générale, les productions EF et ECS, traitement d’air,  équipements de plus de 80A et réseau de prises de courant.
+    Gestion des éclairages 
+    - Puissance / m², points de commande, gestion des apports de la lumière naturelle, GTB.
+    Maintenance des équipements
+    - Conditions d’accessibilité des tableaux BT / HT, des équipements (transformateurs, groupes électrogènes, luminaires….).
+ASCENSEURS
+TROTTOIRS ROULANTS
+ESCALIERS MÉCANIQUES
+

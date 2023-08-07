@@ -1,0 +1,343 @@
+ACCESSIBILITE DES ERP ET DES IOP AUX PERSONNES HANDICAPEES NEUFS
+    Art.1 - Généralités (neuf)
+        Solutions d'effets équivalents satisfaisant aux mêmes objectifs que l'arrêté.
+        Les dispositions des articles 5 à 19 concernant les espaces de manouvre avec possibilité de demi-tour, les espaces de manouvre de porte, les espaces d'usage devant, au droit, à l'aplomb,  ou situés latéralement par rapport aux équipements et la distance minimale entre la poignée de porte et un angle rentrant ne s'appliquent pas pour les étages ou niveaux non accessibles aux personnes circulant en fauteuil roulant.
+    Art. 2 §I. - Cheminements extérieurs - usages attendus
+        Accessibilité à l'entrée ou à une des entrées principales depuis l'accès au terrain
+        Le cheminement accessible est un, ou l'un des cheminements usuels
+        Lorsque plusieurs cheminements, cheminement accessible signalé de façon adapté
+        Places de stationnement adaptées, signalées depuis l'entrée du terrain, à proximité d'une entrée accessible en cas de cheminement non accessible depuis l'entrée du site
+    Art. 2 §II.1 - Repérage et guidage des cheminements accessibles extérieurs
+        Signalisation adaptée à l'entrée du terrain, à proximité des places de stationnement, et choix d'itinéraire
+        Cheminement accessible contrasté visuellement et tactilement
+    Art. 2 §II.2 - Caractéristiques dimensionnelles des cheminements accessibles extérieurs
+        Dénivellation
+        - Pente < 4%
+        - Pente entre 4 et 5 % sur une longueur <= 10 m
+        - Pente entre 5 et 8% sur une longueur <= 2m
+        - Pente entre 8 et 10% <= 0,5m
+        - Pente > 10% interdite
+        - Paliers de repos en haut et en bas de pente
+        - Interdiction de ressaut en bas ou en haut d'une pente
+        Caractéristiques des paliers de repos (1,2m x 1,4m horizontal au devers près)
+        Seuils et ressauts <= 2 cm (ou 4 cm si pente <= 33 %) Arrondis ou chanfreinés
+        Distance minimale de 2,50 m entre deux ressauts successifs
+        Interdiction de "pas d'âne"
+        Rétrécissements ponctuels >= 1,20 m sur une faible longueur
+        Largeur minimale >= 1,40 m
+        Dévers <= 2%
+    Art. 2 §II.2c - Espaces de manœuvre et d'usage sur les cheminements extérieurs accessibles
+        Espaces de manœuvre avec possibilité de 1/2 tour (diamètre 1,50 m) à chaque intersection, devant les systèmes de contrôle d'accès des portes d'entrées desservies par un cheminement accessible
+        Espaces de manœuvre de porte devant chaque porte ou portillon (dimensions 1,40 m x 1,70 m en poussant et 1,40 m x 2,20 m en tirant)
+        Espaces d'usage (dimensions 0,80 m x 1,30 m) devant chaque équipement ou aménagement
+    Art. 2 §II.3 - Sécurité d'usage des cheminements extérieurs accessibles
+        Sols non meuble, non glissants, non réfléchissants et sans obstacle à la roue.
+        Trous ou fentes situés dans le sol : diamètre ou largeur <= 2 cm
+        Cheminement libre de tout obstacle
+        - Hauteur libre : 2,20 m
+        - Repérage des saillies de plus de 15 cm suivant annexe 4.
+        - Mobiliers, bornes et poteaux : respect de l'annexe 5
+        Dispositif de protection si rupture de niveau >= 25 cm à moins de 0,90 m.
+        Protection des espaces sous escaliers de moins de 2,20m de hauteur situés sur des cheminements
+        - Contraste visuel
+        - Rappel situé dans la zone de balayage d'une canne blanche
+        - Prévenir des chocs
+        Parois vitrées situées sur les cheminements ou en bordure immédiate : repérage par éléments visuels contrastés
+        Volée d'escalier de 3 marches ou plus
+        - Largeur => 1,20 m entre mains courantes
+        - Dimensions des marches (hauteur des marches <= 16 cm, giron des marches >= 28 cm)
+        - Main courante comprise entre 0,80 et 1,00 m de hauteur et prolongée au-delà de la première et de la dernière marche, continue, rigide et facilement préhensible
+        - Eveil à la vigilance en haut et sur chaque palier intermédiaire de l'escalier à 50 cm de la première marche (possibilité à 28 cm si contraintes)
+        - Contremarches contrastées sur une hauteur mini de 10 cm pour la première et dernière marche
+        - Nez de marches de 3cm de largeur, contrastés, non glissants, débord < 10 mm
+        Volée d'escalier de moins 3 marches.
+        - Eveil à la vigilance en haut à 50 cm de la première marche (possibilité à 28 cm si contraintes)
+        - Contremarches contrastées sur une hauteur mini de 10 cm pour la première et dernière marche
+        - Nez de marches de 3cm de largeur, contrastés, non glissants, débord < 10 mm
+        Croisement avec un itinéraire emprunté par des véhicules (Co visibilité conducteurs et piétons) : - Elément permettant l'éveil de la vigilance des piétons ; - un marquage au sol et une signalisation qui indiquent également aux conducteurs des véhicules qu'ils croisent un cheminement pour piétons ; - si nécessaire un dispositif complétant voire élargissant le champ de vision.
+        Eclairage cheminements extérieurs
+        Feux tricolores : dispositifs répétiteurs de feux de circulation à l'usage des personnes aveugles ou malvoyantes
+    Art. 3 - Stationnement automobile
+        Nombre de places de stationnement adaptées : 2% de places aménagées ou suivant arrêté municipal si plus de 500 places sans être < 10.
+        Implantation des places de stationnement adaptées (à proximité de l'entrée, sur les deux niveaux les plus proches de la surface pour les parcs de stationnement enterrés)
+        Repérage des places de stationnement adaptées (signalisation horizontale et verticale)
+        Caractéristiques des places de stationnement adaptées (largeur => 3,30 m, longueur => 5,00 m. Surlongueur de 1,20 m pour les places en bataille ou épi par marquage au sol)
+        Contrôle d'accès et de sortie utilisable par des personnes sourdes, malentendantes ou muettes
+        - Bornes visibles directement du poste de contrôle ou : - signaux liés au fonctionnement de dispositif : sonores et visuels - Boucle d'induction magnétique - système interphonie permettant au personnel de visualiser le conducteur - Retour visuel des informations
+        Atteinte des places de stationnement adaptées par un cheminement accessible selon art. 2.
+        Places de stationnement adaptées dans un volume fermé
+    Art. 4 - Accès à l'établissement ou installation
+        Accès principal du bâtiment accessible en continuité avec le cheminement extérieur accessible.
+        - Le niveau d'accès principal à chaque bâtiment où le public est admis est accessible en continuité avec le cheminement extérieur accessible.
+        - Tout dispositif visant à permettre ou restreindre l'accès au bâtiment ou à se signaler au personnel doit pouvoir être repéré, atteint et utilisé par une personne handicapée. L'utilisation du dispositif doit être la plus simple possible.
+        Entrées principales du bâtiment facilement repérables
+        Repérage des dispositifs d'accès au bâtiment et des numéros ou dénomination des bâtiments : contraste visuel et signalétique conforme à l'annexe 3
+        Système de communication entre le public et le personnel : à plus de 40 cm d'un angle rentrant ou d'un obstacle au fauteuil, hauteur comprise entre 0,90 et 1,30 m, repérable et détectable
+        Système de commande manuelle mis à la disposition du public : à plus de 40 cm d'un angle rentrant ou d'un obstacle au fauteuil, hauteur comprise entre 0,90 et 1,30 m, repérable et détectable
+        Système d'ouverture des portes : utilisable en position debout comme assise
+        Dispositif de déverrouillage électrique des portes : laps de temps assez long pour permettre à une PMR d'ouvrir et de rentrer avant que la fermeture automatique se réenclenche. Contraste visuel et tactile vis-à-vis du support
+        Eléments d'information sur l'orientation dans le bâtiment conformes à l'annexe 3
+        Signal lié au fonctionnement des dispositifs d'accès : visuel et sonore
+        Système de contrôle d'accès à l'établissement utilisable par des personnes sourdes, malentendantes ou muettes : permet de signaler leur présence au personnel et être informé de la prise en compte et au personnel de visualiser le visiteur en l'absence de vision direct des accès.
+        - Appareil d'interphonie avec boucle d'induction magnétique respectant l'annexe 9. Les spécifications de la NF EN 60118-4 : 2015 sont réputées satisfaire à ces exigences.
+        - Retour visuel des informations fournies oralement
+    Art. 5 - Accueil du public
+        Aménagement, équipements ou mobilier accessibles aux personnes handicapées
+        Si plusieurs points d'accueil au moins un d'entre eux doit être accessible
+        Caractéristiques des banques d'accueil : utilisable par une personne en position debout et assise, permettre la communication visuelle. Eviter l'effet d'éblouissement
+        Caractéristiques banques d'accueil pour lecture, écriture ou utilisation de clavier : hauteur maximale 0,80 m, vide en partie inférieure d'au moins 30 cm de profondeur, 0,60 m de largeur et 0,70 m de hauteur. Non exigé dans les niveaux non desservis par ascenseurs ou EPMR.
+        Accueil sonorisé : Equipement de transmission du signal acoustique par induction magnétique signalé par pictogramme. Respect de l'annexe 9 : les spécifications de la NF EN 60118-4 : 2015 sont réputées satisfaire à ces exigences.
+        Accueil des établissements remplissant une mission de service public ou des ERP de 1ère à 4 ème catégorie équipé d'une boucle d'induction magnétique
+    Art. 6 - Circulations intérieures horizontales
+        Principaux éléments structurant de la circulation sont repérables et identifiables
+        Accessibilité à l'ensemble des locaux ouverts au public
+        Caractéristiques des circulations intérieures horizontales (respect de l'Art. 2 §II.2)
+            Dénivellation
+            - Pente < 4%
+            - Pente entre 4 et 5 % sur une longueur <= 10 m
+            - Pente entre 5 et 8 % sur une longueur <= 2 m
+            - Pente entre 8 et 10% sur une longueur <= 0,5 m
+            - Pente > 10 % interdite
+            - Paliers de repos horizontal au dévers près (1,20 m x 1,40 m) en haut et en bas de pente
+            - Interdiction de ressaut en bas ou en haut d'une pente
+            Seuils et ressauts <= 2 cm (ou 4 cm si pente <= 33 %), arrondis ou chanfreinés
+            Distance minimale de 2,50 m entre deux ressauts successifs
+            Interdiction de "pas d'âne"
+            Largeur minimale >= 1, 40 m
+            Rétrécissements ponctuels >= 1,20 m sur une faible longueur
+            Dévers <= 2%
+            Restaurants et débits de boisson
+            - Largeur >= 1,40 m permettant aux personnes en fauteuil roulant d'accéder aux emplacements accessibles et sanitaires adaptés.
+            - Autres allées conformes au règlement de sécurité incendie
+            Espaces de manœuvre et d'usage sur les circulations intérieures horizontales (respect de l'Art. 2 §II.2c)
+            Espaces de manœuvre de porte devant chaque porte : dimensions 1,40 m x 1,70 m en poussant et 1,40 m x 2,20 m en tirant à l'exception des niveaux non accessibles aux fauteuils roulants, des portes et des portillons automatiques coulissants avec détection, des portes et des portillons ouvrant uniquement sur un escalier et des portes des sanitaires, des douches et des locaux non adaptés
+            Espaces d'usage devant chaque équipement ou aménagement : dimensions 0,80 m x 1,30 m
+            Sécurité d'usage des circulations intérieures horizontales (respect de l'Art. 2 §II.3)
+            Sols ou revêtements de sol non meubles, non glissants, non réfléchissants et sans obstacle à la roue.
+            Trous ou fentes situés dans le sol : diamètre ou largeur <= 2 cm
+            Cheminement libre de tout obstacle
+            - Hauteur libre de 2,20 m ou 2,00 m dans les parcs de stationnement et accès aux caves.
+            - Repérage des saillies de plus de 15 cm suivant annexe 4
+            - Mobiliers, bornes et poteaux : respect de l'annexe 5
+            Dispositif de protection si rupture de niveau >= 25 cm à moins de 0,90 m.
+            Protection des espaces sous escaliers de moins de 2,20m de hauteur situés sur des cheminements
+            - Contraste visuel
+            - Rappel situé dans la zone de balayage d'une canne blanche
+            - Prévenir des chocs
+            Parois vitrées situées sur les circulations ou en bordure immédiate : repérage par éléments visuels contrastés
+            Volée d'escalier de 3 marches ou plus
+            - Largeur => 1,20 m entre mains courantes
+            - Dimensions des marches (hauteur des marches <= 16 cm, giron des marches >= 28 cm)
+            - Main courante comprise entre 0,80 et 1,00 m de hauteur et prolongée au-delà de la première et de la dernière marche, continue, rigide et facilement préhensible, différenciée  de la paroi de la cage d'escalier
+            - Eveil à la vigilance en haut et sur chaque palier intermédiaire à 50 cm de la première marche
+            - Nez de marches de 3cm de largeur, contrastés, non glissants, débord < 10 mm
+            - Contremarches contrastées sur une hauteur mini de 10 cm pour la première et dernière marche
+            Volée d'escalier de moins de 3 marches
+            - Eveil à la vigilance en haut à 50 cm de la première marche
+            - Nez de marches de 3cm de largeur, contrastés, non glissants, débord < 10 mm
+            - Contremarches contrastées sur une hauteur mini de 10 cm pour la première et dernière marche
+    Art. 7 - Circulations intérieures verticales
+        Dénivellation des circulations horizontales supérieure ou égale à 1,20 m (niveau décalé)
+        Ascenseur ou escalier non visible depuis l'entrée ou le hall d'accès : signalisation adaptée selon annexe 3
+        Ascenseurs ou escaliers desservant de façon sélective les différents niveaux : signalisation appropriée pour aider l'usager à choisir. Pour ascenseur et élévateur information doit figurer à proximité des commandes d'appel.
+        Ascenseurs ou élévateurs : numéro ou dénomination de chaque étage desservi à installer sur chaque palier à proximité (en relief, visuellement contrastée et pouvant être détectée par le toucher par une personne présentant une déficience visuelle)
+    Art. 7.1 - Escaliers de plus de 2 marches
+        Largeur entre mains courantes >= 1,20 m
+        Dimensions des marches (hauteur des marches <= 16 cm, giron des marches >= 28 cm)
+        Eveil à la vigilance en haut et sur chaque palier intermédiaire de l'escalier (possibilité à 28 cm si contraintes)
+        Contremarches contrastées sur une hauteur mini de 10 cm pour la première et dernière marche
+        Nez de marches de 3cm de largeur, contrastés, non glissants, débord < 10 mm
+        Mains courantes
+        - Mains courantes de chaque côté sauf si fût central de diamètre <= 40 cm (1 seule main courante sur mur extérieur)
+        - Hauteur entre 0,80 m et 1,00 m de hauteur, se prolongeant au-delà de la première et dernière marche de chaque volée
+        - Continue, rigide et facilement préhensible y compris sur paliers intermédiaires, différenciée de la paroi support. Continuité non exigée pour la main courante côté fût si présence d'un relief tactile permettant de détecter la présence d'un palier.
+    Art. 7.2.II - Ascenseurs
+        Obligation d'ascenseur
+        - Ascenseurs libres d'accès sauf établissements scolaires sous réserve qu'un dispositif permettant d'utiliser l'appareil en toute autonomie soit remis aux élèves concernés
+        - Effectif >= 50 personnes en sous-sol, mezzanine ou étage
+        - Effectif < 50 personnes si prestations non offertes au RDC
+        - Le seuil est porté à 100 personnes pour établissement d'enseignement
+        Ascenseurs conformes à la norme NF EN 81-70 : 2003 relative à l'accessibilité aux ascenseurs pour toutes les personnes y compris les personnes avec handicap ou équivalent
+        - Commandes neuves à plus de 50 cm d'un angle rentrant
+        - Signalisation palière : Signal sonore prévenant du début d'ouverture des portes ; Deux flèches lumineuses d'une hauteur d'au moins 40 mm indiquant le sens du déplacement ; Signal sonore utilisant des sons différents pour la montée et la descente accompagnant l'illumination des flèches.
+        - Signalisation en cabine : Indicateur visuel permettant de connaître la position de la cabine. La hauteur des numéros d'étage est comprise entre 30 et 60 mm ; Message vocal indiquant la position de la cabine à l'arrêt
+        - Dispositifs de demande de secours : Pictogramme illuminé jaune, pour émission du message ; Pictogramme illuminé vert pour enregistrement de la demande ;  Aide à la communication pour les personnes malentendantes, telle qu'une boucle magnétique
+        - Signaux sonores et messages vocaux : niveau réglable entre 35 et 65 dB (A).
+    Art.7.2.II Appareils élévateurs verticaux :
+        Autorisés si PPRI ou contraintes topographiques
+        A l'intérieur de l'établissement
+        Appareil libre d'accès ou à défaut assorti d'un dispositif permettant de signaler sa présence
+        - Dispositif de signalement à proximité du portillon ou porte d'accès
+        - Dispositif de signalement facilement repérable
+        - Dispositif de signalement visuellement contrasté
+        Caractéristiques de l'appareil en fonction de la hauteur de course
+        - EPMR vertical avec nacelle et sans gaine si hauteur à franchir <= 0,50 m
+        - EPMR vertical avec nacelle, gaine et portillon si hauteur à franchir <= 1,20 m
+        - EPMR vertical avec gaine fermée et avec porte si hauteur à franchir <= 3,20m, vitesse limitée entre 0,13 et 0,15 m/s
+        Protection afin d'empêcher l'accès sous l'appareil. Doit satisfaire aux règles de sécurité en vigueur.
+        Caractéristiques plateformes, portes et commandes
+        - Plateforme de 0,90 m x 1,40 m si service simple ou opposé
+        - Plateforme de 1,10 m x 1,40 m en cas de service d'angle
+        - Commande centrée sur la plateforme
+        - Commande d'appel à enregistrement pour EPMR dans gaine fermée. Elle est située en dehors du débattement de la porte
+        - Porte ou portillon : 0,83 m de passage libre
+        - Appareil élévateur vertical avec nacelle : caractéristiques des commandes à pression maintenue (inclinaison du support compris entre 30° et 45°, force de pression nécessaire pour activer les commandes comprise entre 2 N et 5 N)
+    Art. 8 - Tapis roulants, escaliers et plans inclinés mécaniques
+        Tapis, escaliers et plans inclinés mécaniques doublés par un cheminement accessible fixe ou un ascenseur.
+        Signalisation permettant d'éviter l'équipement (respect de l'annexe 3)
+        Mains courantes accompagnant le mouvement : Situées de part et d'autre de l'équipement et dépassant au moins de 30 cm le départ et l'arrivée de la partie en mouvement.
+        Commande d'arrêt d'urgence à une hauteur comprise entre 0,80 m et 1,30 m
+        Contraste de couleur ou lumière au départ et arrivée des parties en mouvement.
+        Dispositif d'éveil à la vigilance installé en amont et en aval de l'équipement
+        Signale sonore ou tactile à l'arrivée pour tapis roulants et plans inclinés.
+    Art. 9 - Revêtements des sols, murs et plafonds
+        Tapis fixes : dureté suffisante, pas de ressaut > à 2 cm
+        Qualité acoustique des revêtements des espaces d'accueil, d'attente ou de restauration (Aire d'absorption équivalente >= 25% de la surface de sol)
+    Art. 10 - Portes, portiques et sas
+        Largeur des portes principales
+        - Locaux recevant plus de 100 personnes : largeur de passage utile minimale de 1,40 m.
+        - Locaux recevant moins de 100 personnes : largeur de passage utile minimale de 0,83 m.
+        - Portes à plusieurs vantaux : vantail principal de 0,83 cm de passage libre
+        - Portes des sanitaires non adaptés et des cabines et espaces à usage individuel non adaptés : largeur de passage utile de 0,77 cm
+        Largeur des portiques : passage utile de 0,77m
+        Espace de manœuvre de porte (dimensions 1,40 m x 1,70 m en poussant et 1,40 m x 2,20 m en tirant) devant chaque porte à l'exception de celle ouvrant sur un escalier, des portes des sanitaires, cabines et espaces à usage individuel non adaptés.
+        Dimensions des sas "incendie" : respect de l'annexe 2 (espace de manouvre de porte hors débattement de la porte non manœuvrée côté intérieur, aire de manouvre avec possibilité de demi-tour hors débattement des portes côté intérieur)
+        Poignées des portes : facilement préhensibles, extrémité à plus de 40 cm d'un angle rentrant ou d'un obstacle  au fauteuil sauf pour les portes donnant uniquement sur un escalier et celles d'accès aux sanitaires, cabines et espaces à usage individuel non adaptés.
+        Portes à ouverture automatique : durée d'ouverture permettant le passage des personnes à mobilité réduite. Le système doit détecter des personnes de toutes tailles et les animaux d'assistance.
+        Portes à ouverture électrique : signaux sonore et lumineux au déverrouillage
+        Effort pour ouvrir une porte <= 50 N
+        Dispositifs liés à la sécurité ou à la sureté : signalement à l'accueil, repérage et franchissement de la porte adaptée à proximité
+        Portes, encadrements et dispositifs de manouvre : contraste visuel par rapport à leur environnement
+        Portes comportant une partie vitrée importante : repérable ouverte comme fermée avec des éléments visuels contrastés
+    Art. 11 - Equipements et dispositifs de commande dans les locaux ouverts au public
+        Par groupe d'éléments, au moins 1 équipement repéré, atteint et utilisé par les personnes handicapées
+        Equipements et mobiliers repérables par éclairage particulier ou contraste visuel
+        Dispositifs de commande repérables par éclairage particulier ou contraste visuel et tactile
+        Espace d'usage (0,80 m x 1,30 m) devant équipements, mobilier, dispositifs de commande et de service dans les étages accessibles aux personnes en fauteuil roulant.
+        Au moins un équipement ou un élément de mobilier utilisable par une personne debout ou assise
+        Caractéristiques de l'équipement ou élément de mobilier utilisable
+        - Commande manuelle ou lorsque l'utilisation de l'équipement nécessite de voir, lire, entendre, parler : hauteur entre 0,90 m et 1,30 m , à plus de 40 cm d'un angle rentrant
+        - Elément de mobilier permettant de lire, écrire, utiliser un clavier : hauteur maximale 0,80 m et vide en partie inférieure d'au moins 30 cm de profondeur, 0,60 m de largeur et 0,70 m de hauteur pour fauteuil roulant
+        Accueil sonorisé : Equipement de transmission du signal acoustique par induction magnétique signalé par pictogramme.
+        Salles de réunion des ERP de 1ère à 4 ème catégorie : boucle magnétique pour au moins 1 salle
+        Eléments de signalisation et d'information conformes à l'annexe 3
+        Panneaux d'affichage instantané relayant des informations sonores doublées par une information visuelle sur ce support
+        Les interrupteurs et boutons de commande ne sont pas à effleurement
+    Art. 12 - Sanitaires
+        Emplacement des cabinets d'aisances aménagés
+        - Pour chaque niveau accessible : au moins 1 WC aménagé avec lavabo accessible
+        - De préférence au même emplacement que les autres
+        - Si séparés pour chaque sexe, un cabinet accessible pour chaque sexe
+        Un lavabo accessible par groupe de lavabos
+        Caractéristiques dimensionnelles des cabinets d'aisances
+        - Espace d'usage latéral (à droite ou à gauche) à la cuvette de 0,80 x 1,30 m hors débattement de la porte
+        - Espace de retournement d'1,50 m de diamètre à l'intérieur ou à l'extérieur devant la porte
+        Si plusieurs cabinets adaptés par sexe : transfert à droite et transfert à gauche équitablement répartis
+        - Espace de part et d'autre pour permettre le transfert des 2 côtés avec 2 barres d'appuis amovibles et rabattables de part et d'autre de la cuvette
+        - OU 2 cuvettes situées de part et d'autre d'un espace d'usage
+        - Indication du sens de transfert sur la porte du sanitaire adapté
+        Aménagements des cabinets d'aisances
+        - Dispositif permettant de refermer la porte
+        - Lave-main accessible (accès latéral) avec plan à moins de 0,85 m de haut ou lavabo accessible (accès frontal) avec vide en dessous de 0,70 x 0,30 x 0,60 m (H x P x L), commande de déclenchement à plus de 40 cm d'un angle ou tout autre obstacle.
+        - Hauteur de la cuvette entre 0,45 et 0,50 m lunette incluse (sauf WC enfants)
+        - Barre d'appui latérale hauteur entre 0,70 et 0,80 m permettant le transfert et le relevage et supportant le poids d'une personne
+        - Distance entre l'axe de la cuvette et la barre d'appui comprise entre 0,40 m et 0,45 m
+        - Commandes de chasse d'eau accessible et manœuvrable
+        Lavabos accessibles : vide en dessous d'au moins 0,70 x 0,60 x 0,30 m (HxLxP)
+        Equipement et positionnement de la robinetterie : usage complet en position assise
+        Bas des miroirs < 1,05 m (recommandation)
+        Accessoires divers < 1,30 m (au moins 1 par batterie)
+        Urinoirs à différentes hauteurs si batteries d'urinoirs
+    Art. 13 - Sorties
+        Repérage de toutes les sorties normales
+        Aucun risque de confusion avec les issues de secours
+    Art. 14 - Eclairage
+        Eclairement des cheminements extérieurs accessibles, parcs de stationnement extérieurs et leurs circulations piétonnes (20 lux moyens)
+        Eclairement des parcs de stationnement intérieurs et leurs circulations piétonnes (20 lux moyens)
+        Eclairement des circulations intérieures horizontales (100 lux moyens)
+        Eclairement des escaliers et équipements mobiles (150 lux moyens)
+        Eclairement des postes d'accueil  ou mobiliers en faisant office (200 lux moyens)
+        Système d'éclairage temporisé : extinction progressive
+        Système d'éclairage par détection de présence : la détection doit couvrir l'ensemble de l'espace et les zones de détection doivent se chevaucher
+        Absence d'éblouissement direct des usagers ou de reflet sur la signalétique
+    Art. 16 - Etablissement recevant du public assis
+        Nombre de places réservées : 1 + 1 par tranche de 50 personnes. Au-delà de 1000 places selon arrêté préfectoral sans être inférieur à 20.
+        Caractéristiques dimensionnelles des emplacements accessibles : 0,80 m x 1,30 m
+        Cheminement d'accès à ces emplacements
+        Répartition en fonction des différentes catégories de places
+        Emmarchements des gradins et gradins (non considérés comme circulations verticales ou horizontales) : - Bande d'appel à la vigilance - Nez de marches - Contremarches
+    Art. 17 - Etablissement comportant des locaux d'hébergement
+        Usage attendu : Présence de chambres adaptées Chambres non adaptées visitables par une personne en fauteuil roulant (si situées dans un niveau accessible aux fauteuils roulants) et utilisables par des personnes avec une déficience visuelle, auditive ou mentale.
+        - Tout établissement d'hébergement comporte des chambres adaptées accessibles aux PMR
+        - Chambres non adaptées utilisables par des personnes avec une déficience visuelle, auditive ou mentale et visitable par une personne circulant en fauteuil roulant lorsque la chambre est située à un niveau accessible aux fauteuils roulants
+        - Lorsque les chambres adaptées comportent une salle d'eau, celle-ci est aménagée et accessible.  Si les chambres adaptées ne comportent pas de salle d'eau et s'il existe au moins une salle d'eau d'étage, celle-ci est aménagée et accessible depuis ces chambres par un cheminement accessible
+        - Lorsque les chambres adaptées comportent un WC, celui-ci est aménagé et accessible.  Si les chambres adaptées ne comportent pas de WC, un WC indépendant et accessible de ces chambres est aménagé à cet étage, celui-ci est aménagé et accessible depuis ces chambres par un cheminement accessible
+        Dispositions communes à toutes les chambres
+        - Porte d'entrée de 0,77m de passage libre minimum (recommandation : 0,83 m pour les chambres adaptées)
+        - 1 prise de courant au moins placée à proximité immédiate de la tête de lit
+        - 1 prise de téléphone si réseau téléphonique interne
+        - Numéros de chambre en relief, contrastés visuellement et situés à hauteur de vue
+        - Ecrans situés hors du cheminement ou hauteur > 2,20 m
+        Nombre de chambres aménagées : 1 si moins de 20 chambres ou 1 + 1 par tranche de 50 chambres, toutes les chambres si personnes âgées ou mobilité réduite
+        Répartition des chambres adaptées entre les différents niveaux desservis par ascenseur
+        Caractéristiques des chambres adaptées
+        - Espace de rotation d'1,50 m de diamètre hors débattement de la porte d'entrée
+        - En dehors du débattement de la porte : Passage d'au moins 0,90 m sur les 2 grands côtés du lit et un passage d'au moins 1,20 m sur le petit côté du lit ou au moins 1,20 m sur les 2 grands côté du lit et un passage de 0,90 m sur le petit côté du lit.
+        - Hauteur du plan de couchage des lits fixés au sol entre 0,40 et 0,50 m du sol
+        Caractéristiques des salles d'eau adaptées
+        - Intégrées aux chambres adaptées ou à l'une au moins des salles d'eau collectives à l'étage
+        - Ressaut < = 2 cm
+        - Barre de transfert
+        - Equipement permettant un appui debout
+        - Siège
+        - Espace d'usage de 0,80 x 1,30 m placé latéralement à l'équipement permettant de s'asseoir
+        - Espace de rotation d' 1,50 m de diamètre hors débattement de la porte
+        - 1 lavabo accessible avec vide en sous face (0,70 m x 0,60 m x 0,30 m : H x L x P). La robinetterie doit pouvoir être utilisée en position assise
+        Caractéristiques des sanitaires adaptés
+        - Intégrés aux chambres adaptées ou à au moins un cabinet d'aisance collectif à l'étage
+        - Espace d'usage de 0,80 x 1,30 m placé latéralement à l'équipement permettant de s'asseoir
+        - Barre d'appui latérale hauteur entre 0,70 et 0,80 m permettant le transfert et le relevage et supportant le poids d'une personne
+    Art. 18 - Cabines et espaces à usage individuel
+        Cabines ou espaces adaptés accessible par un cheminement praticable
+        Emplacement des cabines ou espaces à usage individuel (aux mêmes emplacements que les autres cabines, répartition par sexe)
+        Nombre de cabines ou espaces à usage individuel adaptés:  1 si moins de 20 ou  1+1 par tranche de 50  au-delà
+        Aménagement des cabines ou espaces à usage individuel adaptés
+        - Espace de rotation d'1,50 m suivant annexe 2 hors débattement de la porte
+        - Siège
+        - Dispositif d'appui en position debout
+        Aménagement des douches adaptées
+        - Siphon de sol
+        - Siège
+        - Equipement permettant un appui debout
+        - Espace d'usage de 0,80 x 1,30 m placé latéralement à l'équipement permettant de s'asseoir
+        - Espace de rotation d' 1,50 m de diamètre suivant annexe 2 hors débattement de la porte
+        - Dispositif permettant de refermer la porte
+        - Equipements divers (patères, robinetterie, sèche-cheveux, miroirs, etc.) accessibles et utilisables en position "assis"
+    Art. 19 - Caisses de paiement et dispositifs ou équipements disposés en batterie
+        Nombre de caisses et dispositifs ou équipements adaptés : 1 par tranche de 20 arrondis à l'unité supérieure
+        Répartition des caisses de façon uniforme
+        Caractéristiques des caisses adaptées : largeur mini du cheminement d'accès de 0,90 m, utilisation par une personne en fauteuil roulant
+        Affichage du prix directement lisible pour personnes sourdes ou malentendantes
+        Art. 20 - Sous-titrage
+        Lieux publics collectifs : sous-titrage en français activé si l'équipement dispose de cette fonctionnalité
+        Lieux publics privatifs : présence d'une notice simplifiée pour activation du sous-titrage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+ISOLEMENT AUX BRUITS AERIENS
+    Isolement aux bruits aériens extérieurs aux logements
+        Niveau d'Isolement requis pour la façade
+        Façades
+        - Parois opaque des façades (murs et toitures) : Nature et épaisseur
+        - Doublages de façades
+        - Menuiseries extérieures et parties vitrées
+        - Bouche d'entrée d'air
+        Points singuliers en façades
+        - Coffres de volets roulants
+        - Chaudières à ventouse
+        - Prise d'air des radiateurs à gaz
+    Isolement aux bruits aériens intérieurs
+        Isolement entre logements : superpositions
+        - Nature et épaisseur des planchers
+        - Recoupement des gaines techniques par les planchers
+        - Points singuliers : façades filantes, bow-window..)
+        Isolement entre logements : mitoyenneté
+        - Nature et épaisseur des parois séparatives
+        - Nature et épaisseur des plafonds pour les logements sous toitures
+        - Rampants filants devant séparatif entre logements
+        - Nature et mise en œuvre des doublages
+        - Prises de courant
+        - Points singuliers : façades filantes, gaines techniques communes…
+        Isolement entre circulations communes et logements
+        - Nature et épaisseur de la paroi verticale
+        - Portes palières : accès sur un sas d'entrée "fermé"
+        - Portes palières : entrée direct sur une pièce principale
+        - Points singuliers : conduits de désenfumage, gaines techniques, tableaux électriques incorporés…
+        Isolement entre logements et garages individuels ou collectifs
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        - Gaines techniques des logements superposés au garage
+        Isolement entre logements et locaux d'activité
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        - Gaines techniques des logements superposés aux locaux d'activité
+        Isolement entre logements et locaux non chauffés
+        - Nature et épaisseur des planchers
+        - Nature et épaisseur des parois verticales séparatives
+        - Gaines techniques des logements superposés aux locaux non chauffée
+        Isolement gaines ascenseur
+        - Emplacement de la gaine
+        - Nature et épaisseur des parois de la gaine
+        - Nature et épaisseur du plancher haut de la gaine
+        Isolement du local machinerie ascenseur
+        - Emplacement du local
+        - Nature et épaisseur des parois du local
+        - Nature et épaisseur des planchers du local
+        Isolement des gaines techniques passant dans les logements
+        - Parois des gaines techniques : nature et épaisseurs
+        Trappes de visite sur gaines techniques
+        - Implantation des trappes
+        - Indice d'affaiblissement acoustique des trappes
+        - Surface de trappe
+        - Joint périphérique de trappe
+        - Principe de fermeture de trappe
+AIRE D'ABSORPTION EQUIVALENTE DES CIRCULATIONS COMMUNES
+    Aire d'absorption équivalente des revêtements absorbants disposés dans les circulations communes
+        - Nature des revêtements absorbants : indice d'absorption et surface
+        - Surface du sol
+NIVEAU DE RECEPTION AUX BRUITS DE CHOCS
+    Planchers
+    - Nature et épaisseur des planchers
+    Revêtements de sols nécessaire à la diminution du niveau de réception aux bruits de chocs
+    - Pièces principales
+    - Pièces humides
+    - Dégagements
+    - Circulations communes
+    - Dépendances
+    - Coursives / Terrasses privatives
+    Revêtements de sols posés sur chape flottante
+    - Caractéristique de la sous couche isolante
+    Revêtements de sols souples posés sur plancher, sans chape flottante
+    - En transmission directe
+    - Transmission indirecte + séparatif lourd
+    - Transmission indirecte + séparatif léger
+    Escaliers communs ou en duplex
+    - Désolidarisation de la structure verticale
+    - Revêtement de sol
+BRUITS DES EQUIPEMENTS
+    Bruits des équipements individuels de chauffage et de climatisation
+        Chauffage
+        - Type des chaudières
+        - Localisation des chaudières
+        Climatisation
+        - Emplacement
+        - Type d'appareil
+        - Désolidarisation
+    Bruits des équipements extérieurs au logement étudié
+        Ventilation mécanique contrôlée individuelle ou collective
+        - Nature des bouches d'extractions
+        - Caisson de ventilation : emplacement
+        - Caisson de ventilation : insonorisation
+        - Caisson de ventilation : désolidarisation
+        - Vitesse de l'air
+        - Dépression
+        Plomberie – sanitaire
+        - Nature des chutes
+        - Dévoiement des chutes
+        - Pression d'alimentation en eau
+        - Vitesse de l'eau dans les canalisations
+        - Robinetterie : classement acoustique
+        - Désolidarisation des équipements
+        - Désolidarisation des canalisations
+        Chaudières individuelles
+        - Emplacement
+        - Désolidarisation
+        Autres équipements individuels
+        - Climatisation
+        - Volets roulants électriques
+    Bruits des équipements collectifs
+        Ascenseurs
+        - Caractéristiques ascenseur
+        - Machinerie : désolidarisation des équipements
+        - Armoire de commande : emplacement, dispositif antivibratile
+        Portes automatiques de garages collectifs
+        - Emplacement
+        - Dispositifs de désolidarisation
+        Chauffage collectif
+        - Caractéristiques de la chaudière
+        - Emplacement de la chaufferie
+        - Nature et épaisseur des parois de la chaufferie (murs et planchers)
+        - Ventilation de la chaufferie
+        - Conduits de fumée : emplacement
+        - Désolidarisation des équipements
+        Ventilation mécanique de parking
+        - Emplacement
+        - Dispositif de désolidarisation
+        - Rejet d'air
+        Vides ordures
+        - Emplacement de la gaine
+        - Emplacement du local récepteur
+        - Nature et épaisseur des parois du local récepteur
+        Autres équipements collectifs
+        - Emplacement équipement
+        - Dispositif de désolidarisation de l'équipement
+
+
+
+
+
+
+
