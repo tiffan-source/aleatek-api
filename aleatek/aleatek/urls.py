@@ -8,7 +8,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from mission.views import AddInterventionTechnique, AddMissionActive, DeleteArticleSelectForAffaire, AddArticleSelectForAffaire, GetAllCritereForAffaire, ArticleSelectViewsetAdmin, GetAllArticleForMission, GetAllMissionViewByChapitre, MissionAdminViewsetAdmin, MissionActiveAdminViewsetAdmin, ITAdminViewsetAdmin, ArticleAdminViewsetAdmin, GetAllParentMission, \
-    MissionActiveForCurrentAffaire, VerifyExistITForMissionSignAndCollab, VerifyExistMissionActive, AllIntervenantForAffaire, AllMissionForAffaire
+    MissionActiveForCurrentAffaire, VerifyExistITForMissionSignAndCollab, VerifyExistMissionActive, AllIntervenantForAffaire, AllMissionForAffaire, ArticleMissionViewsetAdmin
 
 from collaborateurs.views import UtilisateurConnecteView, CollaborateursAdminViewsetAdmin, AllCollabAssignToMission
 from entreprise.views import AddEntrepriseOnAffaire, CreateEntreprise, EditeDataEntreprise, ResponsableAdminViewsetAdmin, EntrepriseAdminViewsetAdmin, GetEntrepriseWithCollaborateur
@@ -31,13 +31,16 @@ from rapport_visite.views import AddAvisOnRv, CreateRv, AllAvisFromRV, RapportVi
 from ouvrage.views import EditRemarque, GetUserRemarqueGeneralOnAso, GetAllRemarqueGeneralOnAso, DocumentCreate, NextNumberAsoForAffaire, RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc, GetAffaireOuvrageFromDocument, GetAllDetailAsoForAffaire, CreateOuvrageForAffaire
 
 
-from RICT.views import SaveDecriptionSommaire, GetAllAvisByRICTandMission, GetAllDispositionByRICTandMission, CheckRICTForAffaire, RICTViewsetAdmin, AvisArticleViewsetAdmin, DescriptionSommaireViewsetAdmin,\
-    DispositionViewsetAdmin, CommentaireAvisArticleViewsetAdmin, GetDesriptionSommaireByRICT
+from RICT.views import SaveDecriptionSommaire, ValidateRICT, GetAllAvisByRICTandMission, GetAllDispositionByRICTandMission, CheckRICTForAffaire, RICTViewsetAdmin, AvisArticleViewsetAdmin, DescriptionSommaireViewsetAdmin,\
+    DispositionViewsetAdmin, CommentaireAvisArticleViewsetAdmin, GetDesriptionSommaireByRICT, SaveArticleDisposition, GetDisposionAvisAndComment, MissionRICTViewsetAdmin, ValidateDevalidateMissionRict
 
 from ouvrage.views import GetOuvrageAffaireDetailEntreprise, AllOuvrageAvailableForAffaire ,DocumentAffectationViewsetAdmin, GetCollaborateurAffectOnDocument, RemoveCollaborateurOnDocument, RemarqueAsoViewsetAdmin, SetRemarqueOnAso
 
 from synthese.views import SyntheseAvisViewsetAdmin, CreateSyntheseAvis, AllSyntheseAvis, SyntheseComentaireRVViewsetAdmin, SyntheseCommentaireArticleViewsetAdmin, SyntheseCommentaireDocumentViewsetAdmin, \
     GetAllCommentaireOnAffaire, LeverCommentaire, AnnulerLever, AllAvisOfAffaire, ValidateSyntheseAvis, AllAvisOfSynthese, DevalidateSyntheseAvis
+    
+    
+from mission.views import GetCritereAboutDescriptionBati, HandleSelectCritere
 # from ouvrage.views import CodificationplusBas
 
 router = routers.SimpleRouter()
@@ -52,6 +55,7 @@ router.register('admin/document_affectation', DocumentAffectationViewsetAdmin, b
 router.register('admin/remarque_aso', RemarqueAsoViewsetAdmin, basename='remarque_aso')
 
 router.register('admin/rict', RICTViewsetAdmin, basename='rict')
+router.register('admin/mission_rict', MissionRICTViewsetAdmin, basename='mission_rict')
 router.register('admin/disposition', DispositionViewsetAdmin, basename='disposition')
 router.register('admin/avis_article', AvisArticleViewsetAdmin, basename='avis_article')
 router.register('admin/commentaire_avis_article', CommentaireAvisArticleViewsetAdmin, basename='commentaire_avis_article')
@@ -71,6 +75,7 @@ router.register('admin/affaireouvrage', AffaireOuvrageAdminViewsetAdmin, basenam
 router.register('admin/aso', AsoViewsetAdmin, basename='admin=aso')
 router.register('admin/mission', MissionAdminViewsetAdmin, basename='admin-mission')
 router.register('admin/missions/active', MissionActiveAdminViewsetAdmin, basename='admin-mission-active')
+router.register('admin/article_mission', ArticleMissionViewsetAdmin, basename='admin-article-mission')
 router.register('admin/intervention/technique', ITAdminViewsetAdmin, basename='admin-it')
 
 router.register('admin/adresse', AdressdminViewsetAdmin, basename='admin-adresse')
@@ -159,7 +164,7 @@ urlpatterns = [
     path('api/mission_affaire/<int:id_affaire>/<int:id_mission>/', VerifyExistMissionActive.as_view()),
     path('api/all_mission/<int:id_affaire>/', AllMissionForAffaire.as_view()),
     path('api/get_all_parent_mission/', GetAllParentMission.as_view()),
-    path('api/get_all_mission_view_by_chapitre/<int:id_affaire>/', GetAllMissionViewByChapitre.as_view()),
+    path('api/get_all_mission_view_by_chapitre/<int:id_affaire>/<int:id_rict>/', GetAllMissionViewByChapitre.as_view()),
     path('api/add_mission_active/', AddMissionActive.as_view()),
 
     # Collaborateur service
@@ -187,9 +192,15 @@ urlpatterns = [
     path('api/add_article_select_for_affaire/<int:id_affaire>/<int:id_article>/', AddArticleSelectForAffaire.as_view()),
     path('api/delete_article_select_for_affaire/<int:id_affaire>/<int:id_article>/', DeleteArticleSelectForAffaire.as_view()),
     path('api/all_avis_from_RV/<int:id_rv>/', AllAvisFromRV.as_view()),
+    
+    path('api/handle_select_critere/<int:id_affaire>/<int:article>/', HandleSelectCritere.as_view()),
+    path('api/get_critere_about_description_bati/<int:id_affaire>/', GetCritereAboutDescriptionBati.as_view()),
 
     # RICT Service
     path('api/check_RICT_for_affaire/<int:id_affaire>/', CheckRICTForAffaire.as_view()),
+    path('api/get_disposion_avis_and_comment/<int:rict>/<int:article>/<int:mission>/', GetDisposionAvisAndComment.as_view()),
+    path('api/validate_devalidate_mission_rict/<int:id_mission>/<int:id_rict>/', ValidateDevalidateMissionRict.as_view()),
+    path('api/valider_rict/<int:id_rict>/', ValidateRICT.as_view()),
 
     # Livrable service
     path('api/data_for_aso/<int:id_aso>/', GenerateDataForAso.as_view()),
@@ -197,6 +208,7 @@ urlpatterns = [
 
     # Disposition service
     path('api/get_all_disposition_by_RICT_and_mission/<int:id_rict>/<int:id_mission>/', GetAllDispositionByRICTandMission.as_view()),
+    path('api/save_article_disposition/<int:rict>/<int:article>/<int:mission>/', SaveArticleDisposition.as_view()),
 
     # AvisArticle service
     path('api/get_all_avis_by_RICT_and_mission/<int:id_rict>/<int:id_mission>/', GetAllAvisByRICTandMission.as_view()),

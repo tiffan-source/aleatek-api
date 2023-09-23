@@ -1,9 +1,9 @@
 from django.db import models
 from django.db.models import UniqueConstraint
 from Dashbord.models import Affaire
-from mission.models import Article
+from mission.models import ArticleSelect, Article, ArticleMission
 from collaborateurs.models import Collaborateurs
-
+from mission.models import MissionActive
 
 # Create your models here.
 
@@ -21,7 +21,7 @@ class RICT(models.Model):
 
 class Disposition(models.Model):
     rict = models.ForeignKey(RICT, on_delete=models.CASCADE)
-    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    article = models.ForeignKey(ArticleMission, on_delete=models.CASCADE)
     commentaire = models.CharField(max_length=300)
 
     class Meta:
@@ -38,9 +38,8 @@ class AvisArticle(models.Model):
         ('SO', 'SO'),
         ('IM', 'IM')]
     rict = models.ForeignKey(RICT, on_delete=models.CASCADE)
-    article = models.ForeignKey(Article, on_delete=models.CASCADE)
+    article = models.ForeignKey(ArticleMission, on_delete=models.CASCADE)
     codification = models.CharField(max_length=5, choices=AVIS)
-
 
 class CommentaireAvisArticle(models.Model):
     id_avis = models.ForeignKey(AvisArticle, on_delete=models.CASCADE)
@@ -51,4 +50,8 @@ class CommentaireAvisArticle(models.Model):
 class DescriptionSommaire(models.Model):
     type = models.CharField(max_length=200)
     content = models.TextField()
+    rict = models.ForeignKey(RICT, on_delete=models.CASCADE)
+    
+class MissionRICT(models.Model):
+    mission = models.ForeignKey(MissionActive, on_delete=models.CASCADE)
     rict = models.ForeignKey(RICT, on_delete=models.CASCADE)

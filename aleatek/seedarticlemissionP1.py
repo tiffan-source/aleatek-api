@@ -5,32 +5,61 @@ import django
 django.setup()
 # settings.configure()
 
-from mission.models import Article
+from mission.models import Article, ArticleMission
 
 with open('articlemissionP1.txt', 'r') as f:
     lines = f.readlines()
     idsupper = []
     idfirstlevel = []
     idsenconlevel = []
-    for i, line in enumerate(lines):
-        print(i)
-        if line.isupper():
-            data = Article(titre=line, article_parent_id=None, commentaire='', mission_id=2)
-            data.save()
-            idsupper.append(data.id)
-        elif line[0] == '\t' and line[1] == '\t' and line[2] == '-':
-            data = Article(titre=line.replace('\n', '').replace('\t', '').replace("- ", ""),
-                           article_parent_id=idsenconlevel[-1], commentaire='', mission_id=2)
-            data.save()
-        elif line[0] == '\t' and line[1] == '\t':
-            data = Article(titre=line.replace('\n', '').replace('\t', '').replace("- ", ""),
-                           article_parent_id=idfirstlevel[-1], commentaire='', mission_id=2)
-            data.save()
-            idsenconlevel.append(data.id)
-        elif line[0] == '\t':
-            data = Article(titre=line.replace('\n', '').replace('\t', '').replace("- ", ""),
-                           article_parent_id=idsupper[-1], commentaire='', mission_id=2)
-            data.save()
-            idfirstlevel.append(data.id)
-        else:
+    try:
+        for i, line in enumerate(lines):
             print(line)
+            if line.isupper():
+                if Article.objects.filter(titre=line).exists():
+                    id = Article.objects.get(titre=line).id
+                    ArticleMission(article_id=id, mission_id=2).save()
+                    if id not in idsupper:
+                        idsupper.append(id)
+                else:
+                    data = Article(titre=line, article_parent_id=None, commentaire='')
+                    data.save()
+                    idsupper.append(data.id)
+                    ArticleMission(article_id=data.id, mission_id=2).save()
+            elif line.startswith('\t\t- '):
+                if Article.objects.filter(titre=line.replace('\n', '').replace('\t', '')).exists():
+                    id = Article.objects.get(titre=line.replace('\n', '').replace('\t', '')).id
+                    ArticleMission(article_id=id, mission_id=2).save()
+                else:
+                    data = Article(titre=line.replace('\n', '').replace('\t', ''), article_parent_id=idsenconlevel[-1],
+                                commentaire='')
+                    data.save()
+            elif line.startswith('\t\t'):
+                if Article.objects.filter(titre=line.replace('\n', '').replace('\t', '')).exists():
+                    id = Article.objects.get(titre=line.replace('\n', '').replace('\t', '')).id
+                    ArticleMission(article_id=id, mission_id=2).save()
+                    if id not in idsenconlevel:
+                        idsenconlevel.append(id)
+                else:
+                    data = Article(titre=line.replace('\n', '').replace('\t', ''), article_parent_id=idfirstlevel[-1],
+                                commentaire='')
+                    data.save()
+                    idsenconlevel.append(data.id)
+                    ArticleMission(article_id=data.id, mission_id=2).save()
+            elif line.startswith('\t'):
+                if Article.objects.filter(titre=line.replace('\n', '').replace('\t', '')).exists():
+                    id = Article.objects.get(titre=line.replace('\n', '').replace('\t', '')).id
+                    ArticleMission(article_id=id, mission_id=2).save()
+                    if id not in idfirstlevel:
+                        idfirstlevel.append(id)
+                else:
+                    data = Article(titre=line.replace('\n', '').replace('\t', ''), article_parent_id=idsupper[-1],
+                                commentaire='')
+                    data.save()
+                    idfirstlevel.append(data.id)
+                    ArticleMission(article_id=data.id, mission_id=2).save()
+            else:
+                print(line)
+    except Exception as ex:
+        print(ex)
+        Article.objects.all().delete()

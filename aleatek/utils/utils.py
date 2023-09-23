@@ -1,3 +1,7 @@
+from mission.models import ArticleSelect, Article
+from RICT.models import Disposition, AvisArticle, CommentaireAvisArticle
+from django.forms.models import model_to_dict
+
 def convert_to_dict(obj):
     result = {}
 
@@ -19,3 +23,37 @@ def convert_to_dict(obj):
             result[key] = value
 
     return result
+
+def getllFirstParentOfArticle(articles):
+    data = []
+    for article in articles:
+        while article.parent != None:
+            article = article.parent
+        data.append(article)
+        
+    return data
+
+def getSubAffaireChild(article):
+    data = {
+        'parent' : model_to_dict(article),
+        'childs' : []
+    }
+    
+    all_childs = Article.objects.filter(article_parent=article.id)
+    
+    for child in all_childs:
+        data['childs'].append(getSubAffaireChild(child))
+        
+    return data
+
+def getParentAffaire(article):
+    
+    if article['parent']['article_parent'] != None:    
+        data = {
+            'parent' : model_to_dict(Article.objects.get(id=article['parent']['article_parent'])),
+            'childs' : [article]
+        }
+        return getParentAffaire(data)
+    else:
+        print(article)
+        return article

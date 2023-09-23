@@ -313,7 +313,7 @@ class GetAllDetailAsoForAffaireOneVersion(APIView):
 
 class GetAllDetailDocumentForAffaireOuvrage(APIView):
     def get(self, request, id_affaire_ouvrage):
-        all_doc = Documents.objects.all();
+        all_doc = Documents.objects.all()
 
         data = []
         for doc in all_doc:
