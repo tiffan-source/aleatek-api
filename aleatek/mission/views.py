@@ -122,7 +122,7 @@ class GetAllMissionViewByChapitre(APIView):
         missionsActive = MissionActive.objects.filter(id_affaire=id_affaire)
         data = []
         for missionActive in missionsActive:
-            
+
             mission = missionActive.id_mission
             if mission.mission_parent == None:
                 
@@ -139,7 +139,7 @@ class GetAllMissionViewByChapitre(APIView):
                         result = {}
                         result['mission'] = model_to_dict(mission)
                         result['chapitre'] = model_to_dict(child)
-                        active_mission = MissionActive.objects.filter(id_affaire=id_affaire, id_mission=child.id)
+                        active_mission = MissionActive.objects.filter(id_affaire=id_affaire, id_mission=mission.id)
                         check = MissionRICT.objects.filter(rict=id_rict, mission=active_mission[0].id).exists()
                         result['chapitre']['check'] = check
                         data.append(result)
@@ -165,7 +165,7 @@ class GetAllArticleForMission(APIView):
         data = []
 
         for article in articles:
-            pre_data.append(getSubAffaireChild(article))
+            pre_data.append(getSubAffaireChild(article, id_mission))
             
         for parent in unique_parents:
             final_parent = {
@@ -249,7 +249,7 @@ class GetCritereAboutDescriptionBati(APIView):
     def get(self, request, id_affaire):
         data = []
         try:
-            articles = Article.objects.filter(article_parent__article_parent__isnull=True, article__mission__in=[1, 2])
+            articles = Article.objects.filter(article_parent__article_parent__isnull=True, article__mission__in=[1, 2, 3, 4])
             for article in articles:
                 if article.article_parent != None:
                     result = model_to_dict(article)
@@ -267,6 +267,29 @@ class GetCritereAboutDescriptionBati(APIView):
 
         return Response(data)
     
+
+class GetCritereAboutCodeTravail(APIView):
+    def get(self, request, id_affaire):
+        data = []
+        try:
+            articles = Article.objects.filter(article_parent__article_parent__isnull=True, article__mission__in=[31, 32, 29, 30, 24, 25, 26])
+            for article in articles:
+                if article.article_parent != None:
+                    result = model_to_dict(article)
+                    
+                    if ArticleSelect.objects.filter(article=article.id, affaire=id_affaire).exists():
+                        result['select'] = True
+                    else:
+                        result['select'] = False
+
+                    result['parent'] = model_to_dict(article.article_parent)
+                    data.append(result)
+        except Exception as ex:
+            print(ex)
+            return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        return Response(data)
+
 class HandleSelectCritere(APIView):
     def post(self, request, id_affaire, article):
         try:

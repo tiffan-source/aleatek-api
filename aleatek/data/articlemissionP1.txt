@@ -14,7 +14,7 @@ PARTITIONS
 		- Nature de la cloison
 		- Stabilité de la cloison
 		- Résistance aux chocs
-		- Compatibilité avec les déformations de la structure 
+		- Compatibilité avec les déformations de la structure
 		- Compatibilité avec la destination des locaux
 		- Dispositions prévues pour fixation d'équipements
 		Cloisons de doublages
@@ -22,14 +22,14 @@ PARTITIONS
 		- Stabilité de la cloison (2)
 		- Conditions de non condensation dans le doublage
 		- Résistance aux chocs (2)
-		- Compatibilité avec les déformations de la structure  (2)
+		- Compatibilité avec les déformations de la structure (2)
 		- Compatibilité avec la destination des locaux (2)
 		- Dispositions prévues pour fixation d'équipements (2)
 		Cloisons amovibles et/ou démontables
 		- Nature de la cloison (3)
 		- Stabilité de la cloison (3)
 		- Résistance aux chocs (3)
-		- Compatibilité avec les déformations de la structure  (3)
+		- Compatibilité avec les déformations de la structure  (1)
 		- Compatibilité avec la destination des locaux (3)
 		- Dispositions prévues pour fixation d'équipements (3)
 		Cloisons mobiles
@@ -37,7 +37,7 @@ PARTITIONS
 		- Stabilité de la cloison (4)
 		- Dispositifs de suspension
 		- Résistance aux chocs (4)
-		- Compatibilité avec les déformations de la structure  (4)
+		- Compatibilité avec les déformations de la structure  (2)
 		- Compatibilité avec la destination des locaux (4)
 	Plafonds
 		Plafonds traditionnels en plâtre
@@ -52,10 +52,10 @@ PARTITIONS
 		- Compatibilité à l'hygrométrie des locaux
 		- Traitement des points singuliers (2)
 	Planchers techniques
-		Planchers surélevés 
+		Planchers surélevés
 		- Capacité du support à reprendre les charges appliquées
 		- Adéquation du support (2)
-		- Compatibilité du support avec produit de collage 
+		- Compatibilité du support avec produit de collage
 		- Stabilité du plancher par rapports aux charges appliquées
 		- Reprise du poids des équipements techniques
 		- Traitement des points singuliers (3)
@@ -69,28 +69,28 @@ PARTITIONS
 		- Durabilité des matériaux
 		- Trappes pour comble
 		Ouvrages ou éléments d'équipement dissociables de la structure
-		Escaliers 
+		Escaliers
 		- Durabilité des matériaux (2)
 		- Compatibilité avec la destination des locaux (6)
 		- Stabilité générale de l'escalier
 		- Principe de fixation des escaliers
-		Garde-corps 
+		Garde-corps
 		- Durabilité des matériaux (3)
 		- Compatibilité avec la destination des locaux (7)
 		- Stabilité des garde-corps
 		- Principe de fixation des garde-corps
 		- Dispositions complémentaires relatif aux éléments verriers
 REVETEMENTS
-	Revêtements de sol 
+	Revêtements de sol
 		Données sur l'exploitation des locaux
 		- Sollicitations d'usage des locaux
 		- Locaux à risques identifiés
 		Enduit de préparation de sols intérieurs
-		- Adéquation du support 
+		- Adéquation du support (3)
 		- Compatibilité de l'enduit avec la destination des locaux
 		- Compatibilité de l'enduit avec le revêtement
-		Chapes 
-		- Adéquation du support (3)
+		Chapes
+		- Adéquation du support (4)
 		- Compatibilité de la chape avec la destination des locaux
 		- Nature et conformité de la sous-couche
 		- Compatibilité sous-couche avec la destination des locaux
@@ -99,10 +99,10 @@ REVETEMENTS
 		- Présence de canalisations
 		- Traitements des joints
 		Revêtements carrelage et analogues
-		- Adéquation du support (4)
+		- Adéquation du support (5)
 		- Adéquation du mode de pose avec l'âge du support
-		- Nature et adéquation du revêtement 
-		- Compatibilité du revêtement avec la destination des locaux 
+		- Nature et adéquation du revêtement
+		- Compatibilité du revêtement avec la destination des locaux
 		- Choix du mode de pose
 		- Pose collée : choix de la colle
 		- Pose collée : mode de pose
@@ -115,24 +115,24 @@ REVETEMENTS
 		- Validation de la méthode de rénovation
 		Revêtements de sol en bois et assimilés
 		- Adéquation du support avec le mode de pose
-		- Nature et adéquation du revêtement  (2)
+		- Nature et adéquation du revêtement (2)
 		- Adéquation du revêtement avec la destination des locaux
 		- Mode de pose du revêtement
 		- Traitement des joints (2)
 		Revêtements de sol souples - Textile ou PVC
-		- Adéquation du support (5)
-		- Nature et adéquation du revêtement  (3)
+		- Adéquation du support (6)
+		- Nature et adéquation du revêtement (3)
 		- Adéquation du revêtement avec la destination des locaux (2)
 		- Travaux préparatoires
 		- Adéquation du produit de collage
 		- Mode de pose du revêtement (2)
 		- Traitement des remontées en plinthes
-		Revêtements de sol coulés 
-		- Nature et composition du revêtement 
-		- Adéquation du support (6)
+		Revêtements de sol coulés
+		- Nature et composition du revêtement
+		- Adéquation du support (7)
 		- Adéquation du revêtement avec la destination des locaux (3)
 		- Traitement des joints (3)
-		Sols industriels 
+		Sols industriels
 		- Adéquation entre le système proposé et les contraintes d'exploitation des locaux
 		- Compatibilité du système de sol industriel avec la conception du support
 		Etanchéité intérieure
@@ -141,7 +141,7 @@ REVETEMENTS
 		- Compatibilité du procédé avec les revêtements envisagés
 	Revêtements muraux intérieurs
 		Enduits intérieurs au plâtre
-		- Adéquation du support (7)
+		- Adéquation du support (8)
 		- Composition de l'enduit
 		- Mise en œuvre de l'enduit
 		- Adaptabilité de l'enduit au support
@@ -151,19 +151,19 @@ REVETEMENTS
 		- Adéquation du revêtement mural – format
 		- Adéquation du produit de collage (2)
 		- Compatibilité du produit de collage en fonction du revêtement
-		Revêtements muraux minces 
-		- Adéquation du support (8)
-		- Nature et adéquation du revêtement  (4)
-		- Compatibilité du revêtement avec la destination des locaux
+		Revêtements muraux minces
+		- Adéquation du support (9)
+		- Nature et adéquation du revêtement  (2)
+		- Compatibilité du revêtement avec la destination des locaux (2)
 		- Adéquation du produit de collage (3)
 		- Mode de pose du revêtement (3)
 		Revêtements muraux en bois et dérivés
-		- Adéquation du support (9)
-		- Nature et conformité du revêtement 
-		- Compatibilité du revêtement avec la destination des locaux (2)
+		- Adéquation du support (10)
+		- Nature et conformité du revêtement
+		- Compatibilité du revêtement avec la destination des locaux (3)
 		- Compatibilité du support en fonction du revêtement
 INSTALLATIONS ELECTRIQUES
-	Installations électriques
+	Installations électriques (*)
 		Poste de livraison d'énergie ou d'abonné
 		- Dispositions constructives parois extérieures
 		- Dispositions constructives cloisons intérieures
@@ -204,10 +204,10 @@ THERMIQUE
 		- Tuyauteries apparentes
 		- Tuyauteries - Traversée des parois
 		- Dispositions vis-à-vis de la dilatation
-		- Adéquation de la robinetterie 
+		- Adéquation de la robinetterie
 		Evacuation d'eau
 		- Adéquation des canalisations
-		- Adéquation des canalisations à la nature de l'eau 
+		- Adéquation des canalisations à la nature de l'eau
 		- Qualité vis-à-vis de l'ambiance extérieure (2)
 		- Incorporation des canalisations dans l'ouvrage
 		- Canalisations enterrées
@@ -216,7 +216,7 @@ THERMIQUE
 		- Dispositions vis-à-vis de la dilatation (2)
 		- Ventilation primaire
 	Chauffage
-		Stockages hydrocarbures 
+		Stockages hydrocarbures
 		- Nature et type de stockage
 		- Adéquation de la cuve de stockage
 		- Dispositions relatives aux cuves enterrées
@@ -240,14 +240,14 @@ THERMIQUE
 		- Caniveaux – Implantation
 		- Résistance mécanique des caniveaux
 		- Traitement des eaux d'infiltration
-		- Dilatation 
-		- Protection des canalisations en fonction du fluide 
+		- Dilatation
+		- Protection des canalisations en fonction du fluide
 		- Protection contre les actions extérieures
 		- Pénétration dans le bâtiment
 		Canalisations de transports en élévation
 		- Définition des supports des canalisations
-		- Dilatation  (2)
-		- Protection des canalisations en fonction du fluide  (2)
+		- Dilatation (2)
+		- Protection des canalisations en fonction du fluide (2)
 		- Protection contre les actions extérieures (2)
 	Ventilation et traitement d'air
 		Ventilation
@@ -270,7 +270,7 @@ THERMIQUE
 		- Dispositions relatives aux entrées d'air (2)
 		- Dispositions relatives aux rejets d'air (2)
 	Installation de gaz combustible
-		Distribution gaz 
+		Distribution gaz
 		- Adéquation / compatibilité des tubes, raccords, accessoires
 		- Pose apparente – Principe
 		- Pose apparente - protection contre les chocs
@@ -288,7 +288,7 @@ THERMIQUE
 		- Définition du flux thermique
 		- Risques liés aux phénomènes de condensation
 		- Stabilité des parois et des plafonds – rigidité
-		- Aptitude et durabilité du revêtement intérieur 
+		- Aptitude et durabilité du revêtement intérieur
 		- Résistance aux chocs (5)
 		- Adéquation du matériau isolant
 		- Protection du matériau isolant
@@ -350,5 +350,5 @@ EQUIPEMENTS
 		- Durabilité vis-à-vis de l'ambiance extérieure
 		- Performances des portes
 		- Stabilité des portails
-		- Mode de pose et fixation 
+		- Mode de pose et fixation
 		- Traitement des seuils

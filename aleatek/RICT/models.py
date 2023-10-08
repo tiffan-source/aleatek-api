@@ -51,7 +51,8 @@ class DescriptionSommaire(models.Model):
     type = models.CharField(max_length=200)
     content = models.TextField()
     rict = models.ForeignKey(RICT, on_delete=models.CASCADE)
-    
+
+# Represente les missions valider pour un RICT
 class MissionRICT(models.Model):
     mission = models.ForeignKey(MissionActive, on_delete=models.CASCADE)
     rict = models.ForeignKey(RICT, on_delete=models.CASCADE)

@@ -1,4 +1,4 @@
-from mission.models import ArticleSelect, Article
+from mission.models import ArticleSelect, Article, ArticleMission
 from RICT.models import Disposition, AvisArticle, CommentaireAvisArticle
 from django.forms.models import model_to_dict
 
@@ -33,7 +33,7 @@ def getllFirstParentOfArticle(articles):
         
     return data
 
-def getSubAffaireChild(article):
+def getSubAffaireChild(article, mission):
     data = {
         'parent' : model_to_dict(article),
         'childs' : []
@@ -42,7 +42,8 @@ def getSubAffaireChild(article):
     all_childs = Article.objects.filter(article_parent=article.id)
     
     for child in all_childs:
-        data['childs'].append(getSubAffaireChild(child))
+        if ArticleMission.objects.filter(article=child, mission=mission).exists():
+            data['childs'].append(getSubAffaireChild(child, mission))
         
     return data
 
@@ -55,5 +56,4 @@ def getParentAffaire(article):
         }
         return getParentAffaire(data)
     else:
-        print(article)
         return article

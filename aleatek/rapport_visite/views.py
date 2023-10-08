@@ -125,9 +125,6 @@ class GenerateDataForRV(APIView):
                                 'image': comment.image.url if comment.image else None,
                                 'avis': comment.avis_id
                             }
-                            # print(str(pre['image']))
-                            # if str(pre['image']) == "":
-                            #     del pre['image']
                             subresult['comments'].append(pre)
 
                         result['all_avis'].append(subresult)

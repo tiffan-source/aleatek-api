@@ -7,9 +7,9 @@ GARDE-CORPS ET RAMPES D’ESCALIER
 	2 - Rampes d'escalier
 		Hauteur sur volée
 		Hauteur sur palier
-		Géométrie
+		Géométrie (2)
 	3 - Allèges (autres que celles en RDC)
-		Hauteur normale de protection
+		Hauteur normale de protection (2)
 		Hauteur réduite et barre d'appui ou protection 
 		Géométrie et absence d'éléments réduisant la hauteur de protection
 	4 - Vitrage de remplissage
@@ -40,7 +40,7 @@ OUVRANTS ET PAROIS TRANSPARENTES
 		Espacement entre deux plans coulissants
 		Dispositifs arrêt du mouvement pour portes battantes ou tournantes
 		Dispositions pour mauvais fonctionnement des portes comptant comme issue de secours
-		Marquage à hauteur de vue
+		Marquage à hauteur de vue (2)
 PORTES ET PORTAILS 
 	Portes et portails pour véhicules
 		Indication des textes de références

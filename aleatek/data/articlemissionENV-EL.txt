@@ -19,10 +19,10 @@ INSTALLATION_DE_COMBUSTION_D_UNE_PUISSANCE_THERMIQUE_A_2_MW_ET_A_20_MW_ARRÊTÉ_
 		- Liaison équipotentielle des équipements métalliques
 ATELIERS_DE_CHARGE_D_ACCUMULATEURS_PUISSANCE_A_10K_W_ARRÊTÉ_DU_29_MAI_2000
 	Implantation - Aménagement
-		Installations électriques
+		Installations électriques (2)
 		- Installations électriques conformes au décret n° 88-1056
 		Mise à la terre des équipements
-		- Liaison équipotentielle des équipements métalliques
+		- Liaison équipotentielle des équipements métalliques (2)
 	Risques
 		Matériel électrique de sécurité
 		- Installations électriques nécessaires aux besoins de l'exploitation

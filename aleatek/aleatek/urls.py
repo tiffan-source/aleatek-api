@@ -31,7 +31,7 @@ from rapport_visite.views import AddAvisOnRv, CreateRv, AllAvisFromRV, RapportVi
 from ouvrage.views import EditRemarque, GetUserRemarqueGeneralOnAso, GetAllRemarqueGeneralOnAso, DocumentCreate, NextNumberAsoForAffaire, RecupereLensembleDesAvisSurDocument, GetAllDetailDocument, GetAllDetailDocumentWithIdDoc, GetAffaireOuvrageFromDocument, GetAllDetailAsoForAffaire, CreateOuvrageForAffaire
 
 
-from RICT.views import SaveDecriptionSommaire, ValidateRICT, GetAllAvisByRICTandMission, GetAllDispositionByRICTandMission, CheckRICTForAffaire, RICTViewsetAdmin, AvisArticleViewsetAdmin, DescriptionSommaireViewsetAdmin,\
+from RICT.views import ReviserRICT, GenerateDataForRICT, SaveDecriptionSommaire, ValidateRICT, GetAllAvisByRICTandMission, GetAllDispositionByRICTandMission, CheckRICTForAffaire, RICTViewsetAdmin, AvisArticleViewsetAdmin, DescriptionSommaireViewsetAdmin,\
     DispositionViewsetAdmin, CommentaireAvisArticleViewsetAdmin, GetDesriptionSommaireByRICT, SaveArticleDisposition, GetDisposionAvisAndComment, MissionRICTViewsetAdmin, ValidateDevalidateMissionRict
 
 from ouvrage.views import GetOuvrageAffaireDetailEntreprise, AllOuvrageAvailableForAffaire ,DocumentAffectationViewsetAdmin, GetCollaborateurAffectOnDocument, RemoveCollaborateurOnDocument, RemarqueAsoViewsetAdmin, SetRemarqueOnAso
@@ -40,7 +40,7 @@ from synthese.views import SyntheseAvisViewsetAdmin, CreateSyntheseAvis, AllSynt
     GetAllCommentaireOnAffaire, LeverCommentaire, AnnulerLever, AllAvisOfAffaire, ValidateSyntheseAvis, AllAvisOfSynthese, DevalidateSyntheseAvis
     
     
-from mission.views import GetCritereAboutDescriptionBati, HandleSelectCritere
+from mission.views import GetCritereAboutDescriptionBati, HandleSelectCritere, GetCritereAboutCodeTravail
 # from ouvrage.views import CodificationplusBas
 
 router = routers.SimpleRouter()
@@ -195,16 +195,19 @@ urlpatterns = [
     
     path('api/handle_select_critere/<int:id_affaire>/<int:article>/', HandleSelectCritere.as_view()),
     path('api/get_critere_about_description_bati/<int:id_affaire>/', GetCritereAboutDescriptionBati.as_view()),
+    path('api/get_critere_about_code_travail/<int:id_affaire>/', GetCritereAboutCodeTravail.as_view()),    
 
     # RICT Service
     path('api/check_RICT_for_affaire/<int:id_affaire>/', CheckRICTForAffaire.as_view()),
     path('api/get_disposion_avis_and_comment/<int:rict>/<int:article>/<int:mission>/', GetDisposionAvisAndComment.as_view()),
     path('api/validate_devalidate_mission_rict/<int:id_mission>/<int:id_rict>/', ValidateDevalidateMissionRict.as_view()),
     path('api/valider_rict/<int:id_rict>/', ValidateRICT.as_view()),
+    path('api/reviser_rict/<int:id_rict>/', ReviserRICT.as_view()),
 
     # Livrable service
     path('api/data_for_aso/<int:id_aso>/', GenerateDataForAso.as_view()),
     path('api/data_for_rv/<int:id_rv>/', GenerateDataForRV.as_view()),
+    path('api/data_for_rict/<int:id_rict>/<int:plan_affaire>/', GenerateDataForRICT.as_view()),
 
     # Disposition service
     path('api/get_all_disposition_by_RICT_and_mission/<int:id_rict>/<int:id_mission>/', GetAllDispositionByRICTandMission.as_view()),

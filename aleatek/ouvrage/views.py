@@ -129,7 +129,6 @@ class CodificationASOInCurrent(APIView):
         ouvrage = Aso.objects.get(id=id_aso).affaireouvrage
         TabCodifications = []
         for avis in aviss:
-            print(avis.id)
             document = avis.id_document
             if document.emetteur.affaire_ouvrage.id == ouvrage.id:
                 TabCodifications.append(avis.codification)
@@ -152,11 +151,6 @@ class CodificationASO(APIView):
     def get(self, request, id_aso):
         # aviss = Avis.objects.all()
         TabCodifications = []
-        # for avis in aviss:
-        #     print(avis.id)
-        #     document = avis.id_document
-        #     if document.aso.id == id_aso:
-        #         TabCodifications.append(avis.codification)
         documents = Documents.objects.filter(aso=id_aso)
         for document in documents:
             aviss = Avis.objects.filter(id_document=document.id)
@@ -192,7 +186,6 @@ class GetAllDetailDocument(APIView):
                 if id == id_affaire:
                     prepare = model_to_dict(document)
                     ouvrage = affaireOuvrage.id_ouvrage
-                    print(ouvrage)
                     entreprise = affaireEntreprise.entreprise
 
                     prepare['ouvrage'] = model_to_dict(ouvrage)
@@ -413,7 +406,6 @@ class GenerateDataForAso(APIView):
             aviss = Avis.objects.all()
             TabCodifications = []
             for avis in aviss:
-                print(avis.id)
                 document = avis.id_document
                 if document.aso and (document.aso.id == id_aso):
                     TabCodifications.append(avis.codification)
@@ -498,7 +490,6 @@ class RemoveCollaborateurOnDocument(APIView):
 class NextNumberAsoForAffaire(APIView):
     def get(self, request, id_affaire):
         asos = Aso.objects.filter(affaireouvrage__id_affaire_id=id_affaire)
-        print(len(asos))
         return Response({'position' : len(asos) + 1})
     
 class DocumentCreate(APIView):
@@ -507,9 +498,7 @@ class DocumentCreate(APIView):
             with transaction.atomic():
                 affaire  = request.data['affaire']
                 del request.data['affaire']
-                print(affaire)
                 number = len(Documents.objects.filter(emetteur__affaire_ouvrage__id_affaire_id=affaire))
-                print(number)
                 doc = Documents(**request.data, createur=request.user, order=number+1)
                 doc.save()
                 doc_affec = DocumentAffectation(document=doc, collaborateur=request.user)
@@ -524,7 +513,6 @@ class AddAffaireOuvrage(APIView):
     def post(self, request):
         try:
             with transaction.atomic():
-                print(request.data['ouvrages'])
                 for ouvrage in request.data['ouvrages']:
                     AffaireOuvrage(id_affaire_id=request.data['affaire'], id_ouvrage_id=ouvrage).save()
         except Exception as e:

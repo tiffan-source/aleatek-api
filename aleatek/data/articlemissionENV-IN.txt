@@ -161,11 +161,11 @@ ATELIERS_DE_CHARGE_D_ACCUMULATEURS_PUISSANCE_A_10K_W_ARRÊTÉ_DU_29_MAI_2000
 		- Desservi par une voie-échelle
 		- Local fermé, une des façades équipée d'ouvrants
 		Rétention des aires et locaux de travail
-		- Sol incombustible
-	Risques
+		- Sol incombustible (2)
+	Risques (2)
 		Moyens de secours contre l'incendie
-		- Détermination des points d'eau nécessaires et implantation
-		- Extincteurs portatifs
+		- Détermination des points d'eau nécessaires et implantation (2)
+		- Extincteurs portatifs (2)
 		- Moyens d'alerte
 		- Plans des locaux
 		Localisation des risques
