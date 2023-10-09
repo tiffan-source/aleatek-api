@@ -104,16 +104,16 @@ SITE_ID =1
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
 # DATABASES = {
-#     'default': dj_database_url.parse("postgres://aleatek_db_7ty8_user:H08eTa4cewf8nAwCw5re2NAkG8fuNW65@dpg-cj00bep8g3n4ain0moj0-a.oregon-postgres.render.com/aleatek_db_7ty8")
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
+
+DATABASES = {
+    'default': dj_database_url.parse("postgres://aleatek_db_b881_user:vGVAcauLiLCewnYMnPzrDjzuis7QSUkt@dpg-cki4itce1qns73epals0-a.frankfurt-postgres.render.com/aleatek_db_b881")
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
