@@ -45,8 +45,8 @@ with open(input_file, 'r') as f:
                     ArticleMission(article_id=data.id, mission_id=mission_id).save()
             
             elif line.startswith("\t\t- "):
-                if Article.objects.filter(titre=line.strip().replace('\n', '').replace('\t', '')).exists():
-                    id = Article.objects.get(titre=line.strip().replace('\n', '').replace('\t', '')).id
+                if Article.objects.filter(titre=line.strip().replace('\n', '').replace('\t', ''), article_parent=idsenconlevel[-1]).exists():
+                    id = Article.objects.get(titre=line.strip().replace('\n', '').replace('\t', ''), article_parent_id=idsenconlevel[-1]).id
                     ArticleMission(article_id=id, mission_id=mission_id).save()
                 else:
                     data = Article(titre=line.strip().replace('\n', '').replace('\t', ''), article_parent_id=idsenconlevel[-1],
@@ -55,8 +55,8 @@ with open(input_file, 'r') as f:
                     ArticleMission(article_id=data.id, mission_id=mission_id).save()
             
             elif line.startswith("\t\t"):
-                if Article.objects.filter(titre=line.strip().replace('\n', '').replace('\t', '')).exists():
-                    id = Article.objects.get(titre=line.strip().replace('\n', '').replace('\t', '')).id
+                if Article.objects.filter(titre=line.strip().replace('\n', '').replace('\t', ''), article_parent=idfirstlevel[-1]).exists():
+                    id = Article.objects.get(titre=line.strip().replace('\n', '').replace('\t', ''), article_parent_id=idfirstlevel[-1]).id
                     ArticleMission(article_id=id, mission_id=mission_id).save()
                     if id not in idsenconlevel:
                         idsenconlevel.append(id)
@@ -68,8 +68,8 @@ with open(input_file, 'r') as f:
                     ArticleMission(article_id=data.id, mission_id=mission_id).save()
             
             elif line.startswith("\t"):
-                if Article.objects.filter(titre=line.strip().replace('\n', '').replace('\t', '')).exists():
-                    id = Article.objects.get(titre=line.strip().replace('\n', '').replace('\t', '')).id
+                if Article.objects.filter(titre=line.strip().replace('\n', '').replace('\t', ''), article_parent=idsupper[-1]).exists():
+                    id = Article.objects.get(titre=line.strip().replace('\n', '').replace('\t', ''), article_parent_id=idsupper[-1]).id
                     ArticleMission(article_id=id, mission_id=mission_id).save()
                     if id not in idfirstlevel:
                         idfirstlevel.append(id)

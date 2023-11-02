@@ -4,6 +4,7 @@ from Dashbord.models import Affaire
 from mission.models import ArticleSelect, Article, ArticleMission
 from collaborateurs.models import Collaborateurs
 from mission.models import MissionActive
+from ouvrage.models import Documents
 
 # Create your models here.
 
@@ -56,3 +57,7 @@ class DescriptionSommaire(models.Model):
 class MissionRICT(models.Model):
     mission = models.ForeignKey(MissionActive, on_delete=models.CASCADE)
     rict = models.ForeignKey(RICT, on_delete=models.CASCADE)
+    
+class DocumentRICT(models.Model):
+    rict = models.ForeignKey(RICT, on_delete=models.CASCADE)
+    document = models.ForeignKey(Documents, on_delete=models.CASCADE)

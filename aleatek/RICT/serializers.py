@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
-from .models import RICT, Disposition, AvisArticle, CommentaireAvisArticle, DescriptionSommaire, MissionRICT
+from .models import RICT, Disposition, AvisArticle, CommentaireAvisArticle, DescriptionSommaire, MissionRICT, DocumentRICT
 
 
 class RICTSerializer(ModelSerializer):
@@ -31,4 +31,9 @@ class DescriptionSommaireSerializer(ModelSerializer):
 class MissionRICTSerializer(ModelSerializer):
     class Meta:
         model = MissionRICT
+        fields = '__all__'
+        
+class DocumentRICTSerializer(ModelSerializer):
+    class Meta:
+        model = DocumentRICT
         fields = '__all__'

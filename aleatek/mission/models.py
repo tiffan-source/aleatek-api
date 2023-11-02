@@ -35,7 +35,7 @@ class InterventionTechnique(models.Model):
 
 
 class Article(models.Model):
-    titre = models.CharField(max_length=500, unique=True)
+    titre = models.CharField(max_length=500)
     article_parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.CASCADE, related_name='sous_articles')
     commentaire = models.TextField(blank=True)
 
@@ -65,7 +65,7 @@ class Article(models.Model):
     
     class Meta:
         constraints = [
-            UniqueConstraint(fields=['titre'], name='unique_titre')
+            UniqueConstraint(fields=['titre', 'article_parent'], name='unique_titre')
         ]
 
 class ArticleMission(models.Model):

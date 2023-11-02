@@ -52,7 +52,7 @@ AERATION_DES_LOCAUX_REGLEMENT_SANITAIRE_DEPARTEMENTAL_TYPE
 		Locaux à présence humaine épisodique ne pouvant pas être ventilés par les locaux adjacents
 		Possibilité de ventilation modulée ou discontinue en cas d’occupation très variable des locaux
 		Possibilité d'arrêt de la ventilation pendant l'inoccupation des locaux
-		Prises d'air neuf (2)
+		Prises d'air neuf
 		Recyclage par groupes de locaux
 	Art. 64.2 - Ventilation mécanique ou naturelle des conduits des locaux à pollution spécifique
 		Débit d'air minimal pour pièce à usage individuel
@@ -130,8 +130,8 @@ EQUIPEMENTS_DES_LOCAUX_SANITAIRES_CODE_DU_TRAVAIL
 		- Aménagement des locaux pour éviter les dégagements d'odeur
 		- Présence de chasse d'eau
 		R. 4228-12 - Aération et chauffage des cabinets d'aisance
-		- Locaux ventilés (2)
-		- Locaux chauffés (2)
+		- Locaux ventilés
+		- Locaux chauffés
 		R. 4228-13 - Parois et sols des cabinets d'aisance
 		- Sol et parois permettant un nettoyage efficace
 		R. 4228-14 - Portes des cabinets d'aisance

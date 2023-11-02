@@ -29,13 +29,14 @@ class Affaire(models.Model):
     libelle = models.CharField(max_length=100)
     statut = models.CharField(max_length=20, choices=STATUS)
     numero_offre = models.IntegerField(blank=True, null=True)
-    numero_contrat = models.IntegerField(blank=True, null=True)
+    numero_contrat = models.CharField(max_length=100, default='')
     libelle_contrat = models.CharField(max_length=100, default='', blank=True)
     date_contrat = models.DateField(blank=True, null=True)
     client = models.ForeignKey(Entreprise, on_delete=models.SET_NULL, null=True)  # Retirer null
     charge = models.ForeignKey(Collaborateurs, on_delete=models.SET_NULL, related_name='DashbordAffairecharge', null=True)
     assistant = models.ForeignKey(Collaborateurs, on_delete=models.SET_NULL, related_name='DashbordAffaireassistant', null=True)
     chef = models.ForeignKey(Collaborateurs, on_delete=models.SET_NULL, related_name='DashbordAffairechef', null=True)
+    etendu = models.TextField(default='')
 
 
 class PlanAffaire(models.Model):

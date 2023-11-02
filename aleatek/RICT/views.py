@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from .permissions import IsAdminAuthenticated
 from rest_framework.viewsets import ModelViewSet, ViewSet
-from .serializers import RICTSerializer, DispositionSerializer, AvisArticleSerializer, CommentaireAvisArticleSerializer, DescriptionSommaireSerializer, MissionRICTSerializer
-from .models import RICT, Disposition, AvisArticle, CommentaireAvisArticle, DescriptionSommaire, MissionRICT
+from .serializers import RICTSerializer, DispositionSerializer, AvisArticleSerializer, CommentaireAvisArticleSerializer, DescriptionSommaireSerializer, MissionRICTSerializer, DocumentRICTSerializer
+from .models import RICT, Disposition, AvisArticle, CommentaireAvisArticle, DescriptionSommaire, MissionRICT, DocumentRICT
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.forms.models import model_to_dict
@@ -38,6 +38,11 @@ class DispositionViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
 class AvisArticleViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
     serializer_class = AvisArticleSerializer
     queryset = AvisArticle.objects.all()
+    permission_classes = [IsAdminAuthenticated]
+    
+class DocumentRICTViewsetAdmin(MultipleSerializerMixin, ModelViewSet):
+    serializer_class = DocumentRICTSerializer
+    queryset = DocumentRICT.objects.all()
     permission_classes = [IsAdminAuthenticated]
 
 class CommentaireAvisArticleViewsetAdmin(MultipleSerializerMixin, ModelViewSet):

@@ -32,7 +32,7 @@ from ouvrage.views import EditRemarque, GetUserRemarqueGeneralOnAso, GetAllRemar
 
 
 from RICT.views import ReviserRICT, GenerateDataForRICT, SaveDecriptionSommaire, ValidateRICT, GetAllAvisByRICTandMission, GetAllDispositionByRICTandMission, CheckRICTForAffaire, RICTViewsetAdmin, AvisArticleViewsetAdmin, DescriptionSommaireViewsetAdmin,\
-    DispositionViewsetAdmin, CommentaireAvisArticleViewsetAdmin, GetDesriptionSommaireByRICT, SaveArticleDisposition, GetDisposionAvisAndComment, MissionRICTViewsetAdmin, ValidateDevalidateMissionRict
+    DispositionViewsetAdmin, CommentaireAvisArticleViewsetAdmin, DocumentRICTViewsetAdmin, GetDesriptionSommaireByRICT, SaveArticleDisposition, GetDisposionAvisAndComment, MissionRICTViewsetAdmin, ValidateDevalidateMissionRict
 
 from ouvrage.views import GetOuvrageAffaireDetailEntreprise, AllOuvrageAvailableForAffaire ,DocumentAffectationViewsetAdmin, GetCollaborateurAffectOnDocument, RemoveCollaborateurOnDocument, RemarqueAsoViewsetAdmin, SetRemarqueOnAso
 
@@ -59,14 +59,8 @@ router.register('admin/mission_rict', MissionRICTViewsetAdmin, basename='mission
 router.register('admin/disposition', DispositionViewsetAdmin, basename='disposition')
 router.register('admin/avis_article', AvisArticleViewsetAdmin, basename='avis_article')
 router.register('admin/commentaire_avis_article', CommentaireAvisArticleViewsetAdmin, basename='commentaire_avis_article')
-router.register('admin/description_sommaire', DescriptionSommaireViewsetAdmin, basename='description_sommaire'),
-
-router.register('admin/avis_ouvrage', AvisOuvrageViewsetAdmin, basename='admin-avis_ouvrage')
-router.register('admin/article', ArticleAdminViewsetAdmin, basename='admin-article')
-router.register('admin/article_select', ArticleSelectViewsetAdmin, basename='admin-article-select')
-router.register('admin/avis_commentaire', CommentaireAvisOuvrageViewsetAdmin)
-router.register('admin/rapport/visite', RapportVisiteSerializerAdminViewsetAdmin, basename='admin-rapport')
-router.register('admin/commentaire', CommentaireAdminViewsetAdmin, basename='admin=commentaire')
+router.register('admin/description_sommaire', DescriptionSommaireViewsetAdmin, basename='description_sommaire')
+router.register('admin/document_rict', DocumentRICTViewsetAdmin, basename='document_rict')
 router.register('admin/fichierattacher', FichierSerializerAdminViewsetAdmin, basename='admin=avis')
 router.register('admin/avis', AvisSerializerAdminViewsetAdmin, basename='admin=avis')
 router.register('admin/documents', DocumentSerializerAdminViewsetAdmin, basename='admin=document')

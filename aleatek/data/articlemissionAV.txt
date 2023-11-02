@@ -35,6 +35,6 @@ EXAMEN_DES_DISPOSITIONS_PRISES_PAR_LES_CONCEPTEURS_ET_CONSTRUCTEURS
 		Reprise des charges des ouvrages avoisinants
 		Déplacement en tête de parois
 	Réalisation des parois périmétriques d’infrastructure
-		Processus d'exécution des travaux (2)
-		Reprise des charges des ouvrages avoisinants (2)
-		Déplacement en tête de parois (2)
+		Processus d'exécution des travaux
+		Reprise des charges des ouvrages avoisinants
+		Déplacement en tête de parois
